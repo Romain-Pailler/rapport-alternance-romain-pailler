@@ -21,3 +21,16 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+romain:
+  name: Romain Pailler
+  title: Dev Full Stack en alternance @ Leasa
+  url: https://portfolio-romain-pailler.netlify.app/
+  image_url: https://github.com/slorber.png
+  page:
+    permalink: '/all-romain-articles'
+  socials:
+    x: sebastienlorber
+    linkedin: sebastienlorber
+    github: slorber
+    newsletter: https://thisweekinreact.com
