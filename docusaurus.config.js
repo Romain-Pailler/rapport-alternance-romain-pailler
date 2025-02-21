@@ -65,6 +65,13 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+    require.resolve("@easyops-cn/docusaurus-search-local"),
+    ({
+      hashed: true,
+    }),
+  ],],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -78,10 +85,10 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {to: '/docs/hello', label: 'Présentation', position: 'left'},
+          {to: 'docs/category/présentation', label: 'Présentation', position: 'left'},
           {to: '/blog', label: 'Projets', position: 'left'},
-          {to: '/docs/intro', label: 'Glossaire', position: 'left'},
-          {to: '/docs/intro', label: 'Annexes', position: 'left'},
+          {to: 'docs/category/présentation', label: 'Glossaire', position: 'left'},
+          {to: 'docs/category/présentation', label: 'Annexes', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Romain-Pailler',
@@ -96,49 +103,38 @@ const config = {
           {
             title: 'Présentation',
             items: [
-              {
-                label: "L'équipe",
-                to: '/docs/intro',
-              },
-              {
-                label: "Le projet",
-                to: '/docs/intro',
-              },
-            ],
+              { label: "L'équipe", to: '/docs/category/présentation' },
+              { label: 'Le projet', to: '/docs/category/présentation' }
+            ]
           },
           {
             title: 'Projets',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Page Recherche de demande',
+                to: '/docs/category/présentation' // ✅ Utilisation correcte de `to`
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discordapp.com/invite/docusaurus'
               },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
+              { label: 'X', href: 'https://x.com/docusaurus' }
+            ]
           },
           {
             title: 'Glossaire',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              { label: 'Blog', to: '/blog' }, // ✅ Changer `href` en `to` pour un lien interne
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
+                href: 'https://github.com/facebook/docusaurus'
+              }
+            ]
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Rapport d'alternance - Romain PAILLER `,
+        copyright: "Copyright © 2025 Rapport d'alternance - Romain PAILLER"
       },
+      
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
