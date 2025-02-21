@@ -1,7 +1,14 @@
+---
+sidebar_position: -1
+---
 
+# Accueil
 
-# Tutorial Intro
+:::warning
 
+Des parties peuvent être indisponibles ou bien manquantes car le site n'est pas abouti
+
+:::
 Let's discover **Docusaurus in less than 5 minutes**.
 
 ## Getting Started

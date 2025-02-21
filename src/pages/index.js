@@ -8,29 +8,23 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+      <div className="container text--center">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">Bienvenue sur mon rapport d'alternance</p>
         <div className={styles.buttons}>
-          <Link
-            className="button "
-            to="/docs/intro">
-            Accueil
+          <Link className="button button--primary button--lg" to="/docs/accueil">
+            🚀 Accueil
           </Link>
-          <Link
-            className="button button--secondary"
-            to="/docs/intro">
-            Présentation de l'équipe
+          <Link className="button button--outline button--lg margin-horiz--sm" to="/docs/accueil">
+            👥 Présentation de l'équipe
           </Link>
-          <Link
-            className="button button--secondary"
-            to="/docs/intro">
-            Recherche de demande
+          <Link className="button button--secondary button--lg" to="/docs/accueil">
+            🔍 Recherche de demande
           </Link>
         </div>
       </div>
@@ -39,11 +33,9 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+    <Layout title={`${siteConfig.title}`} description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
