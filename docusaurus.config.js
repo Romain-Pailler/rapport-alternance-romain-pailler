@@ -85,10 +85,10 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {to: 'docs/category/présentation', label: 'Présentation', position: 'left'},
-          {to: '/blog', label: 'Projets', position: 'left'},
-          {to: 'docs/category/présentation', label: 'Glossaire', position: 'left'},
-          {to: 'docs/category/présentation', label: 'Annexes', position: 'left'},
+          {to: '/docs/category/présentation', label: 'Présentation', position: 'left'},
+          {to: '/docs/category/missions', label: 'Projets', position: 'left'},
+          {to: '/docs/category/glossaire', label: 'Glossaire', position: 'left'},
+          {to: '/docs/category/annexes', label: 'Annexes', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Romain-Pailler',
@@ -103,8 +103,8 @@ const config = {
           {
             title: 'Présentation',
             items: [
-              { label: "L'équipe", to: '/docs/category/présentation' },
-              { label: 'Le projet', to: '/docs/category/présentation' }
+              { label: "L'équipe", to: '/docs/category/présentation/Equipe' },
+              { label: 'Le projet', to: '/docs/category/présentation/Leasa' }
             ]
           },
           {
@@ -112,7 +112,7 @@ const config = {
             items: [
               {
                 label: 'Page Recherche de demande',
-                to: '/docs/category/présentation' // ✅ Utilisation correcte de `to`
+                to: '/docs/category/projets-individuels' 
               },
               {
                 label: 'Discord',
@@ -124,7 +124,7 @@ const config = {
           {
             title: 'Glossaire',
             items: [
-              { label: 'Blog', to: '/blog' }, // ✅ Changer `href` en `to` pour un lien interne
+              { label: 'Blog', to: '/blog' }, 
               {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus'

@@ -7,6 +7,7 @@ const FeatureList = [
   {
     title: 'Migration vers Angular 2+',
     Svg: require('@site/static/img/undraw_code-inspection.svg').default,
+    url: '/docs/category/projets-individuels',
     description: (
       <>
         A travers ce rapport, vous allez découvrir l'une de mes missions principales : la migration et l'amélioration de composants
@@ -16,6 +17,7 @@ const FeatureList = [
   {
     title: 'Nouveaux défis',
     Svg: require('@site/static/img/undraw_developer-activity.svg').default,
+    url: '/docs/category/missions',
     description: (
       <>
         Au cours de cette année, j'ai aussi contribué à aider mon équipe en corrigeant des bugs et en développant de nouvelles fonctionnalités.
@@ -25,6 +27,7 @@ const FeatureList = [
   {
     title: "Qu'est-ce que j'ai appris durant cette année",
     Svg: require('@site/static/img/undraw_proud-coder.svg').default,
+    url: '/blog',
     description: (
       <>
         En plus des connaissances acquises en entreprise, de nombreux projets personnels m'ont permis d'explorer de nouvelles technologies, comme l'IA, et de développer de nouvelles compétences.
@@ -33,7 +36,7 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description,url}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -41,7 +44,7 @@ function Feature({Svg, title, description}) {
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">
-        <Link to="docs/category/présentation">{title}</Link>
+        <Link to={url}>{title}</Link>
           </Heading>
         <p>{description}</p>
       </div>

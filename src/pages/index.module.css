@@ -21,3 +21,16 @@
   align-items: center;
   justify-content: center;
 }
+/* Responsive: sur les petits écrans, les boutons passent en colonne */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button {
+    width: 80%;
+    max-width: 300px;
+    margin: 5px auto;
+  }
+}
