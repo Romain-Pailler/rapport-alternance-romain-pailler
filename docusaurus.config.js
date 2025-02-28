@@ -103,8 +103,8 @@ const config = {
           {
             title: 'Présentation',
             items: [
-              { label: "L'équipe", to: '/docs/category/présentation/Equipe' },
-              { label: 'Le projet', to: '/docs/category/présentation/Leasa' }
+              { label: "L'équipe", to: '/docs/Présentation/Equipe' },
+              { label: 'Le projet', to: '/docs/Présentation/Leasa' }
             ]
           },
           {

@@ -17,3 +17,9 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+
+Présentation:
+  label: Présentation
+  permalink: /presentation
+  description: Tag pour la présentation
