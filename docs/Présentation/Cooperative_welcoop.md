@@ -1,5 +1,5 @@
 ---
-sidebar_label: Présentation Entreprise
+sidebar_label: Coopérative Equasens
 sidebar_position: "2"
 tags: 
     - Presentation
