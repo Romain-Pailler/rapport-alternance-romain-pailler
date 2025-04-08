@@ -36,6 +36,11 @@ const config = {
     locales: ['en', 'fr'],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -96,6 +101,9 @@ const config = {
             position: 'right',
           },
         ],
+      },
+      mermaid: {
+        theme: {light: 'neutral', dark: 'forest'},
       },
       footer: {
         style: 'dark',

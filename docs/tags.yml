@@ -19,7 +19,17 @@ hola:
   description: Hola tag description
 
 
-Présentation:
+Presentation:
   label: Présentation
   permalink: /presentation
   description: Tag pour la présentation
+
+Features:
+  label: Features
+  permalink: /features
+  description: Tag pour les features
+
+Template:
+  label: Template
+  permalink: /template
+  description: Tag pour les templates de mail

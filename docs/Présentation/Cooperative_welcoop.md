@@ -1,5 +1,5 @@
 ---
-sidebar_label: Coopérative Equasens
+sidebar_label: Coopérative Welcoop
 sidebar_position: "2"
 tags: 
     - Presentation

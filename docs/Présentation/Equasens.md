@@ -16,4 +16,4 @@ tags:
 
 Equasens est également la maison mère de plusieurs entités spécialisées, dont **Nanceo** et **La Coopérative Welcoop**[^1].
 
-[^1]: Voir aussi [La Coopérative Welcoop](./cooperative-welcoop.md) et [Nanceo](./nanceo.md).
+[^1]: Voir aussi [La Coopérative Welcoop](./Cooperative_welcoop.md) et [Nanceo](./Nanceo.md).

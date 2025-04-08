@@ -1,54 +1,52 @@
 ---
-sidebar_label: Nanceo
-sidebar_position: "3"
+sidebar_label: Leasa
+sidebar_position: "4"
 ---
-# Nanceo
 
-**Nanceo** est une filiale du groupe Equasens qui constitue à elle seule la division **Fintech** de **Pharmagest**. Créée en **2015**, elle est spécialisée dans la mise en place de **solutions de financement de biens en location** pour le secteur tertiaire.
+# Présentation technique du projet
 
-## Une solution de financement innovante
+## Contexte du projet
 
-Afin de rendre le processus de financement plus **simple** et **autonome**, Nanceo a développé **Leasa**, une passerelle informatique **full web** également disponible sous forme d'application mobile.  
-Cette solution permet :
-- Une **gestion automatique** des processus de financement des ventes.
-- Un **accès rapide** aux partenaires financiers du marché.
-- Une **mise en relation optimisée** entre clients et organismes financiers.
+Leasa est une application web et mobile développée pour faciliter la mise en place de financements auprès des clients d'**Equasens** ou d'autres entreprises partenaires. Elle vise à simplifier et digitaliser le dépôt, le traitement et le suivi des demandes de financement.
 
-Grâce à **Leasa**, les entreprises peuvent financer leurs projets et leurs biens plus **rapidement** et **efficacement**.
+## Type de service et contexte métier
 
-## Les activités principales de Nanceo
+Leasa s’inscrit dans un contexte métier lié aux services de financement, principalement dans le domaine de la santé. Elle est utilisée par :
 
-Nanceo repose sur **deux activités métier principales** :
+- **Les commerciaux**, pour déposer des demandes de financement,
+- **Les administrateurs des ventes**, pour la gestion de ces demandes,
+- **Les clients finaux**, via une interface mobile simplifiée.
 
-### 1️⃣ Vente et gestion de l'application **Leasa**
-- Une **équipe commerciale** dédiée à l'acquisition de nouveaux clients et bailleurs.
-- Une **gestion des dossiers de financement**, notamment pour les parties non automatisables.
+L'application est composée de **trois interfaces distinctes** :
 
-### 2️⃣ Développement et maintenance de l'application
-- Deux **équipes d’ingénieurs** (développeurs, testeurs, analystes fonctionnels).
-- Maintenance et évolution de l'application **Leasa**.
-- Support assuré en grande partie par **Pharmagest** pour le compte de Nanceo.
+- **Le front office** (application web) : utilisé principalement par les commerciaux pour le dépôt des demandes de financement.
+- **Le back office** (application web) : réservé aux administrateurs des ventes pour la gestion des dossiers.
+- **L'application mobile** (iOS et Android) : reprend la logique du front office dans une version simplifiée.
 
-## Leasa : une révolution dans le financement
+## Accéder à l'application
 
-De nombreuses entreprises, en particulier les **jeunes structures**, rencontrent des difficultés pour financer leurs équipements. Le **leasing** (ou **LOA – Location avec Option d’Achat**) est une solution qui permet de **lisser les coûts** et de bénéficier d'une plus grande flexibilité financière.
+- **Front office** :  
+  - [leasa.nanceo.fr](https://leasa.nanceo.fr)  
 
-### 🔹 Avantages du leasing :
-✔️ Lissage de l'effort financier  
-✔️ Écritures comptables simplifiées  
-✔️ Échéanciers clairs et lisibles  
+- **Back office** :  
+  - [leasa.nanceo.fr/back](https://leasa.nanceo.fr/back)
 
-Cependant, cette méthode peut être **lente** et **administrativement complexe**. Trouver une banque, monter un dossier, valider le financement, recommencer en cas de refus… toutes ces étapes sont **longues et fastidieuses**.
+- **Application mobile** :  
+  - [Android (Play Store)](https://play.google.com/store/apps/details?id=com.nanceo.leasa)  
+  - [iOS (App Store)](https://itunes.apple.com/fr/app/leasa-by-nanceo/id1192222008)
 
-💡 **Leasa by Nanceo** répond à ce problème en **automatisant** l’ensemble des tâches administratives :
-- Saisie unique de la demande de financement.
-- Dialogue instantané avec **des dizaines de bailleurs**.
-- Réponse rapide : **moins de 4 minutes** pour la majorité des demandes.
+## Existant et contraintes
 
-### 🛠️ Fonctionnalités de Leasa
-- **Front-end** : interface utilisée par les clients pour soumettre leurs demandes.
-- **Back-end** : interface dédiée aux gestionnaires de portefeuille de Nanceo, permettant de suivre l’avancement des demandes et de traiter les cas nécessitant une intervention humaine.
+L’application a été développée **from scratch** (à partir de zéro), sans reprise d’un existant technique.
 
-Grâce à **Leasa**, Nanceo simplifie et accélère le **financement des entreprises**, renforçant ainsi son rôle clé au sein du groupe **Equasens**[^1].
 
-[^1]: Voir aussi [Equasens](./equasens.md) et [La Coopérative Welcoop](./cooperative-welcoop.md).
+## Architecture générale 
+
+![alt text](architecture_leasa.png)
+
+Les commerciaux saisissent des demandes de financement décrivant l'objet du financement (matériel, quantité, montant, durée du financement, périodicité...), la demande est alors envoyée via web-service aux organismes financiers susceptibles de financer la demande.
+
+En fonction de la réponse des organismes (toujours via web-service et de manière automatique), le dossier est constitué et finalisé (écritures comptables, récupération des factures d'achat, génération de la facture de vente...).
+## Liens documentaires
+
+- [Espace projet Leasa](#)
