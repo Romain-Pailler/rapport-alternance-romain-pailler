@@ -1,8 +1,15 @@
 ---
 sidebar_label: Lettre de bienvenue
-sidebar_position: "1"
+sidebar_position: "2"
 tags: 
     - Features
     - Template
 ---
-# Test
+# Template de mail pour la lettre de bienvenue 
+
+## Contexte 
+
+
+## Objectifs
+
+## Réalisations

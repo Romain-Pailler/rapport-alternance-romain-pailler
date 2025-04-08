@@ -92,7 +92,6 @@ const config = {
         items: [
           {to: '/docs/category/présentation', label: 'Présentation', position: 'left'},
           {to: '/docs/category/missions', label: 'Projets', position: 'left'},
-          {to: '/docs/category/glossaire', label: 'Glossaire', position: 'left'},
           {to: '/docs/category/annexes', label: 'Annexes', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {

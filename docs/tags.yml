@@ -33,3 +33,13 @@ Template:
   label: Template
   permalink: /template
   description: Tag pour les templates de mail
+
+Code:
+  label: Code
+  permalink: /code
+  description: Tag pour les bouts de code
+
+Blog:
+  label: Blog
+  permalink: /blog
+  description: Tag pour le blog
