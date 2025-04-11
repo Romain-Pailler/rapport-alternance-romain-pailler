@@ -31,6 +31,8 @@ La partie la plus technique à été d'afficher ou non la date de prélévement 
 J'ai du créer un nouveau processus : explication des 3 couches de Leasa
 
 
+## Ce que j'ai appris 
+
 ## Le code
 
 ### Le processus
