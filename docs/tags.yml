@@ -43,3 +43,13 @@ Blog:
   label: Blog
   permalink: /blog
   description: Tag pour le blog
+
+Migration:
+  label: Migration
+  permalink: /migration
+  description: Tag pour la Migration
+
+Angular:
+  label: Angular
+  permalink: /angular
+  description: Tag pour Angular
