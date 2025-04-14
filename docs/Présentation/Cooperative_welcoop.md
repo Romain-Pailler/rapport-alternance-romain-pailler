@@ -5,7 +5,8 @@ tags:
     - Presentation
 ---
 # Présentation Entreprise
-# La Coopérative Welcoop
+
+## La Coopérative Welcoop
 
 La **Coopérative Welcoop**[^1] est une coopérative de pharmaciens fondée en **1935**, dédiée à l'accompagnement des pharmaciens dans leur pratique quotidienne et leurs nouvelles missions envers les patients. Elle compte aujourd'hui **4 000 pharmaciens-sociétaires** et plus de **2 000 collaborateurs**, avec un chiffre d'affaires de **402 millions d'euros en 2023**.
 
@@ -17,7 +18,7 @@ Elle met l'accent sur l'**innovation en e-santé**, notamment à travers l'**int
 ## Une ambition européenne
 
 La Coopérative Welcoop ambitionne de devenir la **première plateforme européenne de santé**, en centralisant et coordonnant les **données de santé des patients** entre tous les professionnels concernés, garantissant ainsi un **suivi optimisé et sécurisé**.  
-Sa filiale [**Equasens**](./Equipe.md)[^2] est agréée **Hébergeur de Données de Santé (HDS)**, assurant la sécurisation des informations patients. 
+Sa filiale [**Equasens**](./Equipe.md)[^2] est agréée **Hébergeur de Données de Santé (HDS)**, assurant la sécurisation des informations patients.
 
 ## Une mission au service des patients
 
@@ -26,11 +27,12 @@ Les membres de La Coopérative Welcoop, qu'ils soient **coopérateurs** ou **col
 ✅ **Renforcer l'efficience du système de santé**  
 
 Cette mission est portée par des valeurs essentielles :  
+
 - **Expertise**  
 - **Proximité**  
 - **Anticipation**  
 - **Optimisme**  
 
-___ 
+___
 [^1]: [La Coopérative Welcoop](https://www.lacooperativewelcoop.com/)
-[^2]: [Equasens](https://www.equasens.com/) est une entreprise spécialisée dans les technologies de santé, offrant des solutions numériques pour améliorer la coordination des soins.
+[^2]: [Equasens](https://www.equasens.com/) est une entreprise spécialisée dans les technologies de santé, offrant des solutions numériques pour améliorer la coordination des soins

@@ -25,13 +25,11 @@ Les données manquantes :
 
 ## Réalisations
 
-La partie la plus technique à été d'afficher ou non la date de prélévement estimée car la DP dépend d'une seule facture comptabilisée donc je devais vérifier que la facture était comptabilisée, que son type soit de loyer facture vente. Il peut avoir des factures comptabilisées qui sont annulés car elles ont des avoir; 
-
+La partie la plus technique à été d'afficher ou non la date de prélévement estimée car la DP dépend d'une seule facture comptabilisée donc je devais vérifier que la facture était comptabilisée, que son type soit de loyer facture vente. Il peut avoir des factures comptabilisées qui sont annulés car elles ont des avoir;
 
 J'ai du créer un nouveau processus : explication des 3 couches de Leasa
 
-
-## Ce que j'ai appris 
+## Ce que j'ai appris
 
 ## Le code
 
