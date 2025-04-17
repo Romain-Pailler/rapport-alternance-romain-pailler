@@ -12,7 +12,7 @@ tags:
 Il est possible depuis l'application d'envoyer un email de bienvenue après la facturation d'un dossier.
 Ce template est codé en .mustache (à voir avec clément) qui à besoin de données telles que des dates ou des numéro de contrat
 
-## Objectifs
+## Objectif
 
 L'objectif ici est d'améliorer l'existant. Le template de mail existe mais avec des fautes d'ortographes et des données nécessaires manquantes que les commerciaux devaient remplir manuellement.
 Les données manquantes :
