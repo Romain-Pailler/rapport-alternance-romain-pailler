@@ -25,7 +25,7 @@ const FeatureList = [
     ),
   },
   {
-    title: "Qu'est-ce que j'ai appris durant cette année",
+    title: "Ce que j'ai appris durant cette année",
     Svg: require('@site/static/img/undraw_proud-coder.svg').default,
     url: '/blog',
     description: (
