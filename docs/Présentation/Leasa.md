@@ -47,6 +47,3 @@ L’application a été développée **from scratch** (à partir de zéro), sans
 Les commerciaux saisissent des demandes de financement décrivant l'objet du financement (matériel, quantité, montant, durée du financement, périodicité...), la demande est alors envoyée via web-service aux organismes financiers susceptibles de financer la demande.
 
 En fonction de la réponse des organismes (toujours via web-service et de manière automatique), le dossier est constitué et finalisé (écritures comptables, récupération des factures d'achat, génération de la facture de vente...).
-## Liens documentaires
-
-- [Espace projet Leasa](#)

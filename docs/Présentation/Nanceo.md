@@ -51,7 +51,6 @@ Cependant, cette méthode peut être **lente** et **administrativement complexe*
 
 Grâce à **Leasa**, Nanceo simplifie et accélère le **financement des entreprises**, renforçant ainsi son rôle clé au sein du groupe **Equasens**[^1].
 
-
 Nanceo
 Les activités de la division Fintech de Pharmagest sont regroupées dans la filiale Nanceo. A l'origine, celle-ci a été créée afin de répondre au besoin de faire financer la location de matériel aux clients de Pharmagest.
 

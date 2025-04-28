@@ -64,4 +64,3 @@ La migration d’AngularJS vers Angular 2+ est indispensable pour garantir la **
 [^7]: **Dette technique** : Coût futur induit par l'usage de solutions techniques obsolètes ou sous-optimales.
 [^8]: **Architecture modulaire** : Organisation du code en modules ou composants autonomes facilitant la maintenance et l’évolution.
 [^9]: **PWA (Progressive Web App)** : Application web enrichie pour offrir une expérience proche d'une application mobile native (installation, hors-ligne, notifications).
-
