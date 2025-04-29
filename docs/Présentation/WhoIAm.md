@@ -7,41 +7,40 @@ sidebar_position: 1
 
 ## Romain Pailler – Alternant développeur web
 
-Bienvenue sur mon rapport d'alternance !
+Je m'appelle **Romain Pailler**, j'ai **24 ans** et je suis actuellement en **3ᵉ année de BUT Informatique**, spécialité **Développement Web et Mobile**, à l'[IUT Nancy-Charlemagne](https://iut-charlemagne.univ-lorraine.fr/).
 
-Je m'appelle **Romain Pailler**, j'ai **23 ans** et je suis actuellement en **BUT 3 Informatique**, parcours **Développement Web et Mobile**, à l'[IUT Nancy-Charlemagne](https://iut-charlemagne.univ-lorraine.fr/).
+Passionné d'informatique depuis le lycée, j'ai d’abord entamé une **Licence Informatique** à l'Université de Paris. Pour des raisons économiques, j'ai interrompu ma deuxième année et travaillé un an avant de recommencer mes études. Fraîchement diplômé d'un **BTS SIO (option SLAM)** — obtenu avec mention (moyenne : 15) — j'ai ensuite intégré le BUT Informatique, une formation qui me correspondait mieux qu'une licence 3 traditionnelle car la formation est  très centrée sur des **projets concrets**.
 
-Passionné d'informatique depuis le lycée, mon intérêt pour la programmation m'a conduit à entreprendre des études approfondies dans ce domaine. Fraîchement diplômé d'un **BTS SIO (option SLAM)** obtenu avec mention (moyenne de 15), j'ai choisi de consolider mes compétences en poursuivant en BUT Informatique, une formation axée sur la réalisation d'applications à travers des **Situations d'Apprentissage et d'Évaluation (SAÉ)** et des **projets tutorés**.
-
-Depuis maintenant **2 ans**, j'évolue en tant qu'alternant au sein de l'équipe **Leasa** chez **Equasens**. Mon rôle principal est de participer à la migration de plusieurs écrans et composants AngularJS vers Angular moderne, tout en apportant des améliorations fonctionnelles aux outils utilisés par l'entreprise.
+Depuis maintenant **deux ans**, j’évolue en alternance au sein de l’équipe **Leasa** chez **Equasens**. Mon rôle consiste principalement à migrer des écrans et composants d’**AngularJS** vers **Angular 2+**, tout en enrichissant les fonctionnalités de l’application selon les besoins métier.
 
 ---
 
 ## Mon parcours
 
-- **BTS SIO (option SLAM)** : obtenu à l'école IPSSI de Marne-la-Vallée.
-- **BUT 3 Informatique** : parcours Développement Web et Mobile, avec spécialisation dans la conception et l'optimisation d'applications.
+- **Licence Informatique (Université de Paris)** : années L1 et L2, interrompues  
+- **BTS SIO (option SLAM)** : IPSSI Marne-la-Vallée, obtenu avec mention (15/20)  
+- **BUT Informatique (3ᵉ année)** : IUT Nancy-Charlemagne, parcours Développement Web et Mobile  
 
-Mon parcours académique est volontairement orienté vers la pratique et l'alternance, afin d'acquérir une expérience solide dans des environnements professionnels.
+Mon cursus privilégie la pratique et l’alternance pour développer une expertise solide en contexte professionnel.
 
 ---
 
 ## Mon objectif professionnel
 
-Mon ambition est de devenir **développeur FullStack**. J'apprécie particulièrement le défi de travailler sur des projets de grande envergure, nécessitant une compréhension approfondie des architectures web, ainsi que la résolution de problèmes complexes en backend et frontend.
+Mon ambition est de devenir **développeur FullStack**. J’apprécie relever des défis techniques sur des projets d’envergure, et résoudre des problématiques complexes tant en front-end qu’en back-end.
 
-L'alternance au sein d'Equasens me permet de confronter mes compétences aux réalités du monde professionnel, en répondant aux besoins métier tout en respectant les contraintes techniques. Cette expérience renforce également mon envie de continuer à apprendre et à évoluer dans un contexte d'apprentissage par projet.
+L’alternance chez Equasens me confronte quotidiennement aux contraintes métier et aux bonnes pratiques d’entreprise, ce qui renforce ma volonté d’évoluer dans un environnement de projets concrets et collaboratifs.
 
 ---
 
 ## Ce qui me passionne
 
-En dehors de mes études et du travail, je suis animé par plusieurs centres d'intérêt :
+En dehors de mes études et de mon travail, je cultive plusieurs centres d’intérêt :
 
-- **La lecture** : je m'intéresse aussi bien aux ouvrages philosophiques, tels que *Pensées pour moi-même* de Marc Aurèle, qu'à la littérature classique et de science-fiction. Parmi les romans qui m'ont marqué figurent *Dune* de Herbert, *Neuromancien* de William Gibson et *Les Nuits Blanches* de Dostoïevski.
-- **Le volley-ball** : sport que je pratique activement avec l'équipe universitaire de Nancy Centre.
-- **La course à pied** : discipline dans laquelle j'ai réalisé un record personnel de **1h45** au semi-marathon.
+- **La lecture** : aussi bien des essais philosophiques, comme *Pensées pour moi-même* de Marc Aurèle, que des romans de science-fiction et classiques. Parmi mes préférés : *Dune* (Frank Herbert), *Neuromancien* (William Gibson) et *Les Nuits blanches* (Fiodor Dostoïevski).  
+- **Le volley-ball** : pratiqué au sein de l’équipe universitaire de Nancy Centre.  
+- **La course à pied** : discipline que je pratique régulièrement et pour laquelle j’ai un record personnel de **1 h 45** au semi-marathon.  
 
 ---
 
-Je vous souhaite une excellente lecture de ce rapport, en espérant qu'il sera aussi intéressant à parcourir qu'il l'a été pour moi à réaliser.
+Je vous souhaite une excellente lecture de ce rapport, en espérant qu’il soit aussi stimulé à parcourir qu’il me l’a été à réaliser.  
