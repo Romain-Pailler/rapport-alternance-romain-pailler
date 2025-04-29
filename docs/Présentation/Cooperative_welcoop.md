@@ -18,13 +18,14 @@ Elle met l'accent sur l'**innovation en e-santé**, notamment à travers l'**int
 ## Une ambition européenne
 
 La Coopérative Welcoop ambitionne de devenir la **première plateforme européenne de santé**, en centralisant et coordonnant les **données de santé des patients** entre tous les professionnels concernés, garantissant ainsi un **suivi optimisé et sécurisé**.  
-Sa filiale [**Equasens**](./Equipe.md)[^2] est agréée **Hébergeur de Données de Santé (HDS)**, assurant la sécurisation des informations patients.
+Sa filiale [**Equasens**](./Equasens.md)[^2] est agréée **Hébergeur de Données de Santé (HDS)**, assurant la sécurisation des informations patients.
 
 ## Une mission au service des patients
 
 Les membres de La Coopérative Welcoop, qu'ils soient **coopérateurs** ou **collaborateurs**, sont animés par une ambition commune :  
-✅ **Assurer la santé, le confort et le bien-être des patients**  
-✅ **Renforcer l'efficience du système de santé**  
+
+- **Assurer la santé, le confort et le bien-être des patients**  
+- **Renforcer l'efficience du système de santé**  
 
 Cette mission est portée par des valeurs essentielles :  
 

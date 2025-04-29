@@ -9,9 +9,9 @@ Dans le cadre de mon alternance au sein de Nanceo, j'ai été recruté principal
 
 Cette partie sera donc séparée en trois grandes catégories :
 
-- **1. Les nouvelles fonctionnalités**
-- **2. Les corrections**
-- **3. L'analyse fonctionnelle**
+- **Les nouvelles fonctionnalités**
+- **Les corrections**
+- **L'analyse fonctionnelle**
 
 ---
 

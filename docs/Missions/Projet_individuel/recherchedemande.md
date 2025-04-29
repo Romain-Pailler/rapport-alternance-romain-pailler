@@ -7,7 +7,7 @@ tags:
 ---
 # Migration de l'écran de recherche de demandes
 
-## Introduction
+## Contexte
 
 Presenter l'existant que font les utilisateurs sur la page, pourquoi on fait ça ? Comment s'y prendre ?
 
