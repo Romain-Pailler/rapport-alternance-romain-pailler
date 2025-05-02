@@ -72,4 +72,3 @@ La navigation au sein du site vous permettra d'explorer en détail chacune des p
 [^5]: Migration technique de la base AngularJS vers Angular 2+.
 [^6]: Utilisateurs finaux, c’est-à-dire les personnes utilisant directement l’application (ex. gestionnaires, conseillers, etc.).
 [^7]: Voir aussi [Méthodologie Agile](./Présentation/Methodologie_Agile.md).
-
