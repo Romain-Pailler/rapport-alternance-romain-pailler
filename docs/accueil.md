@@ -65,10 +65,10 @@ La navigation au sein du site vous permettra d'explorer en détail chacune des p
 
 ---
 
-[^1]: Voir aussi [Equasens](./Présentation/Equasens.md) et [La Coopérative Welcoop](./Présentation/Cooperative_welcoop.md).
-[^2]: Voir aussi [Leasa](./Présentation/Leasa.md).
+[^1]: Voir aussi [Equasens](./presentation/Equasens) et [La Coopérative Welcoop](./presentation/Cooperative_welcoop).
+[^2]: Voir aussi [Leasa](./presentation/Leasa).
 [^3]: Corrections apportées à l'application, principalement des bugs ou anomalies identifiées.
 [^4]: Nouvelles fonctionnalités implémentées dans le cadre de l’évolution de l’application.
 [^5]: Migration technique de la base AngularJS vers Angular 2+.
 [^6]: Utilisateurs finaux, c’est-à-dire les personnes utilisant directement l’application (ex. gestionnaires, conseillers, etc.).
-[^7]: Voir aussi [Méthodologie Agile](./Présentation/Methodologie_Agile.md).
+[^7]: Voir aussi [Méthodologie Agile](./presentation/Methodologie_Agile).

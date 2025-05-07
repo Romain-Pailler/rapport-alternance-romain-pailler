@@ -15,9 +15,9 @@ Cette partie sera donc séparée en trois grandes catégories :
 
 ---
 
-# Migration d'AngularJS vers Angular (2+) : enjeux et importance
+## Migration d'AngularJS vers Angular (2+) : enjeux et importance
 
-## AngularJS : une technologie obsolète
+### AngularJS : une technologie obsolète
 
 AngularJS[^1] a été l’un des premiers *frameworks*[^2] front-end très populaires pour créer des applications web dynamiques (des **Single Page Applications (SPA)**[^3]). Cependant, ce framework lancé en 2010 est désormais considéré comme obsolète. Google, son éditeur, a annoncé la fin du support officiel d’AngularJS fin 2021, ce qui signifie l’absence de mises à jour ni de correctifs de sécurité depuis janvier 2022.
 
@@ -25,7 +25,7 @@ De son côté, **Angular**[^4] (souvent appelé Angular 2+ pour les versions ult
 
 Contrairement à AngularJS, Angular est régulièrement mis à jour (nouvelles versions stables tous les six mois environ) et bénéficie d’un support actif de la part de Google et de sa communauté.
 
-## Dette technique et risques liés à AngularJS
+### Dette technique et risques liés à AngularJS
 
 Continuer d’utiliser AngularJS aujourd’hui équivaut à accumuler de la **dette technique**[^7]. Ce concept désigne le coût futur que représente le maintien de solutions technologiques dépassées ou de raccourcis de développement pris par le passé. Plus le temps passe sans migrer, plus l'impact de cette dette augmente.
 
@@ -34,10 +34,10 @@ Les principaux risques associés au maintien d'AngularJS sont :
 - **Sécurité** : absence de correctifs de sécurité critiques.
 - **Maintenance difficile** : rareté des développeurs AngularJS et bugs connus non corrigés.
 - **Compatibilité et pérennité** : risques d'incompatibilité avec les évolutions web modernes.
- 
+
 ![Illustration de la dette technique et de la nécessité de migration](dette_technique_migration.png)
 
-## Avantages de migrer vers Angular (2+)
+### Avantages de migrer vers Angular (2+)
 
 Migrer une application AngularJS vers Angular moderne offre plusieurs bénéfices majeurs :
 
@@ -47,7 +47,7 @@ Migrer une application AngularJS vers Angular moderne offre plusieurs bénéfice
 - **Support et communauté** : accès à des ressources mises à jour régulièrement.
 - **Réduction de la dette technique** : meilleure qualité du code et préparation des évolutions futures.
 
-## Conclusion
+### Conclusion
 
 La migration d’AngularJS vers Angular 2+ est indispensable pour garantir la **sécurité**, la **pérennité** et la **performance** des applications web modernes. Mon rôle durant l'alternance a été d’apporter une contribution technique essentielle en réalisant cette migration, tout en respectant les contraintes métier et techniques du projet Leasa.
 

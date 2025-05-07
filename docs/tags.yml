@@ -53,3 +53,8 @@ Angular:
   label: Angular
   permalink: /angular
   description: Tag pour Angular
+
+Bug:
+  label: Bug
+  permalink: /bug
+  description: Tag pour les bugs
