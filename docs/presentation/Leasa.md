@@ -1,49 +1,32 @@
 ---
-sidebar_label: Leasa
-sidebar_position: "4"
+sidebar_label: "Leasa"
+sidebar_position: 4
+tags:
+  - Présentation
 ---
 
-# Présentation technique du projet
+# Leasa
 
-## Contexte du projet
+## Contexte de développement
 
-Leasa est une application web et mobile développée pour faciliter la mise en place de financements auprès des clients d'**Equasens** ou d'autres entreprises partenaires. Elle vise à simplifier et digitaliser le dépôt, le traitement et le suivi des demandes de financement.
+Leasa est une application web et mobile dédiée à la gestion des demandes de financement de biens. Elle a été conçue pour répondre aux besoins spécifiques des partenaires de Nanceo, principalement dans le secteur médical et paramédical.
 
-## Type de service et contexte métier
+Développée **from scratch**, l’application a été pensée dès l’origine comme une solution modulaire, interconnectée, et accessible depuis différents supports (ordinateur, tablette, smartphone).
 
-Leasa s’inscrit dans un contexte métier lié aux services de financement, principalement dans le domaine de la santé. Elle est utilisée par :
+## Architecture et fonctionnalités
 
-- **Les commerciaux**, pour déposer des demandes de financement,
-- **Les administrateurs des ventes**, pour la gestion de ces demandes,
-- **Les clients finaux**, via une interface mobile simplifiée.
+L'application se compose de trois environnements fonctionnels principaux :
 
-L'application est composée de **trois interfaces distinctes** :
+- **Le Front Office** : destiné aux commerciaux pour la création et le dépôt des demandes de financement,
+- **Le Back Office** : dédié aux administrateurs et gestionnaires pour le suivi et la validation des dossiers,
+- **L’Application Mobile** : accessible aux clients finaux pour consulter ou compléter leurs dossiers.
 
-- **Le front office** (application web) : utilisé principalement par les commerciaux pour le dépôt des demandes de financement.
-- **Le back office** (application web) : réservé aux administrateurs des ventes pour la gestion des dossiers.
-- **L'application mobile** (iOS et Android) : reprend la logique du front office dans une version simplifiée.
+Leasa centralise l’ensemble des informations relatives aux demandes (identité du client, nature du matériel, modalités de financement) et les transmet automatiquement aux organismes partenaires, via un système de web-services.
 
-## Accéder à l'application
+## Objectifs et bénéfices
 
-- **Front office** :  
-  - [leasa.nanceo.fr](https://leasa.nanceo.fr)  
+L’objectif principal de Leasa est de **réduire les délais de traitement** tout en **fiabilisant les échanges** entre les différentes parties prenantes. En automatisant les étapes du cycle de financement, l’outil permet un gain de temps significatif, notamment lors de la constitution de dossier et de la validation des accords de financement.
 
-- **Back office** :  
-  - [leasa.nanceo.fr/back](https://leasa.nanceo.fr/back)
+Avec une réponse obtenue dans la majorité des cas en moins de 4 minutes, Leasa se positionne comme un outil performant et structurant pour les équipes commerciales et administratives.
 
-- **Application mobile** :  
-  - [Android (Play Store)](https://play.google.com/store/apps/details?id=com.nanceo.leasa)  
-  - [iOS (App Store)](https://itunes.apple.com/fr/app/leasa-by-nanceo/id1192222008)
-
-## Existant et contraintes
-
-L’application a été développée **from scratch** (à partir de zéro), sans reprise d’un existant technique.
-
-
-## Architecture générale 
-
-![alt text](architecture_leasa.png)
-
-Les commerciaux saisissent des demandes de financement décrivant l'objet du financement (matériel, quantité, montant, durée du financement, périodicité...), la demande est alors envoyée via web-service aux organismes financiers susceptibles de financer la demande.
-
-En fonction de la réponse des organismes (toujours via web-service et de manière automatique), le dossier est constitué et finalisé (écritures comptables, récupération des factures d'achat, génération de la facture de vente...).
+---

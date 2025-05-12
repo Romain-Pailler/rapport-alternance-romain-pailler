@@ -1,66 +1,31 @@
 ---
-sidebar_label: Nanceo
-sidebar_position: "3"
+sidebar_label: "Nanceo"
+sidebar_position: 3
+tags:
+  - Présentation
 ---
+
 # Nanceo
 
-**Nanceo** est une filiale du groupe Equasens qui constitue à elle seule la division **Fintech** de **Pharmagest**. Créée en **2015**, elle est spécialisée dans la mise en place de **solutions de financement de biens en location** pour le secteur tertiaire.
+## Présentation de la structure
 
-## Une solution de financement innovante
+Créée en 2015, Nanceo est une filiale du groupe Equasens. Elle constitue la branche Fintech du groupe et intervient principalement dans la mise en œuvre de solutions de financement locatif à destination des professionnels du secteur tertiaire, notamment dans le domaine de la santé.
 
-Afin de rendre le processus de financement plus **simple** et **autonome**, Nanceo a développé **Leasa**, une passerelle informatique **full web** également disponible sous forme d'application mobile.  
-Cette solution permet :
+En complément de ses activités de conseil et de financement, Nanceo s’appuie sur une solution applicative développée en interne : **Leasa**.
 
-- Une **gestion automatique** des processus de financement des ventes.
-- Un **accès rapide** aux partenaires financiers du marché.
-- Une **mise en relation optimisée** entre clients et organismes financiers.
+## Missions principales
 
-Grâce à **Leasa**, les entreprises peuvent financer leurs projets et leurs biens plus **rapidement** et **efficacement**.
+L’activité de Nanceo repose sur deux grands volets :
 
-## Les activités principales de Nanceo
+- La **vente** et la **gestion** de contrats de financement via l’outil Leasa,
+- Le **développement** et la **maintenance** de l’application, en lien étroit avec les utilisateurs et partenaires financiers.
 
-Nanceo repose sur **deux activités métier principales** :
+Le support applicatif, la supervision technique et les évolutions fonctionnelles sont assurés par deux équipes distinctes, composées de développeurs, testeurs et analystes.
 
-### 1️⃣ Vente et gestion de l'application **Leasa**
+## Enjeux métier
 
-- Une **équipe commerciale** dédiée à l'acquisition de nouveaux clients et bailleurs.
-- Une **gestion des dossiers de financement**, notamment pour les parties non automatisables.
+Le financement par leasing ou location avec option d’achat (LOA) répond à un besoin croissant de flexibilité budgétaire pour les professionnels. Nanceo se positionne en facilitateur, en accélérant le traitement des demandes via un système automatisé et interconnecté avec les organismes de financement.
 
-### 2️⃣ Développement et maintenance de l'application
+Cette approche permet de réduire les délais de validation, tout en garantissant un suivi rigoureux et conforme aux obligations réglementaires.
 
-- Deux **équipes d’ingénieurs** (développeurs, testeurs, analystes fonctionnels).
-- Maintenance et évolution de l'application **Leasa**.
-- Support assuré en grande partie par **Pharmagest** pour le compte de Nanceo.
-
-## Leasa : une révolution dans le financement
-
-De nombreuses entreprises, en particulier les **jeunes structures**, rencontrent des difficultés pour financer leurs équipements. Le **leasing** (ou **LOA – Location avec Option d’Achat**) est une solution qui permet de **lisser les coûts** et de bénéficier d'une plus grande flexibilité financière.
-
-### 🔹 Avantages du leasing :
-
-✔️ Lissage de l'effort financier  
-✔️ Écritures comptables simplifiées  
-✔️ Échéanciers clairs et lisibles  
-
-Cependant, cette méthode peut être **lente** et **administrativement complexe**. Trouver une banque, monter un dossier, valider le financement, recommencer en cas de refus… toutes ces étapes sont **longues et fastidieuses**.
-
-💡 **Leasa by Nanceo** répond à ce problème en **automatisant** l’ensemble des tâches administratives :
-
-- Saisie unique de la demande de financement.
-- Dialogue instantané avec **des dizaines de bailleurs**.
-- Réponse rapide : **moins de 4 minutes** pour la majorité des demandes.
-
-### 🛠️ Fonctionnalités de Leasa
-
-- **Front-end** : interface utilisée par les clients pour soumettre leurs demandes.
-- **Back-end** : interface dédiée aux gestionnaires de portefeuille de Nanceo, permettant de suivre l’avancement des demandes et de traiter les cas nécessitant une intervention humaine.
-
-Grâce à **Leasa**, Nanceo simplifie et accélère le **financement des entreprises**, renforçant ainsi son rôle clé au sein du groupe **Equasens**[^1].
-
-Nanceo
-Les activités de la division Fintech de Pharmagest sont regroupées dans la filiale Nanceo. A l'origine, celle-ci a été créée afin de répondre au besoin de faire financer la location de matériel aux clients de Pharmagest.
-
-Membre de l’association France FinTech, Nanceo met en place des solutions de location de biens pour des entreprises du secteur tertiaire. Elle a lancé l’application Leasa qui permet de faciliter et d'accélérer le process de demande de financement. La partie technique de l’application est assurée par l’équipe R&D Fintech de Pharmagest.
-
-Pharmagest commercialise également son application Leasa sous marque blanche (d’autres entreprises achètent le logiciel pour leurs propres besoins et y applique leurs chartes graphiques).
-[^1]: Voir aussi [Equasens](./Equasens.md) et [La Coopérative Welcoop](./Cooperative_welcoop.md).
+---

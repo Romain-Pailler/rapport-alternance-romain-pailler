@@ -1,39 +1,32 @@
 ---
-sidebar_label: Coopérative Welcoop
-sidebar_position: "2"
-tags: 
-    - Presentation
+sidebar_label: "La Coopérative Welcoop"
+sidebar_position: 2
+tags:
+  - Présentation
 ---
-# Présentation Entreprise
 
-## La Coopérative Welcoop
+# La Coopérative Welcoop
 
-La **Coopérative Welcoop**[^1] est une coopérative de pharmaciens fondée en **1935**, dédiée à l'accompagnement des pharmaciens dans leur pratique quotidienne et leurs nouvelles missions envers les patients. Elle compte aujourd'hui **4 000 pharmaciens-sociétaires** et plus de **2 000 collaborateurs**, avec un chiffre d'affaires de **402 millions d'euros en 2023**.
+## Présentation générale
 
-## Un laboratoire d'idées et de solutions
+La Coopérative Welcoop est une société coopérative fondée en 1935. Elle rassemble aujourd’hui plus de 4 000 pharmaciens-sociétaires et emploie près de 2 000 collaborateurs. Elle agit en soutien aux professionnels de santé, notamment les pharmaciens d’officine, dans leur mission de proximité et de suivi auprès des patients.
 
-En tant que véritable **laboratoire d'idées, de services et de solutions**, La Coopérative Welcoop couvre l'ensemble des besoins des professionnels et établissements de santé, plaçant le **patient au cœur de son action**.  
-Elle met l'accent sur l'**innovation en e-santé**, notamment à travers l'**intelligence artificielle** et la **sécurisation des données patients**, afin de connecter les professionnels de santé et d'optimiser les suivis médicaux.
+Son siège est basé à Nancy, en région Grand Est. En 2023, la coopérative a réalisé un chiffre d’affaires de 402 millions d’euros, témoignant de son poids économique et de son importance dans le secteur de la santé.
 
-## Une ambition européenne
+## Objectifs et missions
 
-La Coopérative Welcoop ambitionne de devenir la **première plateforme européenne de santé**, en centralisant et coordonnant les **données de santé des patients** entre tous les professionnels concernés, garantissant ainsi un **suivi optimisé et sécurisé**.  
-Sa filiale [**Equasens**](./Equasens.md)[^2] est agréée **Hébergeur de Données de Santé (HDS)**, assurant la sécurisation des informations patients.
+La Coopérative Welcoop s’est fixée pour mission d’améliorer l’efficience du système de santé en accompagnant la transformation des métiers de la santé. Elle se positionne aujourd’hui comme un acteur central de l’innovation en e-santé, en particulier dans les domaines suivants :
 
-## Une mission au service des patients
+- Sécurisation et hébergement des données de santé,
+- Déploiement de solutions logicielles pour les professionnels,
+- Interconnexion entre les acteurs de la chaîne de soins.
 
-Les membres de La Coopérative Welcoop, qu'ils soient **coopérateurs** ou **collaborateurs**, sont animés par une ambition commune :  
+Elle repose sur des valeurs de **proximité**, **d’expertise**, **d’anticipation** et **d’optimisme**, tout en conservant une forte dimension coopérative dans sa gouvernance et son développement stratégique.
 
-- **Assurer la santé, le confort et le bien-être des patients**  
-- **Renforcer l'efficience du système de santé**  
+## Vision européenne
 
-Cette mission est portée par des valeurs essentielles :  
+Ambitionnant de devenir la première plateforme de santé à l’échelle européenne, La Coopérative Welcoop multiplie les initiatives visant à fédérer les données patients de manière sécurisée, dans le respect du cadre réglementaire. Elle entend contribuer activement à l’harmonisation des systèmes d’information de santé entre les pays membres de l’Union européenne.
 
-- **Expertise**  
-- **Proximité**  
-- **Anticipation**  
-- **Optimisme**  
+Pour mener à bien cette ambition, elle s’appuie notamment sur ses filiales spécialisées, dont Equasens, en charge des développements technologiques.
 
-___
-[^1]: [La Coopérative Welcoop](https://www.lacooperativewelcoop.com/)
-[^2]: [Equasens](https://www.equasens.com/) est une entreprise spécialisée dans les technologies de santé, offrant des solutions numériques pour améliorer la coordination des soins
+---
