@@ -7,9 +7,9 @@ sidebar_position: 1
 
 ## Romain Pailler – Alternant développeur web
 
-Je m'appelle **Romain Pailler**, j'ai **24 ans** et je suis actuellement en **3ᵉ année de BUT Informatique**, spécialité **Développement Web et Mobile**, à l'[IUT Nancy-Charlemagne](https://iut-charlemagne.univ-lorraine.fr/).
+Je m'appelle **Romain Pailler**, j'ai **24 ans** et je suis actuellement en **3ᵉ année de BUT Informatique**, spécialité **Développement Web et Mobile**, à l'IUT Nancy-Charlemagne.
 
-Passionné d'informatique depuis le lycée, j'ai d’abord entamé une **Licence Informatique** à l'Université de Paris. Pour des raisons économiques, j'ai interrompu ma deuxième année et travaillé un an avant de recommencer mes études. Fraîchement diplômé d'un **BTS SIO (option SLAM)** — obtenu avec mention (moyenne : 15) — j'ai ensuite intégré le BUT Informatique, une formation qui me correspondait mieux qu'une licence 3 traditionnelle car la formation est  très centrée sur des **projets concrets**.
+Passionné d'informatique depuis le lycée, j'ai d’abord entamé une **Licence Informatique** à l'Université de Paris. Pour des raisons économiques, j'ai interrompu ma deuxième année et travaillé un an avant de recommencer mes études. Fraîchement diplômé d'un **BTS SIO (option SLAM)** en 2024 — obtenu avec mention (moyenne : 15) — j'ai ensuite intégré le BUT Informatique, une formation qui me correspondait mieux qu'une licence 3 traditionnelle car la formation est très centrée sur des **projets concrets**.
 
 Depuis maintenant **deux ans**, j’évolue en alternance au sein de l’équipe **Leasa** chez **Equasens**. Mon rôle consiste principalement à migrer des écrans et composants d’**AngularJS** vers **Angular 2+**, tout en enrichissant les fonctionnalités de l’application selon les besoins métier.
 
@@ -39,7 +39,7 @@ En dehors de mes études et de mon travail, je cultive plusieurs centres d’int
 
 - **La lecture** : aussi bien des essais philosophiques, comme *Pensées pour moi-même* de Marc Aurèle, que des romans de science-fiction et classiques. Parmi mes préférés : *Dune* (Frank Herbert), *Neuromancien* (William Gibson) et *Les Nuits blanches* (Fiodor Dostoïevski).  
 - **Le volley-ball** : pratiqué au sein de l’équipe universitaire de Nancy Centre.  
-- **La course à pied** : discipline que je pratique régulièrement et pour laquelle j’ai un record personnel de **1 h 45** au semi-marathon.  
+- **La course à pied** : discipline que je pratique régulièrement.
 
 ---
 
