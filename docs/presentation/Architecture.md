@@ -7,14 +7,4 @@ tags:
 
 # Architecture de l'application
 
-## Le front office
-
-## Le back office
-
-## Le rest
-
-## Le rest API
-
-## Le compose
-
-## Le compta
+![Architecture de l'app](archi.png)
