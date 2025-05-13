@@ -1,6 +1,6 @@
 ---
 sidebar_label: Architecture Technique
-sidebar_position: "5"
+sidebar_position: 7
 tags: 
     - Presentation
 ---
@@ -9,13 +9,12 @@ tags:
 
 ## Le front office
 
-## Le back office 
+## Le back office
 
-## Le rest 
+## Le rest
 
-## Le rest API 
+## Le rest API
 
-## Le compose 
+## Le compose
 
 ## Le compta
-

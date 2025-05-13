@@ -119,7 +119,7 @@ const config = {
             items: [
               {
                 label: 'Page Recherche de demande',
-                to: '/docs/category/projets-individuels' 
+                to: '/docs/missions/Projet_individuel/recherchedemande' 
               },
               {
                 label: 'Discord',

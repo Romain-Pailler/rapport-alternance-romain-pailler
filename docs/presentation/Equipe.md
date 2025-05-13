@@ -2,7 +2,7 @@
 id: Equipe
 title: L'équipe projet
 sidebar_label: L'équipe
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # L'équipe du projet Leasa
