@@ -9,7 +9,17 @@ tags:
 
 ## Contexte
 
-Presenter l'existant que font les utilisateurs sur la page, pourquoi on fait ça ? Comment s'y prendre ?
+L’écran de recherche de demandes est un **outil central pour les utilisateurs** de l’application Leasa, en particulier les équipes **ADV back-office** et **commerciaux**. Il leur permet d’effectuer des **recherches précises de dossiers**, mais également de générer des **exports Excel** à des fins de reporting.
+
+Cependant, cette page présente aujourd’hui plusieurs **limites importantes** :
+
+- Elle contient un **nombre important de filtres**, parfois redondants ou peu lisibles.
+- Son **ergonomie** est perfectible, rendant la navigation peu intuitive.
+- Elle est toujours **développée en AngularJS**, ce qui freine les évolutions techniques et son intégration avec les nouveaux composants du projet.
+
+👉 Une **migration vers Angular 2+** est donc indispensable pour répondre aux besoins actuels tout en assurant la maintenabilité future. Cette refonte s’inscrit dans le chantier global de **modernisation de l’interface Leasa**.
+
+![alt text](image.png)
 
 ## Étapes
 

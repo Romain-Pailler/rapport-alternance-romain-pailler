@@ -5,7 +5,7 @@ tags:
   - Déploiement
 ---
 
-# Déploiement de la version 1.142.1 en environnement de préproduction
+# Déploiement d'une version sur un environnement de production
 
 ## Contexte
 
@@ -65,3 +65,4 @@ Enfin, j’ai vérifié que :
 - Aucun microservice déployé ne présentait d’anomalie apparente.
 
 ![alt text](image-5.png)
+![alt text](image-6.png)
