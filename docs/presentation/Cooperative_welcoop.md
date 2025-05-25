@@ -9,9 +9,9 @@ tags:
 
 ## Présentation générale
 
-La Coopérative Welcoop est une société coopérative fondée en 1935. Elle rassemble aujourd’hui plus de 4 000 pharmaciens-sociétaires et emploie près de 2 000 collaborateurs. Elle agit en soutien aux professionnels de santé, notamment les pharmaciens d’officine, dans leur mission de proximité et de suivi auprès des patients.
+La Coopérative Welcoop est une société coopérative fondée en 1935. Elle rassemble aujourd’hui plus de 4 000 pharmaciens-sociétaires et emploie près de 2 000 collaborateurs. Elle agit en soutien aux professionnels de santé, notamment les pharmaciens, dans leur mission de proximité et de suivi auprès des patients.
 
-Son siège est basé à Nancy, en région Grand Est. En 2023, la coopérative a réalisé un chiffre d’affaires de 402 millions d’euros, témoignant de son poids économique et de son importance dans le secteur de la santé.
+Son siège est basé à Nancy. En 2023, la coopérative a réalisé un chiffre d’affaires de 402 millions d’euros, témoignant de son poids économique et de son importance dans le secteur de la santé.
 
 ## Objectifs et missions
 
@@ -25,8 +25,8 @@ Elle repose sur des valeurs de **proximité**, **d’expertise**, **d’anticipa
 
 ## Vision européenne
 
-Ambitionnant de devenir la première plateforme de santé à l’échelle européenne, La Coopérative Welcoop multiplie les initiatives visant à fédérer les données patients de manière sécurisée, dans le respect du cadre réglementaire. Elle entend contribuer activement à l’harmonisation des systèmes d’information de santé entre les pays membres de l’Union européenne.
+La coopérative à pour objectif de devenir la première plateforme de santé à l’échelle européenne, La Coopérative Welcoop multiplie les initiatives visant à fédérer les données patients de manière sécurisée, dans le respect de la législation. Elle entend contribuer activement à l’harmonisation des systèmes d’information de santé entre les pays membres de l’Union européenne.
 
-Pour mener à bien cette ambition, elle s’appuie notamment sur ses filiales spécialisées, dont Equasens, en charge des développements technologiques.
+Pour mener à bien cette ambition, elle s’appuie notamment sur ses filiales spécialisées, dont [Equasens](./Equasens), en charge des développements technologiques.
 
 ---
