@@ -1,8 +1,8 @@
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import Layout from '@theme/Layout';
+import clsx from 'clsx';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -23,7 +23,7 @@ function HomepageHeader() {
           <Link className="button button--primary button--lg" to="/docs/presentation/Equipe">
             👥 Présentation de l'équipe
           </Link>
-          <Link className="button button--primary button--lg" to="/docs/category/projets-individuels">
+          <Link className="button button--primary button--lg" to="/docs/Missions/Projet_individuel/recherchedemande">
             🔍 Recherche de demande
           </Link>
         </div>

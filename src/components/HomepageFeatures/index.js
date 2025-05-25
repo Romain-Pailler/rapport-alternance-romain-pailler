@@ -1,7 +1,7 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
+import Heading from '@theme/Heading';
+import clsx from 'clsx';
+import styles from './styles.module.css';
 
 const FeatureList = [
   {
@@ -10,7 +10,7 @@ const FeatureList = [
     url: '/docs/category/projets-individuels',
     description: (
       <>
-        A travers ce rapport, vous allez découvrir l'une de mes missions principales : la migration et l'amélioration de composants
+        A travers ce rapport, vous allez découvrir l'une de mes missions principales : la migration en angular 2+ et l'amélioration de composants
       </>
     ),
   },
@@ -30,7 +30,7 @@ const FeatureList = [
     url: '/blog',
     description: (
       <>
-        En plus des connaissances acquises en entreprise, de nombreux projets personnels m'ont permis d'explorer de nouvelles technologies, comme l'IA, et de développer de nouvelles compétences.
+        En plus des connaissances acquises en entreprise, de nombreux projets personnels m'ont permis d'explorer de nouvelles technologies, comme le framework Java Spring, et de développer de nouvelles compétences.
       </>
     ),
   },
