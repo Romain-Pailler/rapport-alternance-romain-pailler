@@ -1,5 +1,5 @@
 ---
-sidebar_label: Recherche de demande
+sidebar_label: Présentation
 sidebar_position: "2"
 tags: 
     - Migration
@@ -69,25 +69,8 @@ Une fois la maquette validée, un document de **spécifications fonctionnelles**
 - Les interactions prévues entre les différents composants.
 Ce document sert de référence commune pour les développeurs et les testeurs.
 
-### 6. Ateliers techniques avec les développeurs
+### 6. Listes des fonctionnalités développées 
 
-Enfin, des **ateliers techniques**[^ateliers] sont organisés avec l'équipe de développement pour :
+Après toutes ces étapes réalisées, j'ai pu enfin commencé à développer. Voici une liste chrnologique de mes développements : 
 
-- Étudier la faisabilité technique des éléments décrits.
-- Identifier les composants Angular existants pouvant être réutilisés.
-- Définir l'architecture technique adaptée (services, modèles, modules Angular).
-- Anticiper les éventuels défis techniques liés à la migration (ex. compatibilité avec l'API existante, gestion des formulaires complexes).
-
-Ce travail collaboratif garantit une migration fluide, respectueuse des attentes fonctionnelles tout en assurant la qualité du code livré.
-
-## Présentation du rest
-
-expliquer comment ça marche techniquement auj et dire ce que je vais modifier
-
-## Présentation Client
-
-angularJS et angular 2+ prés du double routing, migration et création de composants de recherche
-
-## Présentation de ML-UI
-
-Expliquer à quoi ça sert + ce que j'ai fait
+- L'affichage des résultats : Premier développement de la nouvelle page avec une fonctionnalité simpliste, un bouton pour rechercher toutes les demandes. Il m'a permis de mieux comprendre l'ensemble du code tant côté client que côté serveur.
