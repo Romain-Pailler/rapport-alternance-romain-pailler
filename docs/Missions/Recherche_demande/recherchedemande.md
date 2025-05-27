@@ -73,4 +73,4 @@ Ce document sert de référence commune pour les développeurs et les testeurs.
 
 Après toutes ces étapes réalisées, j'ai pu enfin commencé à développer. Voici une liste chrnologique de mes développements : 
 
-- L'affichage des résultats : Premier développement de la nouvelle page avec une fonctionnalité simpliste, un bouton pour rechercher toutes les demandes. Il m'a permis de mieux comprendre l'ensemble du code tant côté client que côté serveur.
+- [L'affichage des résultats](./Affichage_des_resultats/Cote-client.md) : Premier développement de la nouvelle page avec une fonctionnalité simpliste, un bouton pour rechercher toutes les demandes. Il m'a permis de mieux comprendre l'ensemble du code tant côté client que côté serveur.
