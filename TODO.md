@@ -14,10 +14,9 @@
 - Continuer la partie migration d'écrans (détaillé au maximum)
 - ajouter partie mise en production 
 
+reste à faire :
 
-reste à faire : 
-
-- partie back et rest pour le code du ticket et screen de l'écran 
-- nettoyer les docs qui ne servent pas 
-- modifier l'accueil 
+- partie back et rest pour le code du ticket et screen de l'écran
+- nettoyer les docs qui ne servent pas
+- modifier l'accueil
 - ajouter les features de recherche de demandes dans les nouvelles fonctionnalités et laisser la partie présentation de recherche de demandes dans la partie projets persos
