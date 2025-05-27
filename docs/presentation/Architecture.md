@@ -2,7 +2,7 @@
 sidebar_label: Architecture Technique
 sidebar_position: 7
 tags: 
-    - Presentation
+    - Présentation
 ---
 
 # Architecture de l'application

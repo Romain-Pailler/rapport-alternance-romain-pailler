@@ -1,32 +1,16 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-
 bailleur:
   label: Bailleur
   permalink: /Bailleur
   description: Bailleur désigne une banque
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
-
-
-Presentation:
+Présentation:
   label: Présentation
   permalink: /presentation
   description: Tag pour la présentation
 
-Features:
-  label: Features
-  permalink: /features
+Feature:
+  label: Feature
+  permalink: /feature
   description: Tag pour les features
 
 Template:
@@ -58,3 +42,68 @@ Bug:
   label: Bug
   permalink: /bug
   description: Tag pour les bugs
+
+Architecture:
+  label: Architecture
+  permalink: /architecture
+  description: Tag pour l'architecture web
+
+Microservices:
+  label: Microservices
+  permalink: /microservices
+  description: Tag pour les Microservices
+
+Comptabilité:
+  label: Comptabilité
+  permalink: /comptabilite
+  description: Tag pour la Comptabilité
+
+Déploiement:
+  label: Déploiement
+  permalink: /deploiement
+  description: Tag pour le déploiement
+
+Amélioration:
+  label: Amélioration
+  permalink: /amelioration
+  description: Tag pour l'amélioration de composant
+
+Java:
+  label: Java
+  permalink: /java
+  description: Tag pour le langage Java
+
+Pièces comptables:
+  label: Pièces comptables
+  permalink: /pieces_comptables
+  description: Tag pour les pièces comptables
+
+Monalisa-Compta:
+  label: Monalisa-compta
+  permalink: /monalisa-compta
+  description: Tag pour le microservice monalisa-compta
+
+CRE:
+  label: CRE
+  permalink: /cre
+  description: Tag pour les CRE
+
+Dashboard:
+  label: Dashboard
+  permalink: /dashboard
+  description: Tag pour les dashboards
+
+Leasa:
+  label: Leasa
+  permalink: /leasa
+  description: Tag pour Leasa
+
+Recherche:
+  label: Recherche
+  permalink: /recherche
+  description: Tag pour la recherche
+
+Migration Angular:
+ label: Migration angular
+ permalink: /migration-angular
+ description: Tag pour le microservice monalisa-compta
