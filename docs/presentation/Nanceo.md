@@ -9,7 +9,7 @@ tags:
 
 ## Présentation de la structure
 
-Créée en 2015, Nanceo est une filiale du groupe Equasens. Elle constitue la branche Fintech du groupe et intervient principalement dans la mise en œuvre de solutions de financement locatif à destination des professionnels du secteur tertiaire, notamment dans le domaine de la santé.
+Créée en 2015, Nanceo est une filiale du groupe Equasens. Elle constitue la branche Fintech du groupe et intervient principalement dans la mise en œuvre de solutions de financement locatif à destination des professionnels dans le domaine de la santé.
 
 En complément de ses activités de conseil et de financement, Nanceo s’appuie sur une solution applicative développée en interne : **[Leasa](./Leasa)**.
 
