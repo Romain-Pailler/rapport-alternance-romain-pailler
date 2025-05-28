@@ -14,9 +14,11 @@ Au sein de mon équipe, le développement de l’application Leasa repose sur un
 Chaque sprint débute par deux temps forts :
 
 - Une **rétrospective**, durant laquelle l'équipe revient sur le déroulement du sprint précédent. L’objectif est d’identifier les points positifs, les éventuels blocages rencontrés et de proposer des axes d’amélioration.
-- Une **revue de sprint**, qui permet de présenter à l’ensemble de l’équipe (et parfois aux parties prenantes) les livrables produits durant les trois semaines écoulées.
+- Une **revue de sprint**, qui permet de présenter à l’ensemble de l’équipe (et aussi au commercial Christophe PEREIRA) les livrables produits durant les trois semaines écoulées.
 
 L’ensemble du travail à réaliser est planifié dans un **tableau de sprint** accessible via l’outil **Jira**. Chaque ticket correspond à une tâche de développement, un correctif ou une amélioration, et est rattaché à une version précise de l’application.
+
+[![Image de Jira](Jira.png)](Jira.png)
 
 ## Gestion du code source
 
@@ -29,6 +31,8 @@ Le développement suit un processus de versioning rigoureux :
 
 Ce processus garantit la **qualité du code** et la **stabilité** des fonctionnalités livrées.
 
+[![jenkins](jenkins.png)](jenkins.png)
+
 ## Documentation
 
 L’outil **Confluence** est utilisé en parallèle pour centraliser la documentation. Il est structuré autour de plusieurs usages :
@@ -39,6 +43,8 @@ L’outil **Confluence** est utilisé en parallèle pour centraliser la document
 
 Confluence joue donc un rôle clé dans la **transmission de l’information** entre les membres de l’équipe, en favorisant la continuité et la clarté des échanges.
 
+[![confluence](confluence.png)](confluence.png)
+
 ---
 
-Cette organisation agile favorise un **rythme de travail soutenu mais maîtrisé**, une **collaboration fluide** au sein de l’équipe, et une **livraison continue** de valeur au fil des versions. Elle m’a permis de travailler dans un cadre structuré, tout en développant des réflexes essentiels dans la gestion de projet logiciel en entreprise.
+Cette organisation agile favorise une **collaboration fluide** au sein de l’équipe, et une **livraison continue** de valeur au fil des versions. Elle m’a permis de travailler dans un cadre structuré, tout en développant des réflexes essentiels dans la gestion de projet logiciel en entreprise.
