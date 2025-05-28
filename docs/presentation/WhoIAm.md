@@ -43,4 +43,4 @@ En dehors de mes études et de mon travail, je cultive plusieurs centres d’int
 
 ---
 
-Je vous souhaite une excellente lecture de ce rapport, en espérant qu’il soit aussi stimulé à parcourir qu’il me l’a été à réaliser.  
+Je vous souhaite une excellente lecture de ce rapport, en espérant qu’il soit aussi stimulant à parcourir qu’il me l’a été à le réaliser.  
