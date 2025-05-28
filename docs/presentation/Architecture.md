@@ -8,3 +8,5 @@ tags:
 # Architecture de l'application
 
 ![Architecture de l'app](archi.png)
+
+![3 couches rest](archi_rest.png)
