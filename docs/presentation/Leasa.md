@@ -25,7 +25,7 @@ Leasa centralise l’ensemble des informations relatives aux demandes (identité
 
 ## Objectifs et bénéfices
 
-L’objectif principal de Leasa est de **réduire les délais de traitement** tout en **fiabilisant les échanges** entre les différentes parties prenantes. En automatisant les étapes du cycle de financement, l’outil permet un gain de temps significatif, notamment lors de la constitution de dossier et de la validation des accords de financement.
+L’objectif principal de Leasa est de **réduire les délais de traitement** tout en **fiabilisant les échanges** entre les différentes parties prenantes (les banques, les apporteurs, les clients et les commerciaux). En automatisant les étapes du cycle de financement, l’outil permet un gain de temps significatif, notamment lors de la constitution de dossier et de la validation des accords de financement.
 
 Avec une réponse obtenue dans la majorité des cas en moins de 4 minutes, Leasa se positionne comme un outil performant et structurant pour les équipes commerciales et administratives.
 
