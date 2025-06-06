@@ -1,0 +1,8 @@
+{
+    "label": "Ajout du premier critère de recherche",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "Deuxième ticket de la migration de l'écran"
+    }
+  }

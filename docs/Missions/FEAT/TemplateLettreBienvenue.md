@@ -35,7 +35,7 @@ J'ai du créer un nouveau processus : explication des 3 couches de Leasa
 
 ### Le processus
 
-```js title="DemandeFactureProcessusImpl.java"
+```java title="DemandeFactureProcessusImpl.java"
 public List<Facture> getFacturesFiltreesLoyerSansAvoir(final Demande demande) {
     final List<Facture> factures = demande.getFactures().stream()
             .filter(f -> f.getDateComptabilisation() != null)
@@ -62,7 +62,7 @@ public List<Facture> getFacturesFiltreesLoyerSansAvoir(final Demande demande) {
 
 ### Le mailBuilder
 
-``` Java
+``` Java title="MailBuilder.java"
  public Mail getTemplateLettreBienvenue(final Long demandeId) {
         final Demande demande = demandeProcessus.load(demandeId);
         
@@ -105,4 +105,88 @@ public List<Facture> getFacturesFiltreesLoyerSansAvoir(final Demande demande) {
                 .setContenu(templateTools.generateFromTemplate("email/lettre-bienvenue/body.mustache", context))
                 .setSignature(templateToolI18nLoueurLocale.generateFromTemplate(EMAIL_FOOTER_TEMPLATE, data, demande.getApporteur().getLoueur()));
     }
+```
+
+
+``` properties 
+template.mail.lettre_bienvenue.sujet=Redevance de mise \u00E0 disposition - Contrat {{codeDemande}} - {{client.raisonSociale}} - Siren : {{client.premierNumeroIdentification}}
+template.mail.lettre_bienvenue.cher_client=Cher client,
+template.mail.lettre_bienvenue.remerciement_financement=Nous vous remercions de nous avoir confi\u00E9 le financement de la solution commercialis\u00E9e par notre partenaire {{apporteur.raisonSociale}} et esp\u00E9rons que vous \u00EAtes satisfait de nos services.
+template.mail.lettre_bienvenue.confirmation_contrat_echeances=Par la pr\u00E9sente, nous vous confirmons l\u2019entr\u00E9e en vigueur du contrat et vous informons que les \u00E9ch\u00E9ances seront pr\u00E9lev\u00E9es par {{bailleur.raisonSociale}} \u00E0 partir du {{dateDemarrage}}.
+template.mail.lettre_bienvenue.piece_jointe_date_prelevement=Au titre de notre prestation d\u2019accompagnement, nous vous prions de trouver en pi\u00e8ce jointe la facture de mise \u00E0 disposition de la solution \u00E0 la p\u00E9riode du {{dateDebutPrelevement}} au {{dateFinPrelevement}}.
+```
+
+``` mustache
+<p>
+    {{#i18n}}template.mail.lettre_bienvenue.cher_client{{/i18n}}<br/>
+</p>
+<p>
+    {{#i18n}}template.mail.lettre_bienvenue.remerciement_financement{{/i18n}}<br/>
+</p>
+<p>
+    {{#i18n}}template.mail.lettre_bienvenue.confirmation_contrat_echeances{{/i18n}}<br/>
+</p>
+<p>
+    {{#dateDebutPrelevementExists}}
+        {{#i18n}}template.mail.lettre_bienvenue.piece_jointe_date_prelevement{{/i18n}}
+    {{/dateDebutPrelevementExists}}
+    {{^dateDebutPrelevementExists}}
+        {{#i18n}}template.mail.lettre_bienvenue.piece_jointe{{/i18n}}
+    {{/dateDebutPrelevementExists}}
+    <br/>
+</p>
+<p>
+    {{#i18n}}template.mail.lettre_bienvenue.prelevement_prestation{{/i18n}}<br/>
+</p>
+<p>
+    {{#i18n}}template.mail.lettre_bienvenue.contacter_service_client{{/i18n}}<br/>
+</p>
+<ul>
+    <li>{{#i18n}}template.mail.lettre_bienvenue.contact_telephone{{/i18n}}</li>
+    <li>{{#i18n}}template.mail.lettre_bienvenue.contact_mail{{/i18n}}</li>
+</ul>
+<p>
+    {{#i18n}}template.mail.lettre_bienvenue.remerciement{{/i18n}}<br/>
+</p>
+```
+
+```Java title="demandefactureprocessus.java"
+public interface DemandeFactureProcessus {
+    /**
+     *Filtre les factures d'une demande par sous type LoyerFactureVente qui sont comptabilisées sans avoir reliée à elles
+     * @param demande
+     * @return
+     */
+    List<Facture> getFacturesFiltreesLoyerSansAvoir(Demande demande);
+}
+``` 
+
+``` Java title="DemandeFactureProcessusImpl.java"
+@Service
+public class DemandeFactureProcessusImpl implements DemandeFactureProcessus {
+    
+    @Override
+    public List<Facture> getFacturesFiltreesLoyerSansAvoir(final Demande demande) {
+        final List<Facture> factures = demande.getFactures().stream()
+                .filter(f -> f.getDateComptabilisation() != null)
+                .collect(Collectors.toList());
+        
+        final List<Facture> facturesLoyerAvoir = factures.stream()
+                .filter(f -> LOYER_AVOIR_VENTE.equals(f.getSousTypeFacture().getCode()))
+                .collect(Collectors.toList());
+        
+        final Set<String> numerosFactureAvoirOrigine = facturesLoyerAvoir.stream()
+                .map(Facture::getNumeroFactureOrigine)
+                .filter(Objects::nonNull)
+                .collect(Collectors.toSet());
+        
+        final List<Facture> facturesRestantes = factures.stream()
+                .filter(f -> !numerosFactureAvoirOrigine.contains(f.getNumeroFacture()))
+                .collect(Collectors.toList());
+        
+        return facturesRestantes.stream()
+                .filter(f -> LOYER_FACTURE_VENTE.equals(f.getSousTypeFacture().getCode()))
+                .collect(Collectors.toList());
+    }
+}
 ```
