@@ -1,22 +1,21 @@
 # A faire
 
-## pour la fin de la première semaine de mai
-
-- Présentation et moitié des FIXS : ok
-
-## Pour la fin de la deuxième semaine de mai (9 mai)
-
-- Finir les fixs : ok
-- ajouter les présentations des architectures du projet : ok
-
-## Pour la fin de la troisième semaine de mai (16 mai)
-
-- Continuer la partie migration d'écrans (détaillé au maximum)
-- ajouter partie mise en production 
-
-reste à faire :
-
-- partie back et rest pour le code du ticket et screen de l'écran
-- nettoyer les docs qui ne servent pas
-- modifier l'accueil
-- ajouter les features de recherche de demandes dans les nouvelles fonctionnalités et laisser la partie présentation de recherche de demandes dans la partie projets persos
+- [ ] revoir les footnotes dans la partie index.md de missions
+- [ ] ajouter une phrase d'accroche dans la partie 'les nouvelles fonctionnalités'
+- [ ] ajouter présentation des features (ce que c'est, ce que j'ai fait, s'inspirer de la présentation des fixs)
+- [ ] ajouter un peu plus dans la lettre de bienvenue
+- [ ] ajouter phrase d'accroche sur la partie correction
+- [ ] ajouter du code dans les fixs
+- [ ] ajouter phrase d'accroche sur la partie projets individuels 
+- [ ] expliquer le code pour le rest , rest-api et le back 
+- [ ] ajouter la partie bugs et expliquer les bugs que j'ai pu produire et comment les corriger 
+- [ ] ajout de la seconde feature (ajout d'un critère + queryParams)
+- [ ] ajout de la troisième feature (réinit)
+- [ ] ajout de la quatrième (afficher nombre résultats et afficher montant totalHt vente et achat // pas encore fait)
+- [ ] ajouter le fait que pendant un sprint j'ai été de release (rc,demo,beta,preprod,prod) avec screenshot
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
