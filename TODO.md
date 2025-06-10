@@ -1,8 +1,8 @@
 # A faire
 
-- [ ] revoir les footnotes dans la partie index.md de missions
+- [x] revoir les footnotes dans la partie index.md de missions
 - [ ] ajouter une phrase d'accroche dans la partie 'les nouvelles fonctionnalités'
-- [ ] ajouter présentation des features (ce que c'est, ce que j'ai fait, s'inspirer de la présentation des fixs)
+- [x] ajouter présentation des features (ce que c'est, ce que j'ai fait, s'inspirer de la présentation des fixs)
 - [ ] ajouter phrase d'accroche sur la partie correction
 - [ ] ajouter phrase d'accroche sur la partie projets individuels 
 - [ ] expliquer le code pour le rest , rest-api et le back

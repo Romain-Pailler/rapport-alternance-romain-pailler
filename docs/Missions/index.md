@@ -53,8 +53,6 @@ La migration d’AngularJS vers Angular 2+ est indispensable pour garantir la **
 
 ---
 
-## Notes de bas de page
-
 [^1]: **AngularJS** : Framework JavaScript front-end lancé par Google en 2010 (versions 1.x), basé sur le modèle MVC.
 [^2]: **Framework** : Cadre applicatif offrant des outils, composants et conventions pour faciliter le développement logiciel.
 [^3]: **SPA (Single Page Application)** : Application web monopage ne nécessitant pas de rechargements complets, pour une navigation fluide.
