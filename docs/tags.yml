@@ -104,6 +104,6 @@ Recherche:
   description: Tag pour la recherche
 
 Migration Angular:
- label: Migration angular
- permalink: /migration-angular
- description: Tag pour le microservice monalisa-compta
+  label: Migration angular
+  permalink: /migration-angular
+  description: Tag pour le microservice monalisa-compta
