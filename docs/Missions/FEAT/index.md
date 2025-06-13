@@ -1,5 +1,5 @@
 ---
-sidebar_label: Feat
+sidebar_label: Une Feature ?
 sidebar_position: "1"
 tags: 
     - Feature
