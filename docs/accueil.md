@@ -39,7 +39,7 @@ Cette alternance a été une étape significative dans mon parcours professionne
 
 ## Remerciements
 
-Je tiens tout d’abord à remercier Adam SOOGA et Jérôme TANBORINI pour m’avoir accueilli au sein de l'équipe. Je les remercie également pour m’avoir offert l’opportunité d’effectuer cette alternance au sein de Nanceo, ce qui m’a permis d’acquérir des compétences techniques solides et de mieux appréhender les réalités professionnelles du secteur informatique.
+Je tiens tout d’abord à remercier Adam SOOGA et Jérôme TAMBORINI pour m’avoir accueilli au sein de l'équipe. Je les remercie également pour m’avoir offert l’opportunité d’effectuer cette alternance au sein de Nanceo, ce qui m’a permis d’acquérir des compétences techniques solides et de mieux appréhender les réalités professionnelles du secteur informatique.
 
 J’adresse également mes remerciements à l’ensemble des collaborateurs d'Equasens et Nanceo pour leur accueil chaleureux, leur disponibilité, ainsi que leur soutien constant tout au long de cette année d’alternance. Leur patience et leur pédagogie ont été essentielles à mon apprentissage.
 

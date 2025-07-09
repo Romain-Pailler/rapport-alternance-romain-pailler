@@ -35,7 +35,7 @@ J'ai du créer un nouveau processus : explication des 3 couches de Leasa
 
 ### DemandeFactureProcessusImpl.java
 
-Dans cette classe, j’ai ajouté une nouvelle méthode métier getFacturesFiltreesLoyerSansAvoir. Celle-ci permet de filtrer les factures d’une demande afin de ne conserver que celles qui sont comptabilisées dans le système comptable (Monalisa-Compta) et qui ne possèdent pas d'avoir associé. En effet, lorsqu’une facture est associée à un avoir, elle ne doit pas être prise en compte dans le calcul, d’où la nécéssitéde cette fonction utilisé dans le mailBuilder.
+Dans cette classe, j’ai ajouté une nouvelle méthode métier getFacturesFiltreesLoyerSansAvoir. Celle-ci permet de filtrer les factures d’une demande afin de ne conserver que celles qui sont comptabilisées dans le système comptable (Monalisa-Compta) et qui ne possèdent pas d'avoir associé. En effet, lorsqu’une facture est associée à un avoir, elle ne doit pas être prise en compte dans le calcul, d’où la nécéssité de cette fonction utilisé dans le mailBuilder.
 
 ```Java title="IDemandeFactureProcessus.java"
 public interface DemandeFactureProcessus {

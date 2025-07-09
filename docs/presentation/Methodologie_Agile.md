@@ -14,7 +14,7 @@ Au sein de mon équipe, le développement de l’application Leasa repose sur un
 Chaque sprint débute par deux temps forts :
 
 - Une **rétrospective**, durant laquelle l'équipe revient sur le déroulement du sprint précédent. L’objectif est d’identifier les points positifs, les éventuels blocages rencontrés et de proposer des axes d’amélioration.
-- Une **revue de sprint**, qui permet de présenter à l’ensemble de l’équipe (et aussi au commercial Christophe PEREIRA) les livrables produits durant les trois semaines écoulées.
+- Une **revue de sprint**, qui permet de présenter à l’ensemble de l’équipe (et aussi au directeur commercial Christophe PEREIRA) les livrables produits durant les trois semaines écoulées.
 
 L’ensemble du travail à réaliser est planifié dans un **tableau de sprint** accessible via l’outil **Jira**. Chaque ticket correspond à une tâche de développement, un correctif ou une amélioration, et est rattaché à une version précise de l’application.
 

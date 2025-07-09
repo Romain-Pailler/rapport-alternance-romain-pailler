@@ -10,7 +10,7 @@
 - [ ] ajout de la troisième feature (réinit)
 
 - [x] ajouter un peu plus de code dans la lettre de bienvenue
-- [ ] expliquer maintenant le code du mail de la lettre de bienvenue
+- [x] expliquer maintenant le code du mail de la lettre de bienvenue
 - [ ] ajouter du code dans les fixs
 - [ ] ajouter la partie bugs et expliquer les bugs que j'ai pu produire et comment les corriger
 - [ ] ajouter le fait que pendant un sprint j'ai été de release (rc,demo,beta,preprod,prod) avec screenshot
