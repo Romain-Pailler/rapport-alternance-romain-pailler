@@ -29,7 +29,7 @@ Mon cursus privilégie la pratique et l’alternance pour développer une expert
 
 Mon ambition est de devenir **développeur FullStack**. J’apprécie relever des défis techniques sur des projets d’envergure, et résoudre des problématiques complexes tant en front-end qu’en back-end.
 
-L'alternance chez Equasens a renforcé ma volonté d'évoluer dans un environnement de projets concrets car je me confronte quotidiennement aux contraintes métiers et aux bonnex pratiques d'entreprise.
+L'alternance chez Equasens a renforcé ma volonté d'évoluer dans un environnement de projets concrets car je me confronte quotidiennement aux contraintes métiers et au bonne pratique d'entreprise.
 
 ---
 
@@ -37,9 +37,10 @@ L'alternance chez Equasens a renforcé ma volonté d'évoluer dans un environnem
 
 En dehors de mes études et de mon alterance, je cultive plusieurs centres d’intérêt :
 
-- **La lecture** : aussi bien de la philosophie, comme *Pensées pour moi-même* de Marc Aurèle ou bien *Le mythe de Sysyphe* d'Albert Camus, que des romans de science-fiction et classiques. Parmi mes préférés : *Dune* (Frank Herbert), *Neuromancien* (William Gibson) et *Les Nuits blanches* (Fiodor Dostoïevski).  
+- **La lecture** : aussi bien de la philosophie, que des romans de science-fiction et classiques. Parmi mes préférés : *Dune* (Frank Herbert), *Neuromancien* (William Gibson) et *Les Nuits blanches* (Fiodor Dostoïevski).  
 - **Le volley-ball** : pratiqué au sein de l’équipe universitaire de Nancy Centre.  
-- **La course à pied** : discipline que je pratique régulièrement.
+- **La course à pied** : marathon de Metz en octobre.
+- **La randonnée** : plusieurs randonnées dans les Alpes cet été.
 
 ---
 

@@ -19,6 +19,8 @@
 - [ ] ajouter tuteur 'juju'
 - [ ] retire la partie blog
 - [ ] mettre en annexe le md architecture technique au lieu de présentation
-- [ ]
-- [ ]
-- [ ]
+- [ ] ajouter un glossaire
+- [ ] retirer la partie vocab et doc
+- [ ] modifier Structure du rapport par 'tables des matières'
+- [ ] relire chaque partie
+- [ ] retirer des mots en gras dans la partie présentation
