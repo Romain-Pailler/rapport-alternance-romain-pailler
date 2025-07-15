@@ -16,9 +16,9 @@
 - [ ] ajouter le fait que pendant un sprint j'ai été de release (rc,demo,beta,preprod,prod) avec screenshot
 - [ ] ajout de la quatrième feature(afficher nombre résultats et afficher montant totalHt vente et achat // pas encore fait)
 
-- [ ]
-- [ ]
-- [ ]
+- [ ] ajouter tuteur 'juju'
+- [ ] retire la partie blog
+- [ ] mettre en annexe le md architecture technique au lieu de présentation
 - [ ]
 - [ ]
 - [ ]

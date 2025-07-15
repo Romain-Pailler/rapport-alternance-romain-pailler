@@ -107,3 +107,18 @@ Migration Angular:
   label: Migration angular
   permalink: /migration-angular
   description: Tag pour le microservice monalisa-compta
+
+REST:
+  label: Rest
+  permalink: /rest
+  description: Tag pour le rest
+  
+OpenAPI:
+  label: OpenAPI
+  permalink: /openAPI
+  description: Tag pour OpenAPI
+
+Spring:
+  label: Spring
+  permalink: /spring
+  description: Tag pour le framework Spring

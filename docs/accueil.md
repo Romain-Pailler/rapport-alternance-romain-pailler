@@ -22,7 +22,7 @@ Voici les informations clés relatives à mon alternance :
 | -------------------------- | --------------------------------------- |
 | **Entreprise**             | Coopérative Welcoop - Equasens (Nanceo) |
 | **Alternant**              | PAILLER Romain                          |
-| **Maître d'apprentissage** | SOOGA Adam                              |
+| **Maître d'apprentissage** | SOOGA Adam / PAYOT Julien               |
 | **Tuteur universitaire**   | BONIFACE Yann                           |
 
 ## Introduction

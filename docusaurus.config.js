@@ -93,7 +93,6 @@ const config = {
           {to: '/docs/category/présentation', label: 'Présentation', position: 'left'},
           {to: '/docs/category/missions', label: 'Missions', position: 'left'},
           {to: '/docs/category/annexes', label: 'Annexes', position: 'left'},
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Romain-Pailler',
             label: 'GitHub',
