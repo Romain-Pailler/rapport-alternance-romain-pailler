@@ -59,7 +59,6 @@ Lorsqu’un utilisateur effectue une recherche ou une action via l’interface w
 
 ## Mapping DTO ↔ Entity
 
-Dans notre application, les données sont échangées entre frontend et backend sous forme de **DTO REST** (envoyer vers le markdown de restdemande short) (`RestDemandeShort`, `RestDemandeSearch`, etc.).
 
 Le **controller** ou le **service** se charge de **mapper** ces DTO en entités JPA lorsqu’une opération sur la base est nécessaire, ou l’inverse lorsqu’on retourne un résultat à afficher.
 

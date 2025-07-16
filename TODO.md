@@ -14,18 +14,16 @@
 - [ ] ajouter du code dans les fixs
 - [ ] ajouter la partie bugs et expliquer les bugs que j'ai pu produire et comment les corriger
 - [ ] ajouter le fait que pendant un sprint j'ai été de release (rc,demo,beta,preprod,prod) avec screenshot
-- [ ] ajout de la quatrième feature(afficher nombre résultats et afficher montant totalHt vente et achat // pas encore fait)
+- [ ] ajout de la quatrième feature(afficher nombre résultats et afficher montant totalHt vente et achat // pas encore fait) et ajouter 
 
-- [ ] ajouter tuteur 'juju'
-- [ ] retire la partie blog
-- [ ] mettre en annexe le md architecture technique au lieu de présentation
-- [ ] ajouter un glossaire
-- [ ] retirer la partie vocab et doc
-- [ ] modifier Structure du rapport par 'tables des matières'
+- [x] ajouter tuteur 'juju'
+- [x] retire la partie blog
+- [x] mettre en annexe le md architecture technique au lieu de présentation
+- [x] ajouter un glossaire
+- [x] retirer la partie vocab et doc
+- [x] modifier Structure du rapport par 'tables des matières'
 - [ ] relire chaque partie
 - [ ] retirer des mots en gras dans la partie présentation
-
-https://alternance-hugo-jahnke.netlify.app/presentation.html#fonctionnement
 
 # Consignes pour le rapport de stage d'alternance
 
@@ -44,3 +42,5 @@ Bien indiquer ce qui sort de la formation.
 Objectifs réalisés
 Suite du travail/projet
 Intégrer un film de démonstration qui sera commenté pendant la soutenance.
+
+https://alternance-hugo-jahnke.netlify.app/presentation.html#fonctionnement

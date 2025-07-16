@@ -45,7 +45,7 @@ J’adresse également mes remerciements à l’ensemble des collaborateurs d'Eq
 
 Enfin, je souhaite remercier particulièrement Yann BONIFACE, mon tuteur universitaire, pour son accompagnement régulier, ses conseils précieux et sa disponibilité tout au long de cette période.
 
-## Structure du rapport
+## Table des matières 
 
 Le rapport est structuré de la manière suivante :
 
