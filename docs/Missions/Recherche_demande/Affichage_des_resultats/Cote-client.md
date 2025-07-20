@@ -7,84 +7,147 @@ tags:
 ---
 # Côté Client
 
-- j'ai du créer un nouveau composant (component/html), nouveau data source et tests 
-
 ## Création du composant avec la CLI angular 
 
-il va créé recherche-demandes.component.html, recherche-demandes.component.scss, recherche-demandes.component.ts, recherche-demandes.component.spec.ts
+Afin d’ajouter une nouvelle page à l’application, j’ai commencé par générer un composant Angular. Ce composant constitue la structure de base de l’interface, en regroupant la logique métier (TypeScript), le template HTML, la feuille de style dédiée (SCSS) ainsi que les tests unitaires associés.
 
-## ajout dans app-routing.module.ts
+Pour cela, j’ai utilisé la CLI Angular avec la commande suivante :
 
-``` typescript
-   {
-    path: 'recherche-demandes',
-    component: RechercheDemandesComponent,
-    canActivate: [AuthGuard, MailGuard],
-  }
+```bash
+ng generate component recherche-demandes
 ```
 
-demande.service.ts ajout de ce code : expliquer ce code
+Cette commande a automatiquement généré les fichiers suivants :
 
-```` typescript
- public searchDemandesByCriteria(demandeCriteria: FormGroup): Observable<DemandePaginate> {
-    return this.demandesApi
-      .searchByCriteria(demandeCriteria)
-      .pipe(map((demandesContainer: DemandePaginateContainer) => demandesContainer.result));
-  }
+* `recherche-demandes.component.ts` : fichier principal contenant la logique du composant (classe TypeScript)
+* `recherche-demandes.component.html` : template HTML affichant les données et la structure visuelle
+* `recherche-demandes.component.scss` : feuille de style spécifique à ce composant
+* `recherche-demandes.component.spec.ts` : fichier de test unitaire permettant de valider le comportement du composant
+
+:::tip
+L’utilisation de la CLI permet de normaliser la structure des fichiers Angular, de gagner du temps, et de s'assurer que tous les éléments nécessaires sont bien créés dès le départ.
+:::
+
+Très bien ! Voici une version rédigée et claire pour cette partie sur le **routing**, avec une explication du pourquoi et du comment :
+
+---
+
+## Ajout dans le routing de l'application
+
+Une fois le composant créé, il est nécessaire de le déclarer dans le système de **routing Angular**, afin de rendre la page accessible via une URL. Cela se fait dans le fichier `app-routing.module.ts`, qui centralise toutes les routes de l'application.
+
+J’ai donc ajouté l’entrée suivante :
+
+```typescript
+{
+  path: 'recherche-demandes',
+  component: RechercheDemandesComponent,
+  canActivate: [AuthGuard, MailGuard],
 }
-````
+```
 
-demande.datasource.ts : utilise search  pour requete get et la pagination fonctionne grâce au subscribe (à expliquer)
+### Explication 
 
-```` typescript
-export class DemandeDataSource implements DataSource<DemandeDomain> {
-  private NO_SEARCH: number = -1;
-  private demandeSubject = new BehaviorSubject<DemandeDomain[]>([]);
-  private loadingSubject = new BehaviorSubject<boolean>(false);
-  private numberPageSubject = new BehaviorSubject<number>(0);
-  private numberTotalElementSubject = new BehaviorSubject<number>(this.NO_SEARCH);
+* `path: 'recherche-demandes'` : définit l'URL à laquelle le composant sera accessible (`/recherche-demandes`).
+* `component: RechercheDemandesComponent` : associe cette route au composant que j’ai créé.
+* `canActivate` : ajoute des **garde-fous de sécurité** (`AuthGuard` et `MailGuard`), qui empêchent l'accès à la page si certaines conditions ne sont pas remplies (par exemple : utilisateur non authentifié, ou email non validé).
 
-  private demande$: Observable<DemandeDomain[]> = this.demandeSubject.asObservable();
-  public loading$: Observable<boolean> = this.loadingSubject.asObservable();
-  public numberPage$: Observable<number> = this.numberPageSubject.pipe(distinctUntilChanged());
-  public numberTotalElement$: Observable<number> = this.numberTotalElementSubject.pipe(distinctUntilChanged());
-  constructor(private demandeService: DemandeService) {}
-  connect(collectionViewer: CollectionViewer): Observable<DemandeDomain[]> {
-    return this.demande$;
-  }
+:::tip
+En Angular, le routing est indispensable pour permettre la navigation entre les différentes pages d’une application monopage (SPA — Single Page Application).
+:::
+Parfait, voici une rédaction claire et complète pour expliquer à quoi sert un fichier `.service.ts` en Angular, ainsi qu’une explication du code que tu as ajouté dans `demande.service.ts` :
 
-  disconnect(collectionViewer: CollectionViewer): void {
-    this.demandeSubject.complete();
-    this.loadingSubject.complete();
-    this.numberPageSubject.complete();
-    this.numberTotalElementSubject.complete();
-  }
-  searchDemande(demandeCriteria: any, indexPage: number) {
-    this.loadingSubject.next(true);
-    this.demandeService
-      .searchDemandesByCriteria(Object.assign(demandeCriteria, {startPage: indexPage}))
-      .pipe(
-        tap((demandes) => this.demandeSubject.next(demandes.list)),
-        tap((demandes) => this.numberPageSubject.next(demandes.offset - 1)),
-        tap((demandes) => this.numberTotalElementSubject.next(demandes.total)),
-        catchError(() => of([])),
-        finalize(() => this.loadingSubject.next(false)),
-      )
-      .subscribe();
-  }
+---
 
-  /**
-   * Réinitialise la data source
-   */
-  reinit() {
-    this.loadingSubject.next(false);
-    this.demandeSubject.next([]);
-    this.numberPageSubject.next(0);
-    this.numberTotalElementSubject.next(this.NO_SEARCH);
-  }
+## Ajout de la logique métier dans un service Angular
+
+En Angular, les fichiers terminant par `.service.ts` sont utilisés pour **centraliser la logique métier** et **gérer les échanges avec les APIs** (backend). Ces services permettent de découpler les composants de la logique de traitement, rendant le code plus lisible, réutilisable et facile à tester.
+
+Dans mon cas, j’ai ajouté une méthode `searchDemandesByCriteria` dans le fichier `demande.service.ts`. Cette méthode permet d’effectuer une recherche de demandes à partir de critères dynamiques (fournis via un formulaire qui sera utilisé par la suite  ).
+
+### Code ajouté 
+
+```typescript
+public searchDemandesByCriteria(demandeCriteria: FormGroup): Observable<DemandePaginate> {
+  return this.demandesApi
+    .searchByCriteria(demandeCriteria)
+    .pipe(map((demandesContainer: DemandePaginateContainer) => demandesContainer.result));
 }
+```
 
-````
+### Explication 
+
+* `demandeCriteria: FormGroup` : correspond aux critères saisis par l’utilisateur dans un formulaire (par exemple, un filtre sur la date ou le statut).
+* `this.demandesApi.searchByCriteria(...)` : appelle l’API REST côté serveur avec ces critères.
+* `.pipe(map(...))` : permet de transformer la réponse obtenue. L’API retourne un objet de type `DemandePaginateContainer`, contenant des métadonnées et les résultats. Le `map()` extrait uniquement la liste des demandes (`result`), qui nous intéresse ici.
+* Le tout retourne un `Observable<DemandePaginate>`, conforme à la logique réactive d’Angular (RxJS), pour permettre un traitement asynchrone.
+
+## DataSource personnalisée : centraliser le flux de données et la pagination
+
+Pour alimenter la table **`ml-ui-table`** en données tout en gérant la pagination et les états de chargement, j’ai créé une classe `DemandeDataSource` qui implémente l’interface `DataSource<DemandeDomain>`.
+
+### Pourquoi une DataSource ?
+
+* **Responsabilité unique** : elle encapsule toute la logique de récupération, de transformation et de diffusion des données destinées au tableau, laissant le composant léger et centré sur l’UI.
+* **Flux réactif** : en exposant des `Observable`, elle permet au template d’utiliser l’`async pipe` pour se mettre à jour automatiquement.
+* **Nettoyage facilité** : `connect()` et `disconnect()` assurent l’ouverture et la fermeture propre des flux.
+
+### Description des principaux membres
+
+| Élément                                             | Rôle                                                                                     |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `BehaviorSubject<DemandeDomain[]> demandeSubject`   | Contient la liste courante de demandes à afficher.                                       |
+| `BehaviorSubject<boolean> loadingSubject`           | Indique si une requête est en cours pour afficher un skeleton ou désactiver les boutons. |
+| `BehaviorSubject<number> numberPageSubject`         | Conserve l’index de la page courante.                                          |
+| `BehaviorSubject<number> numberTotalElementSubject` | Stocke le nombre total d’éléments retourné par l’API.                                    |
+| `connect()`                                         | Retourne l’`Observable` alimentant directement la table.                                 |
+| `disconnect()`                                      | Ferme les sujets pour éviter les fuites mémoire.                                         |
+
+### La méthode `searchDemande`
+
+```typescript
+searchDemande(demandeCriteria: any, indexPage: number) {
+  this.loadingSubject.next(true); // 1. active l’indicateur de chargement
+
+  this.demandeService
+    .searchDemandesByCriteria({ ...demandeCriteria, startPage: indexPage }) // 2. appel API
+    .pipe(
+      tap((demandes) => this.demandeSubject.next(demandes.list)),          // 3a. mise à jour des lignes
+      tap((demandes) => this.numberPageSubject.next(demandes.offset - 1)), // 3b. index de page
+      tap((demandes) => this.numberTotalElementSubject.next(demandes.total)), // 3c. total
+      catchError(() => of([])),                                            // 4. tolérance aux erreurs
+      finalize(() => this.loadingSubject.next(false))                      // 5. désactive le loading
+    )
+    .subscribe();                                                          // 6. déclenche l'exécution
+}
+```
+
+1. **Activation du loader** : la vue affiche un skeleton.
+2. **Appel du service** : fusion des critères utilisateur avec `startPage`.
+3. **`tap()` en cascade** : met à jour la liste, la page courante et le nombre total d’éléments, ce qui alimente en temps réel la table et le paginator.
+4. **`catchError()`** : en cas d’erreur, on renvoie une liste vide pour éviter de casser l’affichage.
+5. **`finalize()`** : coupe proprement le loader, qu’il y ait succès ou échec.
+6. **`subscribe()`** : indispensable pour exécuter la chaîne RxJS et déclencher les `tap()`.
+
+> **Pourquoi la pagination « fonctionne grâce au subscribe » ?**
+> Sans `subscribe()`, le flux reste « froid » (non exécuté). C’est l’abonnement qui lance réellement l’appel HTTP et propage les mises à jour vers les `BehaviorSubject`; le paginator, abonné à `numberPage$` et `numberTotalElement$`, se rafraîchit alors automatiquement.
+
+### Réinitialisation
+
+```typescript
+reinit() {
+  this.loadingSubject.next(false);
+  this.demandeSubject.next([]);
+  this.numberPageSubject.next(0);
+  this.numberTotalElementSubject.next(this.NO_SEARCH);
+}
+```
+
+Cette méthode vide les flux et rétablit l’état initial, pratique lorsqu’on ferme la page ou qu’on change complètement de critères.
+
+:::tip
+Grâce à cette `DataSource`, la table reste **synchrone** avec les données serveur, la pagination et l’état de chargement, tout en gardant le composant `RechercheDemandesComponent` simple et maintenable.
+:::
 
 dans recherche-demandes.component.ts : ici fonction init pour initialiser le datasource, fonction search avec criteria (indispensable)
 

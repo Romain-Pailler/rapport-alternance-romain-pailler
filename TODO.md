@@ -10,7 +10,7 @@
 - [ ] ajout de la quatrième feature(afficher nombre résultats et afficher montant totalHt vente et achat // pas encore fait) et ajouter 
 
 - [ ] relire chaque partie
-- [ ] retirer des mots en gras dans la partie présentation
+- [x] retirer des mots en gras dans la partie présentation
 
 # Consignes pour le rapport de stage d'alternance
 
