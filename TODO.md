@@ -63,3 +63,10 @@ https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/Templat
 
 -[] faire vocab technique 
 -[] faire vocab métier
+
+
+demander à juju ce qui est préférable de faire ??
+
+- tout mettre et tout expliquer ? 
+- mettre les explications dans le fichier et le code dans un autre fichier annexes ? 
+- mettre le code et les explications dans la partie annexes
