@@ -148,9 +148,94 @@ Cette méthode vide les flux et rétablit l’état initial, pratique lorsqu’o
 :::tip
 Grâce à cette `DataSource`, la table reste **synchrone** avec les données serveur, la pagination et l’état de chargement, tout en gardant le composant `RechercheDemandesComponent` simple et maintenable.
 :::
+Voici une **explication détaillée** et claire de ce composant Angular `RechercheDemandesComponent`, structurée par sections pour être facilement intégrable dans un rapport :
 
-dans recherche-demandes.component.ts : ici fonction init pour initialiser le datasource, fonction search avec criteria (indispensable)
+---
 
+## Composant `RechercheDemandesComponent`
+
+### Méthode `ngOnInit()`
+
+```ts
+ngOnInit(): void {
+  this.initDataSource();
+}
+```
+
+Cette méthode du cycle de vie Angular est appelée **automatiquement à l’affichage du composant**. Elle appelle la fonction `initDataSource`.
+
+---
+
+### Méthode `initDataSource()`
+
+```ts
+private initDataSource() {
+  this.demandeDataSource = new DemandeDataSource(this.demandeService);
+  ...
+}
+```
+
+Elle :
+
+* crée une nouvelle instance de `DemandeDataSource`
+* s’abonne à trois flux (`numberPage$`, `numberTotalElement$`, `loading$`) pour mettre à jour dynamiquement les variables du composant à chaque changement :
+
+  * `numberPage` : mise à jour de la page affichée
+  * `numberTotalElement` : mise à jour du nombre total de résultats
+  * `searchLoading` : pour afficher un indicateur de chargement (skeleton)
+
+> Le `takeUntilDestroyed()` évite les fuites mémoire en coupant l’abonnement automatiquement lorsque le composant est détruit.
+
+---
+
+### Méthode `search()`
+
+```ts
+search() {
+  this.showSearchResult = true;
+  this.searchPage(0);
+}
+```
+
+Cette méthode est appelée lorsqu’un utilisateur clique sur le bouton **Rechercher**.
+Elle :
+
+1. rend visibles les résultats (`showSearchResult = true`)
+2. déclenche une recherche à partir de la **première page**
+
+---
+
+### Méthode `searchPage(index: number)`
+
+```ts
+searchPage(index: number) {
+  const criteria: any = {
+    currentProjection: 'projectionRechercheBack',
+  };
+  this.demandeDataSource.searchDemande(criteria, index);
+}
+```
+
+Elle exécute une **recherche avec pagination**, en appelant la méthode `searchDemande()` du `DataSource`, avec :
+
+* les **critères de recherche** (ici une projection par défaut)
+* l’**index de la page** demandée
+
+---
+
+### Méthode `getCurrency(devise: string)`
+
+```ts
+getCurrency(devise: string) {
+  return CurrencyUtils.parseToAngularDevise(devise);
+}
+```
+
+Méthode utilitaire utilisée dans le HTML pour formater les montants en fonction de la devise.
+Par exemple, `"EUR"` est transformé pour être correctement interprété par le `currency` pipe d’Angular.
+
+
+### Le code complet
 ```` typescript
 @Component({
   selector: 'ml-recherche-demandes',
@@ -228,7 +313,111 @@ export class RechercheDemandesComponent {
 }
 ````
 
-dans le recherche-demandes.component.html, ici j'ai créé deux parties : partie filtres (vide actuellement), partie affichage de résultats : colonnes avec skeletton pour charger les données
+--- 
+
+
+## Structure du fichier HTML : `recherche-demandes.component.html`
+
+Le template HTML de cette page Angular repose sur deux grands blocs visuels :
+
+1. Un bloc pour les **filtres de recherche**,
+2. Un bloc pour l’**affichage des résultats**, avec une table et une pagination.
+
+---
+
+### **Premier bloc – Filtres de recherche**
+
+```html
+<ml-ui-bloc [foldable]="true" [folded]="false">
+  <ml-ui-bloc-title i18n>Filtres</ml-ui-bloc-title>
+  <ml-ui-bloc-body>
+    <div>
+      <button (click)="search()" mlUiButton [disabled]="searchLoading">
+        <ml-ui-icon icon="search"></ml-ui-icon>
+        <span i18n>Rechercher</span>
+      </button>
+    </div>
+  </ml-ui-bloc-body>
+</ml-ui-bloc>
+```
+
+Ce bloc contient les **éléments d’interaction utilisateur**, en particulier le bouton « Rechercher ».
+Celui-ci déclenche la méthode `search()` dans le composant TypeScript.
+Le bloc est repliable, mais toujours déplié par défaut (`[folded]="false"`).
+
+> La partie "Filtres" pourra ensuite être enrichie avec des champs de formulaire (input, select, date, etc.).
+
+---
+
+### **Second bloc – Résultats de la recherche**
+
+Ce bloc ne s'affiche **que si une recherche est lancée**, contrôlé par `*ngIf="showSearchResult"` (ici via `[class.hide]`).
+
+#### **Affichage du tableau**
+
+```html
+<table ml-ui-table [dataSource]="demandeDataSource" ...>
+  ...
+</table>
+```
+
+La table est alimentée automatiquement par la `DataSource` Angular. Elle affiche les colonnes définies dans le composant TypeScript (`columns = [...]`), et chaque colonne est associée à un champ de l’objet `demande`.
+
+Les colonnes les plus importantes sont :
+
+* **N° Dossier** : affiché sous forme de chip colorée.
+* **Statut**, **Apporteur**, **Client**, **Bailleur** : informations d’identification.
+* **Montants** : vente, achat et loyer HT, formatés via le pipe `currency` en fonction de la devise.
+* **Dates** : dépôt et paiement, avec affichage au format `dd/MM/yyyy`.
+* **Commercial apporteur** : affiche le nom complet du commercial lié.
+
+#### **Chargement en cours (Skeleton)**
+
+```html
+<div *mlUiSkeleton="searchLoading; template: 'table'; ..."></div>
+```
+
+Lorsque les résultats sont en cours de chargement (`searchLoading` à `true`), un **squelette visuel** est affiché à la place du tableau.
+
+---
+
+#### **Aucun résultat**
+
+```html
+<div [class.hide]="numberTotalElement > 0 || searchLoading" i18n>
+  Aucun résultat pour cette recherche.
+</div>
+```
+
+Ce message est affiché uniquement si :
+
+* Aucun résultat n’a été trouvé (`numberTotalElement <= 0`)
+* ET que la recherche n’est plus en cours (`searchLoading == false`)
+
+---
+
+#### **Pagination**
+
+```html
+<ml-ui-paginator
+  [length]="numberTotalElement"
+  [pageSize]="10"
+  [indexPage]="numberPage"
+  (page)="searchPage($event + 1)"
+  ...
+></ml-ui-paginator>
+```
+
+Ce composant permet de naviguer dans les pages de résultats.
+Il est alimenté dynamiquement avec :
+
+* le nombre total d’éléments (`numberTotalElement`)
+* la page en cours (`numberPage`)
+* et une taille de page fixe (10)
+
+Lors d’un changement de page, il appelle `searchPage()` dans le composant TypeScript, avec l’index correspondant.
+
+### Le code complet 
 
 ```` html
 <div class="page-header-leasa">
@@ -327,4 +516,4 @@ dans le recherche-demandes.component.html, ici j'ai créé deux parties : partie
   </ml-ui-bloc-body>
 </ml-ui-bloc>
 
-```
+````
