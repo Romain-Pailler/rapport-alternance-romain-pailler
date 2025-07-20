@@ -20,8 +20,6 @@ L’activité de Nanceo repose sur deux grands volets, le commercial et le déve
 - La **vente** et la **gestion** de contrats de financement via l’outil Leasa,
 - Le **développement** et la **maintenance** de l’application, en lien étroit avec les utilisateurs et partenaires financiers.
 
-Le support applicatif, la supervision technique et les évolutions fonctionnelles sont assurés par deux équipes distinctes, composées de développeurs, testeurs et analystes.
-
 ## Enjeux métier
 
 Le financement par leasing ou location avec option d’achat (LOA) répond à un besoin croissant de flexibilité budgétaire pour les professionnels. Nanceo se positionne en facilitateur, en accélérant le traitement des demandes via un système automatisé et interconnecté avec les banques et les organismes de financement.

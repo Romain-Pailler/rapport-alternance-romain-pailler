@@ -11,7 +11,7 @@ tags:
 
 Leasa est une application web et mobile dédiée à la gestion des demandes de financement de biens. Elle a été conçue pour répondre aux besoins spécifiques des partenaires de Nanceo, principalement dans le secteur médical et paramédical.
 
-Développée **from scratch**, l’application a été pensée dès l’origine comme une solution modulaire, interconnectée, et accessible depuis différents supports (ordinateur, tablette, smartphone).
+Développée **from scratch**, l’application a été pensée dès l’origine comme une solution modulaire, interconnectée, et accessible depuis différents supports (ordinateur, tablette, smartphone), même si aujourd'hui 95% des développements sont à destination des PC. 
 
 ## Architecture et fonctionnalités
 
@@ -22,6 +22,10 @@ L'application se compose de trois environnements fonctionnels principaux :
 - **L’Application Mobile** : accessible aux clients finaux pour consulter ou compléter leurs dossiers.
 
 Leasa centralise l’ensemble des informations relatives aux demandes (identité du client, nature du matériel, modalités de financement) et les transmet automatiquement aux organismes partenaires, via un système de web-services.
+
+:::info
+ Le schéma détaillé de l'architecture technique du back-office, se trouve [ici](./../Annexes/Architecture).
+ :::
 
 ## Objectifs et bénéfices
 

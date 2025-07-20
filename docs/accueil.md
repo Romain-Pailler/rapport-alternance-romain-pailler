@@ -8,9 +8,9 @@ sidebar_position: -1
 Ce site est actuellement en cours de construction, certaines sections peuvent être incomplètes ou temporairement indisponibles.
 :::
 
-Ce site constitue mon rapport d'alternance dans le cadre de ma troisième année de BUT Informatique à l'[IUT Nancy-Charlemagne](https://iut-charlemagne.univ-lorraine.fr/).
+Ce site constitue mon support de rapport d'alternance dans le cadre de ma troisième année de BUT Informatique à l'[IUT Nancy-Charlemagne](https://iut-charlemagne.univ-lorraine.fr/).
 
-Il retrace mon parcours au sein de la [Coopérative Welcoop](./presentation/Cooperative_welcoop), plus précisément au sein de sa branche [Equasens](./presentation/Equasens) et de la filiale Nanceo. Ce rapport présente de manière détaillée les missions effectuées durant cette année d'alternance, les compétences techniques et méthodologiques développées, ainsi que l'organisation générale des projets sur lesquels j'ai été amené à travailler.
+Il retrace mon parcours au sein de la [Coopérative Welcoop](./presentation/Cooperative_welcoop), plus précisément au sein de sa branche logicielles [Equasens](./presentation/Equasens) et de la filiale Nanceo. Ce rapport présente de manière détaillée les missions effectuées durant cette année d'alternance, les compétences techniques et méthodologiques acquises, ainsi que l'organisation générale des projets sur lesquels j'ai été amené à travailler.
 
 J'ai opté pour la réalisation de ce rapport sous forme de site web en utilisant [Docusaurus](https://docusaurus.io/), un générateur de sites statiques permettant une documentation claire et une intégration aisée d'éléments techniques.
 
@@ -39,11 +39,11 @@ Cette alternance a été une étape significative dans mon parcours professionne
 
 ## Remerciements
 
-Je tiens tout d’abord à remercier Adam SOOGA et Jérôme TAMBORINI pour m’avoir accueilli au sein de l'équipe. Je les remercie également pour m’avoir offert l’opportunité d’effectuer cette alternance au sein de Nanceo, ce qui m’a permis d’acquérir des compétences techniques solides et de mieux appréhender les réalités professionnelles du secteur informatique.
+Je tiens tout d’abord à remercier Adam SOOGA et Jérôme TAMBORINI pour m’avoir accueilli au sein de l'équipe. Je les remercie également pour m’avoir offert l’opportunité d’effectuer cette alternance au sein de Nanceo, me permettant d’acquérir des compétences techniques solides et de mieux appréhender les réalités professionnelles du secteur informatique.
 
-J’adresse également mes remerciements à l’ensemble des collaborateurs d'Equasens et Nanceo pour leur accueil chaleureux, leur disponibilité, ainsi que leur soutien constant tout au long de cette année d’alternance. Leur patience et leur pédagogie ont été essentielles à mon apprentissage.
+J’adresse également mes remerciements à l’ensemble des collaborateurs d'Equasens et de Nanceo pour leur accueil chaleureux, leur disponibilité, ainsi que leur soutien constant tout au long de cette année d’alternance. Leur patience et leur pédagogie ont été essentielles à mon apprentissage.
 
-Enfin, je souhaite remercier particulièrement Yann BONIFACE, mon tuteur universitaire, pour son accompagnement régulier, ses conseils précieux et sa disponibilité tout au long de cette période.
+Enfin, je souhaite remercier particulièrement Yann BONIFACE, mon tuteur universitaire, pour son accompagnement, ses conseils et sa disponibilité tout au long de cette période.
 
 ## Table des matières 
 
