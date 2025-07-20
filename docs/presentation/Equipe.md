@@ -17,7 +17,6 @@ graph TD
   ANTHONY["Anthony TRAUT<br/>Tech Leader"]
   CHARLOTTE["Charlotte DA FONSECA FERNANDES<br/>Analyste Fonctionnel"]
   JULIEN["Julien PAYOT<br/>Analyste Testeur"]
-
   FREDERIC["Frederic AUBRY<br/>Développeur"]
   ADAM["Adam SOOGA<br/>Développeur"]
   CLEMENT["Clement CHARTON<br/>Développeur"]

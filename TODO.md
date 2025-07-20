@@ -60,3 +60,6 @@ https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/Templat
 # Annexes
 
 # Glossaire 
+
+-[] faire vocab technique 
+-[] faire vocab métier
