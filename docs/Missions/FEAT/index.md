@@ -20,7 +20,7 @@ La mise en place d’une nouvelle fonctionnalité suit un processus itératif, s
    * Lister les fichiers susceptibles d’être modifiés ou créés.
 
 3. **Développement technique**  
-   Dans cette partie, le développeur doit résoudre le ticket et s'assurer que tout fonctionne. Au besoin, il peut échanger avec Charlotte ou bien avec d'autres développeurs à ce sujet. Le **daily meeting** est fait pour exprimer une aide pour éviter que le développeur perde trop de temps dans son développement.
+   Dans cette partie, le développeur doit résoudre le ticket et s'assurer que tout fonctionne. Au besoin, il peut échanger avec Charlotte ou bien avec d'autres développeurs à ce sujet. Le **daily meeting** est fait pour exprimer les difficultés rencontrées afin de faciliter l'apport d'aide d'autres collègues.
 
 4. **Tests et validation**  
    Une fois le code produit :
@@ -28,6 +28,6 @@ La mise en place d’une nouvelle fonctionnalité suit un processus itératif, s
    * Des **tests unitaires** ou d’**intégration** sont ajoutés,  
    * Une **pull request** est créée,  
    * Une validation des pairs est nécessaire  
-   * Un build Jenkins se lance et vérifie plusieurs choses (le build, les tests, le coverage des tests, bien indenté, bien traduit, etc...),  
+   * Un build Jenkins se lance et vérifie plusieurs choses (le build, les tests, le coverage des tests, l'indentation, la traduction, etc...),  
    * Puis la branche est mergée sur la branche `develop` où la personne chargée de faire des **releases** mettra en place des nouvelles versions avec le développement dedans,  
    * Puis le ticket est envoyé à Julien, analyste testeur, qui valide la fonctionnalité sur l’environnement de test.

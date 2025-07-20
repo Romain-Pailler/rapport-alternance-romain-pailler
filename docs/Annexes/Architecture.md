@@ -15,7 +15,7 @@ L’architecture REST de l’application Leasa repose sur une organisation en **
 
 ## Présentation des couches
 
-### 1. Couche controllers
+### 1. Couche Présentation (`Service`)
 
 Cette couche est constituée des **contrôleurs REST**, exposés grâce à **Framework Spring**. Elle gère les requêtes en provenance du frontend.
 
@@ -24,7 +24,7 @@ Rôle principal :
 - Appeler les services métier adéquats,
 - Retourner une réponse HTTP formatée.
 
-### 2. Couche Service
+### 2. Couche Service (`Processus`)
 
 Il s’agit de la **couche métier**, appelée **processus** dans notre projet.
 
@@ -34,7 +34,7 @@ Caractéristiques :
 - Elle contient la logique métier propre à chaque fonctionnalité.
 - Elle est annotée avec `@Transactional`, ce qui garantit que les opérations s’exécutent dans le contexte d’une transaction gérée par **Hibernate**.
 
-### 3. Couche Persistance (`Repositories`)
+### 3. Couche Persistance (`DAO`)
 
 Cette couche correspond aux DAO (Data Access Object) classiques. Elle repose sur **Spring Data JPA**.
 

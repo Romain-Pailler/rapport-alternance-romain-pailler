@@ -44,3 +44,8 @@ Suite du travail/projet
 Intégrer un film de démonstration qui sera commenté pendant la soutenance.
 
 https://alternance-hugo-jahnke.netlify.app/presentation.html#fonctionnement
+
+
+
+https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/TemplateLettreBienvenue
+(à voir avec clément) ??

@@ -43,7 +43,7 @@ Migrer une application AngularJS vers Angular moderne offre plusieurs bénéfice
 
 - **Maintenabilité** : code mieux structuré grâce à l'architecture *modulaire*[^8].
 - **Performance** : gain en vitesse et en réactivité grâce à la compilation anticipée (AOT).
-- **Technologies modernes** : adoption de TypeScript, PWA[^9], CLI, et gestion d'état moderne.
+- **Technologies modernes** : adoption de TypeScript, PWA[^9], CLI[^10], et gestion d'état moderne.
 - **Support et communauté** : accès à des ressources mises à jour régulièrement.
 - **Réduction de la dette technique** : meilleure qualité du code et préparation des évolutions futures.
 
@@ -62,3 +62,4 @@ La migration d’AngularJS vers Angular 2+ est indispensable pour garantir la **
 [^7]: **Dette technique** : Coût futur induit par l'usage de solutions techniques obsolètes ou sous-optimales.
 [^8]: **Architecture modulaire** : Organisation du code en modules ou composants autonomes facilitant la maintenance et l’évolution.
 [^9]: **PWA (Progressive Web App)** : Application web enrichie pour offrir une expérience proche d'une application mobile native (installation, hors-ligne, notifications).
+[^10]: **CLI Angular (Command Line Interface)** : Outil en ligne de commande qui permet de créer, développer, tester et déployer facilement des applications Angular grâce à des commandes simples.
