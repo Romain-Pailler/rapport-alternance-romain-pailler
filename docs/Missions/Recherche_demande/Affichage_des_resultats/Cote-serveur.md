@@ -8,7 +8,24 @@ tags:
 
 # Côté Java
 
-commencer par ajouter une condition dans le searchService.java :
+## Ajout d’une projection spécifique dans le `searchService.java`
+
+### Contexte
+
+Pour que la nouvelle page Angular puisse afficher les résultats de recherche, il est nécessaire que le backend expose une **projection spécifique** — autrement dit, un format de données adapté à l'affichage. Cela se fait via un `DTO` (*Data Transfer Object*) qui structure les données côté Java avant leur envoi au frontend.
+
+:::tip
+#### Qu’est-ce qu’un DTO ? // A ajouter dans un autre fichier
+Un DTO (Data Transfer Object) est une classe qui sert à transférer des données entre différentes couches de l’application (par exemple entre le backend et le frontend) tout en **filtrant et organisant** les champs utiles.
+:::
+
+
+---
+
+### Code modifié dans `searchService.java`
+
+Le code modifié dans le service de recherche ajoute un **cas particulier** pour traiter une projection spécifique : `PROJECTION_RECHERCHE_BACK_V2`.
+
 
 ``` java
  @GET
@@ -45,7 +62,41 @@ commencer par ajouter une condition dans le searchService.java :
     }
 ```
 
-ici ajout de setGroupesApporteursToApporteurs et setFacturesToDemandes :
+### Explication
+
+* `DemandeCriteria.getCurrentProjection()` : récupère la projection demandée par le frontend.
+* La condition `if (PROJECTION_RECHERCHE_BACK_V2.equals(...))` permet de **répondre avec un format de données spécifique**, ici un DTO se nommant `RestDemandeSearch`.
+* `mapper.mapList(...)` : convertit les entités Java `Demande` (souvent complexes) vers une liste de `RestDemandeSearch`, qui contient **uniquement les champs nécessaires à l’affichage** dans la page Angular.
+* `RestCollectionResult` : encapsule les données paginées avec le nombre total de résultats (`count`) et la page actuelle.
+
+---
+
+### Objectifs
+
+Cela garantit :
+
+* un **meilleur découplage** entre frontend et backend ;
+* une réponse **plus légère et optimisée** par rapport à mon besoin côté client;
+* une **structuration des données claire** pour l’affichage dans Angular.
+
+---
+Voici une explication claire de la suite du code, dans la continuité du `searchService.java`, que tu pourras intégrer dans ton rapport :
+
+---
+
+## Enrichissement des entités en fonction de la projection demandée
+
+### Objectif de la méthode `setEntitesByProjection(...)`
+
+Cette méthode sert à **ajouter dynamiquement des données complémentaires** à une liste de demandes (`List<Demande>`), en fonction de la **projection** choisie par le frontend.
+
+> Sans cette méthode, certaines données secondaires (comme les factures ou les groupes d’apporteurs) ne seraient **pas chargées**, car elles ne sont pas incluses par défaut dans les entités.
+
+---
+
+### Focus sur l’ajout pour la projection `PROJECTION_RECHERCHE_BACK`
+
+on retrouve le bloc suivant :
 
 ``` java
     private List<Demande> setEntitesByProjection(final List<Demande> demandes, final DemandeCriteria demandeCriteria, final Utilisateur utilisateur) {
@@ -93,7 +144,44 @@ ici ajout de setGroupesApporteursToApporteurs et setFacturesToDemandes :
     }
 ```
 
-ajout de montantTotalHt, dateComptabilisation, ajout du sens facture et sous type facture 
+
+Voici ce que fait chaque appel :
+
+* `setProtections(...)` : ajoute à chaque demande des informations liées à la protection (ex : niveau d’accès ou confidentialité). // à revérifier
+* `setGroupesApporteursToApporteurs(...)` : permet de **rattacher à chaque apporteur son groupe**, ce qui est utile pour l’affichage de l’arborescence apporteur / groupe d’apporteurs dans le tableau de résultat de recherche.
+* `setFacturesToDemandes(...)` : associe à chaque demande **les factures liées**, nécessaires pour afficher des montants ou dates de paiement dans la vue.
+
+Ces appels permettent donc de **préparer toutes les données nécessaires** avant le mapping vers un DTO comme `RestDemandeSearch`.
+
+---
+
+### Pourquoi cette étape est indispensable
+
+* Dans une application métier comme Leasa, les entités (Demandes, Apporteurs, Factures, etc.) sont souvent liées entre elles.
+* Mais pour optimiser les performances, **ces relations ne sont pas chargées automatiquement** (lazy loading).
+* Ce code permet donc de forcer le **chargement explicite** de certaines sous-parties des données uniquement **quand la projection l’exige**.
+
+---
+
+### Résumé
+
+> Selon la projection demandée (ex. `PROJECTION_RECHERCHE_BACK`), certaines sous-données comme les groupes d’apporteurs ou les factures sont **chargées manuellement** avant d’être retournées au frontend.
+
+Cela garantit que le frontend (notamment Angular) dispose **de toutes les données attendues pour chaque demande**, sans devoir refaire des appels secondaires.
+
+---
+Voici une explication claire et accessible que tu peux intégrer à ton rapport pour documenter cette partie côté DAO Java :
+
+---
+
+## Enrichissement des entités : ajout des factures aux demandes (`setFacturesToDemandes`)
+
+### Objectif de cette méthode
+
+La méthode `setFacturesToDemandes(...)` permet d’**associer à chaque demande la liste de ses factures**, en les récupérant via une requête optimisée, et en projetant uniquement les champs nécessaires.
+
+---
+### Code 
 
 ``` java
     
@@ -131,61 +219,78 @@ ajout de montantTotalHt, dateComptabilisation, ajout du sens facture et sous typ
         });
     }
 ```
+---
 
-ajout dans demandeprojectionrecherchebackImpl.java (expliquer ce qu'est une projection) :
+### Détails de l'implémentation
 
-``` java
- return Projections.bean(Demande.class,
-                Q_DEMANDE.id,
-                Q_DEMANDE.code,
-                Q_DEMANDE.dateCreation,
-                Q_DEMANDE.eligibleProtection,
-                Projections.bean(Apporteur.class,
-                        Q_APPORTEUR.id,
-                        Q_APPORTEUR.code,
-                        Q_APPORTEUR.libelle,
-                        Projections.bean(Loueur.class,
-                                Q_LOUEUR.id,
-                                Q_LOUEUR.code,
-                                Q_LOUEUR.libelle,
-                                Q_LOUEUR.devise).as(Q_APPORTEUR.loueur)
-                ).as(Q_DEMANDE.apporteur),
-                Projections.bean(Statut.class,
-                        Q_STATUT.id,
-                        Q_STATUT.code).as(Q_DEMANDE.statut),
-                Projections.bean(Client.class,
-                        Q_CLIENT.id,
-                        Q_CLIENT.premierNumeroIdentification,
-                        Q_CLIENT.raisonSociale).as(Q_DEMANDE.client),
-                Projections.bean(SchemaFinancier.class,
-                        Q_SCHEMA_FINANCIER.id,
-                        Q_SCHEMA_FINANCIER.montantHT,
-                        Q_SCHEMA_FINANCIER.loyerHT).as(Q_DEMANDE.schemaFinancier),
-                Projections.bean(Facturation.class,
-                        Q_FACTURATION.id,
-                        Q_FACTURATION.montantHT,
-                        Q_FACTURATION.loyerCalcule,
-                        Q_FACTURATION.loyerContrat
-                ).as(Q_DEMANDE.facturation),
-                Projections.bean(Decision.class,
-                        Q_ACCORD.id,
-                        Q_ACCORD.montantHT,
-                        Q_ACCORD.reference,
-                        Projections.bean(Bailleur.class,
-                                Q_BAILLEUR_ACCORD.id,
-                                Q_BAILLEUR_ACCORD.code,
-                                Q_BAILLEUR_ACCORD.libelle).as(Q_ACCORD.bailleur)
-                ).as(Q_DEMANDE.accord),
-                Projections.bean(Utilisateur.class,
-                        Q_UTILISATEUR_COMMERCIAL.id,
-                        Q_UTILISATEUR_COMMERCIAL.prenom,
-                        Q_UTILISATEUR_COMMERCIAL.nom).as(Q_DEMANDE.utilisateurCommercial)
-        
-        );
-    }
-```
+1. **Construction de la requête avec QueryDSL :**
 
-dto restDemandeSearch.java expliquer ce que c'est 
+   La requête assemble toutes les informations utiles sur les factures liées aux demandes :
+
+   * `montantTotalHT` : montant hors taxes de la facture
+   * `dateComptabilisation` : date d’enregistrement comptable de la facture
+   * `entité` et `loueur` : les parties liées à la facture
+   * `sous-type de facture` : catégorie plus précise (ex : acompte, solde…)
+   * `sens de facture` : sens comptable (débit/crédit)
+
+   Tout est récupéré via des **jointures**, puis groupé avec :
+
+   ```java
+   GroupBy.groupBy(Q_DEMANDE.id).as(GroupBy.list(...))
+   ```
+
+   Cela permet de créer **un `Map<idDemande, List<Facture>>`**.
+
+2. **Projection optimisée avec `Projections.bean(...)` :**
+
+   Au lieu de charger tous les champs, on ne récupère que ceux nécessaires à l’affichage ou au traitement :
+
+   * Pour `Facture`, on extrait par exemple : `id`, `montantTotalHT`, `dateComptabilisation`, etc.
+   * Pour les entités liées comme `SousTypeFacture` ou `SensFacture`, seules `id` et `code` sont extraites.
+
+ Cela permet de **réduire considérablement la charge mémoire et le temps de traitement**.
+
+3. **Association finale aux objets `Demande` :**
+
+   Pour chaque demande de la liste :
+
+   * On regarde si des factures lui sont associées dans le `map`
+   * On filtre les éventuelles factures invalides (`null` ou sans `id`)
+   * On les assigne proprement à l’objet `Demande` via `d.setFactures(...)`
+
+---
+
+### Pourquoi c’est important
+
+* Sans cette méthode, les factures ne seraient **pas chargées** avec les demandes.
+* C’est indispensable pour **afficher les bons montants ou la date de paiement** dans la vue Angular.
+* La projection permet de **gagner en performance** par rapport à une récupération brute.
+
+---
+
+### Lien avec le frontend
+
+Grâce à ce code :
+
+* Le backend **enrichit chaque demande avec ses factures complètes**
+* Le DTO envoyé à Angular (`RestDemandeSearch`) contient ces factures
+* Elles sont ensuite **utilisées dans les colonnes de la table** (ex : loyer HT ou date de paiement)
+
+---
+
+## `RestDemandeSearch.java` – Le **DTO** utilisé pour la recherche de demandes
+
+### Qu’est-ce qu’un DTO ?
+
+Un **DTO (Data Transfer Object)** est une classe utilisée pour **transporter des données entre le backend et le frontend**, sans exposer les entités internes du modèle métier.
+Cela permet de :
+
+* Sécuriser les données exposées à l’extérieur,
+* Optimiser les échanges (en ne transférant que les champs nécessaires),
+* Adapter la structure aux besoins spécifiques d’une interface.
+
+---
+### Code 
 
 ``` java
 package com.pharmagest.monalisa.rest.service.domain.demande;
@@ -247,14 +352,98 @@ public class RestDemandeSearch {
 
 ```
 
-mapping.xml :
+---
 
-``` xml
- <converter type="com.pharmagest.monalisa.rest.service.mapper.DemandeSearchConverter">
-                <class-a>com.pharmagest.monalisa.rest.entity.Demande</class-a>
-                <class-b>com.pharmagest.monalisa.rest.service.domain.demande.RestDemandeSearch</class-b>
-            </converter>
+### Objectif de `RestDemandeSearch`
+
+La classe `RestDemandeSearch` est le **DTO renvoyé au frontend** lors d’une recherche de demandes avec la projection `PROJECTION_RECHERCHE_BACK_V2`.
+
+Elle regroupe **toutes les informations nécessaires à l’affichage dans la table de résultats**, dans un format léger et structuré.
+
+---
+
+### Champs principaux
+
+Voici les principaux champs présents dans ce DTO :
+
+| Champ                                                          | Rôle                                                 |
+| -------------------------------------------------------------- | ---------------------------------------------------- |
+| `id`, `code`                                                   | Identifiants uniques de la demande                   |
+| `statut`                                                       | Statut actuel de la demande (ex: validée, rejetée…)  |
+| `client`, `loueur`                                             | Informations synthétiques sur les entités impliquées |
+| `apporteur`                                                    | Apporteur et groupe d’apporteurs liés                |
+| `utilisateurCommercial`                                        | Nom du commercial qui gère cette demande             |
+| `montantTotalAchatHT`, `montantTotalVenteHT`, `montantLoyerHT` | Montants financiers pour affichage                   |
+| `dateCreation`, `datePaiement`                                 | Dates clés de la vie de la demande                   |
+| `accord`                                                       | Accord obtenu pour la demande (bailleur, référence…) |
+| `devise`                                                       | Devise utilisée pour les montants (ex : EUR)         |
+
+> 💡 Tous ces champs sont utilisés **dans le tableau de résultats**, pour permettre un affichage complet et lisible des demandes.
+
+---
+
+### Annotation et structure
+
+* `@XmlRootElement`, `@XmlAccessorType`... : annotations utilisées pour permettre la **sérialisation XML/JSON** automatique via JAX-RS.
+* `@Getter` / `@Setter` : générés automatiquement grâce à **Lombok**, pour ne pas avoir à écrire manuellement les accesseurs.
+* `toString()` : méthode de débogage simple pour afficher rapidement une demande dans les logs.
+
+---
+
+### Lien avec le reste du code
+
+* C’est ce DTO qui est **renvoyé dans la méthode `search(...)`** du service REST, lorsque la projection demandée est `"PROJECTION_RECHERCHE_BACK_V2"`.
+* C’est également ce qui est **affiché dans la table HTML Angular** grâce au `dataSource` bindé aux propriétés de ce DTO.
+
+---
+
+
+## Mapping XML – Déclaration du **converter** entre l’entité métier et le DTO
+
+Dans l’application Java, le fichier `mapping.xml` sert à **configurer les conversions automatiques entre les objets métiers (entités) et les objets transférés (DTO)** grâce à un **mapper générique** (probablement basé sur Dozer ou une implémentation maison).
+
+---
+
+### Ce que fait ce bloc XML
+
+```xml
+<converter type="com.pharmagest.monalisa.rest.service.mapper.DemandeSearchConverter">
+  <class-a>com.pharmagest.monalisa.rest.entity.Demande</class-a>
+  <class-b>com.pharmagest.monalisa.rest.service.domain.demande.RestDemandeSearch</class-b>
+</converter>
 ```
+
+Ce bloc déclare un **convertisseur personnalisé (`DemandeSearchConverter`)** chargé de mapper :
+
+* **`class-a` :** l’entité métier `Demande`, qui représente une demande complète en base de données,
+* **`class-b` :** le DTO `RestDemandeSearch`, qui est renvoyé au frontend pour l’affichage dans la table.
+
+---
+
+### Pourquoi utiliser un converter personnalisé ?
+
+Le mapping automatique ne suffit pas toujours (ex : sous-objets complexes, calculs spécifiques, formatages).
+Le converter `DemandeSearchConverter` permet de :
+
+* Sélectionner uniquement les champs utiles à exposer,
+* Appliquer des **règles de transformation** (ex : changer une devise, formater une date…),
+* Mapper des **relations imbriquées** (client, apporteur, facture…) vers leurs sous-DTO respectifs.
+
+---
+
+### Où est-il utilisé ?
+
+Ce mapping est **activé automatiquement** lorsque l’on appelle une méthode comme :
+
+```java
+mapper.mapList(demandes, RestDemandeSearch.class);
+```
+
+dans la méthode `search(...)` du service REST.
+
+Cela garantit que chaque objet `Demande` est converti proprement en un objet `RestDemandeSearch`, en appliquant la logique du converter déclaré ici.
+
+---
 
 demandeSearchConverter.java :
 
@@ -387,10 +576,92 @@ public class DemandeSearchConverter implements CustomConverter {
     }
 }
 ```
+## `DemandeSearchConverter` – Mettre en forme une **Demande** pour l’envoyer au frontend
+
+Ce converter personnalisé est appelé chaque fois qu’on veut transformer l’entité métier `Demande` en DTO `RestDemandeSearch`.
+Il implémente l’interface **Dozer `CustomConverter`**, afin de pouvoir exécuter du code métier plus fin qu’un mapping déclaratif.
+
+---
+
+### 1. Sécurité et pré‑conditions
+
+```java
+if (source == null) return null;
+if (!(source instanceof Demande)) throw new MappingException(...);
+```
+
+* **Null‑safety** : on renvoie `null` si rien n’est fourni.
+* **Type‑safety** : on s’assure que la source est bien une `Demande`, sinon on lève une exception claire.
+
+---
+
+### 2. Création (ou réutilisation) du DTO
+
+```java
+RestDemandeSearch rest = destination == null ? new RestDemandeSearch() : (RestDemandeSearch) destination;
+```
+
+* Dozer peut recycler une instance déjà créée ; sinon on en instancie une nouvelle.
+
+---
+
+### 3. Copie des champs **simples**
+
+```java
+rest.setId(d.getId());
+rest.setCode(d.getCode());
+rest.setDateCreation(d.getDateCreation());
+```
+
+> Identifiants, code et date de création passent tels quels.
+
+---
+
+### 4. Mapping des **sous‑objets** (client, apporteur, bailleur, etc.)
+
+| Sous‑objet                 | DTO cible                                   | Champs repris                              |
+| -------------------------- | ------------------------------------------- | ------------------------------------------ |
+| **Statut**                 | `RestStatutShort` (via `StatutShortMapper`) | id, libellé…                               |
+| **Utilisateur commercial** | `RestUtilisateurShort`                      | id, fullName                               |
+| **Client**                 | `RestClientMinimal`                         | id, raison sociale, SIREN                  |
+| **Accord / Bailleur**      | `RestDecisionShort` + `RestBailleurDetail`  | libellé bailleur, référence accord         |
+| **Apporteur**              | `RestApporteurShortWithGroupe`              | id, code, libellé, groupe, loueur & devise |
+
+Tous ces sous‑DTO sont construits « à la main » pour **n’exposer que les champs utiles** et éviter des boucles de dépendances.
+
+---
+
+### 5. Calcul des **montants financiers**
+
+La logique dépend du **statut de la demande** (repéré par `ordreTimeline`) :
+
+| Cas                                              | Sources de montants                                  | Champs renseignés                                              |
+| ------------------------------------------------ | ---------------------------------------------------- | -------------------------------------------------------------- |
+| **Statut < 19** (demande encore « pré‑contrat ») | `schemaFinancier` (achat + loyer) + `accord` (vente) | `montantTotalAchatHT`, `montantLoyerHT`, `montantTotalVenteHT` |
+| **Statut ≥ 19** (factures disponibles)           | `factureProcessus.computeMontantTotalAchat/ Vente()` | mêmes champs, mais calculés à partir des factures réelles      |
+
+Ainsi :
+
+* **Avant facturation** : on affiche les montants théoriques du contrat.
+* **Après facturation** : on bascule sur les montants réellement émis.
+
+---
+
+### 6. Renvoi du DTO
+
+Le DTO complet, enrichi et allégé, est renvoyé au mapper Dozer, qui le transmet ensuite au service REST → frontend.
+
+---
+
+### En résumé
+
+* **But** : fournir un objet léger, prêt à l’emploi pour Angular, sans exposer toute la complexité de l’entité `Demande`.
+* **Points clés** : null‑safety, mapping manuel des sous‑objets, calcul conditionnel des montants, ajout de la devise.
+* **Avantage** : le frontend reçoit exactement les données qu’il attend, sans surcharge ni appels secondaires.
 
 dans FactureProcessusImpl.java : 
 
-``` java
+```java
 @Override
     public BigDecimal computeMontantTotalAchat(List<Facture> factures) {
         return computeTotalBySens(factures, SensFacture.ACHAT);
@@ -423,4 +694,89 @@ dans FactureProcessusImpl.java :
     
 ```
 
-après les tests
+---
+
+## Objectif de ces fonctions
+
+Ces méthodes calculent le **montant total HT** des factures d’une demande, en distinguant **les achats** des **ventes**.
+Elles sont utilisées dans le `DemandeSearchConverter` pour enrichir le DTO `RestDemandeSearch` avec des données financières *réelles*, issues de la facturation.
+
+---
+
+## Fonctions exposées
+
+### `computeMontantTotalAchat(List<Facture> factures)`
+
+> Retourne la somme des montants HT des factures d’**achat**.
+
+Elle appelle :
+
+```java
+computeTotalBySens(factures, SensFacture.ACHAT)
+```
+
+---
+
+### `computeMontantTotalVente(List<Facture> factures)`
+
+> Retourne la somme des montants HT des factures de **vente**.
+
+ Elle appelle :
+
+```java
+computeTotalBySens(factures, SensFacture.VENTE)
+```
+
+---
+
+## Fonction interne `computeTotalBySens(...)`
+
+Cette fonction réalise tout le traitement métier :
+
+```java
+private BigDecimal computeTotalBySens(List<Facture> factures, String sensRecherche)
+```
+
+### Étapes du calcul
+
+1. **Vérification de la liste**
+   Si la liste est vide ou nulle → on retourne `0`.
+
+2. **Filtrage des factures valides**
+   On garde uniquement les factures qui :
+
+   * ont une **date de comptabilisation** (facture effective),
+   * ont un **sous-type** autorisé (cf. liste ci-dessous),
+   * ont un **montant HT** non nul,
+   * ont un **sens** (ACHAT ou VENTE) qui correspond au `sensRecherche`.
+
+3. **Liste des sous-types autorisés**
+
+   * `ACQUISITION_FACTURE_ACHAT`
+   * `ACQUISITION_FACTURE_VENTE`
+   * `ACQUISITION_AVOIR_ACHAT`
+   * `ACQUISITION_AVOIR_VENTE`
+   * `ACQUISITION_EXTOURNE_ACHAT`
+   * `ACQUISITION_EXTOURNE_VENTE`
+
+   Cela permet de filtrer uniquement les factures comptabilisées **reliées à une acquisition**.
+
+4. **Calcul de la somme**
+   On extrait les `montantTotalHT` des factures filtrées, puis on les additionne.
+
+---
+
+### En résumé
+
+| Fonction                   | Rôle                                            | Filtrage                                                   |
+| -------------------------- | ----------------------------------------------- | ---------------------------------------------------------- |
+| `computeMontantTotalAchat` | Calcule les **achats** HT totaux d’une demande  | Sens = `ACHAT`                                             |
+| `computeMontantTotalVente` | Calcule les **ventes** HT totales d’une demande | Sens = `VENTE`                                             |
+| `computeTotalBySens`       | Fonction centrale                               | Applique les règles métier (type, sens, montant, validité) |
+
+---
+
+### Pourquoi ce filtrage ?
+
+Il garantit que seules les **factures comptabilisées**, **pertinentes**, et **cohérentes avec l’analyse** sont prises en compte pour les montants. Cela renforce la fiabilité des données transmises au frontend.
+

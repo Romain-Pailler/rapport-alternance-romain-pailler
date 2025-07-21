@@ -61,3 +61,8 @@ https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/Templat
 -[] faire vocab métier
 
 demander à juju ce qui est préférable de faire ??
+
+
+dans la partie de code setEntitesByProjection
+
+j'ajoute les des projections supp dans recherche demande back (pas V2 ??? à vérifier)
