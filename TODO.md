@@ -32,11 +32,8 @@ Intégrer un film de démonstration qui sera commenté pendant la soutenance.
 
 https://alternance-hugo-jahnke.netlify.app/presentation.html#fonctionnement
 
-
-
 https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/TemplateLettreBienvenue
 (à voir avec clément) ??
-
 
 # accueil
 
@@ -44,10 +41,9 @@ https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/Templat
 
 -[ ] ajouter liens vers les parties
 
-# Presentation 
+# Presentation
 
-
-## Leasa 
+## Leasa
 
 -[] demander schema de l'architecture du back office 
 
@@ -59,14 +55,9 @@ https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/Templat
 
 # Annexes
 
-# Glossaire 
+# Glossaire
 
--[] faire vocab technique 
+-[] faire vocab technique
 -[] faire vocab métier
 
-
 demander à juju ce qui est préférable de faire ??
-
-- tout mettre et tout expliquer ? 
-- mettre les explications dans le fichier et le code dans un autre fichier annexes ? 
-- mettre le code et les explications dans la partie annexes
