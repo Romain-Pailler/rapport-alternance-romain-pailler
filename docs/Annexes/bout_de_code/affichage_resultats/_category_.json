@@ -1,0 +1,9 @@
+{
+    "label": "Code Affichage de résultats",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+       "description": "Code du premier ticket de la migration de l'écran"
+    }
+  }
+  
