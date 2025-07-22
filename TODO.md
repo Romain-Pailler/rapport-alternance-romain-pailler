@@ -66,3 +66,7 @@ demander à juju ce qui est préférable de faire ??
 dans la partie de code setEntitesByProjection
 
 j'ajoute les des projections supp dans recherche demande back (pas V2 ??? à vérifier)
+
+
+
+ajouter tests dans partie cote serveur du premier ticket de la recherche de demande.

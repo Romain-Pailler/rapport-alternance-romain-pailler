@@ -167,9 +167,7 @@ Ces appels permettent donc de **préparer toutes les données nécessaires** ava
 Cela garantit que le frontend (notamment Angular) dispose **de toutes les données attendues pour chaque demande**, sans devoir refaire des appels secondaires.
 
 ---
-Voici une explication claire et accessible que tu peux intégrer à ton rapport pour documenter cette partie côté DAO Java :
 
----
 
 ## Enrichissement des entités : ajout des factures aux demandes (`setFacturesToDemandes`)
 
@@ -178,7 +176,7 @@ Voici une explication claire et accessible que tu peux intégrer à ton rapport 
 La méthode `setFacturesToDemandes(...)` permet d’**associer à chaque demande la liste de ses factures**, en les récupérant via une requête optimisée, et en projetant uniquement les champs nécessaires.
 
 ---
-### Code 
+### Code
 
 ``` java
     
@@ -375,7 +373,7 @@ Voici les principaux champs présents dans ce DTO :
 | `accord`                                                       | Accord obtenu pour la demande (bailleur, référence…) |
 | `devise`                                                       | Devise utilisée pour les montants (ex : EUR)         |
 
-> 💡 Tous ces champs sont utilisés **dans le tableau de résultats**, pour permettre un affichage complet et lisible des demandes.
+> Tous ces champs sont utilisés **dans le tableau de résultats**, pour permettre un affichage complet et lisible des demandes.
 
 ---
 

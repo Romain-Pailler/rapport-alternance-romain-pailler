@@ -6,7 +6,7 @@ tags:
     - Angular
 ---
 # Côté Client
-
+ajout des queryParams
 ## le form group
 ``` typescript
 export class RechercheDemandesFormGroup {
