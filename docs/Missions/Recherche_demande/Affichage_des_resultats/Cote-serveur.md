@@ -80,9 +80,6 @@ Cela garantit :
 * une **structuration des données claire** pour l’affichage dans Angular.
 
 ---
-Voici une explication claire de la suite du code, dans la continuité du `searchService.java`, que tu pourras intégrer dans ton rapport :
-
----
 
 ## Enrichissement des entités en fonction de la projection demandée
 

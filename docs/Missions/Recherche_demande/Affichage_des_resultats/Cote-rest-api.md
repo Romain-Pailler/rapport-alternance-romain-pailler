@@ -82,22 +82,7 @@ properties:
 demandeDomain.yaml 
 
 ``` yaml
-title: demandeDomain
-description: La representation d'une demande simpliste
-type: object
-required:
-  - id
-  - code
-properties:
-  id:
-    type: integer
-    format: int64
-    example: 123
-  code:
-    type: string
-    description: Code
-    example: N99999
-  statut: 
+ statut: 
     $ref: '../../statuts/domain/statutDomain.yaml'
   apporteur:
     $ref: '../../apporteur/domain/apporteurDomain.yaml'
@@ -110,6 +95,7 @@ properties:
   schemaFinancier:
     $ref: '../../schema-financier/domain/schemaFinancierDomain.yaml'
 ```
+
 decisionDomain.yaml
 
 ``` yaml
