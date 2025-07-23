@@ -515,6 +515,7 @@ export class RechercheDemandesComponent {
 ````
 
 ## le code source
+
 ### demande.datasource.ts
 ````
 export class DemandeDataSource implements DataSource<DemandeDomain> {
@@ -577,14 +578,14 @@ export class DemandeDataSource implements DataSource<DemandeDomain> {
 ````
 
 ## recherche-demandes.form-group.ts :
-
+### ajout du validators.pattern
 
 ````
 code: new FormControl(null as string | null, Validators.pattern('[a-zA-Z]?[0-9]{1,6}')), // ce pattern prends en compte une lettre (majuscule ou minuscule) ou non et ensuite jusqu'a 6 chiffres
 ````
 
-### code complet :
-
+### code complet:
+````
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 export class RechercheDemandesFormGroup {
@@ -594,3 +595,4 @@ export class RechercheDemandesFormGroup {
     });
   }
 }
+````
