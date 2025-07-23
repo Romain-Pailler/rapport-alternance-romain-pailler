@@ -218,16 +218,17 @@ tags:
 </ml-ui-bloc>
 ````
 
-## le css 
+## le css
 
-````
+````scss
   &__titre {
       &__montants {
         font-size: medium;
       }
     }
 ````
-## le composant 
+
+## le composant
 
 ngOnInit
 
@@ -264,9 +265,10 @@ ngOnInit
     });
   }
 ```
-le reste 
 
-``` typescript 
+le reste
+
+``` typescript
 search() {
     if (this.formGroupDemandeCriteria.invalid) {
       this.formGroupDemandeCriteria.markAllAsTouched();
@@ -305,9 +307,10 @@ search() {
 
 }
 ```
-### code source complet 
 
-````
+### code source complet
+
+````typescript
 @Component({
   selector: 'ml-recherche-demandes',
   standalone: true,
@@ -517,7 +520,8 @@ export class RechercheDemandesComponent {
 ## le code source
 
 ### demande.datasource.ts
-````
+
+````typescript
 export class DemandeDataSource implements DataSource<DemandeDomain> {
   private NO_SEARCH: number = -1;
   private demandeSubject = new BehaviorSubject<DemandeDomain[]>([]);
@@ -577,14 +581,16 @@ export class DemandeDataSource implements DataSource<DemandeDomain> {
 }
 ````
 
-## recherche-demandes.form-group.ts :
+## recherche-demandes.form-group.ts
+
 ### ajout du validators.pattern
 
-````
+````typescript
 code: new FormControl(null as string | null, Validators.pattern('[a-zA-Z]?[0-9]{1,6}')), // ce pattern prends en compte une lettre (majuscule ou minuscule) ou non et ensuite jusqu'a 6 chiffres
 ````
 
-### code complet:
+### code complet
+
 ````
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
