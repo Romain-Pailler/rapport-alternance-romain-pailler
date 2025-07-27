@@ -6,8 +6,17 @@ tags:
     - Angular
 ---
 # Côté Client
-ajout des queryParams
-## le form group ajoute codeLoueur (expliquer ce que c'est)
+
+## Objectif de la fonctionnalité
+
+Cette évolution permet d’affiner les recherches de demandes en ajoutant un troisième critère : `codeLoueur`. Ce champ correspond à **l’identifiant du loueur** rattaché à la demande. Il s’agit généralement d’un acteur interne ou externe responsable de la mise à disposition du bien.
+
+---
+
+## Mise à jour du FormGroup
+
+Le `FormGroup` définit la structure des champs présents dans le formulaire de recherche. Ici, on ajoute un champ `codeLoueur` de type `FormControl`, utilisé pour capturer la valeur saisie par l’utilisateur.
+
 ``` typescript
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
@@ -22,8 +31,19 @@ export class RechercheDemandesFormGroup {
 }
 ```
 
-## le composant html
-ajout d'un input pour faire un filtre
+### Détail :
+
+* **`codeLoueur`** : champ libre (pas de contrainte de format), saisi manuellement par l’utilisateur.
+* **Pourquoi l’ajouter** : permet de cibler les demandes en fonction du loueur rattaché.
+
+---
+
+## Ajout dans le composant HTML – Champ « Loueur »
+
+Un **champ de sélection (dropdown)** a été ajouté au formulaire pour permettre à l’utilisateur de filtrer les demandes selon le **loueur associé**. Le champ est lié au `formControlName="codeLoueur"` défini dans le `FormGroup`.
+
+### Code HTML :
+
 ```html  <div class="uiu-1-5">
           <ml-ui-form-field>
             <ml-ui-label i18n>Loueur</ml-ui-label>
@@ -34,9 +54,64 @@ ajout d'un input pour faire un filtre
           </ml-ui-form-field>
         </div>
 ```
-## le composant typescript 
-ajoute LoueurList, initLoueurs dans le ngOnInit
-````typescript
+
+### Explication :
+
+* **`<ml-ui-select>`** : composant personnalisable de type menu déroulant.
+* **`formControlName="codeLoueur"`** : relie ce champ au `FormGroup`.
+* **`loueurList`** : tableau d’objets contenant les données des loueurs disponibles (généralement chargé via un service).
+
+  * Chaque `loueur` possède une propriété `code` (valeur du champ) et un `libelle` (affiché dans le menu).
+* L’option par défaut (`[value]="null"`) permet de sélectionner *tous les loueurs*.
+
+---
+
+## Mise à jour du composant TypeScript – Chargement des loueurs
+
+Pour permettre à l’utilisateur de filtrer les demandes par **loueur**, la liste des loueurs disponibles est désormais chargée dans le composant.
+
+### Déclaration
+
+```ts
+public loueurList: Loueur[];
+```
+
+> Cette variable contiendra la liste des loueurs disponibles pour le champ de filtre dans le formulaire.
+
+---
+
+### Chargement des loueurs dans le `ngOnInit`
+
+```ts
+ngOnInit(): void {
+  this.initDataSource();
+  this.initLoueurs(); // ⬅️ Ajout du chargement des loueurs
+  this.formGroupDemandeCriteria = RechercheDemandesFormGroup.build();
+  // ...
+}
+```
+
+> L’appel à `initLoueurs()` est effectué dès l’initialisation du composant pour peupler la liste.
+
+---
+
+### Fonction `initLoueurs()`
+
+```ts
+private initLoueurs(): void {
+  this.loueurList = this.loueurService.getLoueursSelected();
+}
+```
+
+* **Objectif** : récupérer les loueurs disponibles via le service `LoueurService`.
+* **`getLoueursSelected()`** : méthode du service retournant une liste filtrée ou complète selon la logique métier.
+* Le résultat est stocké dans `loueurList`, utilisé directement par la vue HTML pour remplir la liste déroulante.
+
+---
+
+
+ a ajouter dans le code source :
+ ````typescript
 
 @Component({
   selector: 'ml-recherche-demandes',
@@ -251,9 +326,8 @@ export class RechercheDemandesComponent {
 }
 ````
 
-les tests ajoute refBailleur
-
-````describe('RechercheDemandesComponent', () => {
+````js
+describe('RechercheDemandesComponent', () => {
   let component: RechercheDemandesComponent;
   let fixture: ComponentFixture<RechercheDemandesComponent>;
   let demandeServiceSpy: jest.Mocked<DemandeService>;

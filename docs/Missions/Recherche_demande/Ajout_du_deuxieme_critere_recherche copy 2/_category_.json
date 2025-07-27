@@ -1,6 +1,6 @@
 {
     "label": "Ajout du deuxième critère de recherche",
-    "position": 2,
+    "position": 4,
     "link": {
       "type": "generated-index",
       "description": "Quatrième ticket de la migration de l'écran"
