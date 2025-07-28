@@ -1,4 +1,93 @@
-# expliquer comment marche la logique pour rechercher les demandes (existant)
+# Fonctionnement global de la recherche de demandes (Existant)
+
+Lorsqu’un utilisateur effectue une recherche de demandes depuis l’interface, une requête HTTP est envoyée à l’API. Cette requête est traitée par la couche service, puis transmise au processus métier, qui appelle le DAO. Le DAO utilise un `SearchBuilder` pour construire dynamiquement la requête SQL avec tous les critères nécessaires.
+
+---
+
+## 1. `SearchService` — **Point d'entrée de la recherche (API REST)**
+
+```java
+@GET
+public Response search(...)
+```
+
+Ce contrôleur REST reçoit l'appel HTTP de recherche. Il construit un objet `DemandeCriteria` à partir des paramètres passés dans l’URL (via `UriInfo`) ainsi que du `Header` (clé d’authentification).
+
+Ensuite, il :
+
+* Calcule le nombre total de résultats avec `countAllByCriteria`.
+* Récupère la liste paginée des demandes avec `searchByCriteria`.
+* Applique un mapping vers un objet de sortie (`RestDemandeShort` ou autre).
+* Selon la projection demandée (ex. : `PROJECTION_RECHERCHE_BACK_V2`), il peut également renvoyer des montants totaux (achat et vente) récupérés via `getMontantSearchDemande`.
+
+**Rôle** : C’est le point d’entrée de l’API côté serveur. Il orchestre les appels aux couches métier et technique, selon le type de projection ou le format souhaité pour la réponse.
+
+---
+
+## 2. `DemandeSearchProcessus` — **Traitement métier de la recherche**
+
+```java
+public List<Demande> searchByCriteria(DemandeCriteria criteria, boolean initialize)
+```
+
+Cette méthode applique d'abord une logique métier :
+
+* Récupère l'utilisateur courant (`currentUser`).
+* Filtre les critères de recherche selon les droits utilisateur (`filterSearch`).
+* Appelle le DAO pour exécuter la recherche réelle.
+* Initialise ou hydrate certains champs d’entités avec Hibernate si `initialize` est à `true` (notamment les objets liés comme taches, paiements, accord...).
+
+**Rôle** : Appliquer la logique métier autour de la recherche, s'assurer que les entités sont correctement chargées et filtrées.
+
+---
+
+## 3. `DemandeDao` — **Accès aux données (DAO)**
+
+```java
+public List<Demande> searchByCriteria(DemandeCriteria criteria, Utilisateur utilisateur)
+```
+
+C’est ici que la recherche dans la base de données est réellement construite et exécutée :
+
+* Un `DemandeSearchBuilder` est instancié, avec le `criteria` et l’utilisateur.
+* Le builder ajoute tous les `WHERE`, `ORDER BY`, `LIMIT`, `OFFSET`, etc.
+* Les entités résultantes sont ensuite filtrées si nécessaire (`filterByRule`).
+* Enfin, selon la projection, certains champs supplémentaires sont initialisés avec `setEntitesByProjection`.
+
+**Rôle** : Construire et exécuter dynamiquement une requête basée sur les nombreux critères de recherche disponibles.
+
+---
+
+## 4. `DemandeSearchBuilder` — **Construction dynamique de requêtes**
+
+```java
+public DemandeSearchBuilder addAllWhere()
+```
+
+Ce fichier contient une longue série de méthodes `whereX()` qui ajoutent dynamiquement des clauses de filtrage (`WHERE`) à la requête JPQL/SQL :
+
+Exemples :
+
+* `whereCodeLoueur()` → filtre sur un loueur sélectionné.
+* `whereDateCreationBetween()` → filtre sur une période de création.
+* `whereClientId()` → filtre par client.
+* `whereStatutsContrat()` → filtre sur le statut du contrat.
+
+Toutes ces conditions sont chaînées via un **builder pattern**, permettant une flexibilité maximale.
+
+**Rôle** : Générer dynamiquement la requête de recherche avec tous les filtres possibles selon les critères envoyés depuis le front.
+
+---
+
+## Résumé du flux de traitement
+
+1. **L’interface utilisateur** envoie une requête avec les critères via HTTP.
+2. **`SearchService`** reçoit la requête et construit l’objet `DemandeCriteria`.
+3. **`DemandeSearchProcessus`** applique les règles métiers et appelle le DAO.
+4. **`DemandeDao`** construit la requête avec le `SearchBuilder` et exécute la requête SQL.
+5. **Les résultats** sont retournés (avec éventuellement des montants d'achat/vente HT), transformés en DTOs, puis renvoyés au client.
+
+---
 
 ## SearchService (recoit l'appel api)
 ````java
