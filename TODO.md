@@ -53,6 +53,11 @@ https://weier-loris-rapport-alternance.netlify.app/
 
 -[] faire vocab technique
 -[] faire vocab métier
+-[] ajouter code source dans les annexes 
+-[] relire les explications / ajouter les screens des tickets ??
+-[] faire ajoutNbRésultats et calcul montants totaux vente et achat 
+- expliquer le bug créer et comment je l'ai corriger 
+- ajouter l'explication de l'existant 
 
 demander à juju ce qui est préférable de faire ??
 
