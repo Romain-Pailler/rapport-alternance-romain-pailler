@@ -62,6 +62,8 @@ https://weier-loris-rapport-alternance.netlify.app/
 - ajouter des liens dans chaque partie afin de rediriger vers le code source 
 - mettre beaucoup de contexte et réécrire beaucoup de tickets importants (premier filtre, résultats (ajouter l'image du skateboard), modif du dto pour l'ajout et calcul de montants totaux)
 - ajouter lien nanceo sur la présentation 
+- renommer tout les noms des fichiers 
+- retirer les chatgpt
 
 
 ### expose 
