@@ -28,8 +28,6 @@ Cette commande a automatiquement généré les fichiers suivants :
 L’utilisation de la CLI permet de normaliser la structure des fichiers Angular, de gagner du temps, et de s'assurer que tous les éléments nécessaires sont bien créés dès le départ.
 :::
 
-Très bien ! Voici une version rédigée et claire pour cette partie sur le **routing**, avec une explication du pourquoi et du comment :
-
 ---
 
 ## Ajout dans le routing de l'application
@@ -55,8 +53,6 @@ J’ai donc ajouté l’entrée suivante :
 :::tip
 En Angular, le routing est indispensable pour permettre la navigation entre les différentes pages d’une application monopage (SPA — Single Page Application).
 :::
-Parfait, voici une rédaction claire et complète pour expliquer à quoi sert un fichier `.service.ts` en Angular, ainsi qu’une explication du code que tu as ajouté dans `demande.service.ts` :
-
 ---
 
 ## Ajout de la logique métier dans un service Angular
@@ -148,15 +144,13 @@ Cette méthode vide les flux et rétablit l’état initial, pratique lorsqu’o
 :::tip
 Grâce à cette `DataSource`, la table reste **synchrone** avec les données serveur, la pagination et l’état de chargement, tout en gardant le composant `RechercheDemandesComponent` simple et maintenable.
 :::
-Voici une **explication détaillée** et claire de ce composant Angular `RechercheDemandesComponent`, structurée par sections pour être facilement intégrable dans un rapport :
-
 ---
 
 ## Composant `RechercheDemandesComponent`
 
 :::info
 
-Le code source du composant est disponible [ici](./../../../annexes/bout_de_code/affichage_resultats/cote_client.md)
+Le code source du composant est disponible [ici](./../../../annexes/bout_de_code/affichage_resultats/cote_client)
 
 :::
 

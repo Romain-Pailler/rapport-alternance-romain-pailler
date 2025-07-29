@@ -61,6 +61,13 @@ https://weier-loris-rapport-alternance.netlify.app/
 - mettre un versionning de code source afin de voir l'evolution 
 - ajouter des liens dans chaque partie afin de rediriger vers le code source 
 - mettre beaucoup de contexte et réécrire beaucoup de tickets importants (premier filtre, résultats (ajouter l'image du skateboard), modif du dto pour l'ajout et calcul de montants totaux)
+- ajouter lien nanceo sur la présentation 
+
+
+### expose 
+
+- faire schema utilisateur, besoins, cahier des charges
+- schéma architecture 
 
 demander à juju ce qui est préférable de faire ??
 
