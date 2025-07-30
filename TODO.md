@@ -63,10 +63,9 @@ https://weier-loris-rapport-alternance.netlify.app/
 - mettre beaucoup de contexte et réécrire beaucoup de tickets importants (premier filtre, résultats (ajouter l'image du skateboard), modif du dto pour l'ajout et calcul de montants totaux)
 - ajouter lien nanceo sur la présentation 
 - renommer tout les noms des fichiers 
-- retirer les chatgpt
+- retirer
 
-
-### expose 
+## expose
 
 - faire schema utilisateur, besoins, cahier des charges
 - schéma architecture 
