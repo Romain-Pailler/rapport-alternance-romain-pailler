@@ -51,6 +51,9 @@ https://weier-loris-rapport-alternance.netlify.app/
 
 # Glossaire
 
+- mettre code du template de la lettre de bienvenue dans le code source 
+- ajouter code backend pour le ticket ML-15202 + screenshot  
+- ajouter screenshot build jenkins dans index de feat dans missions
 -[] ajouter les maquettes screenshot en annexes
 -[] faire vocab technique
 -[] faire vocab métier

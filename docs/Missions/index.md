@@ -5,9 +5,9 @@ sidebar_position: "1"
 
 # Présentation des Missions
 
-Dans le cadre de mon alternance au sein de Nanceo, j'ai été recruté principalement pour réaliser un travail de **migration technique** d'écrans existants. Mon objectif était de contribuer activement à la modernisation de l'application interne en migrant progressivement des composants développés sous AngularJS vers Angular moderne (2+).
+Dans le cadre de mon alternance au sein de Nanceo, j'ai été recruté principalement pour réaliser un travail de **migration technique** d'écrans existants. Mon objectif était clair : contribuer activement à la modernisation de l’application back-office en migrant progressivement des composants développés sous **AngularJS** vers **Angular** (versions 2 et ultérieures).
 
-Cette partie sera donc séparée en trois grandes catégories :
+Pour mieux présenter ce travail, j’ai choisi de l’organiser en trois grandes catégories : 
 
 - **Les nouvelles fonctionnalités**
 - **Les corrections**
@@ -19,37 +19,44 @@ Cette partie sera donc séparée en trois grandes catégories :
 
 ### AngularJS : une technologie obsolète
 
-AngularJS[^1] a été l’un des premiers *frameworks*[^2] front-end très populaires pour créer des applications web dynamiques (des **Single Page Applications (SPA)**[^3]). Cependant, ce framework lancé en 2010 est désormais considéré comme obsolète. Google, son éditeur, a annoncé la fin du support officiel d’AngularJS fin 2021, ce qui signifie l’absence de mises à jour ni de correctifs de sécurité depuis janvier 2022.
+Quand j’ai commencé, une grande partie de l’application reposait sur **AngularJS**[^1], un des premiers *frameworks*[^2] front-end très populaires pour créer des applications web dynamiques (**SPA**[^3]).  
+Sorti en 2010, il a été massivement adopté, mais Google a mis fin à son support officiel fin 2021, ce qui signifie qu’il n’existe plus aucune mise à jour ni correctif de sécurité depuis janvier 2022.
 
-De son côté, **Angular**[^4] (souvent appelé Angular 2+ pour les versions ultérieures) est la refonte complète du framework par Google, sortie dès 2016. Angular repose sur une architecture par **composants**[^5] et utilise **TypeScript**[^6] comme langage, ce qui apporte des améliorations majeures en termes de performance, de maintenabilité et de fonctionnalités.
+De son côté, **Angular**[^4] (souvent appelé Angular 2+ pour les versions ultérieures) est une refonte complète, sortie dès 2016.  
+Il repose sur une architecture par **composants**[^5], utilise **TypeScript**[^6] et apporte des améliorations majeures en matière de performance, de maintenabilité et de fonctionnalités. Contrairement à AngularJS, il est encore activement maintenu, avec de nouvelles versions stables publiées environ tous les six mois.
 
-Contrairement à AngularJS, Angular est régulièrement mis à jour (nouvelles versions stables tous les six mois environ) et bénéficie d’un support actif de la part de Google et de sa communauté.
+
+#### Tableau comparatif – AngularJS vs Angular (2+)
+
+| Critère                | AngularJS (1.x)                                | Angular (2+)                                       |
+|------------------------|-----------------------------------------------|---------------------------------------------------|
+| **Année de sortie**    | 2010                                           | 2016                                              |
+| **Langage principal**  | JavaScript                                     | TypeScript                                        |
+| **Architecture**       | MVC (*Model-View-Controller*)                  | Basée sur des composants                         |
+| **Performances**       | Plus lentes, cycle digest fréquent             | Plus rapides, compilation AOT (*Ahead-of-Time*)  |
+| **Maintenance**        | Fin du support depuis janvier 2022             | Mises à jour régulières (2/an)                   |
+| **Communauté**         | En forte diminution                            | Active et en croissance                          |                                              |
+| **Gestion des modules**| Limitée                                        | Complète (architecture modulaire)                |
+| **Outils CLI**         | Non                                            | Oui (CLI Angular officiel)                       |
+| **Sécurité**           | Plus de correctifs, failles non comblées       | Correctifs réguliers                              |
 
 ### Dette technique et risques liés à AngularJS
 
-Continuer d’utiliser AngularJS aujourd’hui équivaut à accumuler de la **dette technique**[^7]. Ce concept désigne le coût futur que représente le maintien de solutions technologiques dépassées ou de raccourcis de développement pris par le passé. Plus le temps passe sans migrer, plus l'impact de cette dette augmente.
+Continuer à utiliser AngularJS aujourd’hui revient à accumuler de la **dette technique**[^7] : un coût futur lié au maintien de solutions obsolètes. Plus on tarde à migrer, plus cette dette pèse lourd.
 
-Les principaux risques associés au maintien d'AngularJS sont :
+Les principaux risques sont clairs:
 
-- **Sécurité** : absence de correctifs de sécurité critiques.
-- **Maintenance difficile** : rareté des développeurs AngularJS et bugs connus non corrigés.
-- **Compatibilité et pérennité** : risques d'incompatibilité avec les évolutions web modernes.
+- **Sécurité** : plus aucun correctif pour combler les failles critiques.  
+- **Maintenance** : rareté des développeurs AngularJS et absence de correction des bugs connus.  
+- **Compatibilité** : difficultés croissantes avec les technologies web récentes.
+
 
 ![Illustration de la dette technique et de la nécessité de migration](dette_technique_migration.png)
 
-### Avantages de migrer vers Angular (2+)
-
-Migrer une application AngularJS vers Angular moderne offre plusieurs bénéfices majeurs :
-
-- **Maintenabilité** : code mieux structuré grâce à l'architecture *modulaire*[^8].
-- **Performance** : gain en vitesse et en réactivité grâce à la compilation anticipée (AOT).
-- **Technologies modernes** : adoption de TypeScript, PWA[^9], CLI[^10], et gestion d'état moderne.
-- **Support et communauté** : accès à des ressources mises à jour régulièrement.
-- **Réduction de la dette technique** : meilleure qualité du code et préparation des évolutions futures.
-
 ### Conclusion
 
-La migration d’AngularJS vers Angular 2+ est indispensable pour garantir la **sécurité**, la **pérennité** et la **performance** des applications web modernes. Mon rôle durant l'alternance a été d’apporter une contribution technique essentielle en réalisant cette migration, tout en respectant les contraintes métier et techniques du projet Leasa.
+La migration d’AngularJS vers Angular 2+ n’était pas seulement une amélioration technique : c’était une **nécessité stratégique** pour garantir la sécurité, la pérennité et la performance de l’application.  
+Pendant mon alternance, j’ai joué un rôle clé dans ce processus, en prenant en compte à la fois les contraintes **techniques** et les besoins **métier** du projet.
 
 ---
 

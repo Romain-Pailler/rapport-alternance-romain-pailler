@@ -1,5 +1,5 @@
 ---
-sidebar_label: Architecture Technique
+sidebar_label: Architecture Technique REST
 sidebar_position: 7
 tags: 
     - Présentation
@@ -7,7 +7,7 @@ tags:
     - Spring
 ---
 
-# Architecture de l'application
+# Architecture de l'application REST
 
 L’architecture REST de l’application Leasa repose sur une organisation en **trois couches principales**, représentées dans le schéma ci-dessous :
 
@@ -63,9 +63,3 @@ Lorsqu’un utilisateur effectue une recherche ou une action via l’interface w
 Le **controller** ou le **service** se charge de **mapper** ces DTO en entités JPA lorsqu’une opération sur la base est nécessaire, ou l’inverse lorsqu’on retourne un résultat à afficher.
 
 ---
-
-Cette architecture en couches permet de :
-- Séparer clairement les responsabilités,
-- Faciliter la maintenance,
-- Réutiliser les services dans d’autres contextes,
-- Mutualiser la logique métier tout en conservant une interface REST simple pour le client.

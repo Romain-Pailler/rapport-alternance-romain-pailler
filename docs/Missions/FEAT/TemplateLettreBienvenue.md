@@ -1,6 +1,6 @@
 ---
 sidebar_label: Lettre de bienvenue
-sidebar_position: "2"
+sidebar_position: "3"
 tags: 
     - Feature
     - Template
@@ -9,13 +9,14 @@ tags:
 
 ## Contexte
 
-Il est possible depuis l'application d'envoyer un email de bienvenue après la facturation d'un dossier.
-Ce template est codé en .mustache (à voir avec clément) qui à besoin de données telles que des dates ou des numéro de contrat
+Depuis l’application, il est possible d’envoyer un email de bienvenue après la facturation d’un dossier.
+Ce mail repose sur un template [Mustache](./../../Annexes/mustache.md), qui nécessite différentes données comme des dates ou des numéros de contrat. Avant de commencer, j’ai échangé avec Charlotte pour clarifier la structure du template et les données à lui fournir.
 
 ## Objectif
 
-L'objectif ici est d'améliorer l'existant. Le template de mail existe mais avec des fautes d'ortographes et des données nécessaires manquantes que les commerciaux devaient remplir manuellement.
-Les données manquantes :
+Mon objectif était d’améliorer l’existant. Le template de mail existait déjà, mais comportait plusieurs fautes d’orthographe et surtout, il manquait certaines données que les commerciaux devaient compléter manuellement.
+
+J’ai donc ajouté automatiquement :
 
 - Le code de la demande
 - La raison sociale du client
@@ -25,17 +26,30 @@ Les données manquantes :
 
 ## Réalisations
 
-La partie la plus technique à été d'afficher ou non la date de prélévement estimée car la DP dépend d'une seule facture comptabilisée donc je devais vérifier que la facture était comptabilisée, que son type soit de loyer facture vente. Il peut avoir des factures comptabilisées qui sont annulés car elles ont des avoir;
-
-J'ai du créer un nouveau processus : explication des 3 couches de Leasa
+La partie la plus technique a été de gérer l’affichage conditionnel de la date de prélèvement estimée.
+En effet, cette date ne devait apparaître que si une seule facture était comptabilisée, et si son type était "loyer facture vente".
+Il fallait aussi exclure les factures annulées par un avoir.
+Pour répondre à ce besoin, j’ai créé un nouveau processus au sein de l’[architecture REST](./../../Annexes/archi_rest.png)
 
 ## Ce que j'ai appris
+
+Ce développement m’a permis de consolider mes compétences sur :
+
+- La gestion conditionnelle de données côté backend
+- L’intégration de données métiers dans un template Mustache
+- Ma compréhension du fonctionnement métier des demandes dans Leasa, notamment sur la manière dont les données sont liées entre les demandes et les factures
 
 ## Le code
 
 ### DemandeFactureProcessusImpl.java
 
-Dans cette classe, j’ai ajouté une nouvelle méthode métier getFacturesFiltreesLoyerSansAvoir. Celle-ci permet de filtrer les factures d’une demande afin de ne conserver que celles qui sont comptabilisées dans le système comptable (Monalisa-Compta) et qui ne possèdent pas d'avoir associé. En effet, lorsqu’une facture est associée à un avoir, elle ne doit pas être prise en compte dans le calcul, d’où la nécéssité de cette fonction utilisé dans le mailBuilder.
+Dans cette classe, j’ai ajouté une nouvelle méthode métier `getFacturesFiltreesLoyerSansAvoir` avec pour objectif clair : filtrer les factures d’une demande pour ne conserver **que celles qui sont réellement prises en compte dans le calcul de la date de prélèvement estimée**. 
+
+Concrètement, j’ai commencé par récupérer uniquement les factures **comptabilisées** dans le système comptable [**Monalisa-Compta**](./../../Annexes/compta.md).  
+Ensuite, j’ai exclu toutes celles ayant un **avoir** associé, car elles ne doivent pas être considérées dans le calcul.  
+Enfin, j’ai appliqué un dernier filtre pour ne garder que les factures dont le sous-type correspond à **LOYER_FACTURE_VENTE**.
+Cette méthode est utilisée dans le `MailBuilder` pour alimenter automatiquement le template de la lettre de bienvenue avec la bonne date, uniquement lorsque les conditions sont réunies.
+
 
 ```Java title="IDemandeFactureProcessus.java"
 public interface DemandeFactureProcessus {
@@ -75,35 +89,21 @@ public List<Facture> getFacturesFiltreesLoyerSansAvoir(final Demande demande) {
 
 ### Le mailBuilder
 
-Dans cette partie, j’ai ajouté la génération du mail de bienvenue, envoyé au client lors de la mise en place de son contrat.
+Pour compléter cette fonctionnalité, j’ai travaillé sur la génération du mail de bienvenue, envoyé au client lors de la mise en place de son contrat.
 
-La méthode getTemplateLettreBienvenue permet de récupérer l’ensemble des informations nécessaires à la génération du mail. Les données sont d’abord chargées à partir de la demande (Demande) via le processus métier. Elles sont ensuite stockées dans un contexte sous forme de Map (String, Object) qui sera utilisé par les templates [Mustache](./../../annexes/mustache).
+J’ai implémenté la méthode `getTemplateLettreBienvenue`, qui commence par charger toutes les données nécessaires depuis la demande (`Demande`) via les processus métiers.  Elles sont ensuite stockées dans un contexte sous forme de Map (String, Object) qui sera utilisé par les templates [Mustache](./../../annexes/mustache).
 
-Plusieurs informations sont extraites, notamment :
+Parmi les données injectées dans le template, on retrouve :  
+- Les coordonnées du bailleur, de l’apporteur et du client  
+- La date de démarrage du contrat  
+- Les coordonnées du loueur (téléphone, email)  
+- Le code de la demande  
 
-Les coordonnées du bailleur, de l’apporteur et du client ;
+J’utilise ensuite `getFacturesFiltreesLoyerSansAvoir` pour déterminer la date de prélèvement estimée, uniquement si une facture éligible est trouvée.  
+Si un loyer intercalaire existe, j’ajoute également les dates de début et de fin de cette période.
 
-La date de démarrage du contrat de facturation ;
 
-Le numéro de téléphone et l’adresse email du loueur, récupérés via le processus adresseEmailProcessus ;
-
-Le code de la demande.
-
-Ensuite, le processus demandeFactureProcessus.getFacturesFiltreesLoyerSansAvoir est appelé pour filtrer les factures, afin de récupérer une éventuelle date de prélèvement estimée s’il n’existe qu’une seule facture éligible. Dans le cas contraire, une valeur par défaut est utilisée.
-
-Un contrôle est également réalisé pour vérifier l'existence d'un loyer intercalaire, et renseigner, si besoin, les dates de début et de fin de cette période dans le contexte.
-
-Enfin, la signature du mail est configurée selon les règles de gestion internes, et l'ensemble des données est injecté dans les templates Mustache pour générer :
-
-Le sujet du mail via objet.mustache,
-
-Le contenu principal via body.mustache,
-
-La signature via le templateToolI18nLoueurLocale.
-
-Les fichiers .properties contiennent les différents libellés traduits qui sont insérés dans le corps du message grâce à la syntaxe Mustache.
-
-Le template Mustache permet, selon la présence ou non des dates de prélèvements, d’afficher dynamiquement le bon contenu pour le client.
+Enfin, la signature est configurée selon les règles internes et l’ensemble des données est injecté dans les templates Mustache pour générer le sujet, le corps et la signature du mail, en adaptant le contenu selon la présence ou non d’une date de prélèvement.
 
 ``` Java title="MailBuilder.java"
  public Mail getTemplateLettreBienvenue(final Long demandeId) {
@@ -158,7 +158,7 @@ template.mail.lettre_bienvenue.confirmation_contrat_echeances=Par la pr\u00E9sen
 template.mail.lettre_bienvenue.piece_jointe_date_prelevement=Au titre de notre prestation d\u2019accompagnement, nous vous prions de trouver en pi\u00e8ce jointe la facture de mise \u00E0 disposition de la solution \u00E0 la p\u00E9riode du {{dateDebutPrelevement}} au {{dateFinPrelevement}}.
 ```
 
-``` mustache
+``` html
 <p>
     {{#i18n}}template.mail.lettre_bienvenue.cher_client{{/i18n}}<br/>
 </p>
@@ -191,3 +191,10 @@ template.mail.lettre_bienvenue.piece_jointe_date_prelevement=Au titre de notre p
     {{#i18n}}template.mail.lettre_bienvenue.remerciement{{/i18n}}<br/>
 </p>
 ```
+### Conclusion
+
+Ce développement m’a permis de découvrir un domaine que je n’avais encore jamais abordé : la création de **templates de mails**.  
+J’ai pu constater à quel point cet outil peut être utile pour nos utilisateurs finaux, qui doivent régulièrement communiquer avec leurs clients par email.  
+En automatisant et en structurant ce type de messages, on leur fait gagner du temps tout en garantissant une présentation professionnelle et cohérente.
+
+---

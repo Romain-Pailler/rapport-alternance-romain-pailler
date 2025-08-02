@@ -6,5 +6,6 @@
 
 - PR : pull request (à quoi ça sert ?)
 
-- écriture comptables
+- écriture comptables // métier
 
+- dette technique
