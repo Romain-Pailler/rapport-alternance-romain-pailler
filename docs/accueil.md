@@ -48,3 +48,5 @@ Je tiens tout d’abord à remercier toute l'équipe Leasa pour m’avoir accuei
 Je remercie également l’ensemble des collaborateurs d’Equasens et de Nanceo pour leur accueil chaleureux, leur disponibilité et leur soutien tout au long de cette année d’alternance.
 
 Enfin, je remercie particulièrement Yann BONIFACE, mon tuteur universitaire, pour son accompagnement, ses conseils et sa disponibilité durant toute cette période.
+
+---

@@ -25,3 +25,5 @@ L’activité de Nanceo se divise en deux volets :
 Le financement par **leasing** ou **location avec option d’achat (LOA)** répond à une demande croissante de flexibilité budgétaire pour les professionnels. Nanceo joue un rôle de facilitateur en accélérant le traitement des demandes grâce à un système automatisé et interconnecté avec les banques et organismes de financement.
 
 Cette approche réduit les délais de validation tout en assurant un suivi rigoureux et conforme aux obligations réglementaires.
+
+---

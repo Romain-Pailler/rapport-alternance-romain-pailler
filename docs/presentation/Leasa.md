@@ -33,3 +33,5 @@ L’objectif principal de **Leasa** est de **réduire les délais de traitement*
 En automatisant les étapes du cycle de financement, l’outil permet un gain de temps significatif, notamment lors de la constitution des dossiers et de la validation des accords de financement.
 
 Avec une réponse obtenue dans la majorité des cas en moins de **4 minutes**, **Leasa** s’impose comme un outil performant et structurant pour les équipes commerciales et administratives.
+
+---

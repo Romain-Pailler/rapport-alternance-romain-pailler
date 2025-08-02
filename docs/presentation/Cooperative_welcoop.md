@@ -24,3 +24,5 @@ Elle repose sur des valeurs fortes — **proximité**, **expertise**, **anticipa
 La coopérative a pour objectif de devenir la **première plateforme de santé à l’échelle européenne**. Pour y parvenir, elle multiplie les initiatives visant à fédérer les données patients de manière sécurisée et conforme à la législation, tout en contribuant à l’harmonisation des systèmes d’information de santé entre les pays membres de l’Union européenne.
 
 Cette ambition s’appuie sur ses filiales spécialisées, dont [Equasens](./Equasens), responsable des développements technologiques.
+
+---

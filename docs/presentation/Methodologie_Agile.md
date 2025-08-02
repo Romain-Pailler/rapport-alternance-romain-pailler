@@ -48,3 +48,5 @@ Confluence joue donc un rôle clé dans la **transmission de l’information** e
 ---
 
 Cette organisation agile favorise une **collaboration fluide** au sein de l’équipe, et une **livraison continue** de valeur au fil des versions. Elle m’a permis de travailler dans un cadre structuré, tout en développant des réflexes essentiels dans la gestion de projet logiciel en entreprise.
+
+---

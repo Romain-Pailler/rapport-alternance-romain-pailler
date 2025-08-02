@@ -21,3 +21,5 @@ Le glossaire contient tout le vocabulaire nécessaire afin de comprendre les ter
 ---
 
 En parcourant le site, vous pourrez découvrir en détail chaque partie et mieux comprendre mon expérience, ainsi que les compétences professionnelles et personnelles acquises durant cette année d’alternance.
+
+---
