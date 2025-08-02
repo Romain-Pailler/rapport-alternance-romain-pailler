@@ -4,18 +4,20 @@ sidebar_label: "Table des matières"
 ---
 # Table des matières 
 
-Le rapport est structuré de la manière suivante :
+Le rapport est organisé de la manière suivante :
 
-## **Présentation** : 
-Cette section débute par une présentation personnelle permettant de mieux comprendre mon parcours et mes motivations. Elle se poursuit par la présentation de la Coopérative Welcoop, d'Equasens, de la filiale Nanceo ainsi que du projet Leasa. J'y détaille ensuite mon équipe de travail et l'architecture globale du projet.
+## [**Présentation**](./category/présentation) : 
+Cette section commence par une présentation personnelle pour mieux comprendre mon parcours et mes motivations. Elle enchaîne avec la présentation de la **Coopérative Welcoop**, d’**Equasens**, de la filiale **Nanceo** et du projet **Leasa**. J’y décris ensuite mon équipe et l’architecture globale du projet.
 
-## **Missions** : 
-Cette partie présente précisément les différentes missions réalisées tout au long de mon alternance, regroupées en fonctionnalités majeures développées, ainsi que les correctifs techniques apportés.
+## [**Missions**](./category/missions) : 
+Cette partie détaille les missions menées pendant mon alternance, regroupées par fonctionnalités majeures développées et par correctifs techniques apportés.
 
-## **Annexes** : 
-Les annexes contiennent des extraits de code ainsi que des éléments de documentation complémentaires.
+## [**Annexes**](./category/annexes) : 
+Les annexes contiennent des extraits de code et des éléments de documentation complémentaires.
 
-## **Glossaire** :
-Le glossaire contient tout le vocabulaire nécessaire afin de comprendre les termes techniques utilisés tout au long du rapport.
+## [**Glossaire**](./category/glossaire) :
+Le glossaire contient tout le vocabulaire nécessaire afin de comprendre les termes techniques et métiers utilisés tout au long du rapport.
 
-La navigation au sein du site vous permettra d'explorer en détail chacune des parties pour mieux appréhender mon expérience ainsi que les acquis professionnels et personnels résultant de cette année d'alternance.
+---
+
+En parcourant le site, vous pourrez découvrir en détail chaque partie et mieux comprendre mon expérience, ainsi que les compétences professionnelles et personnelles acquises durant cette année d’alternance.
