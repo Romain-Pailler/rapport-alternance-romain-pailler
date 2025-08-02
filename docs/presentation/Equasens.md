@@ -9,13 +9,13 @@ tags:
 
 ## Présentation générale
 
-Equasens est une société spécialisée dans les technologies de santé. Filiale du groupe La Coopérative Welcoop, elle se positionne comme un leader européen de la e-santé, en concevant des logiciels et services numériques à destination des professionnels et structures du secteur médical.
+Equasens est une société spécialisée dans les technologies appliquées à la santé. Filiale de La Coopérative Welcoop, elle se positionne comme un leader européen de la e-santé, en concevant des logiciels et services numériques pour les professionnels et structures du secteur médical.
 
-La société est agréée en tant qu’hébergeur de données de santé (HDS), un statut qui lui permet de traiter des informations sensibles dans un cadre sécurisé et conforme aux exigences légales.
+La société est agréée Hébergeur de Données de Santé (HDS), un statut qui l’autorise à traiter des données sensibles dans un environnement sécurisé et conforme aux exigences légales.
 
 ## Activités principales
 
-Les produits et services d’Equasens couvrent un spectre large d’activités :
+Les produits et services d’Equasens couvrent un large éventail d’activités :
 
 - Édition de logiciels pour pharmacies, établissements hospitaliers et professions libérales de santé,
 - Interconnexion des systèmes d’information pour une meilleure coordination des soins,

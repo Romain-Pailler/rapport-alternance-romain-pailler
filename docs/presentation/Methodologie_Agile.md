@@ -7,11 +7,11 @@ tags:
 
 # Méthodologie Agile
 
-Au sein de mon équipe, le développement de l’application Leasa repose sur une organisation en **méthodologie Agile**, et plus précisément sur un fonctionnement par **sprints de trois semaines**.
+Dans mon équipe, le développement de l’application Leasa suit la **méthodologie Agile**, avec des **sprints** d’une durée de trois semaines.
 
 ## Organisation des sprints
 
-Chaque sprint débute par deux temps forts :
+Chaque sprint commence par deux moments clés :
 
 - Une **rétrospective**, durant laquelle l'équipe revient sur le déroulement du sprint précédent. L’objectif est d’identifier les points positifs, les éventuels blocages rencontrés et de proposer des axes d’amélioration.
 - Une **revue de sprint**, qui permet de présenter à l’ensemble de l’équipe (et aussi au responsable du back office  Christophe PEREIRA) les livrables produits durant les trois semaines écoulées.

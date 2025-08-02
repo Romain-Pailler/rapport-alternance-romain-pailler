@@ -9,24 +9,18 @@ tags:
 
 ## Présentation générale
 
-La Coopérative Welcoop est une société coopérative fondée en 1935. Elle rassemble aujourd’hui plus de 4 000 pharmaciens-sociétaires et emploie près de 2 000 collaborateurs. Elle agit en soutien aux professionnels de santé, notamment les pharmaciens, dans leur mission de proximité et de suivi auprès des patients.
+Créée en **1935**, la **Coopérative Welcoop** est une société coopérative qui regroupe aujourd’hui plus de **4 000 pharmaciens-sociétaires** et près de **2 000 collaborateurs**. Elle soutient les professionnels de santé, en particulier les pharmaciens, dans leur mission de proximité et de suivi des patients, et agit comme un partenaire clé du secteur.
 
-Son siège est basé à Nancy. En 2023, la coopérative a réalisé un chiffre d’affaires de 402 millions d’euros, témoignant de son poids économique et de son importance dans le secteur de la santé.
+Basée à **Nancy**, la coopérative a réalisé en 2023 un chiffre d’affaires de **402 millions d’euros**, confirmant son poids économique et son importance dans le paysage de la santé en France.
 
 ## Objectifs et missions
 
-La Coopérative Welcoop s’est fixée pour mission d’améliorer l’efficience du système de santé en accompagnant la transformation des métiers de la santé. Elle se positionne aujourd’hui comme un acteur central de l’innovation en e-santé, en particulier dans les domaines suivants :
+La Coopérative Welcoop s’est donnée pour mission d’améliorer l’efficience du système de santé et d’accompagner l’évolution des métiers de la santé. Acteur clé de l’innovation en **e-santé**, elle intervient notamment dans trois domaines majeurs : la sécurisation et l’hébergement des données de santé, le déploiement de solutions logicielles pour les professionnels, et l’interconnexion entre les acteurs de la chaîne de soins.
 
-- Sécurisation et hébergement des données de santé,
-- Déploiement de solutions logicielles pour les professionnels,
-- Interconnexion entre les acteurs de la chaîne de soins.
-
-Elle repose sur des valeurs de **proximité**, **d’expertise**, **d’anticipation** et **d’optimisme**, tout en conservant une forte dimension coopérative dans sa gouvernance et son développement stratégique.
+Elle repose sur des valeurs fortes — **proximité**, **expertise**, **anticipation** et **optimisme** — tout en conservant un fonctionnement coopératif dans sa gouvernance et son développement stratégique.
 
 ## Vision européenne
 
-La coopérative à pour objectif de devenir la première plateforme de santé à l’échelle européenne, La Coopérative Welcoop multiplie les initiatives visant à fédérer les données patients de manière sécurisée, dans le respect de la législation. Elle entend contribuer activement à l’harmonisation des systèmes d’information de santé entre les pays membres de l’Union européenne.
+La coopérative a pour objectif de devenir la **première plateforme de santé à l’échelle européenne**. Pour y parvenir, elle multiplie les initiatives visant à fédérer les données patients de manière sécurisée et conforme à la législation, tout en contribuant à l’harmonisation des systèmes d’information de santé entre les pays membres de l’Union européenne.
 
-Pour mener à bien cette ambition, elle s’appuie notamment sur ses filiales spécialisées, dont [Equasens](./Equasens), en charge des développements technologiques.
-
----
+Cette ambition s’appuie sur ses filiales spécialisées, dont [Equasens](./Equasens), responsable des développements technologiques.

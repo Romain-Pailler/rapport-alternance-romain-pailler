@@ -50,7 +50,6 @@ https://weier-loris-rapport-alternance.netlify.app/
 # Annexes
 
 # Glossaire
-
 -[] faire vocab technique
 -[] faire vocab métier
 -[] ajouter code source dans les annexes 
