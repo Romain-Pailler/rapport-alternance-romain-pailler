@@ -23,7 +23,7 @@ function HomepageHeader() {
           <Link className="button button--primary button--lg" to="/docs/presentation/Equipe">
             👥 Présentation de l'équipe
           </Link>
-          <Link className="button button--primary button--lg" to="/docs/Missions/Projet_individuel/recherchedemande">
+          <Link className="button button--primary button--lg" to="./../../docs/Missions/Recherche_demande/recherchedemande">
             🔍 Recherche de demande
           </Link>
         </div>
