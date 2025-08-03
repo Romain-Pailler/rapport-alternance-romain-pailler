@@ -51,6 +51,8 @@ https://weier-loris-rapport-alternance.netlify.app/
 
 # Glossaire
 
+
+- ajouter les tickets dans la liste de présentation du projet de migration
 - ajouter screenshot ML-14952
 - ajouter code dans ML-14952
 - ajouter code dans ML-14747

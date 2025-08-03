@@ -13,64 +13,79 @@ L’écran de recherche de demandes est un **outil central pour les utilisateurs
 
 Cependant, cette page présente aujourd’hui plusieurs **limites importantes** :
 
-- Elle contient un **nombre important de filtres**, parfois redondants ou peu lisibles.
-- Son **ergonomie** est perfectible, rendant la navigation peu intuitive.
-- Elle est toujours **développée en AngularJS**, ce qui freine les évolutions techniques et son intégration avec les nouveaux composants du projet.
+- Une **quantité importante de filtres**, parfois redondants ou peu compréhensibles.
+- Une **ergonomie datée**, qui rend la navigation peu intuitive.
+- Un développement basé sur **AngularJS**, qui freine son intégration avec les nouveaux composants Angular du projet.
 
-👉 Une **migration vers Angular 2+** est donc indispensable pour répondre aux besoins actuels tout en assurant la maintenabilité future. Cette refonte s’inscrit dans le chantier global de **modernisation de l’interface Leasa**.
+
+C’est dans ce cadre que **mon projet principal** a été défini : **migrer cet écran stratégique vers Angular 2+**, en respectant son fonctionnement actuel mais en repensant son ergonomie.
 
 ![alt text](image.png)
 
 ## Étapes
 
-### 1. Recueil des besoins
+### Analyse de l'existant
 
-Avant d'ajouter de nouvelles fonctionnalités, il est essentiel de comprendre précisément les attentes fonctionnelles. Cette étape consiste à échanger avec les utilisateurs finaux du projet (dans ce cas : les commerciaux back-office) afin de définir clairement :
+Avant de pouvoir entamer les développements, j’ai commencé par une [**phase d’analyse de l’existant**](./../../Annexes/analyse_existant_recherche_demande.md), aussi bien côté **front-end que back-end**. Cette étape m’a permis de comprendre en profondeur :
 
-- Les fonctionnalités existantes à conserver.
-- Les évolutions ou améliorations souhaitées sur l'écran concerné.
+- Le fonctionnement du code AngularJS actuel.
+- Les différentes couches métier liées à la recherche.
+- Le parcours utilisateur et les cas d’usage fonctionnels.
 
-En amont de ces échanges, j'ai préparé les questions à poser aux utilisateurs en collaboration avec Nicolas, graphiste du projet. Cet échange a permis de structurer un cadre précis pour les réunions, afin d'éviter de dériver vers des besoins extérieurs au périmètre fonctionnel de l'écran à améliorer.
+J’ai également étudié la manière dont les données étaient transmises et affichées dans l’interface, ainsi que les interactions avec les services backend.
 
-Pour réaliser le recueil des besoins, j'ai été accompagné par Charlotte, analyste fonctionnelle du projet, et Nicolas. Ensemble, nous avons organisé deux réunions regroupant cinq utilisateurs. L'objectif était de comprendre leurs habitudes d'utilisation actuelles et d'identifier leurs nouveaux besoins de manière ciblée.
+### 2. Recueil des besoins
 
-À l'issue de ces réunions, j'ai rédigé un compte rendu détaillé synthétisant les retours recueillis.
+Une fois cette première compréhension technique en place, j’ai participé au [**recueil des besoins utilisateurs**](./../../Annexes/cr_recueil_besoins_recherche_demande.md) afin d’identifier :
 
-### 2. Élaboration de wireframes
+- Les fonctionnalités essentielles à conserver.
+- Les améliorations attendues par les utilisateurs.
 
-Une fois les besoins formalisés, des **wireframes**[^wireframe] sont créés. Ces schémas simples permettent de visualiser la structure de la future interface sans se concentrer sur le style graphique :
+Pour préparer ces ateliers, j’ai travaillé en amont avec **Nicolas** (graphiste UI/UX) pour structurer les questions à poser. Ce travail préparatoire a permis d’éviter de dériver hors périmètre fonctionnel pendant les réunions.
 
-- Disposition des éléments (champs de recherche, filtres, résultats, boutons d'action).
-- Parcours utilisateur logique et ergonomique.
-- Mise en avant des fonctionnalités principales.
+J’ai ensuite co-animé deux réunions avec **Charlotte** (analyste fonctionnelle) et Nicolas, réunissant cinq utilisateurs finaux. Ces échanges ont permis de comprendre leurs usages actuels, leurs douleurs, et leurs attentes concrètes pour la nouvelle version de l’écran.
 
-### 3. Réalisation de maquettes graphiques
+### 3. Élaboration de wireframes
 
-Les wireframes validés sont traduits en **maquettes**[^maquette] plus détaillées :
+Une fois les besoins bien cadrés, j’ai réalisé des **wireframes** afin de proposer une première vision fonctionnelle de la future interface. Ces schémas simples ont permis de valider :
 
-- Application de la charte graphique de l'entreprise.
-- Définition des couleurs, typographies, icônes, et styles des composants.
-- Validation du rendu visuel final auprès des équipes métiers et techniques.
+- L’emplacement des filtres et des résultats.
+- Le parcours utilisateur logique.
+- La mise en avant des fonctionnalités essentielles.
 
-### 4. Présentation des maquettes au siège (Paris)
 
-Les maquettes réalisées sont présentées aux équipes métier et aux décideurs basés au siège (Paris) :
+### 4. Réalisation de maquettes graphiques
 
-- Recueil des retours utilisateurs sur l'ergonomie et le design.
-- Ajustements éventuels suite aux observations ou nouvelles attentes.
-- Validation formelle de la future interface avant phase de spécifications.
+Avec l’appui de Nicolas, les wireframes ont ensuite été transformés en **maquettes graphiques complètes**, intégrant :
 
-### 5. Rédaction des spécifications fonctionnelles
+- La charte graphique Leasa.
+- Les icônes, couleurs et composants normalisés.
+- Un rendu fidèle à l’application cible.
 
-Une fois la maquette validée, un document de **spécifications fonctionnelles**[^specs] est rédigé. Il décrit de manière exhaustive :
 
-- Le comportement attendu de chaque élément de l'interface.
-- Les règles de gestion métier associées.
-- Les interactions prévues entre les différents composants.
-Ce document sert de référence commune pour les développeurs et les testeurs.
+### 5. Présentation des maquettes au siège (Paris)
 
-### 6. Listes des fonctionnalités développées 
+Nous avons ensuite présenté les maquettes aux **équipes métiers basées au siège** (Paris). Ce rendez-vous a permis de :
 
-Après toutes ces étapes réalisées, j'ai pu enfin commencé à développer. Voici une liste chrnologique de mes développements : 
+- Recueillir les derniers retours utilisateurs.
+- Apporter quelques ajustements visuels et fonctionnels.
+- Valider formellement la future interface avant rédaction des tickets de specs.
+
+
+### 6. Rédaction des spécifications fonctionnelles
+
+Sur la base des maquettes validées, j’ai participé à la rédaction des **spécifications fonctionnelles**, en collaboration avec l’équipe fonctionnelle (Charlotte et Benoît).  
+Ce document détaille précisément :
+
+- Le rôle de chaque filtre.
+- Les règles de gestion métier.
+- Les comportements attendus côté front-end et backend.
+
+Il a ensuite servi de support de référence pour le développement et les phases de tests.
+
+
+### 7. Listes des fonctionnalités développées 
+
+Après toutes ces étapes réalisées, j'ai pu enfin commencé à développer. Voici une liste chronologique de mes développements : 
 
 - [L'affichage des résultats](./Affichage_des_resultats/Cote-client.md) : Premier développement de la nouvelle page avec une fonctionnalité simpliste, un bouton pour rechercher toutes les demandes. Il m'a permis de mieux comprendre l'ensemble du code tant côté client que côté serveur.
