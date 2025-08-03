@@ -24,8 +24,6 @@ Cette mission a été particulièrement formatrice : elle m’a permis de me fam
 - [ML-15002](/docs/Missions/FIX/liste/ML-15002) **[Pièce comptable]** Le choix du loueur fait bouger les pièces comptables
 - [ML-12242](/docs/Missions/FIX/liste/ML-12242) Supprimer le bouton "Défendre le dossier" dans l'onglet "Décision"
 - [ML-14950](/docs/Missions/FIX/liste/ML-14950) La recherche de relevé se comporte bizarrement avec le filtre compte
-- [ML-15120](/docs/Missions/FIX/liste/ML-15120) Les codes CRE doivent être triés par ordre alphabétique
-- [ML-15245](/docs/Missions/FIX/liste/ML-15245) Reprendre un mail en changeant le contexte n'est pas tiptop
 - [ML-15287](/docs/Missions/FIX/liste/ML-15287) **[RIB/RUM]** Rechargement des éléments de la page quand il n'y a pas de changement
 - [ML-14620](/docs/Missions/FIX/liste/ML-14620) Ajouter au filtre "Statut" une option "Annulé" dans l'historique des CRE
 - [ML-14747](/docs/Missions/FIX/liste/ML-14747) Revoir le calcul de la tuile "Contrat de relocation"

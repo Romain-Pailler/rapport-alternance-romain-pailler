@@ -51,6 +51,13 @@ https://weier-loris-rapport-alternance.netlify.app/
 
 # Glossaire
 
+- ajouter screenshot ML-14952
+- ajouter code dans ML-14952
+- ajouter code dans ML-14747
+-ajouter code + code source dans les annexes pour le ML-14950
+- présenter ce qu'est ML-ui
+- présenter ce qu'est ML-Rest-Api
+- mettre code source de ML-14620 dans les annexes
 - mettre code du template de la lettre de bienvenue dans le code source 
 - ajouter code backend pour le ticket ML-15202 + screenshot  
 - ajouter screenshot build jenkins dans index de feat dans missions
@@ -61,26 +68,15 @@ https://weier-loris-rapport-alternance.netlify.app/
 -[] relire les explications / ajouter les screens des tickets ??
 -[] faire ajoutNbRésultats et calcul montants totaux vente et achat reste le backend
 - expliquer le bug créer et comment je l'ai corriger 
-- ajouter l'explication de l'existant // a developper
 - mettre un versionning de code source afin de voir l'evolution 
 - ajouter des liens dans chaque partie afin de rediriger vers le code source 
 - mettre beaucoup de contexte et réécrire beaucoup de tickets importants (premier filtre, résultats (ajouter l'image du skateboard), modif du dto pour l'ajout et calcul de montants totaux)
 - ajouter lien nanceo sur la présentation 
 - renommer tout les noms des fichiers 
-- retirer
 
 ## expose
 
 - faire schema utilisateur, besoins, cahier des charges
 - schéma architecture 
-
-demander à juju ce qui est préférable de faire ??
-
-
-dans la partie de code setEntitesByProjection
-
-j'ajoute les des projections supp dans recherche demande back (pas V2 ??? à vérifier)
-
-
 
 ajouter tests dans partie cote serveur du premier ticket de la recherche de demande.
