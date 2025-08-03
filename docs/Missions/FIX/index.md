@@ -17,7 +17,7 @@ Lorsqu’un défaut est détecté, il rédige un ticket de correctif afin que la
 ## Mon rôle
 
 Lors de ma première période en entreprise (septembre à décembre), j’ai été amené à travailler sur la correction de plusieurs bugs.  
-Cette mission a été particulièrement formatrice : elle m’a permis de me familiariser avec l’**architecture de l’application**, de **comprendre le code existant** et d’acquérir les **bonnes pratiques** pour analyser et corriger les anomalies de manière efficace.
+Cette mission a été particulièrement formatrice : elle m’a permis de me familiariser avec l’**architecture de l’application**, de **comprendre le code existant** et d’acquérir les **bonnes pratiques** pour analyser et corriger les anomalies.
 
 ## Liste des corrections réalisées
 - [ML-14952](/docs/Missions/FIX/liste/ML-14952) **[Pièce comptable]** Revoir le fonctionnement du filtre "Pièce créée entre..." et "... le"
