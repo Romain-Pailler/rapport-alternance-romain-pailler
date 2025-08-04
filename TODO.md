@@ -25,7 +25,7 @@ https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/Templat
 (à voir avec clément) ??
 https://weier-loris-rapport-alternance.netlify.app/
 
-- ajouter screenshot ML-14952
+
 - ajouter code dans ML-14952
 - ajouter code dans ML-14747
 -ajouter code + code source dans les annexes pour le ML-14950
