@@ -17,7 +17,6 @@ Cependant, cette page présente aujourd’hui plusieurs **limites importantes** 
 - Une **ergonomie datée**, qui rend la navigation peu intuitive.
 - Un développement basé sur **AngularJS**, qui freine son intégration avec les nouveaux composants Angular du projet.
 
-
 C’est dans ce cadre que **mon projet principal** a été défini : **migrer cet écran stratégique vers Angular 2+**, en respectant son fonctionnement actuel mais en repensant son ergonomie.
 
 ![alt text](image.png)
@@ -53,7 +52,6 @@ Une fois les besoins bien cadrés, j’ai réalisé des **wireframes** afin de p
 - Le parcours utilisateur logique.
 - La mise en avant des fonctionnalités essentielles.
 
-
 ### 4. Réalisation de maquettes graphiques
 
 Avec l’appui de Nicolas, les wireframes ont ensuite été transformés en **maquettes graphiques complètes**, intégrant :
@@ -62,7 +60,6 @@ Avec l’appui de Nicolas, les wireframes ont ensuite été transformés en **ma
 - Les icônes, couleurs et composants normalisés.
 - Un rendu fidèle à l’application cible.
 
-
 ### 5. Présentation des maquettes au siège (Paris)
 
 Nous avons ensuite présenté les maquettes aux **équipes métiers basées au siège** (Paris). Ce rendez-vous a permis de :
@@ -70,7 +67,6 @@ Nous avons ensuite présenté les maquettes aux **équipes métiers basées au s
 - Recueillir les derniers retours utilisateurs.
 - Apporter quelques ajustements visuels et fonctionnels.
 - Valider formellement la future interface avant rédaction des tickets de specs.
-
 
 ### 6. Rédaction des spécifications fonctionnelles
 
@@ -83,9 +79,13 @@ Ce document détaille précisément :
 
 Il a ensuite servi de support de référence pour le développement et les phases de tests.
 
+### 7. Listes des fonctionnalités développées
 
-### 7. Listes des fonctionnalités développées 
-
-Après toutes ces étapes réalisées, j'ai pu enfin commencé à développer. Voici une liste chronologique de mes développements : 
+Après toutes ces étapes réalisées, j'ai pu enfin commencé à développer. Voici une liste chronologique de mes développements :
 
 - [L'affichage des résultats](./Affichage_des_resultats/Cote-client.md) : Premier développement de la nouvelle page avec une fonctionnalité simpliste, un bouton pour rechercher toutes les demandes. Il m'a permis de mieux comprendre l'ensemble du code tant côté client que côté serveur.
+- [Ajout d'un filtre par numéro de dossier](./Ajout_du_premier_critere_recherche/Cote-client.md)
+- [Bouton Réinitialiser](./Ajout_bouton_reinit/Cote-client.md)
+- [Ajout nombre de résultats et calculs des montants totaux achat et vente](./Ajout_nb_resultats_calcul_montants_ht/Cote-client.md)
+- [Ajout d'un filtre par groupe de partenaires](./Ajout_du_deuxieme_critere_recherche%20copy%202/Cote-client.md)
+- [Ajout d'un filtre par partenaire](./Ajout_du_troisieme_critere_recherche%20copy/Cote-client.md)

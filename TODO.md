@@ -25,8 +25,6 @@ https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/Templat
 (à voir avec clément) ??
 https://weier-loris-rapport-alternance.netlify.app/
 
-
-- ajouter les tickets dans la liste de présentation du projet de migration
 - ajouter screenshot ML-14952
 - ajouter code dans ML-14952
 - ajouter code dans ML-14747
@@ -36,7 +34,7 @@ https://weier-loris-rapport-alternance.netlify.app/
 - mettre code source de ML-14620 dans les annexes
 -[] faire vocab technique
 -[] faire vocab métier
--[] ajouter code source dans les annexes 
+-[] ajouter code source dans les annexes
 -[] relire les explications / ajouter les screens des tickets ??
 -[] faire ajoutNbRésultats et calcul montants totaux vente et achat reste le backend
 - expliquer le bug créer et comment je l'ai corriger 
