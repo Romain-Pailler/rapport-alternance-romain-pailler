@@ -13,6 +13,10 @@ Créée en **2015**, Nanceo est une filiale du groupe **Equasens** et représent
 
 En complément de ses activités de conseil et de financement, Nanceo s’appuie sur **[Leasa](./Leasa)**, une application développée en interne pour la gestion et le suivi des contrats.
 
+:::info
+Voici leur [site vitrine](https://www.nanceo.com/)
+:::
+
 ## Missions principales
 
 L’activité de Nanceo se divise en deux volets :

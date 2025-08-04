@@ -50,7 +50,6 @@ Les principaux risques sont clairs:
 - **Maintenance** : rareté des développeurs AngularJS et absence de correction des bugs connus.  
 - **Compatibilité** : difficultés croissantes avec les technologies web récentes.
 
-
 ![Illustration de la dette technique et de la nécessité de migration](dette_technique_migration.png)
 
 ### Conclusion

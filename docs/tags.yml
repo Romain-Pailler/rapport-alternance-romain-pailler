@@ -122,3 +122,8 @@ Spring:
   label: Spring
   permalink: /spring
   description: Tag pour le framework Spring
+
+Maquette:
+  label: Maquette
+  permalink: /maquette 
+  description: Tag pour les maquettes

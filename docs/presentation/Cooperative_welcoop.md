@@ -25,4 +25,7 @@ La coopérative a pour objectif de devenir la **première plateforme de santé �
 
 Cette ambition s’appuie sur ses filiales spécialisées, dont [Equasens](./Equasens), responsable des développements technologiques.
 
+:::info
+Pour plus d'info, voici leur [site de présentation](https://equasens.com/)
+:::
 ---

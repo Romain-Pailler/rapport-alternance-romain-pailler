@@ -10,14 +10,11 @@ Le site est en cours de construction. Certaines sections peuvent être incomplè
 
 Ce site est le support de mon rapport d’alternance, réalisé en troisième année de BUT Informatique à l’[IUT Nancy-Charlemagne](https://iut-charlemagne.univ-lorraine.fr/) de septembre 2024 à Août 2025.
 
-Il retrace mon parcours au sein de la [Coopérative Welcoop](./presentation/Cooperative_welcoop), plus précisément au sein de sa branche logicielle [Equasens](./presentation/Equasens) et de la filiale [Nanceo] (./presentation/Nanceo). Le rapport détaille les missions menées pendant l’année d’alternance, les compétences techniques et méthodologiques acquises, ainsi que l’organisation des projets sur lesquels j’ai travaillé.
+Il retrace mon parcours au sein de la [Coopérative Welcoop](./presentation/Cooperative_welcoop), plus précisément au sein de sa branche logicielle [Equasens](./presentation/Equasens) et de la filiale [Nanceo](./presentation/Nanceo). Le rapport détaille les missions menées pendant l’année d’alternance, les compétences techniques et méthodologiques acquises, ainsi que l’organisation des projets sur lesquels j’ai travaillé.
 
 J’ai choisi de présenter ce rapport sous forme de site web avec [Docusaurus](https://docusaurus.io/), un générateur de sites statiques adapté à la documentation technique.
 
 ## Informations générales
-
-Informations clés sur mon alternance :
-
 
 | Information                | Détails                                 |
 | -------------------------- | --------------------------------------- |
@@ -48,5 +45,3 @@ Je tiens tout d’abord à remercier toute l'équipe Leasa pour m’avoir accuei
 Je remercie également l’ensemble des collaborateurs d’Equasens et de Nanceo pour leur accueil chaleureux, leur disponibilité et leur soutien tout au long de cette année d’alternance.
 
 Enfin, je remercie particulièrement Yann BONIFACE, mon tuteur universitaire, pour son accompagnement, ses conseils et sa disponibilité durant toute cette période.
-
----

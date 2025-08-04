@@ -31,7 +31,11 @@ Le ticket est ensuite placé dans le **bac de sprint**, en attente d’être pla
    * Une **pull request** est créée,  
    * Une validation des pairs est nécessaire  
    * Un build Jenkins se lance et vérifie plusieurs choses (le build, les tests, le coverage des tests, l'indentation, la traduction, etc...),  
-   * La personne chargée des **releases** intègre la nouvelle fonctionnalité dans une version,   
+   * La personne chargée des **releases** intègre la nouvelle fonctionnalité dans une version,
    * Puis le ticket est envoyé à Julien, analyste testeur, qui valide la fonctionnalité sur l’environnement de test (souvent en béta).
+
+## Un exemple de build Jenkins
+
+![Build Jenkins](./../../../static/img/feature/build_jenkins.png)
 
 ---

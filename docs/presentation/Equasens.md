@@ -27,4 +27,7 @@ Equasens structure également son offre autour de domaines fonctionnels comme la
 
 Equasens agit comme maison-mère de plusieurs entités spécialisées, dont **[Nanceo](./Nanceo)**, en charge des solutions de financement, et contribue activement à la transition numérique du secteur de la santé.
 
+:::info
+Pour plus d'info, voici leur [site officiel](https://equasens.com/)
+:::
 ---
