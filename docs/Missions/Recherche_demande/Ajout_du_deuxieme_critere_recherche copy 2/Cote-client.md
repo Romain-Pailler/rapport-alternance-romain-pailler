@@ -5,7 +5,7 @@ tags:
     - Migration
     - Angular
 ---
-# Côté Client
+# Deuxième filtre de recherche - Côté Client
 
 ## Ajout d’un champ `refBailleur` dans le formulaire de recherche (Côté client)
 

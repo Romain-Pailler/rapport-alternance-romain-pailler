@@ -5,7 +5,7 @@ tags:
     - Migration
     - Angular
 ---
-# Côté Client
+# Premier filtre de recherche - Côté Client
 
 ## Mise en place du premier critère de recherche – Le FormGroup
 

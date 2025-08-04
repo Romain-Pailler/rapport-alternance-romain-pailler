@@ -6,7 +6,7 @@ tags:
     - Java
 ---
 
-# Côté Java
+# Nombre de résultats / Montant totaux -  Côté Java
 
 
 ## DemandeDaoImpl

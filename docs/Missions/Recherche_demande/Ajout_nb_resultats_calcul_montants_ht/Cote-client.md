@@ -5,10 +5,10 @@ tags:
     - Migration
     - Angular
 ---
-# Côté Client
-
+# Nombre de résultats / Montant totaux - Côté Client
 
 ## le datasource ce que j'ai ajouté
+
 ``` typescript
  searchDemande(demandeCriteria: any, indexPage: number) {
     this.loadingSubject.next(true);

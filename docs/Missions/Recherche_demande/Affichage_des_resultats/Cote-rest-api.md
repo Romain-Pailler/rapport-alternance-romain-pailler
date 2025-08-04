@@ -6,14 +6,13 @@ tags:
     - OpenAPI
 ---
 
-# Rest-Api
-
+# Affichage des résultats - Côté Rest-Api
 
 ## explication
 
-## ce que j'ai fait 
+## ce que j'ai fait
 
-ajout dans openapi.yaml : 
+ajout dans openapi.yaml :
 
 ``` yaml
   /demandes/search:

@@ -5,9 +5,9 @@ tags:
     - Migration
     - Angular
 ---
-# Côté Client
+# Affichage des résultats - Côté Client
 
-## Création du composant avec la CLI angular 
+## Création du composant avec la CLI angular
 
 Afin d’ajouter une nouvelle page à l’application, j’ai commencé par générer un composant Angular. Ce composant constitue la structure de base de l’interface, en regroupant la logique métier (TypeScript), le template HTML, la feuille de style dédiée (SCSS) ainsi que les tests unitaires associés.
 
@@ -44,7 +44,7 @@ J’ai donc ajouté l’entrée suivante :
 }
 ```
 
-### Explication 
+### Explication
 
 * `path: 'recherche-demandes'` : définit l'URL à laquelle le composant sera accessible (`/recherche-demandes`).
 * `component: RechercheDemandesComponent` : associe cette route au composant que j’ai créé.
@@ -61,7 +61,7 @@ En Angular, les fichiers terminant par `.service.ts` sont utilisés pour **centr
 
 Dans mon cas, j’ai ajouté une méthode `searchDemandesByCriteria` dans le fichier `demande.service.ts`. Cette méthode permet d’effectuer une recherche de demandes à partir de critères dynamiques (fournis via un formulaire qui sera utilisé par la suite  ).
 
-### Code ajouté 
+### Code ajouté
 
 ```typescript
 public searchDemandesByCriteria(demandeCriteria: FormGroup): Observable<DemandePaginate> {
@@ -71,7 +71,7 @@ public searchDemandesByCriteria(demandeCriteria: FormGroup): Observable<DemandeP
 }
 ```
 
-### Explication 
+### Explication du service
 
 * `demandeCriteria: FormGroup` : correspond aux critères saisis par l’utilisateur dans un formulaire (par exemple, un filtre sur la date ou le statut).
 * `this.demandesApi.searchByCriteria(...)` : appelle l’API REST côté serveur avec ces critères.
@@ -337,11 +337,9 @@ Il est alimenté dynamiquement avec :
 
 Lors d’un changement de page, il appelle `searchPage()` dans le composant TypeScript, avec l’index correspondant.
 
+## demande.service.spec.ts
 
-## demande.service.spec.ts 
-
-### code rajouté : 
-````
+```ts
  it('should return paginated demandes based on criteria', fakeAsync(() => {
     //GIVEN
     const mockApporteurDomain: ApporteurDomain = {
@@ -409,21 +407,21 @@ Lors d’un changement de page, il appelle `searchPage()` dans le composant Type
     expect(demandesApiSpy.searchByCriteria).toHaveBeenCalledWith(criteriaForm);
     expect(received).toEqual(mockResult);
   }));
-  ````
-## demande.service.ts : 
+  ```
 
-### code rajouté : 
-````
+## demande.service.ts
+
+``` ts
 public searchDemandesByCriteria(demandeCriteria: FormGroup): Observable<DemandePaginate> {
     return this.demandesApi
       .searchByCriteria(demandeCriteria)
       .pipe(map((demandesContainer: DemandePaginateContainer) => demandesContainer.result));
   }
-```` 
+```
 
 ## messages.en_EN.json
 
-`````
+```json
  "5390649178523111901": "Financial application search",
     "4655471430282005775": "Application number",
     "297600783847769458": "Suppliers / Suppliers groupck",
@@ -434,6 +432,4 @@ public searchDemandesByCriteria(demandeCriteria: FormGroup): Observable<DemandeP
     "2074819151343358437": "Submitted on ",
     "1614649226369080187": "Paid on ",
     "7306143457890530917": "Supplier sales person ",
-````
-
-
+```

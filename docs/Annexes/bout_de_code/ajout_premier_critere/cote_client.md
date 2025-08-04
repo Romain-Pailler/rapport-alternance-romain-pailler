@@ -1,6 +1,6 @@
-# recherche-demandes.component.ts 
+# Premier critère - Code source - Front
 
-````
+```html
 <div class="page-header-leasa">
   <h1 i18n>Recherche demandes</h1>
 </div>
@@ -129,12 +129,11 @@
     ></ml-ui-paginator>
   </ml-ui-bloc-body>
 </ml-ui-bloc>
-````
-
+```
 
 ## recherche-demandes.component.ts
 
-````
+```ts
 import {Component, DestroyRef} from '@angular/core';
 import {
   BlocModule,
@@ -329,4 +328,4 @@ export class RechercheDemandesComponent {
     });
   }
 }
-````
+```

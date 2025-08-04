@@ -34,17 +34,14 @@ https://weier-loris-rapport-alternance.netlify.app/
 - présenter ce qu'est ML-ui
 - présenter ce qu'est ML-Rest-Api
 - mettre code source de ML-14620 dans les annexes
-- mettre code du template de la lettre de bienvenue dans le code source
 -[] faire vocab technique
 -[] faire vocab métier
 -[] ajouter code source dans les annexes 
 -[] relire les explications / ajouter les screens des tickets ??
 -[] faire ajoutNbRésultats et calcul montants totaux vente et achat reste le backend
 - expliquer le bug créer et comment je l'ai corriger 
-- mettre un versionning de code source afin de voir l'evolution 
-- ajouter des liens dans chaque partie afin de rediriger vers le code source 
+- ajouter des liens dans chaque partie afin de rediriger vers le code source
 - mettre beaucoup de contexte et réécrire beaucoup de tickets importants (premier filtre, résultats (ajouter l'image du skateboard), modif du dto pour l'ajout et calcul de montants totaux)
-- renommer tout les noms des fichiers 
 
 ## expose
 

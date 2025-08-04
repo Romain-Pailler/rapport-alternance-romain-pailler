@@ -5,7 +5,7 @@ tags:
     - Migration
     - Angular
 ---
-# Côté Client
+# Troisième filtre de recherche - Côté Client
 
 ## Objectif de la fonctionnalité
 

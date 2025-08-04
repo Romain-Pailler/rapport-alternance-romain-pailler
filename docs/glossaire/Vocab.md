@@ -1,4 +1,4 @@
-# Vocab métier 
+# Vocab technique 
 
 ## à définir 
 
@@ -6,6 +6,6 @@
 
 - PR : pull request (à quoi ça sert ?)
 
-- écriture comptables // métier
+
 
 - dette technique

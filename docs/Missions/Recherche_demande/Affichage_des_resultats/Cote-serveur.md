@@ -6,7 +6,7 @@ tags:
     - Java
 ---
 
-# Côté Java
+# Affichage des résultats - Côté Java
 
 ## Ajout d’une projection spécifique dans le `searchService.java`
 

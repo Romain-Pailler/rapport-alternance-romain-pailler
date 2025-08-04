@@ -94,7 +94,8 @@ Pour compléter cette fonctionnalité, j’ai travaillé sur la génération du 
 J’ai implémenté la méthode `getTemplateLettreBienvenue`, qui commence par charger toutes les données nécessaires depuis la demande (`Demande`) via les processus métiers.  Elles sont ensuite stockées dans un contexte sous forme de Map (String, Object) qui sera utilisé par les templates [Mustache](./../../annexes/mustache).
 
 Parmi les données injectées dans le template, on retrouve :  
-- Les coordonnées du bailleur, de l’apporteur et du client  
+
+- Les coordonnées du bailleur, de l’apporteur et du client
 - La date de démarrage du contrat  
 - Les coordonnées du loueur (téléphone, email)  
 - Le code de la demande  
@@ -191,6 +192,20 @@ template.mail.lettre_bienvenue.piece_jointe_date_prelevement=Au titre de notre p
     {{#i18n}}template.mail.lettre_bienvenue.remerciement{{/i18n}}<br/>
 </p>
 ```
+
+### Résultats
+
+Le cas où une facture est de sous-type facture vente avec un mode de paiement 'PRELEVEMENT' comptabilisée
+![screenshoot du mail de bienvenue](./../../../static/img/feature/mail_1_facture.png)
+
+Le cas où deux facture ou plus sont de sous-type Facture Vente avec un mode de paiement 'PRELEVEMENT' comptabilisée
+
+![screenshoot du mail de bienvenue](./../../../static/img/feature/mail_2_factures.png)
+
+Le cas où aucune facture n'est de sous-type Loyer Facture Vente avec un mode de paiement 'PRELEVEMENT' comptabilisée
+
+![screenshoot du mail de bienvenue](./../../../static/img/feature/mail_0_facture.png)
+
 ### Conclusion
 
 Ce développement m’a permis de découvrir un domaine que je n’avais encore jamais abordé : la création de **templates de mails**.  
