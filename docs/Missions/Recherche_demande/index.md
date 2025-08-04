@@ -83,7 +83,7 @@ Il a ensuite servi de support de référence pour le développement et les phase
 
 Après toutes ces étapes réalisées, j'ai pu enfin commencé à développer. Voici une liste chronologique de mes développements :
 
-- [L'affichage des résultats](./Affichage_des_resultats/Cote-client.md) : Premier développement de la nouvelle page avec une fonctionnalité simpliste, un bouton pour rechercher toutes les demandes. Il m'a permis de mieux comprendre l'ensemble du code tant côté client que côté serveur.
+- [L'affichage des résultats](./Affichage_des_resultats/) : Premier développement de la nouvelle page avec une fonctionnalité simpliste, un bouton pour rechercher toutes les demandes. Il m'a permis de mieux comprendre l'ensemble du code tant côté client que côté serveur.
 - [Ajout d'un filtre par numéro de dossier](./Ajout_du_premier_critere_recherche/Cote-client.md)
 - [Bouton Réinitialiser](./Ajout_bouton_reinit/Cote-client.md)
 - [Ajout nombre de résultats et calculs des montants totaux achat et vente](./Ajout_nb_resultats_calcul_montants_ht/Cote-client.md)
