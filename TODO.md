@@ -46,8 +46,6 @@ https://weier-loris-rapport-alternance.netlify.app/
 - schéma architecture 
 
 ajouter tests dans partie cote serveur du premier ticket de la recherche de demande.
-
-- modifier prés nanceo (détaillé) et ajouter healthlease 
 - ajoute schéma des entités de la coopérative welcoop
 - ajoute schéma des entités de equasens
 
