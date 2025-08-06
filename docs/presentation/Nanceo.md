@@ -54,7 +54,7 @@ Le système dialogue instantanément avec des dizaines de bailleurs pour trouver
 - Réduction drastique des délais de traitement (la majorité des demandes obtiennent une réponse en **moins de 4 minutes**).  
 - Intégration d’une **partie Front-end** (utilisée par les clients) et d’une **partie Back-end** (utilisée par les gestionnaires Nanceo pour suivre les demandes et gérer les cas nécessitant une intervention humaine).
 
-## Autres utilisations de Leasa dans le groupe
+## Autre utilisation de Leasa dans le groupe
 
 En plus de son utilisation par Nanceo, **Leasa** est également exploité par une autre entité du groupe pour répondre à des besoins spécifiques de leasing.
 
