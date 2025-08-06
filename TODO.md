@@ -93,3 +93,9 @@ Date écriture	= Date comptabilisation = MOV2_DATE_MOV (dans Pontprod) : Il s'ag
 Date enregistrement	= date à laquelle on saisie la facture... LP : je ne suis pas certain que cette date soit utile.
 FAE	Facture à établir
 Montant facturé au loueur	Il s'agit de la somme des factures et avoirs et extournes de sens ACHAT et de type ACQUISITION.
+
+
+
+Liste des tickets avec code source ou pas besoin : 
+
+- ml-14952
