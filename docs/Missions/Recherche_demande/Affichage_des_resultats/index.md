@@ -17,6 +17,10 @@ L’objectif était donc de **valider la structure technique**, aussi bien côt�
 
 ![Analogie du skateboard](./../../../../static/img/recherche_demande/skateboard.png)
 
+## Ticket 
+
+![Screenshot du ticket Jira](/img/recherche_demande/ticket_resultats.png)
+
 ## Ce que j’ai développé
 
 J’ai conçu ce ticket comme une **base fondatrice** pour tous les développements suivants. Il m’a permis de :
@@ -26,8 +30,6 @@ J’ai conçu ce ticket comme une **base fondatrice** pour tous les développeme
 - Gérer un premier bouton d’action (“Rechercher”) qui appelle le serveur.
 
 Ce premier affichage de résultats correspond donc au **“skateboard”** du projet : ce n’est pas encore une application complète, mais c’est déjà un produit **cohérent, démontrable et utile**.
-
-## Ticket
 
 ## Points techniques
 

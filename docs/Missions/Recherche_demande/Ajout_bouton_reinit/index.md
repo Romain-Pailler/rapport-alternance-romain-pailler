@@ -14,7 +14,10 @@ Ce ticket fait partie des premières fonctionnalités développées dans le cadr
 
 C’est ce qu’on appelle une **quick win** : un développement rapide à mettre en place, mais qui améliore de façon concrète et immédiate l’expérience utilisateur.
 
-## Ticket
+## Ticket 
+
+![Screenshot du ticket Jira](/img/recherche_demande/ticket_bouton_reinit.png)
+
 
 ## Une mise en œuvre complète côté client
 

@@ -11,6 +11,10 @@ tags:
 
 Cette évolution permet d’affiner les recherches de demandes en ajoutant un troisième critère : `codeLoueur`. Ce champ correspond à **l’identifiant du loueur** rattaché à la demande. Il s’agit généralement d’un acteur interne ou externe responsable de la mise à disposition du bien.
 
+## Ticket 
+
+![Screenshot du ticket Jira](/img/recherche_demande/ticket_filtre_loueur.png)
+
 ---
 
 ## Mise à jour du FormGroup

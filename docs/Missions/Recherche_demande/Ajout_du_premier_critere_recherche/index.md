@@ -14,6 +14,10 @@ Ce critère est central pour les utilisateurs, car il permet de retrouver **pré
 
 Ce ticket marque donc le **début de la construction réelle du formulaire de recherche**, en instaurant les fondations du `FormGroup` Angular et la gestion des paramètres d’URL.
 
+## Ticket 
+
+![Screenshot du ticket Jira](/img/recherche_demande/ticket_filtre_num_dossier.png)
+
 ## Rôle du ticket dans le projet
 
 Ce développement m’a permis de :
@@ -24,9 +28,6 @@ Ce développement m’a permis de :
 - Préparer le système pour accueillir les filtres suivants de façon cohérente.
 
 Il s’agit donc d’un **ticket de transition**, entre la simple récupération de résultats et une **logique de recherche avancée multi-critères**.
-
-## Ticket
-
 
 ## Liens vers les explications détaillées
 

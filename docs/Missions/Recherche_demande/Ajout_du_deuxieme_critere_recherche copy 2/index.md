@@ -1,15 +1,19 @@
 ---
-sidebar_label: Côté client
+sidebar_label: Filtre Référence Bailleur
 sidebar_position: "1"
 tags: 
     - Migration
     - Angular
 ---
-# Deuxième filtre de recherche - Côté Client
+# Deuxième filtre de recherche
 
 ## Ajout d’un champ `refBailleur` dans le formulaire de recherche (Côté client)
 
 Dans le cadre de l'amélioration du formulaire de recherche des demandes, un champ supplémentaire `refBailleur` a été introduit afin de permettre aux utilisateurs de filtrer les résultats en fonction de la référence du bailleur associé à la demande. Ce champ est désormais pris en compte à la fois dans l'interface utilisateur et dans les paramètres de requête de l'URL (queryParams).
+
+## Ticket 
+
+![Screenshot du ticket Jira](/img/recherche_demande/ticket_filtre_ref_bailleur.png)
 
 ### Formulaire de recherche – Définition du `FormGroup`
 
