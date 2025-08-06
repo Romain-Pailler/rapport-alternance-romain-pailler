@@ -25,16 +25,11 @@ https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/Templat
 (à voir avec clément) ??
 https://weier-loris-rapport-alternance.netlify.app/
 
-
-- ajouter code dans ML-14952
-- ajouter code dans ML-14747
--ajouter code + code source dans les annexes pour le ML-14950
 - présenter ce qu'est ML-Rest-Api besoin peut-être de voir ça avec toto
-- mettre code source de ML-14620 dans les annexes
 -[] faire vocab technique
 -[] faire vocab métier
 -[] ajouter code source dans les annexes
--[] relire les explications / ajouter les screens des tickets ??
+-[] relire les explications
 -[] faire ajoutNbRésultats et calcul montants totaux vente et achat reste le backend
 - expliquer le bug créer et comment je l'ai corriger 
 - ajouter des liens dans chaque partie afin de rediriger vers le code source
@@ -94,9 +89,3 @@ Date enregistrement	= date à laquelle on saisie la facture... LP : je ne suis p
 FAE	Facture à établir
 Montant facturé au loueur	Il s'agit de la somme des factures et avoirs et extournes de sens ACHAT et de type ACQUISITION.
 
-
-
-Liste des tickets avec code source ou pas besoin : 
-
-- ml-14952
-- ml-14620

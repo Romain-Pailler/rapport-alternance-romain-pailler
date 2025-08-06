@@ -9,7 +9,7 @@ tags:
 
 ## Contexte de développement
 
-**Leasa** est une application web et mobile dédiée à la gestion des demandes de financement de biens, conçue pour répondre aux besoins spécifiques des partenaires de **Nanceo**, principalement dans les secteurs médical et paramédical.
+**Leasa** est une application web et mobile dédiée à la gestion des demandes de financement de biens, conçue pour répondre aux besoins spécifiques des partenaires de **Nanceo**.
 
 Développée **from scratch**, l’application a été pensée dès l’origine comme une solution modulaire, interconnectée et accessible depuis différents supports (ordinateur, tablette, smartphone), même si aujourd’hui 95 % des développements ciblent les PC.
 
