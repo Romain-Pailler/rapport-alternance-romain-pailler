@@ -79,9 +79,7 @@ const config = {
     }),
   ],],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+  themeConfig: {
       zoom: {
         selector: '.markdown > img',
         background: {
@@ -153,7 +151,7 @@ const config = {
         additionalLanguages: ['java'],
         theme: prismThemes.github,
       },
-    }),
+    },
 };
 
 export default config;
