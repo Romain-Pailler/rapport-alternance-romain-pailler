@@ -99,3 +99,4 @@ Montant facturé au loueur	Il s'agit de la somme des factures et avoirs et extou
 Liste des tickets avec code source ou pas besoin : 
 
 - ml-14952
+- ml-14620
