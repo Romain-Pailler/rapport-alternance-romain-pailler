@@ -71,6 +71,7 @@ const config = {
     ],
   ],
   plugins: [
+    require.resolve('docusaurus-plugin-image-zoom'),
     [
     require.resolve("@easyops-cn/docusaurus-search-local"),
     ({
@@ -81,6 +82,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      zoom: {
+        selector: '.markdown > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)'
+        },
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
