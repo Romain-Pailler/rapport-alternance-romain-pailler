@@ -7,7 +7,14 @@ tags:
 ---
 # Bouton Réinitialiser - Côté Client
 
+## Ajout d’un bouton de réinitialisation du formulaire de recherche
+
+Dans le cadre de l’amélioration de l’expérience utilisateur de la page de recherche de demandes, un ticket a été créé pour intégrer un **bouton de réinitialisation** du formulaire. Ce bouton permet à l’utilisateur de réinitialiser rapidement tous les filtres et champs saisis dans le formulaire, sans avoir à le faire manuellement champ par champ.
+
+La première étape a consisté à intégrer un bouton HTML avec l’attribut `type="reset"` à l’intérieur du `<form>`, afin qu’il déclenche automatiquement l’événement `reset`. Ce bouton est stylisé via le design system maison (`mlUiButton`) et utilise une icône "undo" pour en renforcer la signification visuelle.
+
 ## le form group
+
 ``` typescript
 export class RechercheDemandesFormGroup {
   static build() {
@@ -18,16 +25,7 @@ export class RechercheDemandesFormGroup {
 }
 ```
 
-## le composant html ajout du bouton
-
-
-
-## Ajout d’un bouton de réinitialisation du formulaire de recherche
-
-Dans le cadre de l’amélioration de l’expérience utilisateur de la page de recherche de demandes, un ticket a été créé pour intégrer un **bouton de réinitialisation** du formulaire. Ce bouton permet à l’utilisateur de réinitialiser rapidement tous les filtres et champs saisis dans le formulaire, sans avoir à le faire manuellement champ par champ.
-
-La première étape a consisté à intégrer un bouton HTML avec l’attribut `type="reset"` à l’intérieur du `<form>`, afin qu’il déclenche automatiquement l’événement `reset`. Ce bouton est stylisé via le design system maison (`mlUiButton`) et utilise une icône "undo" pour en renforcer la signification visuelle.
-```html 
+```html
 <form
       (ngSubmit)="search()"
       [formGroup]="formGroupDemandeCriteria"
@@ -90,19 +88,19 @@ reinit() {
 }
 ```
 
-#### Détail de la méthode :
+#### Détail de la méthode
 
 * `this.formGroupDemandeCriteria.reset();`
-  ➤ Réinitialise tous les champs du formulaire à leur valeur initiale (souvent `null` ou vide), supprimant ainsi tous les filtres saisis par l'utilisateur.
+   Réinitialise tous les champs du formulaire à leur valeur initiale (souvent `null` ou vide), supprimant ainsi tous les filtres saisis par l'utilisateur.
 
 * `this.demandeDataSource.reinit();`
-  ➤ Vide ou réinitialise l’objet représentant les résultats de recherche (`DemandeDataSource`), ce qui empêche l’affichage de données obsolètes ou filtrées.
+   Vide ou réinitialise l’objet représentant les résultats de recherche (`DemandeDataSource`), ce qui empêche l’affichage de données obsolètes ou filtrées.
 
 * `this.showSearchResult = false;`
-  ➤ Masque la section de résultats, si elle était visible suite à une précédente recherche.
+   Masque la section de résultats, si elle était visible suite à une précédente recherche.
 
 * `this.router.navigate([], { queryParams: {}, queryParamsHandling: '' });`
-  ➤ Supprime tous les paramètres de l’URL associés à la recherche (comme des filtres ou des pages), en assurant que l’état de l’application est complètement nettoyé.
+   Supprime tous les paramètres de l’URL associés à la recherche (comme des filtres ou des pages), en assurant que l’état de l’application est complètement nettoyé.
 
 ---
 
@@ -135,7 +133,7 @@ it('should reset the form, reinit the datasource, hide results, and clear query 
 }));
 ```
 
-#### Ce que teste ce bloc :
+#### Ce que teste ce bloc
 
 * **Déclenchement de la méthode `reinit()`** après le clic sur le bouton de type `reset`.
 * **Réinitialisation du formulaire** via `formGroupDemandeCriteria.reset()`.
@@ -147,10 +145,9 @@ Ce test garantit donc que le bouton de réinitialisation effectue bien toutes le
 
 ---
 
+## code source
 
-## code source 
-
-````
+```html
 <div class="page-header-leasa">
   <h1 i18n>Recherche demandes</h1>
 </div>
@@ -283,8 +280,9 @@ Ce test garantit donc que le bouton de réinitialisation effectue bien toutes le
     ></ml-ui-paginator>
   </ml-ui-bloc-body>
 </ml-ui-bloc>
-````
-````
+```
+
+```scss
 .recherche-demande {
   &__filtres {
     &__boutons {
@@ -321,7 +319,7 @@ Ce test garantit donc que le bouton de réinitialisation effectue bien toutes le
 }
 ````
 
-````
+```js
 import {Component, DestroyRef} from '@angular/core';
 import {
   BlocModule,
@@ -535,10 +533,9 @@ export class RechercheDemandesComponent {
 }
 ````
 
-
 tout les tests :
 
-````
+```ts
 import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 import {RechercheDemandesComponent} from './recherche-demandes.component';
 import {DemandeService} from '@core/service/demande/demande.service';
@@ -714,4 +711,4 @@ describe('RechercheDemandesComponent', () => {
     });
   }));
 });
-````
+```

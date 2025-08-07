@@ -23,6 +23,7 @@ https://alternance-hugo-jahnke.netlify.app/presentation.html#fonctionnement
 
 https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/TemplateLettreBienvenue
 (à voir avec clément) ??
+
 https://weier-loris-rapport-alternance.netlify.app/
 
 - présenter ce qu'est ML-Rest-Api besoin peut-être de voir ça avec toto
@@ -85,9 +86,7 @@ CRE	Compte Rendu d'Evènements
 Date écriture	= Date comptabilisation = MOV2_DATE_MOV (dans Pontprod) : Il s'agit de la date à laquelle la pièce sera enregistrée en comptabilité
 Date enregistrement	= date à laquelle on saisie la facture... LP : je ne suis pas certain que cette date soit utile.
 FAE	Facture à établir
-Montant facturé au loueur	Il s'agit de la somme des factures et avoirs et extournes de sens ACHAT et de type ACQUISITION.
-
-
+Montant facturé au loueur Il s'agit de la somme des factures et avoirs et extournes de sens ACHAT et de type ACQUISITION.
 
 faire code source de : 
 
