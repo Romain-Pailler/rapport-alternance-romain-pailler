@@ -88,7 +88,6 @@ Montant facturé au loueur Il s'agit de la somme des factures et avoirs et extou
 
 faire code source de :
 
-- http://localhost:3000/docs/Missions/FIX/Liste/ML-14950
 - http://localhost:3000/docs/Missions/FIX/Liste/ML-14747
 - http://localhost:3000/docs/Missions/FIX/Liste/ML-15002 vidéo si jamais ?
 - http://localhost:3000/docs/Missions/FIX/Liste/ML-15287
