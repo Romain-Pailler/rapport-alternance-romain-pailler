@@ -329,3 +329,152 @@ export class RechercheDemandesComponent {
   }
 }
 ```
+
+```ts
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {RechercheDemandesComponent} from './recherche-demandes.component';
+import {DemandeService} from '@core/service/demande/demande.service';
+import {DemandeDataSource} from './demande.datasource';
+import {NO_ERRORS_SCHEMA} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {of} from 'rxjs';
+import {FormControl, FormGroup} from '@angular/forms';
+
+describe('RechercheDemandesComponent', () => {
+  let component: RechercheDemandesComponent;
+  let fixture: ComponentFixture<RechercheDemandesComponent>;
+  let demandeServiceSpy: jest.Mocked<DemandeService>;
+  let demandeDataSourceSpy: jest.Mocked<DemandeDataSource>;
+  const activatedRouteStub: Partial<ActivatedRoute> = {
+    snapshot: {
+      queryParams: {},
+    } as any,
+    queryParams: of({}),
+  };
+
+  const routerStub: Partial<Router> = {
+    navigate: jest.fn(),
+  };
+
+  beforeEach(async () => {
+    demandeServiceSpy = jest.mocked(DemandeService.prototype);
+    demandeDataSourceSpy = jest.mocked(DemandeDataSource.prototype);
+
+    demandeDataSourceSpy.searchDemande = jest.fn();
+    demandeDataSourceSpy.reinit = jest.fn();
+    await TestBed.configureTestingModule({
+      imports: [RechercheDemandesComponent],
+
+      providers: [
+        {provide: DemandeService, useValue: demandeServiceSpy},
+        {provide: ActivatedRoute, useValue: activatedRouteStub},
+        {provide: Router, useValue: routerStub},
+      ],
+
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(RechercheDemandesComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+  it('should init the component and not trigger searchDemande when no query params are given', () => {
+    const spySearch = jest.spyOn(component.demandeDataSource, 'searchDemande');
+    const spyUpdateUrl = jest.spyOn(component as any, 'updateUrlWithNewPage');
+
+    component.ngOnInit();
+
+    expect(spySearch).not.toHaveBeenCalled();
+    expect(spyUpdateUrl).not.toHaveBeenCalled();
+
+    expect(component.searchLoading).toBe(false);
+    expect(component.numberPage).toEqual(0);
+    expect(component.columns.length).toBe(10);
+    expect(component.columns).toEqual([
+      'numDossier',
+      'statut',
+      'apporteur',
+      'client',
+      'bailleur',
+      'montantVenteAchatHT',
+      'loyerHT',
+      'dateDepot',
+      'datePaiement',
+      'commercialApporteur',
+    ]);
+    expect(component.demandeDataSource).not.toBeNull();
+  });
+
+  it('should trigger searchDemande with correct criteria and call updateUrlWithNewPage if needed', fakeAsync(() => {
+    const queryParams = {code: 'N12345'};
+
+    component['route'].queryParams = of(queryParams);
+
+    const searchSpy = jest.spyOn(component.demandeDataSource, 'searchDemande');
+    const updateUrlSpy = jest.spyOn(component as any, 'updateUrlWithNewPage');
+
+    component.ngOnInit();
+    tick();
+
+    expect(component['showSearchResult']).toBe(true);
+    expect(searchSpy).toHaveBeenCalledWith({code: 'N12345'}, 0);
+    expect(updateUrlSpy).not.toHaveBeenCalledWith(0);
+  }));
+
+  it('should set showSearchResult to true and navigate with correct query params', () => {
+    const navigateSpy = jest.spyOn(component['router'], 'navigate').mockImplementation(jest.fn());
+
+    component.formGroupDemandeCriteria = new FormGroup({
+      code: new FormControl('N12345'),
+    });
+
+    component.search();
+    expect(component['showSearchResult']).toBe(true);
+
+    expect(navigateSpy).toHaveBeenCalledWith([], {
+      relativeTo: component['route'],
+      queryParams: {
+        code: 'N12345',
+        currentProjection: 'projectionRechercheBackV2',
+        page: 0,
+      },
+      queryParamsHandling: 'merge',
+    });
+  });
+
+  it('should navigate with updated page query param', () => {
+    const navigateSpy = jest.spyOn(component['router'], 'navigate').mockImplementation(jest.fn());
+
+    Object.defineProperty(component['route'], 'snapshot', {
+      configurable: true,
+      get: () => ({
+        queryParams: {
+          currentProjection: 'projectionRechercheBackV2',
+          code: 'N12345',
+        },
+      }),
+    });
+
+    component.searchPage(2);
+
+    expect(navigateSpy).toHaveBeenCalledWith([], {
+      relativeTo: component['route'],
+      queryParams: {
+        currentProjection: 'projectionRechercheBackV2',
+        code: 'N12345',
+        page: 2,
+      },
+      queryParamsHandling: 'merge',
+    });
+  });
+
+  it('should return parsed currency from CurrencyUtils', () => {
+    const result = component.getCurrency('EURO');
+    expect(result).toBe('EUR'); // le pipe côté html le trasnforme en €
+  });
+});
+```

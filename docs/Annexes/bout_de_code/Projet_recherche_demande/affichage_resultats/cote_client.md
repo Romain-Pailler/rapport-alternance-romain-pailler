@@ -8,9 +8,9 @@ tags:
 ---
 # Affichage résultat - Code source - Front
 
+## demande.datasource.ts
 
-## demande.datasource.ts 
-````
+```ts
 import {CollectionViewer, DataSource} from '@angular/cdk/collections';
 import {BehaviorSubject, catchError, distinctUntilChanged, finalize, Observable, of, tap} from 'rxjs';
 import {DemandeService} from '@core/service/demande/demande.service';
