@@ -11,7 +11,7 @@ tags:
 
 ## Objectif
 
-**Monalisa-Compta** est un microservice chargé d’assurer l’interface entre l’application **Leasa** et différents systèmes d’information comptables. Son rôle principal est de transformer des **CRE** (Comptes Rendus d’Événements) métiers en **écritures comptables** exploitables par ces systèmes tiers, en respectant les règles de gestion propres à chacun.
+**Monalisa-Compta** est un microservice chargé d’assurer l’interface entre l’application **Leasa** et le système d’information comptable de l'entreprise **Sage**. Son rôle principal est d'interpréter des **CRE** (Comptes Rendus d’Événements) métiers en **écritures comptables** exploitables par ce système tier, en respectant les règles de gestion propres à chacun.
 
 ## Fonctionnement
 
@@ -23,20 +23,22 @@ tags:
    Le microservice s’appuie sur un ensemble de règles configurables pour interpréter les CRE. Chaque règle tient compte :
    - du **code du CRE**,
    - du **code du montant à évaluer**,
-   - des **règles spécifiques de comptabilisation**.
+   - des **règles spécifiques de comptabilisation** (Type, Sens Achat ou Vente).
 
-   Le résultat est une ou plusieurs **lignes d’écritures comptables**, générées dynamiquement.
+   Le résultat est une ou plusieurs **lignes d’écritures comptables** (HT, TTC, TVA), générées dynamiquement au format compréhensible vers Sage.
 
 3. **Généricité et extension**  
-   Le système est conçu pour mutualiser l’implémentation entre différents microservices comptables. Une **couche générique** de transformation est utilisée, puis des **hooks** permettent d'adapter les écritures au SI cible (comme Sage par exemple).
+   Le système est conçu pour mutualiser l’implémentation entre différents microservices comptables. Une **couche générique** de transformation est utilisée afin d'adapter les écritures au SI cible (Sage).
 
 ## Exemple de processus
-- Un CRE est généré côté Leasa lors de la validation d’une facture.
+
+- Un CRE est généré côté Leasa lors d'une comptabilisation d’une facture.
 - Il est envoyé à Monalisa-Compta.
 - En fonction du paramétrage, plusieurs lignes d’écriture sont générées.
-- Ces écritures sont ensuite transmises vers le système comptable final.
+- Ces écritures sont ensuite transmises vers **Sage**.
 
 ## Conclusion
 
-Ce microservice constitue une brique essentielle pour le traitement automatisé et normé des opérations comptables entre Leasa et les autres applications financières. Son architecture orientée événement permet une grande souplesse et une interopérabilité avec des systèmes tiers divers.
+Ce microservice constitue une brique essentielle pour le traitement automatisé et normé des opérations comptables entre Leasa et l'application comptable du groupe. Son architecture permet une grande souplesse et une interopérabilité avec des systèmes tiers divers.
 
+---
