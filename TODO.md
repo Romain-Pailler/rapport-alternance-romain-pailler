@@ -80,15 +80,14 @@ Gestionnaire back office (=Chargé de portefeuille)	Le gestionnaire a pour rôle
 Demande de financement	Accord	Accord de financement
 Comptabilité/Trésorerie
 
-
-
 CRE	Compte Rendu d'Evènements
 Date écriture	= Date comptabilisation = MOV2_DATE_MOV (dans Pontprod) : Il s'agit de la date à laquelle la pièce sera enregistrée en comptabilité
 Date enregistrement	= date à laquelle on saisie la facture... LP : je ne suis pas certain que cette date soit utile.
 FAE	Facture à établir
 Montant facturé au loueur Il s'agit de la somme des factures et avoirs et extournes de sens ACHAT et de type ACQUISITION.
 
-faire code source de : 
+faire code source de :
+
 - http://localhost:3000/docs/Missions/FIX/Liste/ML-14950
 - http://localhost:3000/docs/Missions/FIX/Liste/ML-14747
 - http://localhost:3000/docs/Missions/FIX/Liste/ML-15002 vidéo si jamais ?
