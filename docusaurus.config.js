@@ -148,7 +148,7 @@ const config = {
       },
       
       prism: {
-        additionalLanguages: ['java'],
+        additionalLanguages: ['java','diff'],
         theme: prismThemes.github,
       },
     },

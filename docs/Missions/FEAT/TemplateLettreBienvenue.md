@@ -12,7 +12,7 @@ tags:
 Depuis l’application, il est possible d’envoyer un email de bienvenue après la facturation d’un dossier.
 Ce mail repose sur un template [Mustache](./../../Annexes/mustache.md), qui nécessite différentes données comme des dates ou des numéros de contrat. Avant de commencer, j’ai échangé avec Charlotte pour clarifier la structure du template et les données à lui fournir.
 
-## Ticket 
+## Ticket
 
 ![Screenshot du ticket Jira](/img/feature/ticket/lettre_bienvenue.png)
 

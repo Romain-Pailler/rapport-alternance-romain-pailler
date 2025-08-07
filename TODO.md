@@ -88,19 +88,30 @@ Montant facturé au loueur Il s'agit de la somme des factures et avoirs et extou
 
 faire code source de :
 
-- http://localhost:3000/docs/Missions/FIX/Liste/ML-14747
-- http://localhost:3000/docs/Missions/FIX/Liste/ML-15002 vidéo si jamais ?
 - http://localhost:3000/docs/Missions/FIX/Liste/ML-15287
+
 - http://localhost:3000/docs/Missions/Recherche_demande/Affichage_des_resultats/Cote-rest-api // faire aussi les explications
+
 - http://localhost:3000/docs/Missions/Recherche_demande/Ajout_du_premier_critere_recherche/Cote-client
--http://localhost:3000/docs/Missions/Recherche_demande/Ajout_bouton_reinit/Cote-client
+
+- http://localhost:3000/docs/Missions/Recherche_demande/Ajout_bouton_reinit/Cote-client
+
 - http://localhost:3000/docs/Missions/Recherche_demande/Ajout_du_deuxieme_critere_recherche/
+
 - http://localhost:3000/docs/Missions/Recherche_demande/Ajout_du_troisieme_critere_recherche/
+
 - http://localhost:3000/docs/Missions/Recherche_demande/Ajout_nb_resultats_calcul_montants_ht/Cote-client
+
 - http://localhost:3000/docs/Missions/Recherche_demande/Ajout_nb_resultats_calcul_montants_ht/Cote-serveur explication + code source
+
 - tout faire : http://localhost:3000/docs/Missions/Recherche_demande/Bugs/Premier_bug/cote_client
+
 - http://localhost:3000/docs/Missions/Recherche_demande/Logique_java_recherche_demande à relire + envoyer faire analyse existant fonctionnel
-- http://localhost:3000/docs/Annexes/Maquette rajouter explication 
+
+- http://localhost:3000/docs/Annexes/Maquette rajouter explication
+
 - http://localhost:3000/docs/Annexes/Mise_en_prod préciser les délais pour chaque environnements
-- http://localhost:3000/docs/glossaire/Vocab tout mettre en relisant tout 
-- http://localhost:3000/docs/glossaire/Vocab_metier idem 
+
+- http://localhost:3000/docs/glossaire/Vocab tout mettre en relisant tout
+
+- http://localhost:3000/docs/glossaire/Vocab_metier idem
