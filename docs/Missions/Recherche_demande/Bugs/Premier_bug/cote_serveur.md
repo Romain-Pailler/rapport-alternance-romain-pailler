@@ -1,7 +1,7 @@
 
 ## demandeDao.java :
 
-````
+````java
   case DemandeCriteria.PROJECTION_RECHERCHE_BACK -> setProtections(demandeList);
                     case DemandeCriteria.PROJECTION_RECHERCHE_BACK_V2 -> {
                         setProtections(demandeList);
@@ -10,7 +10,7 @@
                     }
 ````           
 retire le code suivant DemandeProjectionRechercheBackImpl.java     
-````
+````java
    ).as(Q_DEMANDE.apporteur),
                 Projections.bean(Statut.class,
                         Q_STATUT.id,
@@ -31,7 +31,7 @@ retire ça :  Q_STATUT.ordreTimeline)
 
 créé nouveau fichier DemandeProjectionRechercheBackV2Impl.java
 
-````
+````java
 package com.pharmagest.monalisa.rest.dao.projection.impl.demande;
 
 import com.querydsl.core.types.Projections;
@@ -156,17 +156,51 @@ public class DemandeProjectionRechercheBackV2Impl implements IProjection<Demande
 
 ajout dans ProjectionDemandeFactory.java // expliquer une factory
 
-````
+````java
  projections.add(DemandeProjectionRechercheBackV2Impl.getInstance());
 ````
 
 ajout dans DemandeCriteria.java : 
-````
+````java
 public static final String PROJECTION_RECHERCHE_BACK_V2 = "projectionRechercheBackV2";
 ````
 dans le searchService.java 
-````
+````java
    if (DemandeCriteria.PROJECTION_RECHERCHE_BACK_V2.equals(demandeCriteria.getCurrentProjection())) {
 ````
 
 dans la fonction get
+```java
+  @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public Response search(@Context final UriInfo info, @HeaderParam(Constantes.AUTH_KEY_FROM) final String from) {
+        final DemandeCriteria demandeCriteria = new DemandeCriteria(info.getQueryParameters(), from);
+        
+        if (demandeCriteria.getVersion().equals(DemandeCriteria.Version.V2)) {
+            final Long count = demandeSearchProcessus.countAllByCriteria(demandeCriteria);
+            final List<Demande> demandes = demandeSearchProcessus.searchByCriteria(demandeCriteria);
+            return Response.ok(new RestCollectionResult<>(mapper.mapList(demandes, RestDemandeShort.class), demandeCriteria.getStartPage(), count)).build();
+        } else {
+            final Boolean withProjection = demandeCriteria.getWithProjection() != null && demandeCriteria.getWithProjection();
+            final Boolean initialize = !withProjection;
+            
+            final Long count = demandeSearchProcessus.countAllByCriteria(demandeCriteria);
+            if (DemandeCriteria.PROJECTION_ETAT_PARC_VALEURS_INTERRUPTION_FRONT.equals(demandeCriteria.getCurrentProjection())) {
+                final List<Demande> demandes = demandeSearchProcessus.searchByCriteria(demandeCriteria);
+                final List<RestDemandeEtatParc> restDemandes = demandeSearchProcessus.convertSearchResults(demandes);
+                return Response
+                        .ok(new RestEtatParcDureeContrat(restDemandes, demandeCriteria.getStartPage(), count, demandeProcessus.getMaxDureeContratByCriteria(demandeCriteria)))
+                        .build();
+            } else {
+                final List<Demande> demandes = demandeSearchProcessus.searchByCriteria(demandeCriteria, initialize);
+                if (DemandeCriteria.PROJECTION_RECHERCHE_BACK_V2.equals(demandeCriteria.getCurrentProjection())) {
+                    return Response.ok(new RestCollectionResult<>(mapper.mapList(demandes, RestDemandeSearch.class), demandeCriteria.getStartPage(), count)).build();
+                } else {
+                    final List<RestDemandeShort> restDemandes = setDetails(demandes, demandeCriteria, mapper.mapList(demandes, RestDemandeShort.class), from);
+                    return Response.ok(new RestCollectionResult<>(restDemandes, demandeCriteria.getStartPage(), count)).build();
+                }
+            }
+        }
+    }
+```

@@ -90,12 +90,6 @@ faire code source de :
 
 - http://localhost:3000/docs/Missions/Recherche_demande/Affichage_des_resultats/Cote-rest-api // faire aussi les explications
 
-- http://localhost:3000/docs/Missions/Recherche_demande/Ajout_nb_resultats_calcul_montants_ht/Cote-client
-
-- http://localhost:3000/docs/Missions/Recherche_demande/Ajout_nb_resultats_calcul_montants_ht/Cote-serveur explication + code source
-
-- tout faire : http://localhost:3000/docs/Missions/Recherche_demande/Bugs/Premier_bug/cote_client
-
 - http://localhost:3000/docs/Missions/Recherche_demande/Logique_java_recherche_demande à relire + envoyer faire analyse existant fonctionnel
 
 - http://localhost:3000/docs/Annexes/Maquette rajouter explication
