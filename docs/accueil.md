@@ -10,7 +10,7 @@ Le site est en cours de construction. Certaines sections peuvent être incomplè
 
 Ce site est le support de mon rapport d’alternance, réalisé en troisième année de BUT Informatique à l’[IUT Nancy-Charlemagne](https://iut-charlemagne.univ-lorraine.fr/) de septembre 2024 à Août 2025.
 
-Il retrace mon parcours au sein de la [Coopérative Welcoop](./presentation/Cooperative_welcoop), plus précisément au sein de sa branche logicielle [Equasens](./presentation/Equasens) et de la filiale [Nanceo](./presentation/Nanceo). Le rapport détaille les missions menées pendant l’année d’alternance, les compétences techniques et méthodologiques acquises, ainsi que l’organisation des projets sur lesquels j’ai travaillé.
+Il retrace mon parcours au sein de la [Coopérative Welcoop](./presentation/Cooperative_welcoop), plus précisément dans sa branche logicielle [Equasens](./presentation/Equasens)où j’ai travaillé au sein de l’équipe de sa filiale [Fintech](./presentation/Nanceo) qui regroupe les sociétés [Nanceo](./presentation/Nanceo) et Healthlease. Le rapport détaille les missions menées pendant l’année d’alternance, les compétences techniques et méthodologiques acquises, ainsi que l’organisation des projets sur lesquels j’ai travaillé.
 
 J’ai choisi de présenter ce rapport sous forme de site web avec [Docusaurus](https://docusaurus.io/), un générateur de sites statiques adapté à la documentation technique.
 
@@ -28,7 +28,7 @@ J’ai choisi de présenter ce rapport sous forme de site web avec [Docusaurus](
 
 ## Introduction
 
-La [Coopérative Welcoop](./presentation/Cooperative_welcoop) est un acteur majeur de la santé en France. Sa branche [Equasens](./presentation/Equasens) développe des solutions logicielles pour les professionnels de santé, les établissements de soins et les patients. La filiale [Nanceo](./presentation/Nanceo) est spécialisée dans la gestion financière et le financement des équipements de santé par leasing. Elle porte le projet [Leasa](./presentation/Leasa), une application métier dédiée à la gestion des contrats de location.
+La [Coopérative Welcoop](./presentation/Cooperative_welcoop) est un acteur majeur de la santé en France. Sa branche [Equasens](./presentation/Equasens) développe des solutions logicielles pour les professionnels de santé, les établissements de soins et les patients. Les sociétés [Nanceo](./presentation/Nanceo.md) et Healthlease sont spécialisées dans le financement locatif, chacune sur son marché : Nanceo se concentre sur le secteur tertiaire, tandis que Healthlease gère spécifiquement le financement des équipements de santé.
 
 J’ai choisi de réaliser mon alternance au sein de cette structure, car elle me permettait de m’inscrire dans un projet à la fois concret, structuré et évolutif. Après des expériences orientées développement web, je souhaitais intégrer un environnement technique exigeant, avec des problématiques métiers réelles et une culture projet bien établie. La mission proposée correspondait pleinement à ces attentes.
 
@@ -40,7 +40,7 @@ Cette alternance a été une étape significative dans mon parcours professionne
 
 ## Remerciements
 
-Je tiens tout d’abord à remercier toute l'équipe Leasa pour m’avoir accueilli de la meilleure des manières. Je les remercie aussi de m’avoir donné la chance de faire cette alternance chez Nanceo, où j’ai pu renforcer mes compétences techniques et découvrir concrètement les réalités du métier dans le secteur informatique.
+Je tiens tout d’abord à remercier toute l'équipe Leasa pour m’avoir accueilli de la meilleure des manières. Je les remercie aussi de m’avoir donné la chance de faire cette alternance chez Equasens, où j’ai pu renforcer mes compétences techniques et découvrir concrètement les réalités du métier dans le secteur informatique.
 
 Je remercie également l’ensemble des collaborateurs d’Equasens et de Nanceo pour leur accueil chaleureux, leur disponibilité et leur soutien tout au long de cette année d’alternance.
 

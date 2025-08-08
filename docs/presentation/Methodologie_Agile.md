@@ -33,15 +33,18 @@ Ce processus garantit la **qualité du code** et la **stabilité** des fonctionn
 
 [![jenkins](jenkins.png)](jenkins.png)
 
-## Documentation
+## Documentation fonctionnelle
 
-L’outil **Confluence** est utilisé en parallèle pour centraliser la documentation. Il est structuré autour de plusieurs usages :
+L’outil **Confluence** est notre référentiel principal pour toute la documentation liée au projet.  
+Il est structuré autour de plusieurs usages clés :
 
+- **Documentation fonctionnelle** : rédaction et mise à jour des **cahiers des charges** et des spécifications fonctionnelles. Ces documents détaillent le périmètre, les règles de gestion et les objectifs des évolutions à développer.  
 - **Changelog** des nouvelles versions : description des fonctionnalités, correctifs et évolutions livrées.
 - **Documentation technique** : tutoriels internes pour installer les outils de développement, guides de démarrage, procédures de déploiement...
 - **Notes de version** : synthèses des sprints et préparation des futures mises en production.
 
-Confluence joue donc un rôle clé dans la **transmission de l’information** entre les membres de l’équipe, en favorisant la continuité et la clarté des échanges.
+Confluence joue ainsi un rôle central dans la **structuration des échanges** entre les équipes métier et technique.  
+Il permet de garantir que chaque évolution est bien cadrée dès sa conception et que toutes les parties prenantes disposent d’une **vision claire et partagée** du projet.
 
 [![confluence](confluence.png)](confluence.png)
 
