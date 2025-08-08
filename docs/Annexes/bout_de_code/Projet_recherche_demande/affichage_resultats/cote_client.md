@@ -523,3 +523,17 @@ describe('RechercheDemandesComponent', () => {
   });
 });
 ````
+## messages.en_EN.json
+
+```json
+ "5390649178523111901": "Financial application search",
+    "4655471430282005775": "Application number",
+    "297600783847769458": "Suppliers / Suppliers groupck",
+    "3374708419980534575": "Client / Siren / Registration number ",
+    "4154092245707467191": "Funder and référence ",
+    "5252146544424526556": "Purchase excl. VAT / Sales excl.VAT ",
+    "44406838033108295": "Rent excl.VAT ",
+    "2074819151343358437": "Submitted on ",
+    "1614649226369080187": "Paid on ",
+    "7306143457890530917": "Supplier sales person ",
+```
