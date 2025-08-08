@@ -42,7 +42,7 @@ Une fois cette première compréhension technique en place, j’ai participé au
 
 Pour préparer ces ateliers, j’ai travaillé en amont avec **Nicolas** (graphiste UI/UX) pour structurer les questions à poser. Ce travail préparatoire a permis d’éviter de dériver hors périmètre fonctionnel pendant les réunions.
 
-J’ai ensuite co-animé deux réunions avec **Charlotte** (analyste fonctionnelle) et Nicolas, réunissant cinq utilisateurs finaux. Ces échanges ont permis de comprendre leurs usages actuels, leurs douleurs, et leurs attentes concrètes pour la nouvelle version de l’écran.
+J’ai ensuite co-animé deux réunions avec **Charlotte** (analyste fonctionnelle) et Nicolas, réunissant cinq utilisateurs finaux. Ces échanges ont permis de comprendre leurs usages actuels, leurs doléances, et leurs attentes concrètes pour la nouvelle version de l’écran.
 
 ### 3. Élaboration de wireframes
 

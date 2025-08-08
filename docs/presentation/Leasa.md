@@ -19,7 +19,7 @@ L’application se compose de trois environnements fonctionnels principaux :
 
 - **Front Office** : destiné aux commerciaux pour la création et le dépôt des demandes de financement  
 - **Back Office** : dédié aux administrateurs et gestionnaires pour le suivi et la validation des dossiers  
-- **Application mobile** : accessible aux clients finaux pour consulter ou compléter leurs dossiers
+- **Application mobile** : accessible aux commerciaux pour déposer leurs demandes, les suivres.
 
 **Leasa** centralise toutes les informations relatives aux demandes (identité du client, nature du matériel, modalités de financement) et les transmet automatiquement aux organismes partenaires via un système de web-services.
 

@@ -9,7 +9,7 @@ tags:
 
 ## Contexte
 
-Dans le cadre de l’évolution de l’application Monalisa, une nouvelle version (1.142.1) devait être déployée sur l’environnement de **préproduction** afin de permettre les phases de validation et de test utilisateurs avant une mise en production.
+Dans le cadre de l’évolution de l’application Monalisa, une nouvelle version (1.142.1) devait être déployée sur l’environnement de **préproduction** afin de tester les nouvelles corrections et fonctionnalités avant une mise en production.
 
 Mon rôle a été d’assurer l’ensemble du processus de **déploiement applicatif**, depuis la validation des tags jusqu’à l’installation du RPM sur les serveurs de préproduction.
 
@@ -33,7 +33,7 @@ J’ai veillé à ce que les **builds soient tous marqués comme réussis**, con
 
 ### 3. Packaging
 
-Une fois les tags validés, j’ai lancé le job Jenkins suivant pour packager l’application :
+Une fois les tags validés, j’ai lancé le deuxième job Jenkins suivant pour packager l’application :
 
 ![alt text](image-2.png)
 
@@ -45,7 +45,7 @@ Une vérification dans la liste déroulante des versions disponibles m’a permi
 
 ### 4. Déploiement
 
-La dernière étape consiste à déployer le RPM sur l’environnement de préproduction, à l’aide d’un second job Jenkins :
+La dernière étape consiste à déployer le RPM sur l’environnement de préproduction, à l’aide d’un troisième job Jenkins :
 
 ![alt text](image-4.png)
 
