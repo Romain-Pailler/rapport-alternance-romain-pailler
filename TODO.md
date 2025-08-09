@@ -88,7 +88,6 @@ Montant facturé au loueur Il s'agit de la somme des factures et avoirs et extou
 
 faire code source de :
 
-- http://localhost:3000/docs/Missions/Recherche_demande/Affichage_des_resultats/Cote-rest-api // faire aussi les explications
 
 - http://localhost:3000/docs/Missions/Recherche_demande/Logique_java_recherche_demande à relire + envoyer faire analyse existant fonctionnel
 
@@ -100,7 +99,7 @@ faire code source de :
 
 - http://localhost:3000/docs/glossaire/Vocab_metier idem
 
-
+- http://localhost:3000/docs/Missions/Recherche_demande/Ajout_nb_resultats_calcul_montants_ht/Cote-serveur rajouter code source ? et explication de code
 ajouter dans partie pres leasa le schema avec apporteur loueur et bailleurs
 revoir l'explication du problème du fix ML-14950
 ML-12242 expliquer ce que signifie défendre le dossier dans le vocab métier  anonymiser les screens

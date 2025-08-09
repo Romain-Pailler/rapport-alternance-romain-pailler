@@ -9,7 +9,7 @@ tags:
 
 ## decisionDomain.yaml
 
-````
+````yaml
 title: DecisionDomain
 description: La représentation simplifiée d'une decision
 type: object
@@ -28,7 +28,7 @@ properties:
 
 ## demandeDomain.yaml
 
-````
+````yaml
 title: demandeDomain
 description: La representation d'une demande simpliste
 type: object
