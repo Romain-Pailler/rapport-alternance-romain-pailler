@@ -88,8 +88,7 @@ Montant facturé au loueur Il s'agit de la somme des factures et avoirs et extou
 
 faire code source de :
 
-
-- http://localhost:3000/docs/Missions/Recherche_demande/Logique_java_recherche_demande à relire + envoyer faire analyse existant fonctionnel
+- http://localhost:3000/docs/Missions/Recherche_demande/Logique_java_recherche_demande à relire + envoyer vers analyse existant fonctionnel
 
 - http://localhost:3000/docs/Annexes/Maquette rajouter explication
 

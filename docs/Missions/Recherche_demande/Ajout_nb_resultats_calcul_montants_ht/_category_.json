@@ -1,0 +1,8 @@
+{
+    "label": "Nombre de résultats et Montants totaux",
+    "position": 7,
+    "link": {
+    "type": "generated-index",
+    "description": "Nouvelle fonctionnalité pour la page de recherche de demande"
+    }
+}

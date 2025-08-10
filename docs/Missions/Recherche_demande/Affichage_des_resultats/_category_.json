@@ -1,6 +1,6 @@
 {
     "label": "Affichage des résultats",
-    "position": 1,
+    "position": 3,
     "link": {
       "type": "generated-index",
       "description": "Premier ticket de la migration de l'écran"

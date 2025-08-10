@@ -1,3 +1,10 @@
+---
+sidebar_label: Fonctionnement global de la recherche de demandes (Existant) 
+sidebar_position: 2
+tags: 
+    - Migration
+    - Java
+---
 # Fonctionnement global de la recherche de demandes (Existant)
 
 Lorsqu’un utilisateur effectue une recherche de demandes depuis l’interface, une requête HTTP est envoyée à l’API. Cette requête est traitée par la couche service, puis transmise au processus métier, qui appelle le DAO. Le DAO utilise un `SearchBuilder` pour construire dynamiquement la requête SQL avec tous les critères nécessaires.

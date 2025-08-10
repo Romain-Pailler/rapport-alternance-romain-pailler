@@ -1,9 +1,8 @@
 ---
 sidebar_label: Présentation
-sidebar_position: "0"
+sidebar_position: 1
 tags: 
     - Migration
-    - Angular
 ---
 # Migration de l'écran de recherche de demandes
 

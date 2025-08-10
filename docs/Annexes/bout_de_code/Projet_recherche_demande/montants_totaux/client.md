@@ -153,7 +153,7 @@
     ></ml-ui-paginator>
   </ml-ui-bloc-body>
 </ml-ui-bloc>
-````
+```
 
 
 form-group
@@ -169,6 +169,7 @@ export class RechercheDemandesFormGroup {
 ```
 
 scss
+
 ```css
 .recherche-demande {
   &__filtres {
@@ -209,8 +210,6 @@ scss
   }
 }
 ```
-
-### le code source
 
 ```ts
 export class DemandeDataSource implements DataSource<DemandeDomain> {
