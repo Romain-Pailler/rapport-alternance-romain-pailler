@@ -86,7 +86,6 @@ Date enregistrement	= date à laquelle on saisie la facture... LP : je ne suis p
 FAE	Facture à établir
 Montant facturé au loueur Il s'agit de la somme des factures et avoirs et extournes de sens ACHAT et de type ACQUISITION.
 
-faire code source de :
 
 - http://localhost:3000/docs/Missions/Recherche_demande/Logique_java_recherche_demande à relire + envoyer vers analyse existant fonctionnel
 
@@ -106,4 +105,4 @@ ML-12242 expliquer ce que signifie défendre le dossier dans le vocab métier  a
 ML-14747 expliquer ce qu'est une tache dans le vocab metier anonymiser les screens
 http://localhost:3000/docs/Missions/Recherche_demande/Affichage_des_resultats/Cote-rest-api revoir sur la pr ce que j'ai réélement ajouté
 
-http://localhost:3000/docs/Missions/Recherche_demande/Bugs/Premier_bug/ à faire 
+http://localhost:3000/docs/Missions/Recherche_demande/Bugs/Premier_bug/ à faire
