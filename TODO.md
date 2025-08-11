@@ -105,3 +105,5 @@ revoir l'explication du problème du fix ML-14950
 ML-12242 expliquer ce que signifie défendre le dossier dans le vocab métier  anonymiser les screens
 ML-14747 expliquer ce qu'est une tache dans le vocab metier anonymiser les screens
 http://localhost:3000/docs/Missions/Recherche_demande/Affichage_des_resultats/Cote-rest-api revoir sur la pr ce que j'ai réélement ajouté
+
+http://localhost:3000/docs/Missions/Recherche_demande/Bugs/Premier_bug/ à faire 
