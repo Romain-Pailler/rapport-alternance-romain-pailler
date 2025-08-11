@@ -754,7 +754,7 @@ private BigDecimal computeTotalBySens(List<Facture> factures, String sensRecherc
    * `ACQUISITION_EXTOURNE_ACHAT`
    * `ACQUISITION_EXTOURNE_VENTE`
 
-   Cela permet de filtrer uniquement les factures comptabilisées **reliées à une acquisition**.
+   Cela permet de filtrer uniquement les factures **comptabilisées**.
 
 4. **Calcul de la somme**
    On extrait les `montantTotalHT` des factures filtrées, puis on les additionne.
@@ -770,8 +770,3 @@ private BigDecimal computeTotalBySens(List<Facture> factures, String sensRecherc
 | `computeTotalBySens`       | Fonction centrale                               | Applique les règles métier (type, sens, montant, validité) |
 
 ---
-
-### Pourquoi ce filtrage ?
-
-Il garantit que seules les **factures comptabilisées**, **pertinentes**, et **cohérentes avec l’analyse** sont prises en compte pour les montants. Cela renforce la fiabilité des données transmises au frontend.
-

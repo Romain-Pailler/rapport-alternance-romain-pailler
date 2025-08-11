@@ -97,6 +97,7 @@ faire code source de :
 - http://localhost:3000/docs/glossaire/Vocab tout mettre en relisant tout
 
 - http://localhost:3000/docs/glossaire/Vocab_metier idem
+http://localhost:3000/docs/Missions/Recherche_demande/Logique_java_recherche_demande
 
 - http://localhost:3000/docs/Missions/Recherche_demande/Ajout_nb_resultats_calcul_montants_ht/Cote-serveur rajouter code source ? et explication de code
 ajouter dans partie pres leasa le schema avec apporteur loueur et bailleurs
