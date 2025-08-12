@@ -1,56 +1,35 @@
-```java title='DemandeDaoImpl.java'
-case DemandeCriteria.PROJECTION_RECHERCHE_BACK -> setProtections(demandeList);
-case DemandeCriteria.PROJECTION_RECHERCHE_BACK_V2 -> {
-            setProtections(demandeList);
-            setGroupesApporteursToApporteurs(demandeList);
-            setFacturesToDemandes(demandeList);
-    }
-```
-ticket 
-code complet 
-```java 
- private List<Demande> setEntitesByProjection(final List<Demande> demandes, final DemandeCriteria demandeCriteria, final Utilisateur utilisateur) {
-        
-        if (demandeCriteria.getCurrentProjection() != null) {
-            
-            final List<List<Demande>> partitionDemandes = new PartitionManager<Demande>().add(demandes).getPartitions();
-            final List<Demande> demandesToReturn = new ArrayList<>();
-            
-            for (final List<Demande> demandeList : partitionDemandes) {
-                
-                switch (demandeCriteria.getCurrentProjection()) {
-                    case DemandeCriteria.PROJECTION_HISTORIQUE, DemandeCriteria.PROJECTION_STATISTIQUE_WITH_STATUT_HISTORIQUE -> setHistoriquesToDemandes(demandeList);
-                    case DemandeCriteria.PROJECTION_STATISTIQUE_PAYE -> setPaiementsToDemandes(demandeList, new PaiementCriteria().setWithDateReglement(true));
-                    case DemandeCriteria.PROJECTION_RECHERCHE_FRONT -> {
-                        setConditionsAccordToDemandes(demandeList);
-                        setValeurInterruptionToDemandes(demandeList, utilisateur);
-                    }
-                    case DemandeCriteria.PROJECTION_PORTEFEUILLE -> {
-                        setTagsToDemandes(demandeList);
-                        setGroupesApporteursToApporteurs(demandes);
-                    }
-                    case DemandeCriteria.PROJECTION_TAGS -> setTagsToDemandes(demandeList);
-                    case DemandeCriteria.PROJECTION_FACTURES -> setFacturesToDemandes(demandeList);
-                    case DemandeCriteria.PROJECTION_ETAT_PARC_VALEURS_INTERRUPTION_FRONT -> {
-                        setValeurInterruptionToDemandes(demandeList, utilisateur);
-                        setMateriels(demandes);
-                    }
-                    case DemandeCriteria.PROJECTION_TRANSFERABLE -> setDirigeantsClient(demandeList);
-                    case DemandeCriteria.PROJECTION_RECHERCHE_BACK -> setProtections(demandeList);
-                    case DemandeCriteria.PROJECTION_RECHERCHE_BACK_V2 -> {
-                        setProtections(demandeList);
-                        setGroupesApporteursToApporteurs(demandeList);
-                        setFacturesToDemandes(demandeList);
-                    }
-                    default -> {
-                    }
-                }
-                
-                demandesToReturn.addAll(demandeList);
-            }
-            
-            return demandesToReturn;
-        }
-        return demandes;
-    }
-```
+---
+sidebar_label: Bug – Impact sur l’ancienne page
+sidebar_position: 1
+tags:
+  - Bugfix
+  - Projection
+  - Angular
+---
+
+# Bug – Impact de la nouvelle recherche sur l’ancienne page
+
+## Objectif
+La nouvelle page de recherche des demandes (développée sous Angular 2+) devait interroger le serveur avec des données optimisées.  
+Initialement, elle utilisait la même "projection" (configuration de données) que l’ancienne page.  
+Résultat : les modifications apportées à cette projection ont aussi modifié le comportement de l’ancienne page, créant des effets de bord.
+
+---
+
+## Ticket
+
+![Screenshot du ticket](/img/recherche_demande/fix_resultats_vide.png)
+---
+
+## Liens vers les explications détaillées
+
+- [Voir le code côté serveur (Java)](./cote_serveur.md)
+
+- [Voir le code côté client (Angular)](./cote_client.md)
+
+---
+
+## Résultat
+L’ancienne page conserve son fonctionnement, tandis que la nouvelle page utilise une configuration de données optimisée et indépendante.
+
+---
