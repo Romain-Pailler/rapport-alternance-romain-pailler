@@ -91,4 +91,5 @@ http://localhost:3000/docs/missions/Recherche_demande/Bugs/Premier_bug/cote_clie
 
 expliquer le ticket pour la liste des groupes partenaires 
 
+http://localhost:3000/docs/missions/FIX/Liste/ML-15287 retravailler ce fichier
 NBTECH 250

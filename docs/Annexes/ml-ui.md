@@ -62,4 +62,4 @@ Monalisa UI est basé sur **Angular 2+**, et contient deux sous-projets :
 
 Certains composants peuvent être **downgradés** pour être utilisés dans du code AngularJS grâce au module `mlUIDowngradeModule`.
 
-> _[Insérer ici un schéma simple illustrant un composant Angular utilisé dans AngularJS via downgrade]_  
+![Schéma du downgrade de composant](/img/ml-ui-downgrade.png)
