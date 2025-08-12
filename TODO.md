@@ -21,36 +21,17 @@ Bien indiquer ce qui sort de la formation.
 
 https://alternance-hugo-jahnke.netlify.app/presentation.html#fonctionnement
 
-https://rapport-alternance-romain-pailler.netlify.app/docs/Missions/FEAT/TemplateLettreBienvenue
-(à voir avec clément) ??
 
 https://weier-loris-rapport-alternance.netlify.app/
 
 - présenter ce qu'est ML-Rest-Api besoin peut-être de voir ça avec toto
--[] faire ajoutNbRésultats et calcul montants totaux vente et achat reste le backend
-- expliquer le bug créer et comment je l'ai corriger 
 - ajouter des liens dans chaque partie afin de rediriger vers le code source
-- mettre beaucoup de contexte et réécrire beaucoup de tickets importants (premier filtre, résultats (ajouter l'image du skateboard), modif du dto pour l'ajout et calcul de montants totaux)
+
 
 ## expose
 
 - faire schema utilisateur, besoins, cahier des charges
-- schéma architecture 
-
-ajouter tests dans partie cote serveur du premier ticket de la recherche de demande.
-- ajoute schéma des entités de la coopérative welcoop
-- ajoute schéma des entités de equasens
-
-
-
-
-nanceo : 
-Nanceo
-Les activités de la division Fintech de Pharmagest sont regroupées dans la filiale Nanceo. A l'origine, celle-ci a été créée afin de répondre au besoin de faire financer la location de matériel aux clients de Pharmagest.
-
-Membre de l’association France FinTech, Nanceo met en place des solutions de location de biens pour des entreprises du secteur tertiaire. Elle a lancé l’application Leasa qui permet de faciliter et d'accélérer le process de demande de financement. La partie technique de l’application est assurée par l’équipe R&D Fintech de Pharmagest.
-
-Pharmagest commercialise également son application Leasa sous marque blanche (d’autres entreprises achètent le logiciel pour leurs propres besoins et y applique leurs chartes graphiques).
+- schéma architecture
 
 Tiers
 
@@ -91,7 +72,7 @@ Montant facturé au loueur Il s'agit de la somme des factures et avoirs et extou
 
 - http://localhost:3000/docs/Annexes/Maquette rajouter explication
 
-- http://localhost:3000/docs/Annexes/Mise_en_prod préciser les délais pour chaque environnements
+- http://localhost:3000/docs/Annexes/Mise_en_prod préciser les délais pour chaque environnements // les premiers mercredi du sprint // ensuite semaine d'apres rc // prod // preprod la veille
 
 - http://localhost:3000/docs/glossaire/Vocab tout mettre en relisant tout
 
@@ -106,6 +87,7 @@ ML-12242 expliquer ce que signifie défendre le dossier dans le vocab métier  a
 
 ML-14747 expliquer ce qu'est une tache dans le vocab metier anonymiser les screens
 
-http://localhost:3000/docs/Missions/Recherche_demande/Affichage_des_resultats/Cote-rest-api revoir sur la pr ce que j'ai réélement ajouté
+http://localhost:3000/docs/missions/Recherche_demande/Bugs/Premier_bug/cote_client mettre de la premiere personne dans les explications 
 
-http://localhost:3000/docs/Missions/Recherche_demande/Bugs/Premier_bug/ à faire
+
+NBTECH 250

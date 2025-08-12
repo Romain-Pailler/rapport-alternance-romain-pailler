@@ -25,6 +25,8 @@ La coopérative a pour objectif de devenir la **première plateforme de santé �
 
 Cette ambition s’appuie sur ses filiales spécialisées, dont [Equasens](./Equasens), responsable des développements technologiques.
 
+![Image de la structure de la coopérative](/img/presentation/pres_welcoop.png)
+
 :::info
 Pour plus d'info, voici leur [site de présentation](https://www.lacooperativewelcoop.com/)
 :::

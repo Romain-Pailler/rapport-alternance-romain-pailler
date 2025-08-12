@@ -16,7 +16,7 @@ L'objectif de cette partie de l'application était de modifier le contrat en pla
 
 1. **Utilisation de l'endpoint Search** :
   L'endpoint `/demandes/search` situé dans le fichier `openapi.yaml` est celui utilisé pour permettre la recherche des demandes.
-   
+
 2. **Spécification de la logique de recherche** :
    La logique de recherche a été définie dans un fichier `search.yaml`, où était déjà précisé les paramètres acceptés (ici `demandesCriteria`) ainsi que le type de réponse attendu (une liste paginée de demandes).
 
@@ -30,6 +30,7 @@ L'objectif de cette partie de l'application était de modifier le contrat en pla
 :::info
 Le code source entier est disponible [ici](./../../../Annexes/bout_de_code/Projet_recherche_demande/affichage_resultats/cote_rest_api.md)
 :::
+
 ### Ajout dans `openapi.yaml`
 
 Tout d'abord, j'ai gardé l'endpoint dans le fichier principal `openapi.yaml` qui expose la fonctionnalité de recherche des demandes.
@@ -76,25 +77,6 @@ get:
 
 ---
 
-### `demandePaginateContainer.yaml` - Structure de la réponse paginée
-
-Dans ce fichier, on décrit la structure de la réponse paginée retournée par le serveur, qui contient une liste d'objets `DemandePaginate`.
-
-```yaml
-title: DemandePaginateContainer
-description: Contient les demandes paginées
-type: object
-required:
-  - result
-properties:
-  result:
-    $ref: "demandePaginate.yaml"
-```
-
-Cette réponse est constituée d'un objet de type `DemandePaginate`, qui contient une liste d'objets représentant les demandes.
-
----
-
 ### `demandePaginate.yaml` - Liste des demandes paginées
 
 Le fichier `demandePaginate.yaml` définit un objet contenant une liste de demandes paginées.
@@ -121,7 +103,24 @@ properties:
 * **`allOf`** : Hérite des propriétés de pagination définies dans un fichier commun `paginate.yaml`, qui permet de centraliser les informations relatives à la pagination. //a revoir
 
 ---
-## Ce que j'ai modifié
+## Ce que j'ai modifié / ajouté
+
+### `demandePaginateContainer.yaml` - Structure de la réponse paginée
+
+Dans ce fichier, on décrit la structure de la réponse paginée retournée par le serveur, qui contient une liste d'objets `DemandePaginate`.
+
+```yaml
+title: DemandePaginateContainer
+description: Contient les demandes paginées
+type: object
+required:
+  - result
+properties:
+  result:
+    $ref: "demandePaginate.yaml"
+```
+
+Cette réponse est constituée d'un objet de type `DemandePaginate`, qui contient une liste d'objets représentant les demandes.
 
 ### `demandeDomain.yaml` - Structure d'une demande
 

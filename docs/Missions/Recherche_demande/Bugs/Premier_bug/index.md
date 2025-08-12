@@ -19,6 +19,7 @@ Résultat : les modifications apportées à cette projection ont aussi modifié 
 ## Ticket
 
 ![Screenshot du ticket](/img/recherche_demande/fix_resultats_vide.png)
+
 ---
 
 ## Liens vers les explications détaillées
