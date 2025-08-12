@@ -89,5 +89,6 @@ ML-14747 expliquer ce qu'est une tache dans le vocab metier anonymiser les scree
 
 http://localhost:3000/docs/missions/Recherche_demande/Bugs/Premier_bug/cote_client mettre de la premiere personne dans les explications 
 
+expliquer le ticket pour la liste des groupes partenaires 
 
 NBTECH 250
