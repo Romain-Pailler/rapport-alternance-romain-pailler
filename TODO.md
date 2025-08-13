@@ -93,3 +93,5 @@ expliquer le ticket pour la liste des groupes partenaires
 
 http://localhost:3000/docs/missions/FIX/Liste/ML-15287 retravailler ce fichier
 NBTECH 250
+
+reprendre les étapes de la recherche de demande et mettre plus d'implication dire que j'ai animé les réunions et fais les wireframes

@@ -7,7 +7,7 @@ tags:
 
 # Division Fintech
 
-La division **Fintech** du groupe **Equasens** regroupe deux entités spécialisées dans le financement locatif : **Nanceo** et **Healthlease**.  
+La division **[Fintech](../glossaire/Vocab_metier.md#fintech)** du groupe **Equasens** regroupe deux entités spécialisées dans le financement locatif : **Nanceo** et **Healthlease**.  
 Toutes deux s’appuient sur l’application interne **[Leasa](./Leasa)** pour gérer et automatiser leurs demandes de financement.
 
 ## Nanceo
@@ -17,7 +17,7 @@ Elle permet aux entreprises de financer leurs projets via des contrats de **leas
 
 Ses activités se répartissent en deux volets :  
 
-- **Vente / Gestion** : prospection de nouveaux clients et bailleurs, suivi des dossiers nécessitant une intervention humaine
+- **Vente / Gestion** : prospection de nouveaux clients et [bailleurs](../glossaire/Vocab_metier.md#bailleur), suivi des dossiers nécessitant une intervention humaine
 - **Développement / Maintenance** : maintenance et évolution de l’application Leasa, assurées par des collaborateurs d’Equasens travaillant pour le compte de Nanceo
 
 ## Healthlease

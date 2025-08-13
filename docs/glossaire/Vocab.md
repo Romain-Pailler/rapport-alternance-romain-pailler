@@ -6,6 +6,13 @@
 
 - PR : pull request (à quoi ça sert ?)
 
-
-
 - dette technique
+
+## Back Office
+
+## Développement from scratch
+
+## Front Office
+
+
+## Web-service
