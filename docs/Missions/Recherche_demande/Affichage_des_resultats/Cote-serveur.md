@@ -14,18 +14,11 @@ tags:
 
 Pour que la nouvelle page Angular puisse afficher les résultats de recherche, il est nécessaire que le backend expose une **projection spécifique** — autrement dit, un format de données adapté à l'affichage. Cela se fait via un `DTO` (*Data Transfer Object*) qui structure les données côté Java avant leur envoi au frontend.
 
-:::tip
-#### Qu’est-ce qu’un DTO ? // A ajouter dans un autre fichier
-Un DTO (Data Transfer Object) est une classe qui sert à transférer des données entre différentes couches de l’application (par exemple entre le backend et le frontend) tout en **filtrant et organisant** les champs utiles.
-:::
-
-
 ---
 
 ### Code modifié dans `searchService.java`
 
 Le code modifié dans le service de recherche ajoute un **cas particulier** pour traiter une projection spécifique : `PROJECTION_RECHERCHE_BACK_V2`.
-
 
 ``` java
  @GET
@@ -176,6 +169,7 @@ Cela garantit que le frontend (notamment Angular) dispose **de toutes les donné
 La méthode `setFacturesToDemandes(...)` permet d’**associer à chaque demande la liste de ses factures**, en les récupérant via une requête optimisée, et en projetant uniquement les champs nécessaires.
 
 ---
+
 ### Code
 
 ``` java
@@ -285,6 +279,7 @@ Cela permet de :
 * Adapter la structure aux besoins spécifiques d’une interface.
 
 ---
+
 ### Code 
 
 ``` java
@@ -571,6 +566,7 @@ public class DemandeSearchConverter implements CustomConverter {
     }
 }
 ```
+
 ## `DemandeSearchConverter` – Mettre en forme une **Demande** pour l’envoyer au frontend
 
 Ce converter personnalisé est appelé chaque fois qu’on veut transformer l’entité métier `Demande` en DTO `RestDemandeSearch`.

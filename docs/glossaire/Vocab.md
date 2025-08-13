@@ -31,6 +31,8 @@
 
 ## DTO
 
+Un DTO (Data Transfer Object) est une classe qui sert à transférer des données entre différentes couches de l’application (par exemple entre le backend et le frontend) tout en **filtrant et organisant** les champs utiles.
+
 ## Effet de bord
 
 ## Fork
