@@ -130,9 +130,9 @@ Il se traduit souvent par des tableaux de bord, rapports ou graphiques permettan
 Le **SIREN** (Système d’Identification du Répertoire des ENtreprises) est un numéro unique à 9 chiffres attribué à chaque entreprise en France par l’INSEE.  
 Il permet d’identifier légalement une entreprise tout au long de son existence.
 
-## Tache
+## Tâche
 
- c'ets plus des petits soucis a résoudre, ou des rappels
-
+Une tâche est un élément de suivi représentant un **petit problème à résoudre**, une **action ponctuelle** ou un **rappel** lié à un dossier.  
+Elle permet de garder une trace des points à traiter et de s’assurer qu’aucune étape importante n’est oubliée.
 
 ---
