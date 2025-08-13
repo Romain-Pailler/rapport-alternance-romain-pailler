@@ -27,6 +27,10 @@
 
 ## Développement from scratch
 
+## DOM
+
+## Effet de bord
+
 ## Fork
 
 ## Front-end

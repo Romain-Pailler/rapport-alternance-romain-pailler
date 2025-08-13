@@ -19,6 +19,8 @@ bailleur
 
 ## Contrat en relocation
 
+## Couple RIB/RUM
+
 ## CRE
 
 ## Decision
@@ -37,6 +39,8 @@ Fintech
 
 ## Loyer intercalaire
 
+## Mandat SEPA
+
 ## Mode de paiement
 
 ## Partenaire
@@ -46,6 +50,8 @@ Fintech
 ## Processus de relance
 
 ## Raison sociale
+
+## Reporting
 
 ## SIREN
 
