@@ -19,10 +19,11 @@
 
 ## Changelog
 
+## Coverage
+
 ## Développement from scratch
 
 ## Fork
-
 
 ## Front-end
 
@@ -32,6 +33,10 @@
 
 ## Pull Request
 
+## REST
+
 ## Versioning
 
 ## Web-service
+
+## Wireframe

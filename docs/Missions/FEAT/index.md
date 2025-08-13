@@ -10,11 +10,11 @@ tags:
 La mise en place d’une nouvelle fonctionnalité suit un processus itératif, structuré autour des **sprints** définis par l’équipe.
 
 # 1. **Collecte des besoins**
-   Tout commence par la **collecte du besoin** auprès des utilisateurs finaux (par exemple les commerciaux ou l’ADV back-office).  
+   Tout commence par la **collecte du besoin** auprès des utilisateurs finaux (par exemple les commerciaux ou [l’ADV back-office](../../glossaire/Vocab_metier.md#adv-back-office)).  
 Cette étape se déroule au travers de **réunions** réunissant :
 
    - Les **utilisateurs métier**,
-   - L’**analyste fonctionnelle** (Charlotte),
+   - L’**[analyste fonctionnel](../../glossaire/Vocab_metier.md#analyste-fonctionnel)** (Charlotte),
    - Le **Product Owner (PO)**.
 
    L’objectif est de comprendre le contexte, d’identifier les attentes précises et de formaliser les **cas d’usage**.  
@@ -23,7 +23,7 @@ Cette étape se déroule au travers de **réunions** réunissant :
 # 2. **Conception fonctionnelle et préparation**  
    Une fois les besoins validés, on passe à la **formulation en spécifications** :
 
-   - **Création de maquettes** ou wireframes pour visualiser la future interface,
+   - **Création de maquettes** ou [wireframes](../../glossaire/Vocab.md#wireframe) pour visualiser la future interface,
    - **Rédaction d’un ticket Jira** par l’analyste fonctionnelle (Charlotte),
    - Ajout éventuel de pièces jointes (captures, schémas, maquettes, règles métier).   
 
@@ -34,7 +34,7 @@ Cette étape se déroule au travers de **réunions** réunissant :
    Lors de la réunion de planification de sprint, les tickets sont répartis entre les développeurs. Celui ou celle chargé(e) d’un ticket commence par en analyser le contenu pour :
 
    * Comprendre le besoin exprimé,  
-   * Identifier les impacts sur les entités métier et les couches techniques (REST, services, base de données),  
+   * Identifier les impacts sur les entités métier et les couches techniques ([REST](../../glossaire/Vocab.md#rest), Back, base de données),  
    * Lister les fichiers susceptibles d’être modifiés ou créés.
 
 # 4. **Développement technique**  
@@ -46,9 +46,9 @@ Cette étape se déroule au travers de **réunions** réunissant :
    * Des **tests unitaires** ou d’**intégration** sont ajoutés,  
    * Une **pull request** est créée,  
    * Une validation des pairs est nécessaire  
-   * Un build Jenkins se lance et vérifie plusieurs choses (le build, les tests, le coverage des tests, l'indentation, la traduction, etc...),  
+   * Un build Jenkins se lance et vérifie plusieurs choses (le build, les tests, le [coverage](../../glossaire/Vocab.md#coverage) des tests, l'indentation, la traduction, etc...),  
    * La personne chargée des **releases** intègre la nouvelle fonctionnalité dans une version,
-   * Puis le ticket est envoyé à Julien, analyste testeur, qui valide la fonctionnalité sur l’environnement de test (souvent en béta).
+   * Puis le ticket est envoyé à Julien, [analyste testeur](../../glossaire/Vocab_metier.md#analyste-testeur), qui valide la fonctionnalité sur l’environnement de test (souvent en béta).
 
 ## Un exemple de build Jenkins
 
