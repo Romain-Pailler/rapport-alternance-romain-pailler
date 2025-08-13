@@ -43,7 +43,11 @@
 
 ## REST
 
+## Route
+
 ## Service
+
+## Template
 
 ## Versioning
 
