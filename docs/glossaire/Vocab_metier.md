@@ -16,21 +16,36 @@ tags:
 
 ## Apporteur
 
+L'apporteur est un fournisseur de matériel. Il peut aussi être appelé Entité ou Partenaire.
+
 ## Avoir
 
 ## Bailleur
 
-bailleur
+Le bailleur représente une banque. C'est le bailleur qui donnera un accord de financement pour la demande.
 
 ## Client
 
+Le client est le tiers qui cherche à louer un matériel chez l'apporteur.
+
 ## Contrat en relocation
+
+## Commercial back office(Inside Sales)
+
+Un Inside Sales est un commercial dit sédentaire, c'est lui qui gère le portefeuille des commerciaux terrain (Commercial loueur).
+Il intervient dès qu'un accord est donné par un bailleur sur une demande.
 
 ## Couple RIB/RUM
 
 ## CRE
 
+Compte Rendu d'Evènements
+
 ## Decision
+
+## Demande
+
+Demande de financement 
 
 ## Defendre le dossier
 
@@ -43,6 +58,8 @@ Une écriture comptable est un enregistrement d’un mouvement d’argent (entr�
 Fintech
 
 ## Loueur
+
+Le loueur est le tiers intermédiaire entre l'apporteur et le bailleur.(ex : Nanceo, Healthlease, etc.)
 
 ## Loyer intercalaire
 
