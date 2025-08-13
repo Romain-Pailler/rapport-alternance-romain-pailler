@@ -1,5 +1,12 @@
-# Vocabulaire métier
+---
+sidebar_label: Vocabulaire métier
+sidebar_position: 1
+tags: 
+    - Glossaire
+    - Vocabulaire
+---
 
+# Vocabulaire métier
 
 ## ADV back-office
 
@@ -9,7 +16,7 @@
 
 ## Apporteur
 
-## Avoir 
+## Avoir
 
 ## Bailleur
 
