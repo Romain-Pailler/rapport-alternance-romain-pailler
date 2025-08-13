@@ -29,6 +29,8 @@
 
 ## DOM
 
+## DTO
+
 ## Effet de bord
 
 ## Fork
@@ -38,6 +40,10 @@
 ## Front Office
 
 ## FullStack
+
+## Hibernate
+
+## HTTP 
 
 ## Map
 

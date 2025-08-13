@@ -22,7 +22,7 @@ C’est dans ce cadre que **mon projet principal** a été défini : **migrer ce
 
 ## Étapes
 
-### Analyse de l'existant
+### 1. Analyse de l'existant
 
 Avant de pouvoir entamer les développements, j’ai commencé par une [**phase d’analyse de l’existant**](./../../Annexes/analyse_existant_recherche_demande.md), aussi bien côté **front-end que back-end**. Cette étape m’a permis de comprendre en profondeur :
 

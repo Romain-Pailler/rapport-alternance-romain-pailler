@@ -7,7 +7,7 @@ tags:
 ---
 # Fonctionnement global de la recherche de demandes (Existant)
 
-Lorsqu’un utilisateur effectue une recherche de demandes depuis l’interface, une requête HTTP est envoyée à l’API. Cette requête est traitée par la couche service, puis transmise au processus métier, qui appelle le DAO. Le DAO utilise un `SearchBuilder` pour construire dynamiquement la requête SQL avec tous les critères nécessaires.
+Lorsqu’un utilisateur effectue une recherche de demandes depuis l’interface, une requête [HTTP](../../glossaire/Vocab.md#http) est envoyée à l’API. Cette requête est traitée par la couche service, puis transmise au processus métier, qui appelle le DAO. Le DAO utilise un `SearchBuilder` pour construire dynamiquement la requête SQL avec tous les critères nécessaires.
 
 ---
 
@@ -42,7 +42,7 @@ Cette méthode applique d'abord une logique métier :
 * Récupère l'utilisateur courant (`currentUser`).
 * Filtre les critères de recherche selon les droits utilisateur (`filterSearch`).
 * Appelle le DAO pour exécuter la recherche réelle.
-* Initialise ou hydrate certains champs d’entités avec Hibernate si `initialize` est à `true` (notamment les objets liés comme taches, paiements, accord...).
+* Initialise ou hydrate certains champs d’entités avec [Hibernate](../../glossaire/Vocab.md#hibernate) si `initialize` est à `true` (notamment les objets liés comme taches, paiements, accord...).
 
 **Rôle** : Appliquer la logique métier autour de la recherche, s'assurer que les entités sont correctement chargées et filtrées.
 
@@ -92,7 +92,7 @@ Toutes ces conditions sont chaînées via un **builder pattern**, permettant une
 2. **`SearchService`** reçoit la requête et construit l’objet `DemandeCriteria`.
 3. **`DemandeSearchProcessus`** applique les règles métiers et appelle le DAO.
 4. **`DemandeDao`** construit la requête avec le `SearchBuilder` et exécute la requête SQL.
-5. **Les résultats** sont retournés (avec éventuellement des montants d'achat/vente HT), transformés en DTOs, puis renvoyés au client.
+5. **Les résultats** sont retournés (avec éventuellement des montants d'achat/vente HT), transformés en [DTOs](../../glossaire/Vocab.md#dto), puis renvoyés au client.
 
 ---
 
