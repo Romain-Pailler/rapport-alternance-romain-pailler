@@ -7,7 +7,7 @@ tags:
 
 # Méthodologie Agile
 
-Dans mon équipe, le développement de l’application Leasa suit la **méthodologie Agile**, avec des **sprints** d’une durée de trois semaines.
+Dans mon équipe, le développement de l’application Leasa suit la **méthodologie Agile**, une approche itérative visant à **livrer rapidement de la valeur tout en s’adaptant aux besoins changeants**, avec des **sprints** d’une durée de trois semaines.
 
 ## Organisation des sprints
 

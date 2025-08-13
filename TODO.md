@@ -1,16 +1,6 @@
 # A faire
 
 # Consignes pour le rapport de stage d'alternance
-
-- Présentation de l'entreprise et, surtout, du service de stage et de ses travaux.
-
-- Expliquer le résultat à atteindre et la problématique, afin d'introduire les besoins et le travail effectif
-- Cahier des charges & veille technologique si une veille a été réalisée
-- Décrire l'existant et les travaux éventuels passés.
-
-- Choix des technologies retenues et leurs origines, expliquer pourquoi un choix de techno plutôt qu'un autre avec un regard critique et synthétique (tableau de synthèse, tableau comparatif, etc.). Ne pas hésiter à comparer les mérites et désavantages par rapport à d'autres, en particulier ce qui a été vu en formation
-- Outils méthodologiques (Trello ?, etc.)
-
 - Schéma client(s) / serveur(s) / serveur(s) BD indiquer où les technologies employées le sont, pourquoi et quels sont les protocoles et formats d'échanges et de transferts.
 - Définir les différents acteurs utilisant le travail, et quoi s'applique à qui
 Bien indiquer ce qui sort de la formation.
@@ -21,26 +11,17 @@ Bien indiquer ce qui sort de la formation.
 
 https://alternance-hugo-jahnke.netlify.app/presentation.html#fonctionnement
 
-
 https://weier-loris-rapport-alternance.netlify.app/
 
-- ajouter des liens dans chaque partie afin de rediriger vers le code source
+// fastidueux- ajouter des liens dans chaque partie afin de rediriger vers le code source
 
 ## expose
 
 - faire schema utilisateur, besoins, cahier des charges
 - schéma architecture
 
-- http://localhost:3000/docs/Annexes/Maquette rajouter explication
+// rapide - http://localhost:3000/docs/Annexes/Mise_en_prod préciser les délais pour chaque environnements // les premiers mercredi du sprint // ensuite semaine d'apres rc // prod // preprod la veille
 
-- http://localhost:3000/docs/Annexes/Mise_en_prod préciser les délais pour chaque environnements // les premiers mercredi du sprint // ensuite semaine d'apres rc // prod // preprod la veille
+// rapide ajouter dans partie pres leasa le schema avec apporteur loueur et bailleurs
 
-ajouter dans partie pres leasa le schema avec apporteur loueur et bailleurs
-
-ML-14747 expliquer ce qu'est une tache dans le vocab metier
-
-http://localhost:3000/docs/missions/FIX/Liste/ML-15287 retravailler ce fichier
-
-reprendre les étapes de la recherche de demande et mettre plus d'implication dire que j'ai animé les réunions et fais les wireframes
-
-ajouter la définition de sprint dans la methodo agile avec itératif voir cahier
+// rapide reprendre les étapes de la recherche de demande et mettre plus d'implication dire que j'ai animé les réunions et fais les wireframes
