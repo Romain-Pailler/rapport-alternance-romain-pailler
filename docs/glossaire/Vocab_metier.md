@@ -9,6 +9,8 @@
 
 ## Apporteur
 
+## Avoir 
+
 ## Bailleur
 
 bailleur
@@ -25,10 +27,18 @@ Une écriture comptable est un enregistrement d’un mouvement d’argent (entr�
 
 Fintech
 
+## Loueur
+
+## Loyer intercalaire
+
 ## Mode de paiement
 
 ## Partenaire
 
 ## Pièce comptable
+
+## Raison sociale
+
+## SIREN
 
 ---

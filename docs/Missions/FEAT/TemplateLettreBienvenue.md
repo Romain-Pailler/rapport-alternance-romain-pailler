@@ -23,9 +23,9 @@ Mon objectif était d’améliorer l’existant. Le template de mail existait d�
 J’ai donc ajouté automatiquement :
 
 - Le code de la demande
-- La raison sociale du client
-- Le siren du client
-- Les dates du Loyer Intercalaire
+- La [raison sociale](../../glossaire/Vocab_metier.md#raison-sociale) du client
+- Le [siren](../../glossaire/Vocab_metier.md#siren) du client
+- Les dates du [Loyer Intercalaire](../../glossaire/Vocab_metier.md#loyer-intercalaire)
 - La date de prelevement estimée
 
 ## Réalisations
@@ -50,7 +50,7 @@ Ce développement m’a permis de consolider mes compétences sur :
 Dans cette classe, j’ai ajouté une nouvelle méthode métier `getFacturesFiltreesLoyerSansAvoir` avec pour objectif clair : filtrer les factures d’une demande pour ne conserver **que celles qui sont réellement prises en compte dans le calcul de la date de prélèvement estimée**. 
 
 Concrètement, j’ai commencé par récupérer uniquement les factures **comptabilisées** dans le système comptable [**Monalisa-Compta**](./../../Annexes/compta.md).  
-Ensuite, j’ai exclu toutes celles ayant un **avoir** associé, car elles ne doivent pas être considérées dans le calcul.  
+Ensuite, j’ai exclu toutes celles ayant un **[avoir](../../glossaire/Vocab_metier.md#avoir)** associé, car elles ne doivent pas être considérées dans le calcul.  
 Enfin, j’ai appliqué un dernier filtre pour ne garder que les factures dont le sous-type correspond à **LOYER_FACTURE_VENTE**.
 Cette méthode est utilisée dans le `MailBuilder` pour alimenter automatiquement le template de la lettre de bienvenue avec la bonne date, uniquement lorsque les conditions sont réunies.
 
@@ -58,13 +58,13 @@ Cette méthode est utilisée dans le `MailBuilder` pour alimenter automatiquemen
 
 Pour compléter cette fonctionnalité, j’ai travaillé sur la génération du mail de bienvenue, envoyé au client lors de la mise en place de son contrat.
 
-J’ai implémenté la méthode `getTemplateLettreBienvenue`, qui commence par charger toutes les données nécessaires depuis la demande (`Demande`) via les processus métiers.  Elles sont ensuite stockées dans un contexte sous forme de Map (String, Object) qui sera utilisé par les templates [Mustache](./../../annexes/mustache).
+J’ai implémenté la méthode `getTemplateLettreBienvenue`, qui commence par charger toutes les données nécessaires depuis la demande (`Demande`) via les processus métiers.  Elles sont ensuite stockées dans un [contexte](../../glossaire/Vocab.md#contexte) sous forme de [Map](../../glossaire/Vocab.md#map) (String, Object) qui sera utilisé par les templates [Mustache](./../../annexes/mustache).
 
 Parmi les données injectées dans le template, on retrouve :  
 
 - Les coordonnées du bailleur, de l’apporteur et du client
 - La date de démarrage du contrat  
-- Les coordonnées du loueur (téléphone, email)  
+- Les coordonnées du [loueur](../../glossaire/Vocab_metier.md#loueur) (téléphone, email)  
 - Le code de la demande  
 
 J’utilise ensuite `getFacturesFiltreesLoyerSansAvoir` pour déterminer la date de prélèvement estimée, uniquement si une facture éligible est trouvée.  

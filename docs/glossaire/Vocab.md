@@ -19,6 +19,8 @@
 
 ## Changelog
 
+## Contexte
+
 ## Controleur
 
 ## Coverage
@@ -33,7 +35,9 @@
 
 ## FullStack
 
-## Projection 
+## Map
+
+## Projection
 
 ## Pull Request
 
