@@ -22,10 +22,10 @@ L’ensemble du travail à réaliser est planifié dans un **tableau de sprint**
 
 ## Gestion du code source
 
-Le développement suit un processus de versioning rigoureux :
+Le développement suit un processus de [versioning](../glossaire/Vocab.md#versioning) rigoureux :
 
-- Chaque développeur effectue un **fork** du projet principal.
-- Les modifications sont soumises sous forme de **pull request**.
+- Chaque développeur effectue un **[fork](../glossaire/Vocab.md#fork)** du projet principal.
+- Les modifications sont soumises sous forme de **[pull request](../glossaire/Vocab.md#pull-request)**.
 - Chaque pull request est automatiquement **validée par Jenkins**, via une suite de **tests automatisés** (unitaires, d’intégration...).
 - Un ou plusieurs collègues sont ensuite chargés de **relire et valider la PR** avant intégration.
 
@@ -39,7 +39,7 @@ L’outil **Confluence** est notre référentiel principal pour toute la documen
 Il est structuré autour de plusieurs usages clés :
 
 - **Documentation fonctionnelle** : rédaction et mise à jour des **cahiers des charges** et des spécifications fonctionnelles. Ces documents détaillent le périmètre, les règles de gestion et les objectifs des évolutions à développer.  
-- **Changelog** des nouvelles versions : description des fonctionnalités, correctifs et évolutions livrées.
+- **[Changelog](../glossaire/Vocab.md#changelog)** des nouvelles versions : description des fonctionnalités, correctifs et évolutions livrées.
 - **Documentation technique** : tutoriels internes pour installer les outils de développement, guides de démarrage, procédures de déploiement...
 - **Notes de version** : synthèses des sprints et préparation des futures mises en production.
 

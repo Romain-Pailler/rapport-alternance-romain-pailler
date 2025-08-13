@@ -10,9 +10,16 @@
 
 ## Back Office
 
+## Changelog
+
 ## Développement from scratch
+
+## Fork
 
 ## Front Office
 
+## Pull Request
+
+## Versioning
 
 ## Web-service
