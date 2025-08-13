@@ -17,7 +17,7 @@ bailleur
 
 ## Client
 
-## contrat en relocation
+## Contrat en relocation
 
 ## CRE
 
