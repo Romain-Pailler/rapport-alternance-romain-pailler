@@ -11,7 +11,7 @@ tags:
 ## ADV back-office
 
 Abréviation de **Administration des Ventes**.  
-Pour Nanceo, il s’agit de Christophe qui,depuis le back-office, supervise et traiter les demandes clients ou dossiers commerciaux.
+Pour Nanceo, in s'agit d'une équipe de deux personnes qui,depuis le back-office, supervise et traiter les demandes clients ou dossiers commerciaux.
 
 ## Analyste fonctionnel
 
@@ -129,5 +129,10 @@ Il se traduit souvent par des tableaux de bord, rapports ou graphiques permettan
 
 Le **SIREN** (Système d’Identification du Répertoire des ENtreprises) est un numéro unique à 9 chiffres attribué à chaque entreprise en France par l’INSEE.  
 Il permet d’identifier légalement une entreprise tout au long de son existence.
+
+## Tache
+
+ c'ets plus des petits soucis a résoudre, ou des rappels
+
 
 ---

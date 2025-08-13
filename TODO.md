@@ -31,25 +31,15 @@ https://weier-loris-rapport-alternance.netlify.app/
 - faire schema utilisateur, besoins, cahier des charges
 - schéma architecture
 
-- http://localhost:3000/docs/Missions/Recherche_demande/Logique_java_recherche_demande à relire + envoyer vers analyse existant fonctionnel
-
 - http://localhost:3000/docs/Annexes/Maquette rajouter explication
 
 - http://localhost:3000/docs/Annexes/Mise_en_prod préciser les délais pour chaque environnements // les premiers mercredi du sprint // ensuite semaine d'apres rc // prod // preprod la veille
 
 ajouter dans partie pres leasa le schema avec apporteur loueur et bailleurs
-revoir l'explication du problème du fix ML-14950
-
-ML-12242 expliquer ce que signifie défendre le dossier dans le vocab métier  anonymiser les screens
 
 ML-14747 expliquer ce qu'est une tache dans le vocab metier
 
-http://localhost:3000/docs/missions/Recherche_demande/Bugs/Premier_bug/cote_client mettre de la premiere personne dans les explications 
-
-expliquer le ticket pour la liste des groupes partenaires
-
 http://localhost:3000/docs/missions/FIX/Liste/ML-15287 retravailler ce fichier
-NBTECH 250
 
 reprendre les étapes de la recherche de demande et mettre plus d'implication dire que j'ai animé les réunions et fais les wireframes
 

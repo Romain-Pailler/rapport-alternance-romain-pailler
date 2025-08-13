@@ -10,6 +10,9 @@ En effet, avant cette analyse, je n’avais encore **jamais travaillé** sur cet
 J’ai donc commencé par **étudier en détail** l’existant au **Back-Office** afin de comprendre comment la page fonctionnait, quelles fonctionnalités étaient disponibles et comment les utilisateurs s’en servaient au quotidien.  
 L’objectif était d’identifier **les points forts à conserver**, **les points faibles à corriger** et **les améliorations possibles** dans la future version en **Angular 2+**.
 
+:::info
+
+L'analyse de l'existant côté back-end se trouve [ici](./Logique_java_recherche_demande.md)
 Concrètement, cette analyse m’a permis de :
 
 - Recenser toutes les **façons d’accéder** à l’écran de recherche  

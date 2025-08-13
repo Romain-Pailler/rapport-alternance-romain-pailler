@@ -10,7 +10,9 @@ tags:
 # Côté client – Utilisation de la nouvelle projection
 
 ## Objectif
-Pointer la nouvelle page de recherche vers la projection dédiée `projectionRechercheBackV2` pour éviter tout conflit avec l’ancienne page.
+
+Mon objectif était de **pointer la nouvelle page de recherche vers la projection dédiée `projectionRechercheBackV2`**, afin de garantir qu’elle fonctionne indépendamment de l’ancienne page et d’éviter tout conflit ou régression.
+
 
 ---
 
@@ -26,14 +28,17 @@ searchPage(index: number) {
   this.demandeDataSource.searchDemande(criteria, index);
 }
 ```
-Avant, ce champ contenait la valeur projectionRechercheBack utilisée aussi par l’ancienne page.
+
+Avant, ce champ contenait la valeur `projectionRechercheBack` utilisée aussi par l’ancienne page.
 
 ## Effet immédiat
-La nouvelle page charge uniquement les champs définis dans projectionRechercheBackV2.
+
+Grâce à ce changement, la nouvelle page charge uniquement les champs définis dans projectionRechercheBackV2.
 
 L’ancienne page continue à utiliser projectionRechercheBack.
 
-## Bénéfice :
+## Bénéfice
+
 Code plus clair, isolation des comportements, et réduction des risques de régressions.
 
 ---
