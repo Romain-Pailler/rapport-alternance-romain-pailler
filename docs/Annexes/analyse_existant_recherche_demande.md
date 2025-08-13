@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-sidebar_label: "Analyse de l'existant R2D"
+sidebar_label: "Analyse de l'existant R2D - côté Back-Office"
 ---
 # Analyse de l’existant pour la migration de la page de recherche de demandes
 

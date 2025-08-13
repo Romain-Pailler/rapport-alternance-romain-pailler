@@ -1,5 +1,5 @@
 ---
-sidebar_label: Fonctionnement global de la recherche de demandes (Existant) 
+sidebar_label: Analyse de l'existant R2D - côté Rest 
 sidebar_position: 2
 tags: 
     - Migration

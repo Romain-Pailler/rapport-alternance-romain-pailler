@@ -37,14 +37,12 @@ https://weier-loris-rapport-alternance.netlify.app/
 
 - http://localhost:3000/docs/Annexes/Mise_en_prod préciser les délais pour chaque environnements // les premiers mercredi du sprint // ensuite semaine d'apres rc // prod // preprod la veille
 
-
-- http://localhost:3000/docs/Missions/Recherche_demande/Ajout_nb_resultats_calcul_montants_ht/Cote-serveur rajouter code source ? et explication de code
 ajouter dans partie pres leasa le schema avec apporteur loueur et bailleurs
 revoir l'explication du problème du fix ML-14950
 
 ML-12242 expliquer ce que signifie défendre le dossier dans le vocab métier  anonymiser les screens
 
-ML-14747 expliquer ce qu'est une tache dans le vocab metier anonymiser les screens
+ML-14747 expliquer ce qu'est une tache dans le vocab metier
 
 http://localhost:3000/docs/missions/Recherche_demande/Bugs/Premier_bug/cote_client mettre de la premiere personne dans les explications 
 
