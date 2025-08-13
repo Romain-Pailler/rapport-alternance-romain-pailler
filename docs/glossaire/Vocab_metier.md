@@ -25,6 +25,10 @@ Une écriture comptable est un enregistrement d’un mouvement d’argent (entr�
 
 Fintech
 
+## Mode de paiement
+
 ## Partenaire
+
+## Pièce comptable
 
 ---

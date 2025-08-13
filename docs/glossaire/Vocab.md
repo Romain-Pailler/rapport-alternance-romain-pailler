@@ -19,6 +19,8 @@
 
 ## Changelog
 
+## Controleur
+
 ## Coverage
 
 ## Développement from scratch
@@ -31,11 +33,17 @@
 
 ## FullStack
 
+## Projection 
+
 ## Pull Request
 
 ## REST
 
+## Service
+
 ## Versioning
+
+## Vue
 
 ## Web-service
 
