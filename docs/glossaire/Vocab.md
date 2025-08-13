@@ -8,6 +8,13 @@
 
 - dette technique
 
+
+## AngularJS
+
+## Angular 2+
+
+## Back-end
+
 ## Back Office
 
 ## Changelog
@@ -15,6 +22,9 @@
 ## Développement from scratch
 
 ## Fork
+
+
+## Front-end
 
 ## Front Office
 

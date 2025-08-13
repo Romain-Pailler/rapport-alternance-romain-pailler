@@ -11,7 +11,7 @@ Je m'appelle **Romain Pailler**, j'ai 24 ans et je suis actuellement en **3ᵉ a
 
 Passionné d'informatique depuis le lycée, j'ai commencé par une [**Licence Informatique**](https://odf.u-paris.fr/fr/offre-de-formation/licence-XA/sciences-technologies-sante-STS/informatique-K2VO937D//licence-informatique-parcours-informatique-fondamentale-JRKM8J1B.html) à l'Université de Paris. Pour des raisons économiques, j'ai interrompu ma deuxième année et travaillé un an avant de reprendre mes études. Diplômé d'un **BTS SIO (option SLAM)** en 2024 — obtenu avec mention (moyenne : 15) — j'ai ensuite intégré le BUT Informatique, une formation qui me correspondait mieux qu'une licence 3 traditionnelle car la formation est très centrée sur des projets concrets.
 
-Depuis maintenant deux ans, j’évolue en alternance au sein de l’équipe **Leasa** chez **Equasens**. Mon rôle consiste principalement à migrer des écrans et composants d’AngularJS vers Angular 2+, tout en enrichissant les fonctionnalités de l’application selon les besoins métier.
+Depuis maintenant deux ans, j’évolue en alternance au sein de l’équipe **Leasa** chez **Equasens**. Mon rôle consiste principalement à migrer des écrans et composants d’[AngularJS](../glossaire/Vocab.md#angularjs) vers [Angular 2+](../glossaire/Vocab.md#angular-2), tout en enrichissant les fonctionnalités de l’application selon les besoins métier.
 
 ---
 
@@ -27,7 +27,7 @@ Mon cursus privilégie la pratique et l’alternance afin de développer une exp
 
 ## Mon objectif professionnel
 
-Mon ambition est de devenir **développeur FullStack**. J’apprécie relever des défis techniques sur des projets d’envergures, et résoudre des problématiques complexes, qu'elles soient front-end ou back-end.
+Mon ambition est de devenir **développeur [FullStack](../glossaire/Vocab.md#fullstack**. J’apprécie relever des défis techniques sur des projets d’envergures, et résoudre des problématiques complexes, qu'elles soient [front-end](../glossaire/Vocab.md#front-end) ou [back-end](../glossaire/Vocab.md#back-end).
 
 L'alternance chez Equasens a renforcé ma volonté d'évoluer dans un environnement de projets concrets car je me confronte quotidiennement aux contraintes métiers et aux bonnes pratiques d'entreprise.
 
