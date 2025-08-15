@@ -9,3 +9,14 @@ nanceo
 healthlease 
 
 welcoop
+
+jenkins 
+
+angular 
+
+typescript 
+
+java spring 
+jira confluence 
+
+open api 

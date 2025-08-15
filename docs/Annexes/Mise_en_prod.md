@@ -13,6 +13,13 @@ Dans le cadre de l’évolution de l’application Monalisa, une nouvelle versio
 
 Mon rôle a été d’assurer l’ensemble du processus de **déploiement applicatif**, depuis la validation des tags jusqu’à l’installation du RPM sur les serveurs de préproduction.
 
+Pour mieux organiser nos livraisons, nous suivons un **calendrier clair pour chaque environnement** :  
+
+- **Bêta** : premiers mercredis du sprint  
+- **Release Candidate (RC)** : la semaine suivante  
+- **Production** : la semaine suivante de la RC, après un déploiement préalable sur préproduction la veille  
+
+
 ## Étapes réalisées
 
 ### 1. Vérification préalable
