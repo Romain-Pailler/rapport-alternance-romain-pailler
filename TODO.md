@@ -20,8 +20,6 @@ https://weier-loris-rapport-alternance.netlify.app/
 - faire schema utilisateur, besoins, cahier des charges
 - schéma architecture
 
-// rapide - http://localhost:3000/docs/Annexes/Mise_en_prod préciser les délais pour chaque environnements // les premiers mercredi du sprint // ensuite semaine d'apres rc // prod // preprod la veille
-
 // rapide ajouter dans partie pres leasa le schema avec apporteur loueur et bailleurs
 
 // rapide reprendre les étapes de la recherche de demande et mettre plus d'implication dire que j'ai animé les réunions et fais les wireframes
