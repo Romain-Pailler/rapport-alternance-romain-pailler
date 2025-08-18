@@ -10,7 +10,7 @@ Le site est en cours de construction. Certaines sections peuvent être incomplè
 
 Ce site est le support de mon rapport d’alternance, réalisé en troisième année de BUT Informatique à l’[IUT Nancy-Charlemagne](https://iut-charlemagne.univ-lorraine.fr/) de septembre 2024 à Août 2025.
 
-Il retrace mon parcours au sein de la [Coopérative Welcoop](./presentation/Cooperative_welcoop), plus précisément dans sa branche logicielle [Equasens](./presentation/Equasens) où j’ai travaillé au sein de l’équipe de sa filiale [Fintech](./presentation/Fintech) qui regroupe les sociétés [Nanceo](./presentation/Fintech#nanceo) et [Healthlease](./presentation/Fintech#healthlease). Le rapport détaille les missions menées pendant l’année d’alternance, les compétences techniques et méthodologiques acquises, ainsi que l’organisation des projets sur lesquels j’ai travaillé.
+Il retrace mon parcours au sein de la [Coopérative Welcoop](./presentation/Cooperative_welcoop), plus précisément dans sa branche logicielle [Equasens](./presentation/Equasens) où j’ai travaillé au sein de l’équipe de sa filiale [Fintech](./presentation/Fintech) qui regroupe les sociétés [Nanceo](./presentation/Fintech#nanceo) et [Healthlease](./presentation/Fintech#healthlease). Le rapport détaille les missions menées pendant l’année d’alternance ainsi que l’organisation des projets sur lesquels j’ai travaillé.
 
 J’ai choisi de présenter ce rapport sous forme de site web avec [Docusaurus](https://docusaurus.io/), un générateur de sites statiques adapté à la documentation technique.
 
@@ -28,11 +28,11 @@ J’ai choisi de présenter ce rapport sous forme de site web avec [Docusaurus](
 
 ## Introduction
 
-La [Coopérative Welcoop](./presentation/Cooperative_welcoop) est un acteur majeur de la santé en France. Sa branche [Equasens](./presentation/Equasens) développe des solutions logicielles pour les professionnels de santé, les établissements de soins et les patients. Les sociétés [Nanceo](./presentation/Nanceo.md) et Healthlease sont spécialisées dans le financement locatif, chacune sur son marché : Nanceo se concentre sur le secteur tertiaire, tandis que Healthlease gère spécifiquement le financement des équipements de santé.
+La [Coopérative Welcoop](./presentation/Cooperative_welcoop) est un acteur majeur de la santé en France. Sa branche [Equasens](./presentation/Equasens) développe des solutions logicielles pour les professionnels de santé, les établissements de soins et les patients. Les sociétés [Nanceo](./presentation/Fintech#nanceo) et [Healthlease](./presentation/Fintech#healthlease) sont spécialisées dans le financement locatif, chacune sur son marché : Nanceo se concentre sur le secteur tertiaire, tandis que Healthlease gère spécifiquement le financement des équipements de santé.
 
-J’ai choisi de réaliser mon alternance au sein de cette structure, car elle me permettait de m’inscrire dans un projet à la fois concret, structuré et évolutif. Après des expériences orientées développement web, je souhaitais intégrer un environnement technique exigeant, avec des problématiques métiers réelles et une culture projet bien établie. La mission proposée correspondait pleinement à ces attentes.
+J’ai choisi de réaliser mon alternance au sein de cette structure, car elle me permettait de m’inscrire dans un projet concret et structuré. Après des expériences orientées développement web, je souhaitais intégrer un environnement technique exigeant, avec des problématiques métiers réelles et une culture projet bien établie. La mission proposée correspondait pleinement à ces attentes.
 
-Intégré au sein de l’équipe Leasa, j’ai participé à la maintenance et à l’évolution d'écrans de l’application Leasa, développée en Angular. Mon rôle a impliqué l'écriture de ticket, la mise en œuvre de [correctifs de bugs](./missions/FIX), ainsi que la création de [nouvelles fonctionnalités](./missions/FEAT), telles que la [migration](./missions#migration-dangularjs-vers-angular-2--enjeux-et-importance) de AngularJS à Angular2+ en lien avec les [utilisateurs](./annexes/Utilisateurs).
+Intégré au sein de l’équipe Leasa, j’ai participé à la maintenance et à l’évolution d'écrans de l’application, développée en Angular. Mon rôle a impliqué l'écriture de ticket, la mise en œuvre de [correctifs de bugs](./missions/FIX), ainsi que la création de [nouvelles fonctionnalités](./missions/FEAT), telles que la [migration](./missions#migration-dangularjs-vers-angular-2--enjeux-et-importance) de AngularJS à Angular2+ en lien avec les [utilisateurs](./glossaire/Vocab_metier#utilisateur).
 
 Ce rapport présente l’environnement de mon alternance, les missions menées et les solutions techniques mises en œuvre.
 

@@ -135,4 +135,8 @@ Il permet d’identifier légalement une entreprise tout au long de son existenc
 Une tâche est un élément de suivi représentant un **petit problème à résoudre**, une **action ponctuelle** ou un **rappel** lié à un dossier.  
 Elle permet de garder une trace des points à traiter et de s’assurer qu’aucune étape importante n’est oubliée.
 
+## Utilisateur
+
+Les utilisateurs de l'application sont les commerciaux back-office ainsi que les ADV.
+
 ---
