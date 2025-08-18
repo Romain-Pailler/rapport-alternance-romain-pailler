@@ -1,5 +1,3 @@
-# A faire
-
 # Consignes pour le rapport de stage d'alternance
 - Schéma client(s) / serveur(s) / serveur(s) BD indiquer où les technologies employées le sont, pourquoi et quels sont les protocoles et formats d'échanges et de transferts.
 - Définir les différents acteurs utilisant le travail, et quoi s'applique à qui
@@ -20,8 +18,6 @@ https://weier-loris-rapport-alternance.netlify.app/
 - faire schema utilisateur, besoins, cahier des charges
 - schéma architecture
 
-// rapide ajouter dans partie pres leasa le schema avec apporteur loueur et bailleurs
-
 
 ## Conclusion
 Bien qu'il ne soit pas terminé, le projet CartoGIS54 a été une très bonne expérience puisqu'il s'agit du premier projet d'une telle envergure sur lequel j'ai eu l'occasion de travailler.
@@ -39,9 +35,10 @@ Excepté pour ce qui est du #Proxy, aucune des difficultés recontrées ne s'est
 Je suis très reconnaissant auprès de mon maître d'apprentissage pour la confiance qu'il m'a témoigné en me laissant une très grande autonomie, notamment en me permettant de choisir les technologies avec lesquelles je souhaitais travailler.
 
 ## Difficultés rencontrées
+
 Au cours du développement de ce projet, j'ai eu à faire face à des difficultés variées.
 
-#Communication avec les WebServices
+# Communication avec les WebServices
 La prise en main des flux WMS/WFS n'a pas été simple.
 
 La cartographie étant un domaine très spécialisé, la recherche d'informations a été fastidieuse.
