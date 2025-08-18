@@ -34,4 +34,12 @@ En automatisant les étapes du cycle de financement, l’outil permet un gain de
 
 Avec une réponse obtenue dans la majorité des cas en moins de **4 minutes**, **Leasa** s’impose comme un outil performant et structurant pour les équipes commerciales et administratives.
 
+## Schéma
+
+![Schéma](/img/presentation/pres_nanceo1.png)
+
+![Schéma](/img/presentation/pres_nanceo2.png)
+
+![Schéma](/img/presentation/pres_nanceo3.png)
+
 ---

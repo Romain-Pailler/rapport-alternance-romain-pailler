@@ -21,7 +21,6 @@ https://weier-loris-rapport-alternance.netlify.app/
 - schéma architecture
 
 // rapide ajouter dans partie pres leasa le schema avec apporteur loueur et bailleurs
-// rapide reprendre les étapes de la recherche de demande et mettre plus d'implication dire que j'ai animé les réunions et fais les wireframes
 
 
 ## Conclusion
