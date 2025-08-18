@@ -40,7 +40,7 @@ Cette alternance a été une étape importante dans mon parcours professionnel. 
 
 ## Remerciements
 
-Je tiens tout d’abord à remercier toute l'équipe Leasa pour m’avoir accueilli de la meilleure des manières. Je les remercie aussi de m’avoir donné la chance de faire cette alternance chez Equasens, où j’ai pu renforcer mes compétences techniques et découvrir concrètement les réalités du métier dans le secteur informatique.
+Je tiens tout d’abord à remercier toute l'équipe Leasa pour m’avoir accueilli de la meilleure des manières. Je les remercie aussi de m’avoir donné la chance de faire cette alternance chez Equasens, où j’ai pu renforcer mes compétences techniques et découvrir concrètement les réalités du métier.
 
 Je remercie également l’ensemble des collaborateurs d’Equasens et de Nanceo pour leur accueil chaleureux, leur disponibilité et leur soutien tout au long de cette année d’alternance.
 
