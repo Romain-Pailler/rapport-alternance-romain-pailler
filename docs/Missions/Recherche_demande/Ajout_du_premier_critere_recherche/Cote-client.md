@@ -5,202 +5,232 @@ tags:
     - Migration
     - Angular
 ---
-# Ajout du critère "Groupe partenaires" - Côté Client
+# Premier filtre de recherche - Côté Client
 
-## Mise à jour du FormGroup – `RechercheDemandesFormGroup`
+## Mise en place du premier critère de recherche – Le FormGroup
 
-Pour intégrer le critère **Groupe partenaires**, j’ai ajouté un nouveau champ `idGroupeApporteur` dans le `FormGroup` utilisé pour la recherche de demandes.
+Dans Angular, un `FormGroup` représente un ensemble de contrôles de formulaire (inputs) regroupés logiquement. Il permet de gérer l'état, la validation, et la récupération des valeurs de plusieurs champs dans un formulaire de manière structurée.
 
-### FormGroup
+### Déclaration du FormGroup
 
-```ts
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-
+``` typescript
 export class RechercheDemandesFormGroup {
   static build() {
     return new FormGroup({
-      code: new FormControl(null as string | null, Validators.pattern('[a-zA-Z]?[0-9]{1,6}')),
-      refBailleur: new FormControl(null as string | null),
-      codeLoueur: new FormControl(null as string | null),
-      idGroupeApporteur: new FormControl(null as number | null),
+      code: new FormControl(null as string | null),
     });
   }
 }
 ```
 
-### Explications
+### Explication
 
-* Le champ `idGroupeApporteur` correspond à l’identifiant d’un groupe de partenaires mais aussi aux paramètres de critères côté serveur.
-* Sa valeur par défaut est `null`, ce qui signifie que je considère "tous les groupes partenaires".
-* Le `FormGroup` reste le point central pour récupérer et envoyer les valeurs des critères de recherche depuis mon composant.
+* La classe `RechercheDemandesFormGroup` expose une méthode statique `build()` qui construit et retourne une instance de `FormGroup`.
+* Le champ `code` est ici le **premier critère de recherche** mis en place dans le formulaire. Il est associé à un `FormControl` initialisé à `null`.
+* Ce `FormGroup` pourra être injecté dans un composant Angular pour :
+
+  * Lier dynamiquement les champs du formulaire dans le HTML.
+  * Centraliser les valeurs saisies par l’utilisateur.
+  * Faciliter la validation et la gestion des erreurs de formulaire.
+  * Extraire les données pour les envoyer vers un service ou les utiliser dans l’URL via les query parameters (cf. composant ci-après).
 
 ---
 
-## Mise à jour du template HTML – `recherche-demandes.component.html`
+## Le composant HTML – Liaison du champ de recherche au formulaire
 
-J’ai ajouté le critère "Groupe partenaires" sous forme de `select`, lié au champ `idGroupeApporteur`.
+Le fichier HTML du composant permet d'afficher un champ de saisie pour le numéro de dossier (`code`), en le liant dynamiquement au `FormGroup` défini dans le fichier TypeScript.
+
+### Extrait de code
 
 ```html
-<div class="uig uis">
-  <div class="uiu-1-5">
-    <ml-ui-form-field>
-      <ml-ui-label i18n>Groupe partenaires</ml-ui-label>
-      <ml-ui-select formControlName="idGroupeApporteur" [disabled]="groupePartenairesDisabled">
-        <ml-ui-option [value]="null" i18n>- Tous les groupes partenaires -</ml-ui-option>
-        <ml-ui-option *ngFor="let groupePartenaire of groupePartenairesList" [value]="groupePartenaire.id">
-          {{ groupePartenaire.nom }}
-        </ml-ui-option>
-      </ml-ui-select>
-    </ml-ui-form-field>
-  </div>
-</div>
+    <form
+      (ngSubmit)="search()"
+      [formGroup]="formGroupDemandeCriteria"
+    >
+      <div class="uig uis">
+        <div class="uiu-1-6">
+          <ml-ui-form-field>
+            <ml-ui-label i18n>N° dossier</ml-ui-label>
+            <input
+              type="text"
+              formControlName="code"
+              mlUiInput
+              (keydown.space)="$event.preventDefault()"
+            />
+          </ml-ui-form-field>
+        </div>
+      </div>
+      <div>
+        <button type="submit" mlUiButton [disabled]="searchLoading">
+          <ml-ui-icon icon="search"></ml-ui-icon>
+          <span i18n>Rechercher</span>
+        </button>
+      </div>
+    </form>
 ```
 
-### Explications
+### Explication
 
-* J’ai lié le `select` au champ `idGroupeApporteur` du `FormGroup` avec `formControlName`.
-* La liste des groupes (`groupePartenairesList`) est récupérée dynamiquement via mon service `GroupeApporteursService`.
-* J’utilise `[disabled]` pour désactiver le champ si aucun groupe n’est disponible.
-* L’option `[value]="null"` représente mon choix par défaut : "Tous les groupes partenaires".
+* Le formulaire est lié à l’instance du `FormGroup` via `[formGroup]="formGroupDemandeCriteria"`, ce qui permet d'associer dynamiquement les champs à leurs contrôles respectifs.
+* Le champ de saisie `input` est relié à la propriété `code` du `FormGroup` grâce à `formControlName="code"`.
+* L’attribut `(ngSubmit)="search()"` permet d’appeler une méthode TypeScript nommée `search()` lors de la soumission du formulaire (par exemple après clic sur le bouton).
+* L’attribut `(keydown.space)="$event.preventDefault()"` empêche l’insertion d’un espace dans le champ, évitant ainsi des valeurs non souhaitées.
+* Le bouton est désactivé dynamiquement si `searchLoading` est vrai, permettant de désactiver l’action pendant un chargement ou une requête en cours.
+
+Ce formulaire constitue donc l'interface utilisateur du critère de recherche "N° dossier", dont la valeur est exploitée côté TypeScript, notamment via les **query parameters** détaillés ci-après.
 
 ---
 
-## Gestion des interactions côté TypeScript – `recherche-demandes.component.ts`
+## Objectif général du composant
 
-### Variables que j’ai ajoutées
-
-```ts
-public groupePartenairesList: GroupeApporteurDomain[];
-public groupePartenairesDisabled = false;
-```
-
-### Injection des services
-
-Pour gérer la récupération des groupes partenaires, j’ai injecté :
+## 1. Initialisation du composant – `ngOnInit`
 
 ```ts
-readonly groupeApporteurService: GroupeApporteursService;
-```
+ngOnInit(): void {
+  this.initDataSource(); // ①
+  this.formGroupDemandeCriteria = RechercheDemandesFormGroup.build(); // ②
 
----
-
-### Initialisation avec les query parameters
-
-Lors de l’initialisation (`ngOnInit`), je lis les paramètres d’URL et j’adapte le formulaire selon les cas possibles :
-
-```ts
-const codeLoueur = params['codeLoueur'];
-const idGroupeApporteur = params['idGroupeApporteur'];
-
-if (!codeLoueur && !idGroupeApporteur) {
-  this.initAllLoueursAndGroupes();
-} else if (codeLoueur && !idGroupeApporteur) {
-  this.loadLoueursThenGroupesByLoueur(codeLoueur);
-} else if (!codeLoueur && idGroupeApporteur) {
-  this.initAllLoueursAndGroupes(() => {
-    this.checkGroupePartenaires(+idGroupeApporteur);
+  this.route.queryParams.pipe(...).subscribe((params) => { // ③
+    ...
   });
-} else if (codeLoueur && idGroupeApporteur) {
-  this.loadLoueursThenGroupesByLoueur(codeLoueur, +idGroupeApporteur);
 }
 ```
 
-* J’ai prévu ces quatre cas pour gérer toutes les combinaisons possibles entre le loueur et le groupe partenaires.
-* En fonction de la présence du codeLoueur et d'un idGroupeApporteur je filtre la liste de groupe partenaires.
-* Ma fonction `checkGroupePartenaires` vérifie si l’identifiant existe dans la liste avant de l’injecter dans le formulaire.
+### Détail
+
+* **① `initDataSource()`** : initialise la **data source** et ses observables pour récupérer le nombre total d’éléments, la page actuelle, et l’état de chargement.
+* **② `formGroupDemandeCriteria`** : formulaire réactif pour filtrer les demandes.
+* **③ `this.route.queryParams`** : souscription aux **paramètres d’URL**. Chaque fois qu’ils changent (page ou filtres), le composant :
+
+  * Réinitialise le formulaire ;
+  * Applique les critères depuis l’URL (`patchValue`) ;
+  * Lance la recherche via `demandeDataSource.searchDemande()` ;
+  * Corrige l’index de page si celui dans l’URL est supérieur au total de pages disponibles.
 
 ---
 
-### Réaction au changement de loueur
+## 2. Recherche – `search()`
 
 ```ts
-onLoueurChange(codeLoueur: string): void {
-  this.formGroupDemandeCriteria.patchValue({idGroupeApporteur: null});
-  this.loadLoueursThenGroupesByLoueur(codeLoueur);
-}
-```
-
-* Quand l’utilisateur change de loueur, je réinitialise le champ `idGroupeApporteur`.
-* Je recharge dynamiquement la liste des groupes partenaires associés au nouveau loueur.
-
----
-
-### Chargement des groupes partenaires
-
-#### Initialisation globale
-
-```ts
-private initAllLoueursAndGroupes(callback?: () => void): void {
-  this.groupeApporteurService
-    .searchByCriteria('')
-    .pipe(takeUntilDestroyed(this.destroyRef))
-    .subscribe((groupes) => {
-      this.groupePartenairesList = groupes;
-      this.groupePartenairesDisabled = false;
-      callback?.();
-    });
-}
-```
-
-* Cette fonction me permet de récupérer tous les groupes partenaires disponibles.
-
-#### Chargement par loueur
-
-```ts
-private loadLoueursThenGroupesByLoueur(codeLoueur: string, idGroupeApporteur?: number): void {
-  let loueurSelected = this.getLoueurByCode(codeLoueur);
-  const criteria: any = { idLoueur: loueurSelected?.id };
-  
-  this.groupeApporteurService
-    .searchByCriteria(criteria)
-    .pipe(takeUntilDestroyed(this.destroyRef))
-    .subscribe((groupes) => {
-      this.groupePartenairesList = groupes;
-      this.groupePartenairesDisabled = groupes.length === 0;
-
-      if (idGroupeApporteur != null) {
-        const exists = groupes.some((g) => g.id === idGroupeApporteur);
-        if (exists) {
-          this.formGroupDemandeCriteria.patchValue({idGroupeApporteur});
-        } else {
-          this.formGroupDemandeCriteria.patchValue({idGroupeApporteur: null});
-          this.deleteIdGroupeApporteur();
-        }
-      }
-    });
-}
-```
-
-* Avec `loadLoueursThenGroupesByLoueur()`, je récupère uniquement les groupes liés au loueur sélectionné.
-* Si un `idGroupeApporteur` est fourni et valide, je le patch dans le formulaire, sinon je supprime le filtre.
-
----
-
-### Gestion de l’URL
-
-```ts
-private deleteIdGroupeApporteur(): void {
-  const currentParams = {...this.route.snapshot.queryParams};
-  delete currentParams['idGroupeApporteur'];
+search() {
+  const criteria = {
+    ...this.formGroupDemandeCriteria.value,
+    currentProjection: 'projectionRechercheBackV2',
+  };
   this.router.navigate([], {
     relativeTo: this.route,
-    queryParams: currentParams,
-    queryParamsHandling: '',
+    queryParams: {
+      ...criteria,
+      page: 0,
+    },
+    queryParamsHandling: 'merge',
   });
 }
 ```
 
-* Cette méthode me permet de supprimer un paramètre `idGroupeApporteur` invalide de l’URL, afin de ne pas conserver un filtre incorrect après un changement de loueur.
+### À retenir
+
+* Construit les critères à partir du formulaire.
+* Déclenche **la navigation** avec `router.navigate` → met à jour l’URL avec les filtres et **la page 0**.
+* Cette navigation déclenche **automatiquement** la souscription dans `ngOnInit()` pour relancer la recherche.
+
+---
+
+## 3. Pagination – `searchPage(index: number)`
+
+```ts
+searchPage(index: number) {
+  const currentParams = this.route.snapshot.queryParams;
+  this.router.navigate([], {
+    relativeTo: this.route,
+    queryParams: {
+      ...currentParams,
+      page: index,
+    },
+    queryParamsHandling: 'merge',
+  });
+}
+```
+
+### Objectif
+
+* Met à jour uniquement le numéro de page dans l’URL, **sans perdre les autres critères** de recherche.
+* Comme toujours, cela déclenche une nouvelle recherche via `ngOnInit()`.
+
+---
+
+## 4. Gestion de la source de données – `initDataSource()`
+
+```ts
+private initDataSource() {
+  this.demandeDataSource = new DemandeDataSource(this.demandeService); // Création
+
+  this.demandeDataSource.numberPage$ // → numéro de la page affichée
+    .pipe(...)
+    .subscribe((value) => (this.numberPage = value));
+
+  this.demandeDataSource.numberTotalElement$ // → nombre total de résultats
+    .pipe(...)
+    .subscribe((value) => {
+      this.numberTotalElement = value;
+      if (!this.showSearchResult) {
+        this.showSearchResult = value >= 0;
+      }
+    });
+
+  this.demandeDataSource.loading$ // → indicateur de chargement
+    .pipe(...)
+    .subscribe((value) => (this.searchLoading = value));
+}
+```
+
+### But
+
+* Abonnement aux flux `Observable` exposés par la **data source** :
+
+  * Nombre total d’éléments,
+  * Page actuelle,
+  * État de chargement.
+* Synchronisation de l’interface utilisateur avec ces données.
+
+---
+
+## 5. Mise à jour intelligente de l’URL – `updateUrlWithNewPage(newPage: number)`
+
+```ts
+private updateUrlWithNewPage(newPage: number) {
+  const currentParams = this.route.snapshot.queryParams;
+  this.router.navigate([], {
+    queryParams: {
+      ...currentParams,
+      page: newPage,
+    },
+    queryParamsHandling: 'merge',
+  });
+}
+```
+
+### Utilité
+
+* Appelée automatiquement dans `ngOnInit()` **si l’utilisateur a forcé une page invalide** (ex. page 10 alors qu’il n’y a que 5 pages).
+* L’URL est mise à jour avec la dernière page disponible.
+
+---
+
+### Fonction simple
+
+* Utilisée pour afficher la bonne **devise monétaire** avec `CurrencyPipe` dans le HTML.
+* Par exemple : `"EURO"` devient `"EUR"` pour afficher "€".
 
 ---
 
 ## Conclusion
 
-Avec l’ajout du critère **Groupe partenaires**, j’ai pu :
+Ce composant Angular est bien structuré autour de :
 
-* Permettre une recherche plus fine en combinant loueurs et groupes partenaires.
-* Réinitialiser automatiquement le groupe lors d’un changement de loueur.
-* Synchroniser le formulaire avec l’URL pour que les recherches soient partageables et cohérentes.
-* Garantir une UX fluide grâce à la gestion dynamique et réactive des listes de partenaires.
+* La **gestion d’un formulaire de recherche réactif** ;
+* L’**utilisation de la navigation par URL** pour permettre des recherches partageables ;
+* Une **data source** puissante pour gérer la pagination, les états, et le chargement ;
+* Une **UX fluide** où toute action (recherche, pagination) est reflétée dans l’URL.
 
 ---

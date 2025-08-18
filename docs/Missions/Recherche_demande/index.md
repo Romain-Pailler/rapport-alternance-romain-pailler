@@ -39,21 +39,21 @@ Une fois cette première compréhension technique en place, j’ai participé au
 - Les fonctionnalités essentielles à conserver.
 - Les améliorations attendues par les utilisateurs.
 
-Pour préparer ces ateliers, j’ai travaillé en amont avec **Nicolas** (graphiste UI/UX) pour structurer les questions à poser. Ce travail préparatoire a permis d’éviter de dériver hors périmètre fonctionnel pendant les réunions.
+Pour préparer ces réunions, j’ai travaillé en amont avec **Nicolas** (graphiste UI/UX) pour structurer les questions à poser. Ce travail préparatoire a permis d’éviter de dériver hors périmètre fonctionnel pendant les réunions.
 
-J’ai ensuite co-animé deux réunions avec **Charlotte** (analyste fonctionnelle) et Nicolas, réunissant cinq utilisateurs finaux. Ces échanges ont permis de comprendre leurs usages actuels, leurs doléances, et leurs attentes concrètes pour la nouvelle version de l’écran.
+J’ai ensuite animé deux réunions avec **Charlotte** (analyste fonctionnelle) et Nicolas, réunissant cinq utilisateurs finaux. Ces échanges ont permis de comprendre leurs usages actuels, leurs doléances, et leurs attentes concrètes pour la nouvelle version de l’écran.
 
 ### 3. Élaboration de wireframes
 
-Une fois les besoins bien cadrés, j’ai réalisé des **wireframes** afin de proposer une première vision fonctionnelle de la future interface. Ces schémas simples ont permis de valider :
+Une fois les besoins bien cadrés, j’ai pris l’initiative de **[réaliser les wireframes](../../annexes/Maquette.md#wireframes-drawio)** de la future interface. Ces schémas simples ont permis de valider :
 
 - L’emplacement des filtres et des résultats.
 - Le parcours utilisateur logique.
 - La mise en avant des fonctionnalités essentielles.
 
-### 4. Réalisation de maquettes graphiques
+### 4. Réalisation de maquettes
 
-Avec l’appui de Nicolas, les wireframes ont ensuite été transformés en **maquettes graphiques complètes**, intégrant :
+Avec l’appui de Nicolas, les wireframes ont ensuite été transformés en **[maquettes complètes](../../annexes/Maquette.md#maquettes)**, intégrant :
 
 - La charte graphique Leasa.
 - Les icônes, couleurs et composants normalisés.

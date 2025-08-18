@@ -1,4 +1,17 @@
-ajout de idGroupeApporteur dans le form group : recherche-demande-form-group.ts (critere correspondant côté serveur dans le DemandeCriteria.java)
+---
+sidebar_label: Côté client
+sidebar_position: "1"
+tags: 
+    - Migration
+    - Angular
+---
+# Ajout du critère "Groupe partenaires" - Côté Client
+
+## Mise à jour du FormGroup – `RechercheDemandesFormGroup`
+
+Pour intégrer le critère **Groupe partenaires**, j’ai ajouté un nouveau champ `idGroupeApporteur` dans le `FormGroup` utilisé pour la recherche de demandes.
+
+### FormGroup
 
 ```ts
 import {FormControl, FormGroup, Validators} from '@angular/forms';
@@ -6,7 +19,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class RechercheDemandesFormGroup {
   static build() {
     return new FormGroup({
-      code: new FormControl(null as string | null, Validators.pattern('[a-zA-Z]?[0-9]{1,6}')), // ce pattern prends en compte une lettre (majuscule ou minuscule) ou non et ensuite jusqu'a 6 chiffres
+      code: new FormControl(null as string | null, Validators.pattern('[a-zA-Z]?[0-9]{1,6}')),
       refBailleur: new FormControl(null as string | null),
       codeLoueur: new FormControl(null as string | null),
       idGroupeApporteur: new FormControl(null as number | null),
@@ -15,193 +28,182 @@ export class RechercheDemandesFormGroup {
 }
 ```
 
-recherche-demandes.component.html
+### Explications
 
-ajout : 
+* Le champ `idGroupeApporteur` correspond à l’identifiant d’un groupe de partenaires mais aussi aux paramètres de critères côté serveur.
+* Sa valeur par défaut est `null`, ce qui signifie que je considère "tous les groupes partenaires".
+* Le `FormGroup` reste le point central pour récupérer et envoyer les valeurs des critères de recherche depuis mon composant.
 
-```html
- <div class="uig uis">
-        <div class="uiu-1-5">
-          <ml-ui-form-field>
-            <ml-ui-label i18n>Groupe partenaires</ml-ui-label>
-            <ml-ui-select formControlName="idGroupeApporteur" [disabled]="groupePartenairesDisabled">
-              <ml-ui-option [value]="null" i18n>- Tous les groupes partenaires -</ml-ui-option>
-              <ml-ui-option *ngFor="let groupePartenaire of groupePartenairesList" [value]="groupePartenaire.id">{{ groupePartenaire.nom }}</ml-ui-option>
-            </ml-ui-select>
-          </ml-ui-form-field>
-        </div>
-      </div>
-```
+---
 
-et modif ici (ajout du onChange): 
+## Mise à jour du template HTML – `recherche-demandes.component.html`
+
+J’ai ajouté le critère "Groupe partenaires" sous forme de `select`, lié au champ `idGroupeApporteur`.
 
 ```html
- <ml-ui-select formControlName="codeLoueur" (ngModelChange)="onLoueurChange($event)">
-              <ml-ui-option [value]="null" i18n>- Tous les loueurs -</ml-ui-option>
-              <ml-ui-option *ngFor="let loueur of loueurList" [value]="loueur.code">{{ loueur.libelle }}</ml-ui-option>
-            </ml-ui-select>
+<div class="uig uis">
+  <div class="uiu-1-5">
+    <ml-ui-form-field>
+      <ml-ui-label i18n>Groupe partenaires</ml-ui-label>
+      <ml-ui-select formControlName="idGroupeApporteur" [disabled]="groupePartenairesDisabled">
+        <ml-ui-option [value]="null" i18n>- Tous les groupes partenaires -</ml-ui-option>
+        <ml-ui-option *ngFor="let groupePartenaire of groupePartenairesList" [value]="groupePartenaire.id">
+          {{ groupePartenaire.nom }}
+        </ml-ui-option>
+      </ml-ui-select>
+    </ml-ui-form-field>
+  </div>
+</div>
 ```
 
-recherche-demandes.component.ts 
+### Explications
 
+* J’ai lié le `select` au champ `idGroupeApporteur` du `FormGroup` avec `formControlName`.
+* La liste des groupes (`groupePartenairesList`) est récupérée dynamiquement via mon service `GroupeApporteursService`.
+* J’utilise `[disabled]` pour désactiver le champ si aucun groupe n’est disponible.
+* L’option `[value]="null"` représente mon choix par défaut : "Tous les groupes partenaires".
 
-ajout de variable : 
+---
+
+## Gestion des interactions côté TypeScript – `recherche-demandes.component.ts`
+
+### Variables que j’ai ajoutées
 
 ```ts
 public groupePartenairesList: GroupeApporteurDomain[];
-  public groupePartenairesDisabled = false;
+public groupePartenairesDisabled = false;
 ```
 
-dans constructeur : 
+### Injection des services
+
+Pour gérer la récupération des groupes partenaires, j’ai injecté :
 
 ```ts
-  constructor(
-    private demandeService: DemandeService,
-    private destroyRef: DestroyRef,
-    private route: ActivatedRoute,
-    private router: Router,
-    private loueurService: LoueurService,
-    readonly groupeApporteurService: GroupeApporteursService,
-  ) {}
+readonly groupeApporteurService: GroupeApporteursService;
 ```
 
+---
 
-dans le ngOnInit: 
+### Initialisation avec les query parameters
+
+Lors de l’initialisation (`ngOnInit`), je lis les paramètres d’URL et j’adapte le formulaire selon les cas possibles :
 
 ```ts
 const codeLoueur = params['codeLoueur'];
-      const idGroupeApporteur = params['idGroupeApporteur'];
+const idGroupeApporteur = params['idGroupeApporteur'];
 
-      if (!codeLoueur && !idGroupeApporteur) {
-        this.initAllLoueursAndGroupes();
-      } else if (codeLoueur && !idGroupeApporteur) {
-        this.loadLoueursThenGroupesByLoueur(codeLoueur);
-      } else if (!codeLoueur && idGroupeApporteur) {
-        this.initAllLoueursAndGroupes(() => {
-          this.checkGroupePartenaires(+idGroupeApporteur);
-        });
-      } else if (codeLoueur && idGroupeApporteur) {
-        this.loadLoueursThenGroupesByLoueur(codeLoueur, +idGroupeApporteur);
-      }
+if (!codeLoueur && !idGroupeApporteur) {
+  this.initAllLoueursAndGroupes();
+} else if (codeLoueur && !idGroupeApporteur) {
+  this.loadLoueursThenGroupesByLoueur(codeLoueur);
+} else if (!codeLoueur && idGroupeApporteur) {
+  this.initAllLoueursAndGroupes(() => {
+    this.checkGroupePartenaires(+idGroupeApporteur);
+  });
+} else if (codeLoueur && idGroupeApporteur) {
+  this.loadLoueursThenGroupesByLoueur(codeLoueur, +idGroupeApporteur);
+}
 ```
+
+* J’ai prévu ces quatre cas pour gérer toutes les combinaisons possibles entre le loueur et le groupe partenaires.
+* En fonction de la présence du codeLoueur et d'un idGroupeApporteur je filtre la liste de groupe partenaires.
+* Ma fonction `checkGroupePartenaires` vérifie si l’identifiant existe dans la liste avant de l’injecter dans le formulaire.
+
+---
+
+### Réaction au changement de loueur
 
 ```ts
- /**
-   * Fonction déclenchée lors du changement de loueur.
-   *
-   * Réinitialise le champ `idGroupeApporteur` du formulaire à `null`
-   * puis recharge les données des groupes de partenaires associés
-   * en fonction du nouveau `codeLoueur` sélectionné.
-   *
-   * @param codeLoueur Le code du loueur sélectionné.
-   */
-  onLoueurChange(codeLoueur: string): void {
-    this.formGroupDemandeCriteria.patchValue({idGroupeApporteur: null});
-    this.loadLoueursThenGroupesByLoueur(codeLoueur);
-  }
-  /**
-   * Vérifie si l'id existe dans la liste des groupes partenaires.
-   *
-   * Si l'identifiant est trouvé, il est réinjecté dans le formGroup
-   * via un `patchValue`
-   * @param idGroupeApporteur L'identifiant du groupe de partenaires à vérifier.
-   */
-  private checkGroupePartenaires(idGroupeApporteur: number): void {
-    const exists = this.groupePartenairesList.some((apporteur) => apporteur.id === idGroupeApporteur);
-
-    if (exists) {
-      this.formGroupDemandeCriteria.patchValue({idGroupeApporteur: idGroupeApporteur});
-    }
-  }
-
-  /**
-   * Initialise la liste complète des groupes partenaires en effectuant une recherche sans critère.
-   *
-   * Met à jour la propriété `groupePartenairesList` avec les résultats retournés
-   * Un callback optionnel peut être exécuté une fois les données chargées.
-   *
-   * @param callback Fonction facultative appelée après la récupération des groupes.
-   */
-  private initAllLoueursAndGroupes(callback?: () => void): void {
-    this.groupeApporteurService
-      .searchByCriteria('')
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((groupes) => {
-        this.groupePartenairesList = groupes;
-        this.groupePartenairesDisabled = false;
-        callback?.();
-      });
-  }
-
-  /**
-   * Charge les groupes de partenaires associés à un loueur donné, puis met à jour le formulaire en conséquence.
-   *
-   * À partir du `codeLoueur`, récupère le loueur correspondant, puis effectue une recherche
-   * des groupes via `groupeApporteurService`.
-   *
-   * - Met à jour `groupePartenairesList` avec les résultats.
-   * - Active ou désactive le champ des groupes selon la présence de résultats.
-   * - Si un `idGroupeApporteur` est fourni :
-   *   - Il est sélectionné dans le formulaire s’il existe dans les résultats.
-   *   - Sinon, il est réinitialisé et la fonction `deleteIdGroupeApporteur` est appelée.
-   *
-   * @param codeLoueur Le code du loueur sélectionné.
-   * @param idGroupeApporteur (Optionnel) L'identifiant du groupe apporteur à présélectionner si valide.
-   */
-  private loadLoueursThenGroupesByLoueur(codeLoueur: string, idGroupeApporteur?: number): void {
-    let loueurSelected = this.getLoueurByCode(codeLoueur);
-    const criteria: any = {
-      idLoueur: loueurSelected?.id,
-    };
-    this.groupeApporteurService
-      .searchByCriteria(criteria)
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((groupes) => {
-        this.groupePartenairesList = groupes;
-        this.groupePartenairesDisabled = groupes.length === 0;
-        if (idGroupeApporteur != null) {
-          const exists = groupes.some((g) => g.id === idGroupeApporteur);
-          if (exists) {
-            this.formGroupDemandeCriteria.patchValue({idGroupeApporteur});
-          } else {
-            this.formGroupDemandeCriteria.patchValue({idGroupeApporteur: null});
-          }
-          if (!exists) {
-            this.deleteIdGroupeApporteur();
-          }
-        }
-      });
-  }
-
-  /**
-   * Recherche un loueur dans la liste en fonction de son code.
-   *
-   * Parcourt la liste `loueurList` pour trouver un loueur dont le `code`
-   * correspond à celui fourni en paramètre.
-   *
-   * @param codeLoueur Le code du loueur à rechercher.
-   * @return Le loueur correspondant s’il est trouvé, sinon `undefined`.
-   */
-  private getLoueurByCode(codeLoueur: string): Loueur | undefined {
-    return this.loueurList.find((loueur) => loueur.code === codeLoueur);
-  }
-  /**
-   * Supprime le paramètre `idGroupeApporteur` de l'URL sans recharger la page.
-   *
-   * Clone les paramètres actuels de l'URL, supprime la clé `idGroupeApporteur`,
-   * puis effectue une navigation avec les nouveaux paramètres en conservant le contexte de la route actuelle.
-   */
-  private deleteIdGroupeApporteur(): void {
-    const currentParams = {...this.route.snapshot.queryParams};
-    delete currentParams['idGroupeApporteur'];
-    this.router.navigate([], {
-      relativeTo: this.route,
-      queryParams: currentParams,
-      queryParamsHandling: '',
-    });
-  }
+onLoueurChange(codeLoueur: string): void {
+  this.formGroupDemandeCriteria.patchValue({idGroupeApporteur: null});
+  this.loadLoueursThenGroupesByLoueur(codeLoueur);
+}
 ```
 
+* Quand l’utilisateur change de loueur, je réinitialise le champ `idGroupeApporteur`.
+* Je recharge dynamiquement la liste des groupes partenaires associés au nouveau loueur.
+
+---
+
+### Chargement des groupes partenaires
+
+#### Initialisation globale
+
+```ts
+private initAllLoueursAndGroupes(callback?: () => void): void {
+  this.groupeApporteurService
+    .searchByCriteria('')
+    .pipe(takeUntilDestroyed(this.destroyRef))
+    .subscribe((groupes) => {
+      this.groupePartenairesList = groupes;
+      this.groupePartenairesDisabled = false;
+      callback?.();
+    });
+}
+```
+
+* Cette fonction me permet de récupérer tous les groupes partenaires disponibles.
+
+#### Chargement par loueur
+
+```ts
+private loadLoueursThenGroupesByLoueur(codeLoueur: string, idGroupeApporteur?: number): void {
+  let loueurSelected = this.getLoueurByCode(codeLoueur);
+  const criteria: any = { idLoueur: loueurSelected?.id };
+  
+  this.groupeApporteurService
+    .searchByCriteria(criteria)
+    .pipe(takeUntilDestroyed(this.destroyRef))
+    .subscribe((groupes) => {
+      this.groupePartenairesList = groupes;
+      this.groupePartenairesDisabled = groupes.length === 0;
+
+      if (idGroupeApporteur != null) {
+        const exists = groupes.some((g) => g.id === idGroupeApporteur);
+        if (exists) {
+          this.formGroupDemandeCriteria.patchValue({idGroupeApporteur});
+        } else {
+          this.formGroupDemandeCriteria.patchValue({idGroupeApporteur: null});
+          this.deleteIdGroupeApporteur();
+        }
+      }
+    });
+}
+```
+
+* Avec `loadLoueursThenGroupesByLoueur()`, je récupère uniquement les groupes liés au loueur sélectionné.
+* Si un `idGroupeApporteur` est fourni et valide, je le patch dans le formulaire, sinon je supprime le filtre.
+
+---
+
+### Gestion de l’URL
+
+```ts
+private deleteIdGroupeApporteur(): void {
+  const currentParams = {...this.route.snapshot.queryParams};
+  delete currentParams['idGroupeApporteur'];
+  this.router.navigate([], {
+    relativeTo: this.route,
+    queryParams: currentParams,
+    queryParamsHandling: '',
+  });
+}
+```
+
+* Cette méthode me permet de supprimer un paramètre `idGroupeApporteur` invalide de l’URL, afin de ne pas conserver un filtre incorrect après un changement de loueur.
+
+---
+
+## Conclusion
+
+Avec l’ajout du critère **Groupe partenaires**, j’ai pu :
+
+* Permettre une recherche plus fine en combinant loueurs et groupes partenaires.
+* Réinitialiser automatiquement le groupe lors d’un changement de loueur.
+* Synchroniser le formulaire avec l’URL pour que les recherches soient partageables et cohérentes.
+* Garantir une UX fluide grâce à la gestion dynamique et réactive des listes de partenaires.
+
+---
 
 Code source : 
 
