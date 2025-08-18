@@ -20,6 +20,8 @@ https://weier-loris-rapport-alternance.netlify.app/
 - schéma architecture
 
 
+ajouter schema + explication + l'autre fichier
+
 ## Conclusion
 Bien qu'il ne soit pas terminé, le projet CartoGIS54 a été une très bonne expérience puisqu'il s'agit du premier projet d'une telle envergure sur lequel j'ai eu l'occasion de travailler.
 
