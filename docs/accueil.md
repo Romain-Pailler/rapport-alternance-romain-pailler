@@ -36,7 +36,7 @@ Intégré au sein de l’équipe Leasa, j’ai participé à la maintenance et �
 
 Ce rapport présente l’environnement de mon alternance, les missions menées et les solutions techniques mises en œuvre.
 
-Cette alternance a été une étape significative dans mon parcours professionnel. Elle m’a permis de renforcer mes bases techniques, de mieux comprendre les contraintes liées au développement en entreprise, et de m’inscrire activement dans une dynamique d’équipe orientée stabilité et amélioration continue qui se base sur la [méthodologie Agile](./presentation/Methodologie_Agile).
+Cette alternance a été une étape importante dans mon parcours professionnel. Elle m’a permis de renforcer mes bases techniques, de mieux comprendre les contraintes liées au développement en entreprise, et de m’inscrire activement dans une dynamique d’équipe orientée stabilité et amélioration continue qui se base sur la [méthodologie Agile](./presentation/Methodologie_Agile).
 
 ## Remerciements
 
