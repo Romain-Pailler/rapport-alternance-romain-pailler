@@ -5,24 +5,27 @@ tags:
     - Migration
 ---
 
-# Titre
+# Ajout du filtre “Groupe de partenaires”
 
 ## Objectif
+
+Après avoir intégré les premiers filtres (N° de dossier, code Loueur, Loueur, etc.), l’étape suivante consistait à ajouter un **quatrième critère de recherche** : le **groupe de partenaires**.  
+
+L’objectif était donc d’enrichir le formulaire de recherche tout en conservant **la cohérence avec les filtres existants** et en gardant l’expérience utilisateur fluide.
 
 ## Ticket
 
 ![Ticket de la feature](/img/recherche_demande/ticket_filtre_groupe_partenaire.png)
 
-## Ce que j’ai développé
+## Rôle du ticket dans le projet
 
-## Points techniques
+Ce ticket m’a permis de :  
 
-### Explication côté client
+- Ajouter la **liste déroulante “Groupe de partenaires”** dans le formulaire de recherche.  
+- Permettre la **sélection d’un seul groupe** ou de **tous les groupes**.
 
-[Consulter la documentation du développement côté client](./Cote-client.md)
+Ce développement constitue donc une **progression naturelle** dans la construction de la recherche multi-critères, après avoir posé les bases avec les tickets précédents.
 
-## Temps investi
+## Liens vers les explications détaillées
 
-## Résultat
-
----
+- [Voir le code côté client (Angular)](./cote_client.md)
