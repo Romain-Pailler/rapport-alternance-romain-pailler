@@ -39,6 +39,7 @@ Je suis très reconnaissant auprès de mon maître d'apprentissage pour la confi
 Au cours du développement de ce projet, j'ai eu à faire face à des difficultés variées.
 
 # Communication avec les WebServices
+
 La prise en main des flux WMS/WFS n'a pas été simple.
 
 La cartographie étant un domaine très spécialisé, la recherche d'informations a été fastidieuse.
