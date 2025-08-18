@@ -36,10 +36,11 @@ Avec une réponse obtenue dans la majorité des cas en moins de **4 minutes**, *
 
 ## Schéma
 
-![Schéma](/img/presentation/pres_nanceo1.png)
+Voici un schéma expliquant le but de Leasa : Comment un apporteur fait financer son matériel au client
+![Schéma 1](/img/presentation/pres_nanceo1.png)
 
-![Schéma](/img/presentation/pres_nanceo2.png)
+![Schéma 2](/img/presentation/pres_nanceo2.png)
 
-![Schéma](/img/presentation/pres_nanceo3.png)
+![Schéma 3](/img/presentation/pres_nanceo3.png)
 
 ---
