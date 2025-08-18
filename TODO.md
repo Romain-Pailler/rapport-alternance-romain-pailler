@@ -19,10 +19,18 @@ https://weier-loris-rapport-alternance.netlify.app/
 - faire schema utilisateur, besoins, cahier des charges
 - schéma architecture
 
-
 ajouter schema + explication + l'autre fichier
 
+tout relire
+
+vérifier lien
+
+ajouter conclusion avec suite + remerciement encore
+
+ajouter vidéo
+
 ## Conclusion
+
 Bien qu'il ne soit pas terminé, le projet CartoGIS54 a été une très bonne expérience puisqu'il s'agit du premier projet d'une telle envergure sur lequel j'ai eu l'occasion de travailler.
 
 Sachant que ce projet sera surement repris par un autre développeur, j'ai fait mon maximum pour rendre le code lisible et maintenable.
@@ -41,12 +49,10 @@ Je suis très reconnaissant auprès de mon maître d'apprentissage pour la confi
 
 Au cours du développement de ce projet, j'ai eu à faire face à des difficultés variées.
 
-# Communication avec les WebServices
+## Communication avec les WebServices
 
 La prise en main des flux WMS/WFS n'a pas été simple.
 
 La cartographie étant un domaine très spécialisé, la recherche d'informations a été fastidieuse.
 
 Par exemple, il m'a fallu près d'une semaine pour comprendre la manière de construire et envoyer des Transactions (cf. #Transactions).
-
-#Proxy
