@@ -85,7 +85,7 @@ Après toutes ces étapes réalisées, j'ai pu enfin commencé à développer. V
 - [L'affichage des résultats](./Affichage_des_resultats/) : Premier développement de la nouvelle page avec une fonctionnalité simpliste, un bouton pour rechercher toutes les demandes. Il m'a permis de mieux comprendre l'ensemble du code tant côté client que côté serveur.
 - [Ajout d'un filtre par numéro de dossier](./Ajout_du_premier_critere_recherche/Cote-client.md)
 - [Bouton Réinitialiser](./Ajout_bouton_reinit/Cote-client.md)
-- [Ajout d'un filtre par Loueurs](./Ajout_du_deuxieme_critere_recherche/index.md)
-- [Ajout d'un filtre par référence bailleur](./Ajout_du_troisieme_critere_recherche/index.md)
+- [Ajout d'un filtre par référence bailleur](./Ajout_du_deuxieme_critere_recherche/index.md)
+- [Ajout d'un filtre par Loueurs](./Ajout_du_troisieme_critere_recherche/index.md)
 - [Ajout nombre de résultats et calculs des montants totaux achat et vente](./Ajout_nb_resultats_calcul_montants_ht/Cote-client.md)
 - [Ajout d'un filtre par groupe de partenaires](./Ajout_filtre_groupe_partenaires/cote_client.md)
