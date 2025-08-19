@@ -1,4 +1,13 @@
-# Code source template lettre de bienvenue 
+---
+sidebar_label: Code source - Lettre de bienvenue
+sidebar_position: 1
+tags: 
+    - Feature
+    - Template
+    - Code source
+---
+
+# Code source template lettre de bienvenue
 
 ## DemandeFactureProcessusImpl.java
 
