@@ -6,8 +6,8 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Migration vers Angular 2+',
-    Svg: require('@site/static/img/undraw_code-inspection.svg').default,
-    url: '/docs/category/projets-individuels',
+    Svg: require('@site/static/img/undraw_code-inspection_red.svg').default,
+    url: '/docs/missions/',
     description: (
       <>
         A travers ce rapport, vous allez découvrir l'une de mes missions principales : la migration en angular 2+ et l'amélioration de composants
@@ -16,8 +16,8 @@ const FeatureList = [
   },
   {
     title: 'Nouveaux défis',
-    Svg: require('@site/static/img/undraw_developer-activity.svg').default,
-    url: '/docs/category/missions',
+    Svg: require('@site/static/img/undraw_developer-activity_red.svg').default,
+    url: '/docs/missions/FIX/',
     description: (
       <>
         Au cours de cette année, j'ai aussi contribué à aider mon équipe en corrigeant des bugs et en développant de nouvelles fonctionnalités.
@@ -26,8 +26,8 @@ const FeatureList = [
   },
   {
     title: "Ce que j'ai appris durant cette année",
-    Svg: require('@site/static/img/undraw_proud-coder.svg').default,
-    url: '/blog',
+    Svg: require('@site/static/img/undraw_proud-coder_red.svg').default,
+    url: '',
     description: (
       <>
         En plus des connaissances acquises en entreprise, de nombreux projets personnels m'ont permis d'explorer de nouvelles technologies, comme le framework Java Spring, et de développer de nouvelles compétences.
