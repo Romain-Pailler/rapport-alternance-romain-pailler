@@ -17,9 +17,6 @@ https://weier-loris-rapport-alternance.netlify.app/
 ## expose
 
 - faire schema utilisateur, besoins, cahier des charges
-- schéma architecture
-
-explication
 
 tout relire
 
