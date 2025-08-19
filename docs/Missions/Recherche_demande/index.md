@@ -28,7 +28,7 @@ Avant de pouvoir entamer les développements, j’ai commencé par une [**phase 
 
 - Le fonctionnement du code AngularJS actuel.
 - Les différentes couches métier liées à la recherche.
-- Le parcours utilisateur et les cas d’usage fonctionnels.
+- Le parcours utilisateur et les cas d’usages fonctionnels.
 
 J’ai également étudié la manière dont les données étaient transmises et affichées dans l’interface, ainsi que les interactions avec les services backend.
 
@@ -65,7 +65,7 @@ Nous avons ensuite présenté les maquettes aux **équipes métiers basées au s
 
 - Recueillir les derniers retours utilisateurs.
 - Apporter quelques ajustements visuels et fonctionnels.
-- Valider formellement la future interface avant rédaction des tickets de specs.
+- Valider formellement la future interface avant rédaction des tickets de spécifications.
 
 ### 6. Rédaction des spécifications fonctionnelles
 

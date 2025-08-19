@@ -68,7 +68,7 @@ Le code modifié dans le service de recherche ajoute un **cas particulier** pour
 
 Cela garantit :
 
-* un **meilleur découplage** entre frontend et backend ;
+* un **meilleur découpage** entre frontend et backend ;
 * une réponse **plus légère et optimisée** par rapport à mon besoin côté client;
 * une **structuration des données claire** pour l’affichage dans Angular.
 
