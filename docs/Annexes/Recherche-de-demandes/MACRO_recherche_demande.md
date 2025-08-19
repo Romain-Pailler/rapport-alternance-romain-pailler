@@ -20,4 +20,4 @@ Cette macro sert à remplir plusieurs objectifs :
 
 Chaque nœud de la macro correspond à un ticket de feature. Le code couleur et les icônes indiquent son **statut** (déjà en production, en développement, à planifier).
 
-![MACRO](./../../static/img/Recherche_demande.svg)
+![MACRO](../../../static/img/Recherche_demande.svg)

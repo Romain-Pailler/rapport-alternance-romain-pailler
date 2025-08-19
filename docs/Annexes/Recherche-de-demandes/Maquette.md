@@ -15,7 +15,7 @@ L’objectif de ces maquettes était de **visualiser le futur écran de recherch
 
 ## Wireframes (Draw.io)
 
-![wireframe de l'écran de recherche](./../../static/img/maquette/wireframe_recherche_demande.png)
+![wireframe de l'écran de recherche](../../../static/img/maquette/wireframe_recherche_demande.png)
 
 ## Maquettes
 
@@ -24,8 +24,8 @@ Elles reprennent la structure définie dans les wireframes et permettent de vali
 
 ### Partie Filtres
 
-![screeshot de la maquette de la partie filtre](./../../static/img/maquette/partie_filtres.png)
+![screeshot de la maquette de la partie filtre](../../../static/img/maquette/partie_filtres.png)
 
 ### Partie Résultats
 
-![screeshot de la maquette de la partie résultats](./../../static/img/maquette/partie_resultat.png)
+![screeshot de la maquette de la partie résultats](../../../static/img/maquette/partie_resultat.png)

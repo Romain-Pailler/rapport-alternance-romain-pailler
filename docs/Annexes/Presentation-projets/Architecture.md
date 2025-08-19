@@ -20,6 +20,7 @@ L’architecture REST de l’application Leasa repose sur une organisation en **
 Cette couche est constituée des **contrôleurs REST**, exposés grâce à **Framework Spring**. Elle gère les requêtes en provenance du frontend.
 
 Rôle principal :
+
 - Récupérer les données du frontend (généralement au format DTO),
 - Appeler les services métier adéquats,
 - Retourner une réponse HTTP formatée.

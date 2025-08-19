@@ -4,7 +4,6 @@ sidebar_position: 2
 tags:
   - Java
   - Backend
-  - Projection
 ---
 
 # Côté serveur – Création d’une projection dédiée

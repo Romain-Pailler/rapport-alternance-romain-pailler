@@ -2,7 +2,7 @@
 sidebar_label: ML-Rest-API
 sidebar_position: 3
 tags: 
-    - OpenApi
+    - OpenAPI
     - Présentation
 ---
 

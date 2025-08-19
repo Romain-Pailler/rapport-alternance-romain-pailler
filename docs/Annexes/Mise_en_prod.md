@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Déploiement en préproduction – Version 1.142.1"
-sidebar_position: 5
+sidebar_position: 4
 tags:
   - Déploiement
 ---

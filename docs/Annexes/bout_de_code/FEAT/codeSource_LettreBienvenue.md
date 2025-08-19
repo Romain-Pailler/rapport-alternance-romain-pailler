@@ -4,7 +4,7 @@ sidebar_position: 1
 tags: 
     - Feature
     - Template
-    - Code source
+    - Code
 ---
 
 # Code source template lettre de bienvenue

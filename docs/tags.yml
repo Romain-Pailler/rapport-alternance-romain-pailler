@@ -127,3 +127,38 @@ Maquette:
   label: Maquette
   permalink: /maquette 
   description: Tag pour les maquettes
+
+Glossaire:
+  label: Glossaire
+  permalink: /glossaire 
+  description: Tag pour les glossaires
+
+Vocabulaire:
+  label: Vocabulaire
+  permalink: /vocabulaire 
+  description: Tag pour le vocabulaire
+
+UI:
+  label: UI
+  permalink: /ui 
+  description: Tag pour le UI
+
+Librairie:
+  label: Librairie
+  permalink: /librairie 
+  description: Tag pour la librairie
+
+Backend:
+  label: Backend
+  permalink: /backend 
+  description: Tag pour le backend
+
+Frontend:
+  label: Frontend
+  permalink: /frontend 
+  description: Tag pour le frontend
+
+API:
+  label: API
+  permalink: /api 
+  description: Tag pour l'api
