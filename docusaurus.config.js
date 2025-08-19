@@ -127,19 +127,29 @@ const config = {
                 to: '/docs/missions/Projet_individuel/recherchedemande' 
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus'
+                label: 'Les Features',
+                href: '/docs/missions/FEAT'
               },
-              { label: 'X', href: 'https://x.com/docusaurus' }
+              { label: 'Les Fixs', href: '/docs/missions/FIX' }
             ]
           },
           {
-            title: 'Glossaire',
+            title: 'Annexes',
             items: [
               { label: 'Blog', to: '/blog' }, 
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus'
+                label: 'Code Source',
+                href: '/docs/category/code-source'
+              }
+            ]
+          },
+           {
+            title: 'Glossaire',
+            items: [
+              { label: 'Lexique métier', to: '/docs/glossaire/Vocab_metier' }, 
+              {
+                label: 'Lexique technique',
+                href: '/docs/glossaire/Vocab'
               }
             ]
           }

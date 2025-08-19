@@ -34,7 +34,7 @@ J’ai également étudié la manière dont les données étaient transmises et 
 
 ### 2. Recueil des besoins
 
-Une fois cette première compréhension technique en place, j’ai participé au [**recueil des besoins utilisateurs**](./../../Annexes/cr_recueil_besoins_recherche_demande.md) afin d’identifier :
+Une fois cette première compréhension technique en place, j’ai participé au [**recueil des besoins utilisateurs**](../../annexes/cr_recueil_besoins_recherche_demande.md) afin d’identifier :
 
 - Les fonctionnalités essentielles à conserver.
 - Les améliorations attendues par les utilisateurs.
@@ -86,5 +86,5 @@ Après toutes ces étapes réalisées, j'ai pu enfin commencé à développer. V
 - [Ajout d'un filtre par numéro de dossier](./Ajout_du_premier_critere_recherche/Cote-client.md)
 - [Bouton Réinitialiser](./Ajout_bouton_reinit/Cote-client.md)
 - [Ajout nombre de résultats et calculs des montants totaux achat et vente](./Ajout_nb_resultats_calcul_montants_ht/Cote-client.md)
-- [Ajout d'un filtre par groupe de partenaires](./Ajout_du_deuxieme_critere_recherche%20copy%202/Cote-client.md)
-- [Ajout d'un filtre par partenaire](./Ajout_du_troisieme_critere_recherche%20copy/Cote-client.md)
+- [Ajout d'un filtre par référence bailleur](./Ajout_du_troisieme_critere_recherche/index.md)
+- [Ajout d'un filtre par groupe de partenaires](./Ajout_filtre_groupe_partenaires/cote_client.md)
