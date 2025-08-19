@@ -10,7 +10,6 @@ tags:
 
 Le projet **ML-Rest-API** permet d'écrire des **contrats OpenAPI au format YAML** qui, lorsqu’ils sont exécutés, génèrent automatiquement **les fichiers de controllers API côté client**.  
 
-
 ## Pourquoi utiliser ML-Rest-API ?
 
 L’objectif principal est de **gagner du temps et de la fiabilité** dans le développement.  
@@ -53,11 +52,11 @@ get:
 
 Ce fichier YAML définit :
 
-* Le **type de requête** (`GET`).
-* Le **tag** associé à l’endpoint (`demandes`).
-* La **description** et le **résumé** pour documenter l’API.
-* Les **paramètres** attendus (`demandesCriteria`).
-* La **réponse attendue** (`DemandePaginateContainer`).
+- Le **type de requête** (`GET`).
+- Le **tag** associé à l’endpoint (`demandes`).
+- La **description** et le **résumé** pour documenter l’API.
+- Les **paramètres** attendus (`demandesCriteria`).
+- La **réponse attendue** (`DemandePaginateContainer`).
 
 ---
 
