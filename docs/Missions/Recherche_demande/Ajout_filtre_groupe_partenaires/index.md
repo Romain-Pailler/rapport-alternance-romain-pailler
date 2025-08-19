@@ -1,5 +1,5 @@
 ---
-sidebar_label: Ajout du quatrième critère de recherche
+sidebar_label: Ajout du filtre groupe de partenaires
 sidebar_position: 8
 tags: 
     - Migration

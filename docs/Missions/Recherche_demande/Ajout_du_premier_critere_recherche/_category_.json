@@ -1,5 +1,5 @@
 {
-    "label": "Ajout du premier critère de recherche",
+    "label": "Ajout du filtre numéro de dossier",
     "position": 4,
     "link": {
       "type": "generated-index",
