@@ -1,5 +1,5 @@
 ---
-sidebar_label: Côté client
+sidebar_label: Filtre Loueurs
 sidebar_position: "1"
 tags: 
     - Migration
