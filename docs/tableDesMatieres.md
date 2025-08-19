@@ -8,7 +8,7 @@ Le rapport est organisé de la manière suivante :
 
 ## [**Présentation**](./category/présentation)
 
-Cette section commence par une présentation personnelle pour mieux comprendre mon parcours et mes motivations. Elle enchaîne avec la présentation de la **Coopérative Welcoop**, d’**Equasens**, de la filiale **Nanceo** et du projet **Leasa**. J’y décris ensuite mon équipe et l’architecture globale du projet.
+Cette section commence par une présentation personnelle pour mieux comprendre mon parcours et mes motivations. Elle enchaîne avec la présentation de la **Coopérative Welcoop**, d’**Equasens**, de la filiale **Fintech** et du projet **Leasa**. J’y décris ensuite mon équipe et l’architecture globale du projet.
 
 ## [**Missions**](./category/missions)
 

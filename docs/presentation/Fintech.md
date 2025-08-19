@@ -29,7 +29,6 @@ Dans un contexte de transformation profonde du secteur (évolution des missions,
 
 ## Un outil commun : Leasa
 
-Les deux entités partagent l’usage de **[Leasa](./Leasa)**, l’application développée par la division Fintech pour centraliser, traiter et automatiser les demandes de financement.  
-Les détails de son architecture et de ses fonctionnalités sont présentés dans la page suivante.
+Les deux entités partagent l’usage de **[Leasa](./Leasa)**, l’application développée par la division Fintech pour centraliser, traiter et automatiser les demandes de financement.
 
 ---

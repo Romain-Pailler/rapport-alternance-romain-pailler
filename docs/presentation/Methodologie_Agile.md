@@ -46,9 +46,7 @@ Il est structuré autour de plusieurs usages clés :
 Confluence joue ainsi un rôle central dans la **structuration des échanges** entre les équipes métier et technique.  
 Il permet de garantir que chaque évolution est bien cadrée dès sa conception et que toutes les parties prenantes disposent d’une **vision claire et partagée** du projet.
 
-[![confluence](confluence.png)](confluence.png)
-
----
+![confluence](confluence.png)
 
 Cette organisation agile favorise une **collaboration fluide** au sein de l’équipe, et une **livraison continue** de valeur au fil des versions. Elle m’a permis de travailler dans un cadre structuré, tout en développant des réflexes essentiels dans la gestion de projet logiciel en entreprise.
 

@@ -25,7 +25,7 @@ Equasens structure également son offre autour de domaines fonctionnels comme la
 
 ## Organisation
 
-Equasens agit comme maison-mère de plusieurs entités spécialisées, dont **[Nanceo](./Nanceo)**, en charge des solutions de financement.
+Equasens agit comme maison-mère de plusieurs entités spécialisées, dont la filliale **[Fintech](./Fintech)**, en charge des solutions de financement.
 
 ![Image de la structure des entités d'Equasens](/img/presentation/pres_equasens.png)
 :::info

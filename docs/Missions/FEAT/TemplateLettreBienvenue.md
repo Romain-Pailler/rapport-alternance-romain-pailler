@@ -20,7 +20,7 @@ Ce mail repose sur un template [Mustache](./../../Annexes/mustache.md), qui néc
 
 Mon objectif était d’améliorer l’existant. Le template de mail existait déjà, mais comportait plusieurs fautes d’orthographe et surtout, il manquait certaines données que les commerciaux devaient compléter manuellement.
 
-J’ai donc ajouté automatiquement :
+J’ai donc ajouté :
 
 - Le code de la demande
 - La [raison sociale](../../glossaire/Vocab_metier.md#raison-sociale) du client
@@ -44,6 +44,10 @@ Ce développement m’a permis de consolider mes compétences sur :
 - Ma compréhension du fonctionnement métier des demandes dans Leasa, notamment sur la manière dont les données sont liées entre les demandes et les factures
 
 ## Le code
+
+:::info
+Le code source se trouve [ici](../../annexes/bout_de_code/FEAT/codeSource_LettreBienvenue.md)
+:::
 
 ### DemandeFactureProcessusImpl.java
 

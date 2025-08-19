@@ -27,7 +27,7 @@ Mon cursus privilégie la pratique et l’alternance afin de développer une exp
 
 ## Mon objectif professionnel
 
-Mon ambition est de devenir **développeur [FullStack](../glossaire/Vocab.md#fullstack**. J’apprécie relever des défis techniques sur des projets d’envergures, et résoudre des problématiques complexes, qu'elles soient [front-end](../glossaire/Vocab.md#front-end) ou [back-end](../glossaire/Vocab.md#back-end).
+Mon ambition est de devenir **développeur [FullStack](../glossaire/Vocab.md#fullstack)**. J’apprécie relever des défis techniques sur des projets d’envergures qu'ils soient [front-end](../glossaire/Vocab.md#front-end) ou [back-end](../glossaire/Vocab.md#back-end).
 
 L'alternance chez Equasens a renforcé ma volonté d'évoluer dans un environnement de projets concrets car je me confronte quotidiennement aux contraintes métiers et aux bonnes pratiques d'entreprise.
 
@@ -45,5 +45,3 @@ En dehors de mes études et de mon alterance, je cultive plusieurs centres d’i
 ---
 
 Je vous souhaite une excellente lecture de ce rapport, en espérant qu’il soit aussi stimulant à parcourir qu’il me l’a été à le réaliser.  
-
----

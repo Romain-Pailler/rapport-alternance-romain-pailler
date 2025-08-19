@@ -32,6 +32,10 @@ Document ou section listant **toutes les modifications apportées à un projet**
 Il sert de **traçabilité** entre les versions et aide l’équipe à savoir **quand et pourquoi un changement a été effectué**.  
 Dans un projet comme **Leasa**, le changelog permet de suivre les évolutions d’AngularJS vers Angular 2+, ainsi que les tickets Jira corrigés ou ajoutés.
 
+## Composant
+
+Élément indépendant regroupant logique, vue et style d'une partie d'une application Angular.
+
 ## Controller
 
 Composant **côté serveur** qui reçoit les requêtes HTTP, **appelle la logique métier** (services/processus) et **renvoie une réponse** (JSON/XML).
@@ -67,7 +71,11 @@ Les effets de bord compliquent les tests et le débogage, au début du développ
 ## Fork
 
 Copie **indépendante** d’un dépôt Git sur notre espace, permettant d’**expérimenter** ou de **contribuer** sans impacter le dépôt original.  
-Par hbaitude : *fork* → travailler sur une branche → **pull request** vers le dépôt source. 
+Par hbaitude : *fork* → travailler sur une branche → **pull request** vers le dépôt source.
+
+## Framework
+
+Cadre applicatif offrant des outils, composants et conventions pour faciliter le développement logiciel.
 
 ## Front-end
 
