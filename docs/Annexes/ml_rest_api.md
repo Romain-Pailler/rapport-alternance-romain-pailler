@@ -6,14 +6,27 @@ tags:
     - Présentation
 ---
 
-# ml rest api est un projet qui permet d'écrire des contrats sous formats yaml afin que lors de son execution il puisse générer des fichiers de controllers api côté client
+# ML-Rest-API
 
-## pourquoi ?
+Le projet **ML-Rest-API** permet d'écrire des **contrats OpenAPI au format YAML** qui, lorsqu’ils sont exécutés, génèrent automatiquement **les fichiers de controllers API côté client**.  
 
-Permet d'écrire moins de code et d'avoir une cohérence et une sécurité avec ce qui est développé côté serveur
-normalement ce genre de contrats doit aussi générer les endpoints ainsi que les dto côté serveur mais cette partie là n'est pas encore développé pour leasa
 
-## exemple d'un endpoint
+## Pourquoi utiliser ML-Rest-API ?
+
+L’objectif principal est de **gagner du temps et de la fiabilité** dans le développement.  
+Normalement, ce type de contrat devrait également générer :  
+
+- Les **endpoints côté serveur**.  
+- Les **DTOs** (Data Transfer Objects) côté serveur.  
+- Les **services côté serveur**.  
+
+Pour Leasa, cette configuration côté serveur n’est pas encore développée, seule la génération côté client fonctionne pour l’instant.  
+
+---
+
+## Exemple d’un endpoint YAML
+
+Voici un exemple d’endpoint défini dans un contrat OpenAPI pour rechercher des demandes :
 
 ```yaml
 get:
@@ -25,7 +38,7 @@ get:
   parameters:
     - name: demandesCriteria
       in: query
-      description: critère de recherche des demandes
+      description: Critère de recherche des demandes
       required: false
       schema:
         type: object
@@ -38,7 +51,19 @@ get:
             $ref: "../../model/demande/demandePaginateContainer.yaml"
 ```
 
-## exemple d'un model
+Ce fichier YAML définit :
+
+* Le **type de requête** (`GET`).
+* Le **tag** associé à l’endpoint (`demandes`).
+* La **description** et le **résumé** pour documenter l’API.
+* Les **paramètres** attendus (`demandesCriteria`).
+* La **réponse attendue** (`DemandePaginateContainer`).
+
+---
+
+## Exemple d’un modèle YAML
+
+Voici un exemple de modèle de données pour un apporteur :
 
 ```yaml
 title: ApporteurDomain
@@ -71,26 +96,10 @@ properties:
   groupeApporteurs:
     $ref: '../../groupe-apporteur/domain/groupeApporteurDomain.yaml'
 ```
----
-sidebar_label: ML-Rest-API
-sidebar_position: "-1"
-tags: 
-    - Presentation
-    - Rest-API
+
 ---
 
-:::warning
-page en construction
-:::
-
-
-ml rest-api = open api
-contrats qui génère des fichiers, controller api côté front permet de coder plus écrire le code, normalement la configuration doit aussi créer côté serveur controllers et controllers (service chez nous) et dto mais on a pas la config pour
-
-
-image d'exemple de code
-
-image de bout de code générés
+## Exemple de code généré côté front (Angular)
 
 ```ts
 import { HttpClient, HttpHeaders, HttpResponse, HttpEvent, HttpParameterCodec, HttpContext } from '@angular/common/http';
@@ -156,3 +165,14 @@ export declare class DemandesApi {
     static ɵprov: i0.ɵɵInjectableDeclaration<DemandesApi>;
 }
 ```
+
+---
+
+## Conclusion
+
+ML-Rest-API permet donc de :
+
+- **Centraliser les contrats API** pour garantir cohérence et fiabilité.
+- **Générer automatiquement** les fichiers côté client, réduisant les erreurs et le temps de développement.
+
+---

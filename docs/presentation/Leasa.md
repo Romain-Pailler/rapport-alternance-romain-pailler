@@ -34,7 +34,9 @@ En automatisant les étapes du cycle de financement, l’outil permet un gain de
 
 Avec une réponse obtenue dans la majorité des cas en moins de **4 minutes**, **Leasa** s’impose comme un outil performant et structurant pour les équipes commerciales et administratives.
 
-## Schéma
+## Schémas
+
+### Schéma fonctionnel
 
 Voici un schéma expliquant le but de Leasa : Comment un apporteur fait financer son matériel au client
 ![Schéma 1](/img/presentation/pres_nanceo1.png)
@@ -42,5 +44,29 @@ Voici un schéma expliquant le but de Leasa : Comment un apporteur fait financer
 ![Schéma 2](/img/presentation/pres_nanceo2.png)
 
 ![Schéma 3](/img/presentation/pres_nanceo3.png)
+
+### Schéma architecture
+
+![Schéma draw.io](/img/presentation/Schema-architecture-leasa.png)
+
+#### Explications du schéma d'architecture
+
+- **Côté client**  
+  L’API consommée par le client est **générée automatiquement par [`rest-api`](../annexes/ml_rest_api.md)**.
+
+- **Côté serveur**  
+  L’API côté serveur est **écrite à la main** pour l'instant mais il sera possible à l'avenir de le générer grâce à `rest-api`.
+
+- **Microservice Monalisa Compta**  
+  Ce microservice est déployé via **image Docker** et utilise **OpenAPI** pour générer ses propres API. Il partage la même instance de base de données que `monalisa-rest`, mais avec **des bases distinctes**.  
+
+- **Interactions avec les banques**  
+  Le système interagit différemment selon les partenaires bancaires :
+  - On échange les données au format **JSON** à 95%.  
+  - Certaines anciennes banques utilisent encore des échanges **SOAP XML**, nécessitant un traitement particulier. 
+  - Certaines banques reçoivent juste un **POST pour une demande**.
+  - D'autres encore échangent des données afin de connaître leurs statuts ou autres.  
+
+![Schéma infra](/img/presentation/architecture-infra-leasa.png)
 
 ---
