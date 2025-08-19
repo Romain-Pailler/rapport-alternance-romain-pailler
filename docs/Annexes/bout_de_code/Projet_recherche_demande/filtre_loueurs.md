@@ -1,3 +1,13 @@
+---
+sidebar_label: Code source - Filtre loueurs
+sidebar_position: 5
+tags:
+  - Angular
+  - Code
+---
+# Code source
+
+## recherche-demandes.component.html
 
 ```html
 <div class="page-header-leasa">
@@ -178,6 +188,7 @@
 </ml-ui-bloc>
 ```
 
+## recherche-demandes.component.ts
 
  ```typescript
 
@@ -392,7 +403,9 @@ export class RechercheDemandesComponent {
     this.loueurList = this.loueurService.getLoueursSelected();
   }
 }
-````
+```
+
+## recherche-demandes.component.spec.ts
 
 ````js
 describe('RechercheDemandesComponent', () => {

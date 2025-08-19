@@ -15,6 +15,9 @@ tags:
 Pour que la nouvelle page Angular puisse afficher les résultats de recherche, il est nécessaire que le backend expose une **projection spécifique** — autrement dit, un format de données adapté à l'affichage. Cela se fait via un `DTO` (*Data Transfer Object*) qui structure les données côté Java avant leur envoi au frontend.
 
 ---
+:::info
+Le code source complet se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/affichage_resultats/cote_serveur.md)
+:::
 
 ### Code modifié dans `searchService.java`
 

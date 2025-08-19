@@ -16,6 +16,9 @@ Cette évolution permet d’affiner les recherches de demandes en ajoutant un tr
 ![Screenshot du ticket Jira](/img/recherche_demande/ticket_filtre_loueur.png)
 
 ---
+:::info
+Le code source se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/filtre_loueurs.md)
+:::
 
 ## Mise à jour du FormGroup
 

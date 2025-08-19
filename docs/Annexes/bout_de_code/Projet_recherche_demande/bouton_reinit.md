@@ -1,4 +1,15 @@
-# recherche-demandes.component.html
+---
+sidebar_label: Bouton réinitialisation - Code source
+sidebar_position: "1"
+tags: 
+    - Migration
+    - Angular
+    - Code
+---
+
+# Code source
+
+## recherche-demandes.component.html
 
 ```html
 <div class="page-header-leasa">

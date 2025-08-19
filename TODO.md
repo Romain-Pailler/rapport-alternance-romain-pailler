@@ -18,9 +18,13 @@ https://weier-loris-rapport-alternance.netlify.app/
 
 - faire schema utilisateur, besoins, cahier des charges
 
-tout relire
-
 vérifier lien
+
+http://localhost:3000/docs/missions/Recherche_demande/Ajout_du_premier_critere_recherche/Cote-client // ajouter plus de je dedans
+
+l'ordre des fichiers de code source 
+
+lien code source
 
 ajouter conclusion avec suite + remerciement encore
 

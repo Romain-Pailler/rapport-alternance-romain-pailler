@@ -1,12 +1,14 @@
 ---
-sidebar_label: Code source serveur
+sidebar_label: Code source - Bug projection
 sidebar_position: 1
 tags:
   - Java
   - Backend
   - Code
 ---
-## demandeDao.java :
+# Code source
+
+## demandeDao.java
 
 ````java
   case DemandeCriteria.PROJECTION_RECHERCHE_BACK -> setProtections(demandeList);
@@ -15,8 +17,8 @@ tags:
                         setGroupesApporteursToApporteurs(demandeList);
                         setFacturesToDemandes(demandeList);
                     }
-````           
-retire le code suivant DemandeProjectionRechercheBackImpl.java     
+```
+
 ````java
    ).as(Q_DEMANDE.apporteur),
                 Projections.bean(Statut.class,
@@ -34,9 +36,6 @@ retire le code suivant DemandeProjectionRechercheBackImpl.java
                 Projections.bean(Facturation.class,
                         Q_FACTURATION.id,
 ````
-retire ça :  Q_STATUT.ordreTimeline)
-
-créé nouveau fichier DemandeProjectionRechercheBackV2Impl.java
 
 ````java
 package com.pharmagest.monalisa.rest.dao.projection.impl.demande;
@@ -160,23 +159,18 @@ public class DemandeProjectionRechercheBackV2Impl implements IProjection<Demande
 }
 ````
 
-
-ajout dans ProjectionDemandeFactory.java // expliquer une factory
-
 ````java
  projections.add(DemandeProjectionRechercheBackV2Impl.getInstance());
 ````
 
-ajout dans DemandeCriteria.java : 
 ````java
 public static final String PROJECTION_RECHERCHE_BACK_V2 = "projectionRechercheBackV2";
 ````
-dans le searchService.java 
+
 ````java
    if (DemandeCriteria.PROJECTION_RECHERCHE_BACK_V2.equals(demandeCriteria.getCurrentProjection())) {
 ````
 
-dans la fonction get
 ```java
   @GET
     @Produces(MediaType.APPLICATION_JSON)

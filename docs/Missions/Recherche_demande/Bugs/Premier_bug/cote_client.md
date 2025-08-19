@@ -13,7 +13,6 @@ tags:
 
 Mon objectif était de **pointer la nouvelle page de recherche vers la projection dédiée `projectionRechercheBackV2`**, afin de garantir qu’elle fonctionne indépendamment de l’ancienne page et d’éviter tout conflit ou régression.
 
-
 ---
 
 ## Modification principale
