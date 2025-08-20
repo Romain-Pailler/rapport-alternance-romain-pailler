@@ -6,7 +6,7 @@ tags:
     - Vocabulaire
 ---
 
-# Vocabulaire métier
+# Lexique métier
 
 ## ADV back-office
 

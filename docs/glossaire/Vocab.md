@@ -6,7 +6,7 @@ tags:
     - Vocabulaire
 ---
 
-# Vocab technique
+# Lexique technique
 
 ## AngularJS
 
