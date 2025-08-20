@@ -6,4 +6,4 @@ Bien indiquer ce qui sort de la formation.
 Évolution % cahier des charges
 - Objectifs réalisés
 - Suite du travail/projet
-- Intégrer un film de démonstration qui sera commenté pendant la soutenance.
+- Intégrer un film de démonstration qui sera commenté pendant la soutenance

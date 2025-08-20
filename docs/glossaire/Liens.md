@@ -1,22 +1,27 @@
-Méthodo agile 
-https://fr.wikipedia.org/wiki/M%C3%A9thode_agile
+# Liens utiles
 
+Méthodologie agile : https://fr.wikipedia.org/wiki/M%C3%A9thode_agile
 
-equasens 
+Equasens : https://equasens.com/
 
-nanceo 
+Nanceo : https://www.nanceo.com/
 
-healthlease 
+Healthlease : https://www.healthlease.fr/
 
-welcoop
+Coopérative welcoop : https://www.lacooperativewelcoop.com/
 
-jenkins 
+Jenkins : https://www.jenkins.io/doc/book/
 
-angular 
+Angular : https://angular.dev/overview
 
-typescript 
+Typescript : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
-java spring 
-jira confluence 
+Java spring : https://spring.io/
 
-open api 
+Jira : https://www.atlassian.com/fr/software/jira
+
+Confluence : https://www.atlassian.com/fr/software/confluence
+
+Open api : https://www.openapis.org/
+
+RxJS : https://rxjs.dev/
