@@ -9,7 +9,7 @@ tags:
 
 ## Objectif de la fonctionnalité
 
-Cette évolution permet d’affiner les recherches de demandes en ajoutant un troisième critère : `codeLoueur`. Ce champ correspond à **l’identifiant du loueur** rattaché à la demande. Il s’agit généralement d’un acteur interne ou externe responsable de la mise à disposition du bien.
+Cette évolution permet d’affiner les recherches de demandes en ajoutant un troisième critère : `codeLoueur`. Ce champ correspond à **l’identifiant du loueur** rattaché à la demande.
 
 ## Ticket
 
@@ -22,7 +22,7 @@ Le code source se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_de
 
 ## Mise à jour du FormGroup
 
-Le `FormGroup` définit la structure des champs présents dans le formulaire de recherche. Ici, on ajoute un champ `codeLoueur` de type `FormControl`, utilisé pour capturer la valeur saisie par l’utilisateur.
+Le `FormGroup` définit la structure des champs présents dans le formulaire de recherche. Ici, j'ai ajouté un champ `codeLoueur` de type `FormControl`, utilisé pour capturer la valeur saisie par l’utilisateur.
 
 ``` typescript
 import {FormControl, FormGroup, Validators} from '@angular/forms';
@@ -47,7 +47,7 @@ export class RechercheDemandesFormGroup {
 
 ## Ajout dans le composant HTML – Champ « Loueur »
 
-Un **champ de sélection (dropdown)** a été ajouté au formulaire pour permettre à l’utilisateur de filtrer les demandes selon le **loueur associé**. Le champ est lié au `formControlName="codeLoueur"` défini dans le `FormGroup`.
+J'ai ajouté un **champ de sélection (dropdown)** au formulaire pour permettre à l’utilisateur de filtrer les demandes selon le **loueur associé**. Le champ est lié au `formControlName="codeLoueur"` défini dans le `FormGroup`.
 
 ### Code HTML
 

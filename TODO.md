@@ -20,9 +20,8 @@ https://weier-loris-rapport-alternance.netlify.app/
 
 vérifier lien
 
-http://localhost:3000/docs/missions/Recherche_demande/Ajout_du_premier_critere_recherche/Cote-client // ajouter plus de je dedans
-
-l'ordre des fichiers de code source 
+l'ordre des fichiers de code source
+refaire schema fintech avec dispay healthlease tout ça 
 
 lien code source
 

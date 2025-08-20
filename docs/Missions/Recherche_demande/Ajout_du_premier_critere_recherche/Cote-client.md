@@ -30,8 +30,8 @@ export class RechercheDemandesFormGroup {
 ### Explication
 
 * La classe `RechercheDemandesFormGroup` expose une méthode statique `build()` qui construit et retourne une instance de `FormGroup`.
-* Le champ `code` est ici le **premier critère de recherche** mis en place dans le formulaire. Il est associé à un `FormControl` initialisé à `null`.
-* Ce `FormGroup` pourra être injecté dans un composant Angular pour :
+* Le champ `code` est ici le **premier critère de recherche** que j'ai mis en place dans le formulaire. Il est associé à un `FormControl` initialisé à `null`.
+* J'ai ensuite injecté ce `FormGroup` dans le composant Angular pour :
 
   * Lier dynamiquement les champs du formulaire dans le HTML.
   * Centraliser les valeurs saisies par l’utilisateur.
@@ -42,7 +42,7 @@ export class RechercheDemandesFormGroup {
 
 ## Le composant HTML – Liaison du champ de recherche au formulaire
 
-Le fichier HTML du composant permet d'afficher un champ de saisie pour le numéro de dossier (`code`), en le liant dynamiquement au `FormGroup` défini dans le fichier TypeScript.
+J'ai ajouté dans le fichier HTML du composant le champ de saisie pour le numéro de dossier (`code`), en le liant dynamiquement au `FormGroup`.
 
 ### Extrait de code
 
@@ -75,13 +75,12 @@ Le fichier HTML du composant permet d'afficher un champ de saisie pour le numér
 
 ### Explication
 
-* Le formulaire est lié à l’instance du `FormGroup` via `[formGroup]="formGroupDemandeCriteria"`, ce qui permet d'associer dynamiquement les champs à leurs contrôles respectifs.
 * Le champ de saisie `input` est relié à la propriété `code` du `FormGroup` grâce à `formControlName="code"`.
-* L’attribut `(ngSubmit)="search()"` permet d’appeler une méthode TypeScript nommée `search()` lors de la soumission du formulaire (par exemple après clic sur le bouton).
+* L’attribut `(ngSubmit)="search()"` permet d’appeler la méthode TypeScript nommée `search()` lors de la soumission du formulaire (par exemple après clic sur le bouton).
 * L’attribut `(keydown.space)="$event.preventDefault()"` empêche l’insertion d’un espace dans le champ, évitant ainsi des valeurs non souhaitées.
 * Le bouton est désactivé dynamiquement si `searchLoading` est vrai, permettant de désactiver l’action pendant un chargement ou une requête en cours.
 
-Ce formulaire constitue donc l'interface utilisateur du critère de recherche "N° dossier", dont la valeur est exploitée côté TypeScript, notamment via les **query parameters** détaillés ci-après.
+Ce petit formulaire constitue donc l'interface utilisateur pour le moment, j'ai aussi ajouté la logique des **query parameters** détaillés ci-après.
 
 ---
 
@@ -104,7 +103,7 @@ ngOnInit(): void {
 
 * **① `initDataSource()`** : initialise la **data source** et ses observables pour récupérer le nombre total d’éléments, la page actuelle, et l’état de chargement.
 * **② `formGroupDemandeCriteria`** : formulaire réactif pour filtrer les demandes.
-* **③ `this.route.queryParams`** : souscription aux **paramètres d’URL**. Chaque fois qu’ils changent (page ou filtres), le composant :
+* **③ `this.route.queryParams`** : souscription aux **query params**. Chaque fois qu’ils changent (page ou filtres), le composant :
 
   * Réinitialise le formulaire ;
   * Applique les critères depuis l’URL (`patchValue`) ;
@@ -230,11 +229,11 @@ private updateUrlWithNewPage(newPage: number) {
 
 ## Conclusion
 
-Ce composant Angular est bien structuré autour de :
+En résumé, j’ai structuré ce composant Angular autour de : :
 
-* La **gestion d’un formulaire de recherche réactif** ;
-* L’**utilisation de la navigation par URL** pour permettre des recherches partageables ;
-* Une **data source** puissante pour gérer la pagination, les états, et le chargement ;
+* Mon **formulaire réactif** de recherche.
+* L’**utilisation de la navigation par URL** pour permettre des recherches partageables.
+* Une **data source** puissante pour gérer la pagination, les états, et le chargement.
 * Une **UX fluide** où toute action (recherche, pagination) est reflétée dans l’URL.
 
 ---
