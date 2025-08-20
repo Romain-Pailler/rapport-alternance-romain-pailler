@@ -1,5 +1,5 @@
 ---
-sidebar_label: Code source - Filtre loueurs
+sidebar_label: Filtre loueurs - Code source 
 sidebar_position: 5
 tags:
   - Angular

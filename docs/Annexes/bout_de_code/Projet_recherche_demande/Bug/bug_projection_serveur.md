@@ -1,5 +1,5 @@
 ---
-sidebar_label: Code source - Bug projection
+sidebar_label: Bug projection - Code source 
 sidebar_position: 1
 tags:
   - Java

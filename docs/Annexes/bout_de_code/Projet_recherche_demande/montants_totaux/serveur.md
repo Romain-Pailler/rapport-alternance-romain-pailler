@@ -1,4 +1,14 @@
-## DemandeDaoImpl
+---
+sidebar_label: Côté serveur - Code source
+sidebar_position: 2
+tags:
+  - Java
+  - Code
+---
+
+# Code source
+
+## DemandeDaoImpl.java
 
 ```java
   @Override
@@ -80,7 +90,7 @@
     }
 ```
 
-## IdemandeDao
+## IdemandeDao.java
 
 ````java
    
@@ -112,7 +122,7 @@
 }
 ````
 
-## DemandeSearchResultDomain
+## DemandeSearchResultDomain.java
 
 ````java
 
@@ -138,7 +148,7 @@ public class DemandeSearchResultDomain {
 }
 ````
 
-## DemandeSearchProcessusImpl
+## DemandeSearchProcessusImpl.java
 
 ````  @Override
     public DemandeSearchResultDomain getMontantSearchDemande(final DemandeCriteria criteria) {
@@ -168,7 +178,7 @@ public class DemandeSearchResultDomain {
     }
 ````
 
-## IDemandeSearchProcessus
+## IDemandeSearchProcessus.java
 
 ````java
   
@@ -204,7 +214,7 @@ public class DemandeSearchResultDomain {
     BigDecimal getMontantTotalVenteHTByCriteria(final List<Long> demandeIds);
  ````
 
-## SearchService
+## SearchService.java
 
 ```java
     
@@ -243,7 +253,7 @@ public class DemandeSearchResultDomain {
     }
 ```
 
-## RestRechercheDemandeResult
+## RestRechercheDemandeResult.java
 
 ```java
 /**
@@ -379,7 +389,7 @@ public class RestRechercheDemandeResult<T>
 }
 ```
 
-## SearchServiceIT
+## SearchServiceIT.java
 
 ````java
  @Test
@@ -438,7 +448,8 @@ public class RestRechercheDemandeResult<T>
 ````
 
 ## DemandeDao_getMontantTotalHTAchatBeforeAttenteDePaiementByCriteriaIT.java
-````
+
+````java
 package com.pharmagest.monalisa.rest.dao.impl;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -544,7 +555,7 @@ public class DemandeDao_getMontantTotalHTAchatBeforeAttenteDePaiementByCriteriaI
 
 ## DemandeDao_getMontantTotalHTAfterAttenteDePaiementByCriteriaIT.java
 
-````
+````java
 package com.pharmagest.monalisa.rest.dao.impl;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -706,7 +717,7 @@ public class DemandeDao_getMontantTotalHTAfterAttenteDePaiementByCriteriaIT exte
 
 ## DemandeDao_getMontantTotalHTVenteBeforeAttenteDePaiementByCriteriaIT.java
 
-````
+````java
 package com.pharmagest.monalisa.rest.dao.impl;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -812,7 +823,7 @@ public class DemandeDao_getMontantTotalHTVenteBeforeAttenteDePaiementByCriteriaI
 
 ## DemandeSearchProcessus_getMontantTotalAchatHTByCriteriaIT.java
 
-````
+````java
 package com.pharmagest.monalisa.rest.processus.demande;
 
 import java.math.BigDecimal;
@@ -920,7 +931,7 @@ public class DemandeSearchProcessus_getMontantTotalAchatHTByCriteriaIT extends P
 
 ## DemandeSearchProcessus_getMontantTotalVenteHTByCriteriaIT.java
 
-````
+````java
 package com.pharmagest.monalisa.rest.processus.demande;
 
 import java.math.BigDecimal;

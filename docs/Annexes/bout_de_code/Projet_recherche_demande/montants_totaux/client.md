@@ -1,3 +1,15 @@
+---
+sidebar_label: Côté client - Code source
+sidebar_position: 1
+tags:
+  - Angular
+  - Code
+---
+
+# Code source
+
+## recherche-demandes.component.html
+
 ```html
 <div class="page-header-leasa">
   <h1 i18n>Recherche demandes</h1>
@@ -155,8 +167,7 @@
 </ml-ui-bloc>
 ```
 
-
-form-group
+## recherche-demandes.form-group.ts
 
 ```ts
 export class RechercheDemandesFormGroup {
@@ -168,7 +179,7 @@ export class RechercheDemandesFormGroup {
 }
 ```
 
-scss
+## recherche-demandes.component.scss
 
 ```css
 .recherche-demande {
@@ -210,6 +221,8 @@ scss
   }
 }
 ```
+
+## recherche-demandes-form-group.ts
 
 ```ts
 export class DemandeDataSource implements DataSource<DemandeDomain> {
@@ -270,6 +283,8 @@ export class DemandeDataSource implements DataSource<DemandeDomain> {
   }
 }
 ```
+
+## recherche-demandes.component.ts
 
 ````typescript
 @Component({
@@ -477,6 +492,8 @@ export class RechercheDemandesComponent {
   }
 }
 ````
+
+## recherche-demandes.component.spec.ts
 
 ```ts
 import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
