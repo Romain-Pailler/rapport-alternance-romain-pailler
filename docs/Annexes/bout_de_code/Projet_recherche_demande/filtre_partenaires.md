@@ -1,6 +1,6 @@
 ---
 sidebar_label: Filtre partenaires - Code source 
-sidebar_position: "5"
+sidebar_position: 7
 tags: 
     - Migration
     - Angular

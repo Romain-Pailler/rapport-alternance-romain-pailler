@@ -1,6 +1,6 @@
 ---
 sidebar_label: Bouton réinitialisation - Code source
-sidebar_position: "1"
+sidebar_position: "3"
 tags: 
     - Migration
     - Angular

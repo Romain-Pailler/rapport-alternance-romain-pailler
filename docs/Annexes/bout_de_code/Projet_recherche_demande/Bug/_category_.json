@@ -1,6 +1,6 @@
 {
     "label": "Bug - Code source",
-    "position": 6,
+    "position": 8,
     "link": {
       "type": "generated-index",
        "description": "Code source des tickets de bugs produits"
