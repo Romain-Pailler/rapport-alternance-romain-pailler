@@ -10,6 +10,8 @@ tags:
 La division **[Fintech](../glossaire/Vocab_metier.md#fintech)** du groupe **Equasens** regroupe deux entités spécialisées dans le financement locatif : **Nanceo** et **Healthlease**.  
 Toutes deux s’appuient sur l’application interne **[Leasa](./Leasa)** pour gérer et automatiser leurs demandes de financement.
 
+![Image de la structure de la fintech](/img/presentation/pres_fintech.png)
+
 ## Nanceo
 
 Créée en **2015**, **Nanceo** propose des solutions de financement d’équipements professionnels en location, principalement pour le secteur tertiaire.  
@@ -24,8 +26,6 @@ Ses activités se répartissent en deux volets :
 
 Depuis 2010, **Healthlease** est le partenaire exclusif d'Equasens pour le financement des solutions logicielles et informatiques destinées aux professionnels de santé.  
 Dans un contexte de transformation profonde du secteur (évolution des missions, nouveaux modes de rémunération, relation patient repensée), Healthlease aide les pharmaciens à investir sereinement et à anticiper ces changements.
-
-![Image de la structure de la fintech](/img/presentation/pres_fintech.png)
 
 ## Un outil commun : Leasa
 
