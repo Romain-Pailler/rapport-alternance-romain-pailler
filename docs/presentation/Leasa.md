@@ -9,7 +9,7 @@ tags:
 
 ## Contexte de développement
 
-**Leasa** est une application web et mobile dédiée à la gestion des demandes de financement de biens, conçue pour répondre aux besoins spécifiques des partenaires de **Nanceo**.
+**Leasa** est une application web et mobile dédiée à la gestion des demandes de financement de biens, conçue pour répondre aux besoins des partenaires de **Nanceo** et **Healtlease**.
 
 Développée **[from scratch](../glossaire/Vocab.md#développement-from-scratch)**, l’application a été pensée dès l’origine comme une solution modulaire, interconnectée et accessible depuis différents supports (ordinateur, tablette, smartphone), même si aujourd’hui 95 % des développements ciblent les PC.
 
@@ -24,7 +24,7 @@ L’application se compose de trois environnements fonctionnels principaux :
 **Leasa** centralise toutes les informations relatives aux demandes (identité du client, nature du matériel, modalités de financement) et les transmet automatiquement aux organismes partenaires via un système de [web-services](../glossaire/Vocab.md#web-service).
 
 :::info
-Le schéma détaillé de l'architecture technique du backend se trouve [ici](./../Annexes/Presentation-projets/Architecture.md).
+Le schéma détaillé de l'architecture technique du backend se trouve [ici](../annexes/Presentation-projets/Architecture.md).
 :::
 
 ## Objectifs et bénéfices

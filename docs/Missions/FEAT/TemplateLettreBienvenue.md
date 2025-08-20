@@ -10,7 +10,7 @@ tags:
 ## Contexte
 
 Depuis l’application, il est possible d’envoyer un email de bienvenue après la facturation d’un dossier.
-Ce mail repose sur un template [Mustache](./../../Annexes/Presentation-projets/mustache.md), qui nécessite différentes données comme des dates ou des numéros de contrat. Avant de commencer, j’ai échangé avec Charlotte pour clarifier la structure du template et les données à lui fournir.
+Ce mail repose sur un template [Mustache](../../annexes/Presentation-projets/mustache.md), qui nécessite différentes données comme des dates ou des numéros de contrat. Avant de commencer, j’ai échangé avec Charlotte pour clarifier la structure du template et les données à lui fournir.
 
 ## Ticket
 
@@ -33,7 +33,7 @@ J’ai donc ajouté :
 La partie la plus technique a été de gérer l’affichage conditionnel de la date de prélèvement estimée.
 En effet, cette date ne devait apparaître que si une seule facture était comptabilisée, et si son type était "loyer facture vente".
 Il fallait aussi exclure les factures annulées par un avoir.
-Pour répondre à ce besoin, j’ai créé un nouveau processus au sein de l’[architecture REST](./../../Annexes/Presentation-projets/Architecture.md)
+Pour répondre à ce besoin, j’ai créé un nouveau processus au sein de l’[architecture REST](../../annexes/Presentation-projets/Architecture.md)
 
 ## Ce que j'ai appris
 
@@ -53,7 +53,7 @@ Le code source se trouve [ici](../../annexes/bout_de_code/FEAT/codeSource_Lettre
 
 Dans cette classe, j’ai ajouté une nouvelle méthode métier `getFacturesFiltreesLoyerSansAvoir` avec pour objectif clair : filtrer les factures d’une demande pour ne conserver **que celles qui sont réellement prises en compte dans le calcul de la date de prélèvement estimée**. 
 
-Concrètement, j’ai commencé par récupérer uniquement les factures **comptabilisées** dans le système comptable [**Monalisa-Compta**](./../../Annexes/Presentation-projets/compta.md).  
+Concrètement, j’ai commencé par récupérer uniquement les factures **comptabilisées** dans le système comptable [**Monalisa-Compta**](../../annexes/Presentation-projets/compta.md).  
 Ensuite, j’ai exclu toutes celles ayant un **[avoir](../../glossaire/Vocab_metier.md#avoir)** associé, car elles ne doivent pas être considérées dans le calcul.  
 Enfin, j’ai appliqué un dernier filtre pour ne garder que les factures dont le sous-type correspond à **LOYER_FACTURE_VENTE**.
 Cette méthode est utilisée dans le `MailBuilder` pour alimenter automatiquement le template de la lettre de bienvenue avec la bonne date, uniquement lorsque les conditions sont réunies.
@@ -62,7 +62,7 @@ Cette méthode est utilisée dans le `MailBuilder` pour alimenter automatiquemen
 
 Pour compléter cette fonctionnalité, j’ai travaillé sur la génération du mail de bienvenue, envoyé au client lors de la mise en place de son contrat.
 
-J’ai implémenté la méthode `getTemplateLettreBienvenue`, qui commence par charger toutes les données nécessaires depuis la demande (`Demande`) via les processus métiers.  Elles sont ensuite stockées dans un [contexte](../../glossaire/Vocab.md#contexte) sous forme de [Map](../../glossaire/Vocab.md#map) (String, Object) qui sera utilisé par les templates [Mustache](./../../annexes/Presentation-projets/mustache).
+J’ai implémenté la méthode `getTemplateLettreBienvenue`, qui commence par charger toutes les données nécessaires depuis la demande (`Demande`) via les processus métiers.  Elles sont ensuite stockées dans un contexte sous forme de [Map](../../glossaire/Vocab.md#map) (String, Object) qui sera utilisé par les templates [Mustache](./../../annexes/Presentation-projets/mustache).
 
 Parmi les données injectées dans le template, on retrouve :  
 
