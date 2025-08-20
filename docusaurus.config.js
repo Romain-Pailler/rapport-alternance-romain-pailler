@@ -123,8 +123,8 @@ const config = {
             title: 'Projets',
             items: [
               {
-                label: 'Page Recherche de demande',
-                to: '/docs/missions/Projet_individuel/recherchedemande' 
+                label: 'Recherche de demande',
+                to: '/docs/missions/Recherche_demande' 
               },
               {
                 label: 'Les Features',
@@ -136,7 +136,6 @@ const config = {
           {
             title: 'Annexes',
             items: [
-              { label: 'Blog', to: '/blog' }, 
               {
                 label: 'Code Source',
                 href: '/docs/category/code-source'
