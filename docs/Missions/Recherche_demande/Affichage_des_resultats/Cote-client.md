@@ -150,7 +150,7 @@ Grâce à cette `DataSource`, la table reste **synchrone** avec les données ser
 
 :::info
 
-Le code source du composant est disponible [ici](../../../annexes/bout_de_code/Projet_recherche_demande/affichage_resultats/cote_client.md)
+Le code source du composant est disponible [ici](../../../annexes/bout_de_code/Projet_recherche_demande/affichage_resultats/cote_client)
 
 :::
 

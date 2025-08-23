@@ -17,7 +17,7 @@ Cette évolution permet d’affiner les recherches de demandes en ajoutant un tr
 
 ---
 :::info
-Le code source se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/filtre_loueurs.md)
+Le code source se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/filtre_loueurs)
 :::
 
 ## Mise à jour du FormGroup

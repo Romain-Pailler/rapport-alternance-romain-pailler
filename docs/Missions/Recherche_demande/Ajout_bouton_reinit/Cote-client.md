@@ -16,7 +16,7 @@ La première étape a consisté à intégrer un bouton HTML avec l’attribut `t
 ## Explication du code
 
 :::info
-Le code source complet est disponible [ici](./../../../annexes/bout_de_code/Projet_recherche_demande/bouton_reinit.md)
+Le code source complet est disponible [ici](./../../../annexes/bout_de_code/Projet_recherche_demande/bouton_reinit)
 :::
 
 ```html

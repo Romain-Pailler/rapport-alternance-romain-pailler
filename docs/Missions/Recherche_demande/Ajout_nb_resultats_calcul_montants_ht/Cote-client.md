@@ -10,6 +10,10 @@ tags:
 
 ## Modification du DataSource : Ajout des indicateurs financiers
 
+:::info
+
+Le code source de ce ticket se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/montants_totaux/client)
+:::
 Dans ce ticket, j’ai modifié la méthode `searchDemande()` du composant pour intégrer trois nouvelles informations venant du backend : 
 
 1. **Le nombre total d’éléments** (`numberTotalElementSubject`),

@@ -17,7 +17,7 @@ Isoler la logique de recherche de la nouvelle page Angular 2+ pour éviter tout 
 ## Modifications
 
 :::info
-Le code source de ce bug se trouve [ici](../../../../annexes/bout_de_code/Projet_recherche_demande/Bug/bug_projection_serveur.md)
+Le code source de ce bug se trouve [ici](../../../../annexes/bout_de_code/Projet_recherche_demande/Bug/bug_projection_serveur)
 :::
 
 ### 1. Nouvelle constante dans `DemandeCriteria.java`

@@ -16,7 +16,7 @@ Pour que la nouvelle page Angular puisse afficher les résultats de recherche, i
 
 ---
 :::info
-Le code source complet se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/affichage_resultats/cote_serveur.md)
+Le code source complet se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/affichage_resultats/cote_serveur)
 :::
 
 ### Code modifié dans `searchService.java`

@@ -28,7 +28,7 @@ L'objectif de cette partie de l'application était de modifier le contrat en pla
 ## Ce que j'ai utilisé (existant)
 
 :::info
-Le code source complet se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/affichage_resultats/cote_rest_api.md)
+Le code source complet se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/affichage_resultats/cote_rest_api)
 :::
 
 

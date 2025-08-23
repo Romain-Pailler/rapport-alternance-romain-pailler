@@ -12,7 +12,7 @@ tags:
 Dans Angular, un `FormGroup` représente un ensemble de contrôles de formulaire (inputs) regroupés logiquement. Il permet de gérer l'état, la validation, et la récupération des valeurs de plusieurs champs dans un formulaire de manière structurée.
 
 :::info
-Le code source entier se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/cote_client.md)
+Le code source entier se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/cote_client)
 :::
 
 ### Déclaration du FormGroup

@@ -17,6 +17,10 @@ L’objectif de ce ticket était d'ajouter la logique nécessaire pour calculer 
 
 J’ai implémenté la méthode `getMontantTotalHTBeforeAttenteDePaiement` pour calculer le montant total HT des demandes avant leur passage en statut **"ATTENTE_PAIEMENT"**. Cette méthode fait la distinction entre les demandes d'achat et de vente, et calcule le montant HT en fonction du statut des factures.
 
+:::info
+
+Le code source de ce ticket se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/montants_totaux/serveur)
+:::
 ### Code ajouté
 
 ```java

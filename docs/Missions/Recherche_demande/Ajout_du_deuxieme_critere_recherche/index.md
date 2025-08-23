@@ -19,7 +19,7 @@ Dans le cadre de l'amélioration du formulaire de recherche des demandes, un cha
 
 :::info
 
-Le code source de ce ticket se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/filtre_refBailleur.md)
+Le code source de ce ticket se trouve [ici](../../../annexes/bout_de_code/Projet_recherche_demande/filtre_refBailleur)
 :::
 
 Le fichier `RechercheDemandesFormGroup.ts` a été modifié pour ajouter le champ `refBailleur` :

@@ -24,7 +24,7 @@ L’application se compose de trois environnements fonctionnels principaux :
 **Leasa** centralise toutes les informations relatives aux demandes (identité du client, nature du matériel, modalités de financement) et les transmet automatiquement aux organismes partenaires via un système de [web-services](../glossaire/Vocab.md#web-service).
 
 :::info
-Le schéma détaillé de l'architecture technique du backend se trouve [ici](../annexes/Presentation-projets/Architecture.md).
+Le schéma détaillé de l'architecture technique du backend se trouve [ici](../annexes/Presentation-projets/Architecture).
 :::
 
 ## Objectifs et bénéfices
@@ -52,7 +52,7 @@ Voici un schéma expliquant le but de Leasa : Comment un apporteur fait financer
 #### Explications du schéma d'architecture
 
 - **Côté client**  
-  L’API consommée par le client est **générée automatiquement par [`rest-api`](../annexes/Presentation-projets/ml_rest_api.md)**.
+  L’API consommée par le client est **générée automatiquement par [`rest-api`](../annexes/Presentation-projets/ml_rest_api)**.
 
 - **Côté serveur**  
   L’API côté serveur est **écrite à la main** pour l'instant mais il sera possible à l'avenir de le générer grâce à `rest-api`.
