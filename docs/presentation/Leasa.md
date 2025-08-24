@@ -38,7 +38,14 @@ Avec une réponse obtenue dans la majorité des cas en moins de **4 minutes**, *
 
 ### Schéma fonctionnel
 
-Voici un schéma expliquant le but de Leasa : Comment un apporteur fait financer son matériel au client
+Les schémas fonctionnels ci-dessous montrent comment l’application Leasa gère le financement du matériel vendu par les apporteurs aux clients, via les loueurs.
+
+Un **apporteur** est un vendeur de matériel : un client souhaite lui acheter de l'équipement mais le client n’a pas la capacité de financer directement la vente.
+
+Le **loueur** (Nanceo ou Healthlease) prend en charge la demande de financement auprès des banques partenaires, afin de proposer la solution la plus avantageuse pour le client.
+
+Le **client** est l’entreprise ou le professionnel final qui souhaite acquérir le matériel en leasing ou LOA.
+
 ![Schéma 1](/img/presentation/pres_nanceo1.png)
 
 ![Schéma 2](/img/presentation/pres_nanceo2.png)
