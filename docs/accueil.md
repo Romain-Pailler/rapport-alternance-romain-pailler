@@ -4,10 +4,6 @@ sidebar_position: -1
 
 # Accueil
 
-:::warning
-Le site est en cours de construction. Certaines sections peuvent être incomplètes ou temporairement indisponibles.
-:::
-
 Ce site est le support de mon rapport d’alternance, réalisé en troisième année de BUT Informatique à l’[IUT Nancy-Charlemagne](https://iut-charlemagne.univ-lorraine.fr/) de septembre 2024 à Août 2025.
 
 Il retrace mon parcours au sein de la [Coopérative Welcoop](./presentation/Cooperative_welcoop), plus précisément dans sa branche logicielle [Equasens](./presentation/Equasens) où j’ai travaillé au sein de l’équipe de sa filiale [Fintech](./presentation/Fintech) qui regroupe les sociétés [Nanceo](./presentation/Fintech#nanceo) et [Healthlease](./presentation/Fintech#healthlease). Le rapport détaille les missions menées pendant l’année d’alternance ainsi que l’organisation des projets sur lesquels j’ai travaillé.
